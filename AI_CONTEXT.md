@@ -19,6 +19,8 @@ In general:
 
 Not every task requires context from every directory. Select the smallest set of relevant sources that provides enough context to answer accurately.
 
+Files with a leading underscore (e.g. `_template.md`) are structural templates, not content. Skip them when gathering context for a task.
+
 ## Product messaging
 
 When a request concerns a specific Coder product or capability, inspect its directory under `products/` and use the relevant messaging and positioning guidance.
