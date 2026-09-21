@@ -1,2 +1,28 @@
-# messaging-and-positioning
-Coder’s canonical source of truth for company and product messaging, positioning, audiences, value propositions, use cases, terminology, and competitive context. Maintained for humans and their agents of choice.
+# Coder Messaging & Positioning
+
+This repository is Coder’s canonical source of truth for company and product messaging, positioning, audiences, value propositions, use cases, terminology, competitive context, and supporting evidence.
+
+It exists to give everyone at Coder, including the AI agents and tools we use, a shared foundation for how we describe Coder, our products, the problems we solve, and why they matter.
+
+> **Everything in this repository is public information.** Do not commit confidential, proprietary, customer-sensitive, or otherwise non-public information. Messaging that relies on non-public context should be maintained elsewhere.
+
+## What's here
+
+- **Company** — Company-level messaging, positioning, narrative, and value propositions
+- **Products** — Product-specific messaging and positioning
+- **Audiences** — Priorities, problems, and messaging for key audiences
+- **Use cases** — Customer problems and outcomes that may span products
+
+## How to use it
+
+Use this repository as the starting point when creating or reviewing Coder messaging. The content here establishes the strategic foundation, not necessarily copy that should be reproduced verbatim.
+
+When guidance here conflicts with older decks, documents, Slack conversations, prompts, or other materials, treat this repository as the current source of truth or raise the discrepancy with Product Marketing.
+
+For AI agents and applications, see [`AI_CONTEXT.md`](./AI_CONTEXT.md) for instructions on navigating and applying this context.
+
+## Contributing
+
+Messaging evolves alongside our products, customers, and market. Make changes to the canonical source here rather than creating parallel sources of truth elsewhere.
+
+For material changes to positioning, terminology, claims, or product messaging, open a pull request for review. Before contributing, confirm that everything being added is appropriate for public disclosure.
