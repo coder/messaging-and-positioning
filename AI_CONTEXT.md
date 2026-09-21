@@ -72,3 +72,9 @@ Use this repository as a strategic foundation, not a library of sentences that m
 Adapt messaging to the audience, format, and task while preserving the underlying positioning, terminology, product truths, and messaging guardrails.
 
 When reviewing existing content, identify material conflicts with the guidance in this repository and explain the discrepancy.
+
+## Responding to people
+
+Do not assume the person asking is a trained marketer, writer, or Coder insider. Explain positioning and terminology in plain language when it is not already familiar.
+
+Keep responses concise. Lead with the answer, then include only the supporting detail the task requires.
