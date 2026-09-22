@@ -10,7 +10,7 @@ It exists to give everyone at Coder, including the AI agents and tools we use, a
 
 - **Company** — Company-level messaging, positioning, narrative, and value propositions
 - **Products** — Product-specific messaging and positioning
-- **Audiences** — Priorities, problems, and messaging for key audiences
+- **Audiences** — Priorities, problems, and messaging for key audiences, including role-based pages and a `personas/` subdirectory describing cross-role buyer motivations
 - **Use cases** — Customer problems and outcomes that may span products
 
 ## How to use it
