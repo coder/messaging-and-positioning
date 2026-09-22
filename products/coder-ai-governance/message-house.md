@@ -1,5 +1,7 @@
 # AI Governance Message House
 
+AI Governance is the Modernize stage of the [customer journey](../../company/customer-journey.md), typically adopted alongside Coder Workspaces.
+
 ## Status Quo
 
 ### Without AI Governance
@@ -193,41 +195,33 @@ However, AI agent adoption is the strongest signal. Organizations actively exper
 
 ## Buyer Personas
 
-### Economic Buyer (CISO, CTO, etc.)
+See [Buyer Personas](../../audiences/personas/overview.md) for the canonical definition of each persona. The application to AI Governance is below.
+
+### Protectionist
 
 **Common pain points:** Lack of governance over AI agents accessing sensitive code and internal data. Shadow AI usage across engineering teams. Limited visibility and auditability of prompts, model usage, and agent actions. Risk of data exfiltration, prompt injection, and uncontrolled model access.
 
-Coder AI Governance gives economic buyers control over the security risks introduced by AI agents in software development. Coder Workspaces already moves agents off developer laptops and into isolated, ephemeral environments, removing unrestricted access to local credentials and files. AI Governance is what makes running agents there auditable and controlled at the enterprise level: AI Gateway centralizes model access and logs prompts, tool usage, and user attribution for audit and incident response, while Agent Firewall's network boundaries reduce the risk of data exfiltration, prompt injection, and unauthorized actions. This allows the organization to adopt agentic AI while maintaining governance, visibility, and a reduced attack surface.
+Coder AI Governance gives Protectionists control over the security risks introduced by AI agents in software development. Coder Workspaces already moves agents off developer laptops and into isolated, ephemeral environments, removing unrestricted access to local credentials and files. AI Governance is what makes running agents there auditable and controlled at the enterprise level: AI Gateway centralizes model access and logs prompts, tool usage, and user attribution for audit and incident response, while Agent Firewall's network boundaries reduce the risk of data exfiltration, prompt injection, and unauthorized actions. This allows the organization to adopt agentic AI while maintaining governance, visibility, and a reduced attack surface.
 
 - Coder Workspaces already isolates agents from developer laptops; AI Governance adds the audit trail and policy enforcement on top
 - Centralized logging of prompts, tool usage, and user attribution for audit and incident response
 - Network boundaries that reduce the risk of data exfiltration, prompt injection, and unauthorized agent actions
 
-### Platform Engineering Leaders (VP / Dir of Platform Engineering)
+### Opportunist
 
-**Common pain points:** Pressure to enable AI adoption while maintaining platform security and standards. Lack of standardized environments for developers and AI agents. Fragmented AI tooling across teams creating operational complexity. No centralized control over how agents access models, code, and infrastructure.
+**Common pain points:** Pressure to enable AI adoption while maintaining platform security and standards without adding operational overhead. Fragmented AI tooling across teams creating cost and complexity. No centralized visibility into AI usage or spend.
 
-Coder enables platform teams to provide a governed AI development platform for the entire organization. Agents already run in standardized, ephemeral Coder Workspaces; AI Governance adds the policy controls and centralized model access that make that standardization enforceable and auditable at scale. Platform leaders can enforce infrastructure policies, secure agent execution, and provide a consistent developer experience while safely enabling AI adoption across engineering teams.
+Coder enables Opportunists to standardize AI adoption instead of managing it team by team. Agents already run in standardized, ephemeral Coder Workspaces; AI Governance adds the policy controls and centralized model access that make that standardization enforceable and auditable at scale, without the operational overhead of managing API keys and access per team.
 
 - Standardized, ephemeral workspaces as the baseline, with AI Governance policy controls enforced on top for both developers and AI agents
 - Centralized model access and infrastructure policy enforcement across engineering teams
-- A consistent developer experience that doesn't trade safety for adoption
+- Reduced operational overhead from managing AI tooling and access team by team
 
-### Technical Buyers (DevSecOps, Platform Engineer, SRE, etc.)
+### Caring Provider
 
-**Common pain points:** Agents running outside controlled infrastructure. API key sprawl and unmanaged model access. Limited visibility into AI usage, activity, and costs. Difficulty enforcing RBAC, network policies, and execution controls.
+**Common pain points:** Running agents locally exposes credentials and repositories. Inconsistent environments across AI tools. Managing API keys and model access across tools. Lack of safe environments for their developers to experiment with agents.
 
-Coder lets technical buyers control how AI agents run in the developer platform. Coder Workspaces already moves agents off unmanaged laptops into isolated, ephemeral, standardized templates; AI Governance is what turns that infrastructure into governed infrastructure. AI Gateway centralizes model access, removing API key sprawl while providing logging, attribution, and usage visibility. Agent Firewall enforces network restrictions and execution boundaries on top of the workspace's existing RBAC, while exporting telemetry to the existing observability stack. This allows AI agents to operate inside governed infrastructure, not just isolated infrastructure.
-
-- Standardized, ephemeral workspaces as the baseline, with AI Gateway and Agent Firewall adding policy enforcement on top
-- Centralized model access through AI Gateway, removing API key sprawl while providing usage visibility
-- RBAC, network restrictions, and execution boundaries enforced via Agent Firewall, with telemetry exported to existing observability tooling
-
-### Developers
-
-**Common pain points:** Running agents locally exposes credentials and repositories. Inconsistent environments across AI tools. Managing API keys and model access across tools. Lack of safe environments to experiment with agents.
-
-Coder lets developers use AI agents without exposing their laptop, credentials, or repositories, since agents already run in isolated cloud workspaces rather than locally. AI Governance is what makes that safe at the platform level without slowing developers down: model requests go through AI Gateway, which logs prompts and tracks usage, without developers needing to manage their own API keys. Developers keep the speed of AI-assisted development while avoiding API key sprawl, shadow AI, and unsafe agent execution. The result: developers can experiment, automate tasks, and run agents safely, while the platform handles security, access control, and governance in the background.
+Coder lets Caring Providers, whether a platform team supporting a developer population or a developer supporting themselves, use AI agents without exposing a laptop, credentials, or repositories, since agents already run in isolated cloud workspaces rather than locally. AI Governance is what makes that safe at the platform level without slowing developers down: model requests go through AI Gateway, which logs prompts and tracks usage, without developers needing to manage their own API keys. Developers keep the speed of AI-assisted development while avoiding API key sprawl, shadow AI, and unsafe agent execution, and platform teams get a consistent developer experience that doesn't trade safety for adoption.
 
 - Isolated cloud workspaces as the baseline, so agents never touch a laptop, credentials, or local repositories
 - Model requests routed through AI Gateway, with no personal API keys to manage

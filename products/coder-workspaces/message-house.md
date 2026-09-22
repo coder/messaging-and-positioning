@@ -1,5 +1,7 @@
 # Coder Workspaces Message House
 
+Coder Workspaces is the Migrate stage of the [customer journey](../../company/customer-journey.md), and the foundation the Modernize and Multiply stages build on.
+
 ## Status Quo
 
 ### Without Coder
@@ -218,11 +220,9 @@ In regulated industries, Coder is the only platform that can meet data residency
 
 ## Buyer Personas
 
-### The Protectionist
+See [Buyer Personas](../../audiences/personas/overview.md) for the canonical definition of each persona. The application to Coder Workspaces is below.
 
-**Description:** The Protectionist is a mission-driven, pragmatic, and engineering-centric leader who prioritizes security and governance, seeking better controls to mitigate risks and breaches, and prevent loss of IP. They have a low-risk tolerance and strive to find rational compromises that balance security with productivity, aiming to enable their teams to ship consistently and efficiently while attracting and retaining top talent. Their goals include eliminating complexity while maintaining optionality, ensuring teams can do their jobs quickly and effectively.
-
-**Common Roles:** CISO, CTO, CIO, Global Head of Infrastructure, Head of Cloud Infrastructure, VP Platform & Infrastructure, VP Infrastructure & Shared Services, VP Infrastructure Engineering & Operations, Head of Architecture & Strategy
+### Protectionist
 
 **Voice of the persona:** "Local development is risky, and with AI, negligent. Coder gives you control."
 
@@ -232,11 +232,7 @@ Coder replaces the sprawl of local and cloud dev setups with one self-hosted pla
 - Fine-grained permissions and audit logs for every human and agent action
 - Standardized configurations that reduce risk from local or rogue environments
 
-### The Opportunist
-
-**Description:** The Opportunist is an open-minded, ambitious, and efficient leader who seeks measurements to drive change and optimize resource allocation, constantly pressured to do more with less. With a bias for data-driven insights and storytelling, they strive to find top- and bottom-line returns quickly. Their goals include finding new ways to better observe and allocate resources, ultimately creating alignment and driving growth.
-
-**Common Roles:** Head of Platform Engineering, Head of DevOps, Head of Product Engineering, Manager Software Development, Global Head of Infrastructure, Head of Cloud Infrastructure & Services, EVP Cloud Infrastructure, VP Platform & Infrastructure, VP Infrastructure & Shared Services, VP Infrastructure Engineering & Operations, Chief/Principal Architect, Head of Developer Experience, Site Reliability Engineer (SRE)
+### Opportunist
 
 **Voice of the persona:** "Local development is inefficient, and with AI, causes runaway costs. Coder helps you scale sustainably."
 
@@ -246,11 +242,7 @@ Coder turns development environments into measurable, standardized infrastructur
 - Easy policy management across teams, clusters, and clouds
 - Compatible with existing infrastructure, so adoption doesn't disrupt operations
 
-### The Caring Provider
-
-**Description:** The Caring Provider is a mission-driven, pragmatic, and engineering-centric leader who prioritizes delivering reliable developer experiences, efficient onboarding processes, and increased daily productivity, while reducing resource attrition and burnout. With a low-risk tolerance, they balance productivity with team well-being, and aim to eliminate burdensome toil. Their goals include enabling teams to work reliably and efficiently, attracting and retaining top talent, and maintaining a supportive and productive engineering culture.
-
-**Common Roles:** Head of Platform Engineering, Head of DevOps, Head of Product Engineering, Manager Software Development, Global Head of Infrastructure, Head of Cloud Infrastructure & Services, EVP Cloud Infrastructure, VP Platform & Infrastructure, VP Infrastructure & Shared Services, VP Infrastructure Engineering & Operations, Chief / Principal Architect, Head of Developer Experience, Site Reliability Engineer (SRE)
+### Caring Provider
 
 **Voice of the persona:** "Local development is frustrating, and with AI, unsustainable. Coder speeds up project onboarding and reduces cost."
 
