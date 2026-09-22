@@ -2,7 +2,7 @@
 
 ## Who They Are
 
-The Opportunist is a stakeholder motivated by cost and efficiency. This is a mindset, not a job title: it can appear in an executive, a finance-oriented technical leader, or anyone else who evaluates AI development investment primarily through the lens of return on investment.
+The Opportunist is a stakeholder motivated by cost and efficiency. This is a mindset, not a job title. It can appear in an executive, a finance-oriented technical leader, or anyone else who evaluates AI development investment primarily through the lens of return on investment.
 
 ## Core Motivation
 
@@ -23,11 +23,11 @@ Opportunists see AI development as an opportunity if it can be made efficient an
 
 ## How to Engage Them
 
-Lead with a quantifiable value story: productivity gained, time saved, or cost avoided, backed by evidence rather than assertion. Emphasize flexibility and choice, since Opportunists are wary of commitments that reduce their ability to adjust later. See the [company message house](../../company/message-house.md) and the [Compute/Resource Optimization](../../use-cases/compute-resource-optimization.md) use case for quantifiable value narratives.
+Lead with a quantifiable value story covering productivity gained, time saved, or cost avoided, backed by evidence rather than assertion. Emphasize flexibility and choice, since Opportunists are wary of commitments that reduce their ability to adjust later. See the [company message house](../../company/message-house.md) and the [Compute/Resource Optimization](../../use-cases/compute-resource-optimization.md) use case for quantifiable value narratives.
 
 ## Where They Show Up
 
-Opportunists can appear in a range of roles, including:
+Opportunists can appear in a range of roles, including these.
 
 - [CTO](../cto.md)
 - Technical or engineering leaders evaluating cost and efficiency of AI-assisted development

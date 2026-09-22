@@ -2,7 +2,7 @@
 
 ## Who They Are
 
-The Protectionist is a stakeholder motivated by risk reduction. This is a mindset, not a job title: it can appear in a security leader, a technical executive, or anyone else who evaluates AI development investment primarily through the lens of governance and control.
+The Protectionist is a stakeholder motivated by risk reduction. This is a mindset, not a job title. It can appear in a security leader, a technical executive, or anyone else who evaluates AI development investment primarily through the lens of governance and control.
 
 ## Core Motivation
 
@@ -23,11 +23,11 @@ Protectionists believe that AI development without adequate governance is too ri
 
 ## How to Engage Them
 
-Lead with governance, security, and control: what visibility the organization gains, what policies can be enforced, and what stays within their infrastructure. Avoid overselling speed or efficiency to a Protectionist before addressing governance and risk directly. See the [AI Governance message house](../../products/coder-ai-governance/message-house.md) for the core narrative.
+Lead with governance, security, and control, covering what visibility the organization gains, what policies can be enforced, and what stays within their infrastructure. Avoid overselling speed or efficiency to a Protectionist before addressing governance and risk directly. See the [AI Governance message house](../../products/coder-ai-governance/message-house.md) for the core narrative.
 
 ## Where They Show Up
 
-Protectionists most often appear as:
+Protectionists most often appear in these roles.
 
 - [CISO](../ciso.md)
 - [CTO](../cto.md), when accountable for engineering risk rather than efficiency

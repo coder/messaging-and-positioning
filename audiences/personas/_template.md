@@ -8,7 +8,7 @@ One paragraph defining the persona as a mindset or motivation rather than a titl
 
 ## Core Motivation
 
-The one or two sentence driver that defines this persona: what they fundamentally want out of an AI development or infrastructure decision.
+The one or two sentence driver that defines this persona, describing what they fundamentally want out of an AI development or infrastructure decision.
 
 ## What They Care About
 

@@ -2,7 +2,7 @@
 
 ## Who They Are
 
-The Caring Provider is a technical practitioner motivated by delivering a great experience to the people who depend on them. This is a mindset, not a job title: it most often shows up in platform engineers and other technical practitioners, but it describes a motivation rather than a fixed role. A Caring Provider can exist alongside other personas within the same organization, and even within the same person, depending on the situation.
+The Caring Provider is a technical practitioner motivated by delivering a great experience to the people who depend on them. This is a mindset, not a job title. It most often shows up in platform engineers and other technical practitioners, but it describes a motivation rather than a fixed role. A Caring Provider can exist alongside other personas within the same organization, and even within the same person, depending on the situation.
 
 ## Core Motivation
 
@@ -11,7 +11,7 @@ Caring Providers want to give the builders and teams who rely on them a great, p
 ## What They Care About
 
 - Giving developers and other internal users a smooth, productive day-to-day experience.
-- Operational quality: tools and platforms that hold up in practice, not just in a demo.
+- Operational quality, meaning tools and platforms that hold up in practice, not just in a demo.
 - Reducing toil and friction for the people they support.
 - Being able to experiment, adopt, and prove value on their own initiative before asking for organizational buy-in.
 
@@ -27,7 +27,7 @@ Lead with technical credibility and practitioner-to-practitioner conversation, n
 
 ## Where They Show Up
 
-Caring Providers most often appear as:
+Caring Providers most often appear in these roles.
 
 - [Platform Engineer](../platform-engineer.md)
 - [Developer](../developer.md)
