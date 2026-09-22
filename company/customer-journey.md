@@ -16,6 +16,8 @@ Migrate and Modernize are frequently adopted together rather than as two separat
 
 This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house.md) and [Coder AI Governance](../products/coder-ai-governance/message-house.md).
 
+For the fuller argument behind why governance has to live in the environment rather than in individual tools, see [The AI Operating Layer](./ai-operating-layer.md).
+
 ## Multiply
 
 Multiply is scaling development output with coding agents, including agents that operate with a human in the loop and, increasingly, headless or agent-driven execution that runs without one. This is the leading edge of the journey, depending on the governed, centralized foundation established in Migrate and Modernize, and it's where organizations begin treating agent capacity as infrastructure to provision rather than a tool an individual developer runs locally.

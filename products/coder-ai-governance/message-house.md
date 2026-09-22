@@ -1,6 +1,6 @@
 # AI Governance Message House
 
-AI Governance is the Modernize stage of the [customer journey](../../company/customer-journey.md), typically adopted alongside Coder Workspaces.
+AI Governance is the Modernize stage of the [customer journey](../../company/customer-journey.md), typically adopted alongside Coder Workspaces. See [The AI Operating Layer](../../company/ai-operating-layer.md) for the underlying argument this product is built on.
 
 ## Status Quo
 
