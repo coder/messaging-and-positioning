@@ -12,13 +12,13 @@ This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house
 
 Modernize is the addition of AI governance once development is centralized. With development environments already consolidated, organizations gain a natural point to add model access control, auditing, and policy enforcement over how AI agents and developers use AI in those environments.
 
-Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time: they want to move off laptops, and they want AI governed once they do. This is why Coder Premium bundles Coder Workspaces and AI Governance into a single offering rather than selling them as separate products.
+Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time. They want to move off laptops, and they want AI governed once they do. This is why Coder Premium bundles Coder Workspaces and AI Governance into a single offering rather than selling them as separate products.
 
 This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house.md) and [Coder AI Governance](../products/coder-ai-governance/message-house.md).
 
 ## Multiply
 
-Multiply is scaling development output with coding agents, including agents that operate with a human in the loop and, increasingly, headless or agent-driven execution that runs without one. This is the leading edge of the journey: it depends on the governed, centralized foundation established in Migrate and Modernize, and it's where organizations begin treating agent capacity as infrastructure to provision rather than a tool an individual developer runs locally.
+Multiply is scaling development output with coding agents, including agents that operate with a human in the loop and, increasingly, headless or agent-driven execution that runs without one. This is the leading edge of the journey, depending on the governed, centralized foundation established in Migrate and Modernize, and it's where organizations begin treating agent capacity as infrastructure to provision rather than a tool an individual developer runs locally.
 
 This stage maps to [Coder Agents](../products/coder-agents/message-house.md) and [Coder Agent Relay](../products/coder-agent-relay/message-house.md).
 
