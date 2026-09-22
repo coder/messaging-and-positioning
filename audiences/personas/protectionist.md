@@ -30,6 +30,7 @@ Lead with governance, security, and control, covering what visibility the organi
 Protectionists most often appear in these roles.
 
 - [CISO](../ciso.md)
+- [CIO](../cio.md), when accountable for risk in enterprise technology decisions
 - [CTO](../cto.md), when accountable for engineering risk rather than efficiency
 
 The same title doesn't guarantee the same persona. A security leader who is a Protectionist at one organization may act as an [Opportunist](./opportunist.md) at another, with someone else in the organization taking on the opposite motivation.
