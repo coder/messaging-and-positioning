@@ -14,7 +14,7 @@ In general:
 
 - **Company** provides Coder-level messaging, positioning, narrative, terminology, and value propositions.
 - **Products** provides product-specific messaging, positioning, value propositions, terminology, and FAQs.
-- **Audiences** provides context about the people Coder communicates with, including their priorities, problems, needs, and concerns.
+- **Audiences** provides context about the people Coder communicates with, including their priorities, problems, needs, and concerns. This includes role-based pages (e.g. developer, CISO) and an `audiences/personas/` subdirectory describing motivational buyer personas that cut across roles. See `audiences/personas/overview.md` for how the two differ.
 - **Use cases** describes the problems Coder helps customers solve and the outcomes they want to achieve, including use cases that may span multiple products.
 
 Not every task requires context from every directory. Select the smallest set of relevant sources that provides enough context to answer accurately.
