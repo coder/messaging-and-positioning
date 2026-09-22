@@ -14,7 +14,7 @@ Coder is the AI operating layer for the enterprise: a self-hosted, cloud-agnosti
 
 ## Who We're For
 
-Coder serves Global 2000 enterprises, government agencies, and fast-moving technology companies, including organizations in financial services and other regulated industries. These organizations need to scale development and AI adoption while meeting strict security, data residency, and governance requirements.
+Coder serves Global 2000 enterprises, government agencies, and fast-moving technology companies, including organizations in financial services and other regulated industries. These organizations need to scale development and AI adoption while meeting strict security, data residency, and governance requirements. See [Ideal Customer Profile](./ideal-customer-profile.md) for the fuller set of fit signals.
 
 Platform engineering teams use Coder to provide governed development infrastructure and deploy coding agents across their organizations. Developers are the primary users. Engineering-adjacent teams and knowledge workers can also use Coder to access agents on governed infrastructure, extending the ability to build and automate to more people across the organization. In an era where everyone is a coder, that foundation matters beyond engineering.
 
