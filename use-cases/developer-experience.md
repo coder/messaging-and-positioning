@@ -36,7 +36,7 @@ Platform teams update the entire fleet of workspaces from a single template chan
 
 - **Coder Workspaces** — the core self-hosted, Terraform-provisioned environments that eliminate manual setup and environment drift.
 - **Coder Agents** — extends the same day-one-ready, standardized environment model to AI agents running natively on the control plane.
-- **AI Governance** — optional add-on for organizations that want centralized visibility and policy control over AI tooling as part of the broader developer experience.
+- **AI Governance** — included in Coder Premium for organizations that want centralized visibility and policy control over AI tooling as part of the broader developer experience.
 
 ## Proof Points
 
