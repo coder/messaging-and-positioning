@@ -49,6 +49,13 @@ Organizations transitioning out of a rapid-growth or digital-disruption phase an
 - Uncentralized, basic developer tooling with no active push to standardize it
 - A growth- or market-share-focused business cycle with little pressure yet to consolidate spend
 
+## Disqualifying signals
+
+Two additional signals lead Coder to walk away from an opportunity even when an organization otherwise fits the profile above.
+
+- **Unwillingness to acknowledge risk already taken.** An organization that has already deployed AI in a way that introduces real risk, for example rolling out AI coding tools broadly on unmanaged laptops, but is unwilling to acknowledge that decision and take a step back to reduce the risk. These organizations often return once they feel the consequences directly, and Coder is better served waiting for that shift than pushing an unreceptive prospect.
+- **No connected executive initiative or budget.** A need that isn't attached to a strategic initiative at the executive level usually doesn't have real budget behind it. If the champions Coder is working with can't provide access to validate that budget exists at that level, the opportunity is unlikely to close and isn't worth continued pursuit.
+
 ## Related
 
 - [Coder Message House](./message-house.md) for the condensed "Who We're For" summary.
