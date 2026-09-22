@@ -1,5 +1,7 @@
 # Agent Relay Message House
 
+Agent Relay is part of the Multiply stage of the [customer journey](../../company/customer-journey.md), building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
+
 ## Status Quo
 
 ### Without Agent Relay
@@ -134,23 +136,25 @@ Workspace-level controls, network policy via Agent Firewall, secrets management,
 
 ## Buyer Personas
 
-### Economic Buyer (CISO, CTO, etc.)
+See [Buyer Personas](../../audiences/personas/overview.md) for the canonical definition of each persona. The application to Agent Relay is below.
+
+### Protectionist
 
 **Common pain points:** Developers want cloud agents the security team hasn't approved. No way to control where agent execution happens or what it can access. Risk of unmanaged, unauditable agent activity across the organization.
 
-Agent Relay gives economic buyers an approved path to the cloud agents developers already want, without giving up control over where that work happens. Execution runs inside infrastructure the organization already governs, with the same identity, network, and audit controls applied to it. This lets the organization say yes to agent adoption instead of either blocking it or accepting the risk of unmanaged usage.
+Agent Relay gives Protectionists an approved path to the cloud agents developers already want, without giving up control over where that work happens. Execution runs inside infrastructure the organization already governs, with the same identity, network, and audit controls applied to it. This lets the organization say yes to agent adoption instead of either blocking it or accepting the risk of unmanaged usage.
 
-### Platform Engineering Leaders (VP / Dir of Platform Engineering)
+### Opportunist
 
-**Common pain points:** Pressure to give developers the AI tools they're asking for. No standardized way to provision execution environments for cloud-hosted agents. Concern that a few manually wired self-hosted machines won't hold up as agent usage scales.
+**Common pain points:** Pressure to give developers the AI tools they're asking for without standing up new infrastructure or a new security review. Concern that a few manually wired self-hosted machines won't hold up as agent usage scales.
 
-Agent Relay lets platform teams extend infrastructure they already operate, Coder organizations, templates, RBAC, and audit logging, to cloud-hosted agents, without standing up a new platform. It's built to handle bursts of concurrent agent sessions that ad hoc, manually provisioned machines can't.
+Agent Relay is a zero-incremental-platform for existing Coder customers: it extends infrastructure they already operate, organizations, templates, RBAC, and audit logging, to cloud-hosted agents, without standing up a new platform. It's built to handle bursts of hundreds or thousands of concurrent agent sessions that ad hoc, manually provisioned machines can't, so usage scales with infrastructure rather than headcount.
 
-### Developers
+### Caring Provider
 
-**Common pain points:** Wanting to use Cursor or Claude Code, but being blocked by security or platform team concerns. Having to choose between the agent experience they want and the infrastructure their organization will approve.
+**Common pain points:** Wanting to give developers the Cursor or Claude Code experience they're asking for, but being blocked by security or platform team concerns. Having to choose between the agent experience developers want and the infrastructure the organization will approve.
 
-Agent Relay doesn't change the agent experience developers already want. They keep using Cursor or Claude Code exactly as they would otherwise; the difference is invisible to them, since the agent's execution happens inside a Coder workspace behind the scenes.
+Agent Relay doesn't change the agent experience developers already want. They keep using Cursor or Claude Code exactly as they would otherwise; the difference is invisible to them, since the agent's execution happens inside a Coder workspace behind the scenes. Platform teams and developers get to want the same thing at the same time, instead of trading one off against the other.
 
 ## Vertical Messaging
 

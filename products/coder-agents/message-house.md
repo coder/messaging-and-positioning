@@ -1,5 +1,7 @@
 # Coder Agents Message House
 
+Coder Agents is part of the Multiply stage of the [customer journey](../../company/customer-journey.md), building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
+
 ## Status Quo
 
 ### Without Coder
@@ -187,17 +189,19 @@ The logic that drives a traditional Coder Workspace-first purchase is the same l
 
 ## Buyer Personas
 
-### Economic Buyer (CISO, CTO, etc.)
+See [Buyer Personas](../../audiences/personas/overview.md) for the canonical definition of each persona. The application to Coder Agents is below.
 
-Economic buyers face competitive pressure to adopt AI coding agents quickly, but uncontrolled usage introduces existential risk: source code leaving the perimeter, no audit trail, and compliance exposure that can jeopardize deals or trigger regulatory action. Coder Agents removes that tradeoff. Developers get native AI coding agents on infrastructure the organization already controls, with full auditability, so the business can move faster without taking on unmanaged risk.
+### Protectionist
 
-### Technical Buyers (DevSecOps, Platform, SRE, etc.)
+Protectionists face competitive pressure to adopt AI coding agents quickly, but uncontrolled usage introduces existential risk: source code leaving the perimeter, no audit trail, and compliance exposure that can jeopardize deals or trigger regulatory action. Coder Agents removes that tradeoff. Developers get native AI coding agents on infrastructure the organization already controls, with full auditability, so the business can move faster without taking on unmanaged risk.
 
-Developers are adopting AI coding agents whether platform and security teams distribute them or not. The question is whether that adoption happens with governance or as fragmented shadow IT with no visibility or control. Coder Agents gives platform and security teams a single place to distribute a native coding agent to their developer population, with centralized oversight, model configuration, and observability built in. It is also a first-class developer experience rather than a locked-down portal developers route around, so platform teams can solve the distribution and governance problem without sacrificing developer satisfaction.
+### Opportunist
 
-### Developers
+Opportunists want AI coding agents to be a productivity multiplier, not a cost center or a shadow IT liability. Coder Agents is a zero-incremental-platform for existing Coder customers: no new security review, no fragmented per-developer tooling, and no vendor lock-in from switching models. Headless, background agent execution lets an organization throw compute at problems, running parallel sub-agents and CI-triggered workflows, so throughput scales with infrastructure rather than headcount.
 
-Developers describe the problem they want solved and move on to the next task. The native agent provisions a workspace, writes the code, runs the tests, and opens the PR in the background, unsupervised and safely sandboxed. Developers can check progress from their phone, review the diff on their laptop when ready, and pick up in their editor to refine the result. It works with the models developers would choose anyway, including Claude, GPT, and Gemini, without needing to manage API keys, configure an agent, or request access from IT.
+### Caring Provider
+
+Developers are adopting AI coding agents whether platform teams distribute them or not, and Caring Providers, whether platform engineers responsible for their developer population or developers themselves, want that adoption to happen with a great experience rather than as fragmented shadow IT. Coder Agents gives platform teams a single place to distribute a native coding agent to their developer population, with centralized oversight and observability built in, while remaining a first-class developer experience rather than a locked-down portal developers route around. For an individual developer, the agent provisions a workspace, writes the code, runs the tests, and opens the PR in the background, unsupervised and safely sandboxed. Developers can check progress from their phone, review the diff on their laptop when ready, and pick up in their editor to refine the result. It works with the models developers would choose anyway, including Claude, GPT, and Gemini, without needing to manage API keys, configure an agent, or request access from IT.
 
 ## Vertical Messaging
 
