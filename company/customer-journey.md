@@ -12,7 +12,7 @@ This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house
 
 Modernize is the addition of AI governance once development is centralized. With development environments already consolidated, organizations gain a natural point to add model access control, auditing, and policy enforcement over how AI agents and developers use AI in those environments.
 
-Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time. They want to move off laptops, and they want AI governed once they do. AI Governance is included in Coder Premium alongside Coder Workspaces, so an organization adopting Premium for Migrate already has Modernize's governance capabilities available without a separate purchase.
+Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time. They want to move off laptops, and they want AI governed once they do. AI Governance is included in Coder Premium alongside Coder Workspaces, so an organization adopting Premium for Migrate already has Modernize's governance capabilities available without a separate purchase. See [Packaging](./packaging.md) for the fuller packaging narrative.
 
 This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house.md) and [Coder AI Governance](../products/coder-ai-governance/message-house.md).
 
@@ -22,7 +22,7 @@ For the fuller argument behind why governance has to live in the environment rat
 
 Multiply is scaling development output with coding agents, including agents that operate with a human in the loop and, increasingly, headless or agent-driven execution that runs without one. This is the leading edge of the journey, depending on the governed, centralized foundation established in Migrate and Modernize, and it's where organizations begin treating agent capacity as infrastructure to provision rather than a tool an individual developer runs locally.
 
-This stage maps to [Coder Agents](../products/coder-agents/message-house.md) and [Coder Agent Relay](../products/coder-agent-relay/message-house.md).
+This stage maps to [Coder Agents](../products/coder-agents/message-house.md) and [Coder Agent Relay](../products/coder-agent-relay/message-house.md). Coder Agents at scale, without a concurrency cap, is packaged as AI Premium; see [Packaging](./packaging.md) for how the tiers map to this stage.
 
 ## This isn't strictly linear
 

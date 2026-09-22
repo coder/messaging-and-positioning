@@ -35,3 +35,5 @@ Retain your choice of clouds, models, coding agents, and development tools. Give
 ### Consistency
 
 Give developers and agents reproducible environments, provisioned consistently with the tools and context they need. Provide secure access to private code, networks, and systems so teams can do meaningful work on a reliable, centrally managed foundation.
+
+See [Packaging](./packaging.md) for how these pillars translate into Coder's tier structure.
