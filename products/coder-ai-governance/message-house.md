@@ -29,11 +29,11 @@ The need for AI governance is especially urgent now as enterprises move rapidly 
 
 ### Why Coder?
 
-Coder provides the governed AI infrastructure layer that enables organizations to move from experimentation to auditable AI development. AI Governance, Coder's Premium capability set made up of AI Gateway and Agent Firewall, centralizes model access, credential management, and network policy enforcement for AI activity running inside Coder Workspaces, whether that activity comes from Coder's own native agent (Coder Agents) or third-party tools like Cursor and Claude Code. Coder reduces blast radius, delivers full observability into AI activity, and gives organizations the foundation to scale AI adoption while maintaining visibility, control, and compliance.
+Coder provides the governed AI infrastructure layer that enables organizations to move from experimentation to auditable AI development. AI Governance, included in Coder Premium and made up of AI Gateway and Agent Firewall, centralizes model access, credential management, and network policy enforcement for AI activity running inside Coder Workspaces, whether that activity comes from Coder's own native agent (Coder Agents) or third-party tools like Cursor and Claude Code. Coder reduces blast radius, delivers full observability into AI activity, and gives organizations the foundation to scale AI adoption while maintaining visibility, control, and compliance.
 
 ## What's Included
 
-AI Governance is Coder's name for a Premium-only capability set made up of two products:
+AI Governance is Coder's name for the capability set included in Coder Premium, made up of two products:
 
 - **AI Gateway** (formerly named AI Bridge): the LLM gateway that centralizes model access, authentication, auditing, and cost controls.
 - **Agent Firewall** (formerly named Agent Boundaries): the process-level network firewall that restricts and audits what agent processes can reach from inside a workspace.

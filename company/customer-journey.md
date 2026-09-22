@@ -12,7 +12,7 @@ This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house
 
 Modernize is the addition of AI governance once development is centralized. With development environments already consolidated, organizations gain a natural point to add model access control, auditing, and policy enforcement over how AI agents and developers use AI in those environments.
 
-Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time. They want to move off laptops, and they want AI governed once they do. AI Governance is sold as an add-on for Premium customers, layering directly onto the Coder Workspaces infrastructure an organization has usually already put in place during Migrate, so Modernize doesn't require standing up a new platform.
+Migrate and Modernize are frequently adopted together rather than as two separate purchase decisions, since most organizations arrive at both needs around the same time. They want to move off laptops, and they want AI governed once they do. AI Governance is included in Coder Premium alongside Coder Workspaces, so an organization adopting Premium for Migrate already has Modernize's governance capabilities available without a separate purchase.
 
 This stage maps to [Coder Workspaces](../products/coder-workspaces/message-house.md) and [Coder AI Governance](../products/coder-ai-governance/message-house.md).
 
