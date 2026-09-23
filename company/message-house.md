@@ -24,6 +24,8 @@ Enterprise teams need control over where developers and agents work, the code an
 
 ## Why Coder
 
+See [Why Coder](./why-coder.md) for the fuller narrative behind these pillars, including why Coder doesn't face the kind of direct, feature-for-feature competition most vendors do.
+
 ### Control
 
 Run development environments and agent execution on self-hosted infrastructure, with air-gapped deployment options for workloads that require them. Give platform teams centralized control over identity, access, policy, isolation, auditability, and environment lifecycles.
