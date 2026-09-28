@@ -208,10 +208,8 @@ In the Multiply phase, organizations begin scaling agentic workflows. Coder Agen
 
 ## 8. Launch and GTM
 
-**When do we plan to launch this and what is the marketing distribution strategy?**
-Coder Agents is scheduled to become generally available on September 1, 2026.
-
-From a marketing standpoint, the beta launch was on May 5, 2026 and served as a major GTM milestone. We supported the beta launch with broad distribution across key channels, including outreach to existing customers, campaigns for prospective buyers, and engagement with the open source community. Subsequent releases will receive promotion as Coder Agents achieves scalability milestones, integration with AI Governance, and other feature improvements.
+**What is the launch timeline for Coder Agents?**
+Coder Agents became generally available on September 1, 2026. It entered beta on May 5, 2026, supported by distribution across existing customers, prospective buyers, and the open source community. Later releases are promoted as Coder Agents reaches scalability milestones, AI Governance integration, and other feature improvements.
 
 **How does Coder Agents fit into a customer's evaluation of Coder?**
 Coder Agents is deployed as part of the existing Coder platform. It runs in the same binary and fits directly into Coder's control plane architecture, so it's available during proof-of-concept evaluations without requiring additional installation or integration.
@@ -227,10 +225,8 @@ Beginning September 1, 2026, Community licenses support up to five concurrently 
 
 Premium deployments can purchase Agent Hours with their Premium license. Agent Hours are shared across the deployment, allowing any number of agents to run concurrently while consuming from a shared pool of purchased working hours. This usage-based model is designed for enterprise workloads, where large development teams, background automation, and API-triggered tasks can create highly variable bursts of agent activity without being constrained by a concurrency limit.
 
-**What should I tell customers who ask about pricing?**
-Coder Agents entered beta on May 5, 2026 and will become generally available on September 1, 2026. Unlimited free usage for existing customers and Community users ends when Coder Agents becomes generally available on September 1, 2026.
-
-Beginning September 1, 2026, Community licenses support up to five concurrently active agents at no cost, with additional agents queued until capacity is available. Premium deployments can purchase a shared pool of Agent Hours with their Premium license, allowing any number of agents to run concurrently while consuming purchased working hours.
+**Where can I find current pricing details?**
+[coder.com/pricing](https://coder.com/pricing) is the source of truth for current numbers. This document covers the mechanics of the model; if it and the pricing page ever diverge, treat the pricing page as authoritative and flag the discrepancy to Product Marketing.
 
 **How will Coder Agents be packaged?**
 Coder Agents is an additional solution that will be part of the existing Coder install. Coder Agents is not a separate product or deployment.
