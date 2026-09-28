@@ -16,7 +16,7 @@ Use this skill for tasks such as:
 - Checking whether proposed content is consistent with established Coder positioning.
 - Understanding a specific audience's priorities, problems, or concerns when writing for them.
 - Writing or evaluating use-case content that spans one or more Coder products.
-- Drafting or reviewing battlecards and positioning against other vendors or product categories.
+- Drafting or reviewing comparisons and positioning against other vendors or product categories.
 
 ## How to use it
 
