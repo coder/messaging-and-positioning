@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
 *GitLab Duo with Amazon Q is a GitLab add-on built on Amazon Q Developer. AWS has announced end of support for Amazon Q Developer IDE plugins and paid subscriptions on April 30, 2027, with Kiro as the successor ([AWS](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/)). As of 2026-09-28, no public statement from GitLab or AWS addresses how that change affects this add-on.*

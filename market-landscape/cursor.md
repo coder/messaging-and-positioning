@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
 *Cursor is made by Anysphere, Inc. As of August 2026, Anysphere is reported to be a wholly owned subsidiary of SpaceX, being integrated into the SpaceXAI team ([Techzine](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company))). The product name is unchanged.*
@@ -50,7 +51,7 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 - **Agent loop and inference stay in Cursor's cloud (as of 2026-09-28).** Self-hosted pools don't move the agent loop out of Cursor's cloud ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/pool)). Coder doesn't change this, so Cursor with Agent Relay isn't a fit for organizations that require inference inside their perimeter ([Agent Relay message house](../products/coder-agent-relay/message-house.md)).
 - **Some content leaves the customer network during self-hosted runs (as of 2026-09-28).** The worker sends Cursor file contents, terminal output, diffs, screenshots, local MCP results, and routing metadata, and uploads artifacts to Cursor-managed storage. The full checkout, build cache, and machine-local credentials stay on the machine ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted)). Cursor's March 2026 launch post describes code and tool execution as staying entirely in the customer network ([Cursor blog](https://cursor.com/blog/self-hosted-cloud-agents)). The current docs are more specific, and this file follows the docs.
 - **No on-premises deployment of Cursor itself (as of 2026-09-28).** Cursor states it doesn't offer on-premises deployment ([Cursor Enterprise](https://cursor.com/enterprise)).
-- **Self-hosted Team Pools are Enterprise-only (as of 2026-09-28).** Team Pools are for Enterprise teams ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/pool)), so Agent Relay for Cursor assumes a Cursor Enterprise plan. This is inferred from Cursor's docs, not stated in Coder's.
+- **Self-hosted Team Pools are Enterprise-only (as of 2026-09-28).** Team Pools require a Cursor Enterprise plan ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/pool)), and Agent Relay for Cursor lists a Cursor Enterprise plan and a licensed Coder deployment as requirements ([Coder docs](https://coder.com/docs/ai-coder/agent-relay/cursor)).
 
 ## Common Questions
 
@@ -68,7 +69,7 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 - **Cursor.** Individual plans range from free (Hobby) to Pro, Pro+, and Ultra ([Cursor pricing](https://cursor.com/pricing)). Teams seats are $40 per user per month (Standard) or $120 per user per month (Premium, 5x usage), and Enterprise is custom ([Cursor docs](https://cursor.com/docs/account/teams/pricing)). Third-party model requests on Teams and Enterprise add a Cursor Token Rate of $0.25 per million tokens on top of model API pricing ([Cursor docs](https://cursor.com/docs/models-and-pricing)). Cursor changed its pricing several times in 2026, so check the live page.
 - **Coder.** Coder offers a free Community edition and a quote-based Premium edition ([coder.com/pricing](https://coder.com/pricing)). The pricing page also references an AI Premium tier that removes the five-concurrent-agent cap on Coder Agents ([coder.com/pricing](https://coder.com/pricing)). AI Governance (AI Gateway and Agent Firewall) is included with a Premium license, not sold as a separate add-on ([AI Governance message house](../products/coder-ai-governance/message-house.md), [Packaging](../company/packaging.md)).
 - **Agent Relay.** No public pricing. Access is through the Coder account team during preview ([Coder docs](https://coder.com/docs/ai-coder/agent-relay/cursor)).
-- **Combined cost.** A customer using Cursor Cloud Agents on Coder pays for a Cursor plan, including model usage, and a Coder license, plus the compute that runs Coder workspaces. This is inferred from the architecture, not a published bundle.
+- **Combined cost.** A customer using Cursor Cloud Agents on Coder pays for a Cursor Enterprise plan, including model usage, and a Coder license ([Coder docs](https://coder.com/docs/ai-coder/agent-relay/cursor)), plus the compute that runs Coder workspaces. This is inferred from the architecture, not a published bundle.
 
 ## Sources
 
@@ -86,7 +87,7 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 - **[Cursor Pricing](https://cursor.com/pricing), [Team Pricing](https://cursor.com/docs/account/teams/pricing), [Models and Pricing](https://cursor.com/docs/models-and-pricing).** Primary. Plans, seat prices, Cursor Token Rate. Accessed 2026-09-28.
 - **[Techzine: SpaceX completes acquisition of Cursor](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/).** Secondary. Acquisition completion, August 2026. Accessed 2026-09-28.
 - **[Wikipedia: Cursor (company)](https://en.wikipedia.org/wiki/Cursor_(company)).** Secondary. Subsidiary status, product surfaces. Accessed 2026-09-28.
-- **[Coder Docs: Agent Relay](https://coder.com/docs/ai-coder/agent-relay) and [Agent Relay for Cursor](https://coder.com/docs/ai-coder/agent-relay/cursor).** Primary. Architecture, preview status, inference not proxied. Accessed 2026-09-28.
+- **[Coder Docs: Agent Relay](https://coder.com/docs/ai-coder/agent-relay) and [Agent Relay for Cursor](https://coder.com/docs/ai-coder/agent-relay/cursor).** Primary. Architecture, preview status, inference not proxied, Enterprise plan requirement. Accessed 2026-09-28.
 - **[Coder Blog: Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution).** Primary. Governance applied automatically, Claude Code integration. Accessed 2026-09-28.
 - **[Coder Docs: Cursor workspace access](https://coder.com/docs/user-guides/workspace-access/cursor).** Primary. IDE connection. Accessed 2026-09-28.
 - **[Coder Registry: Cursor CLI module](https://registry.coder.com/modules/coder-labs/cursor-cli).** Primary. CLI in workspaces. Accessed 2026-09-28.
