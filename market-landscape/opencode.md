@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
 *OpenCode is built by Anomaly, the team behind SST, and was previously hosted at `github.com/sst/opencode` ([Developers Digest](https://www.developersdigest.tech/blog/opencode-developer-guide-2026)). It now lives at [github.com/anomalyco/opencode](https://github.com/anomalyco). A separate, earlier Go project at [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) shares the name. This page covers the Anomaly project.*

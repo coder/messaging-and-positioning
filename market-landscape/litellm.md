@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Competitive |
 
 *(LiteLLM is developed by BerriAI. The GitHub repository is [BerriAI/litellm](https://github.com/BerriAI/litellm). This comparison is competitive at the AI Gateway layer only. LiteLLM does not compete with the broader Coder platform.)*

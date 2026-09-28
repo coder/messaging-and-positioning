@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Competitive (Codex cloud) and Complementary (Codex CLI, IDE extension, Remote SSH) |
 
 *(On July 9, 2026, OpenAI merged the standalone Codex desktop app into the new ChatGPT desktop app, where Codex remains a dedicated coding mode. The Codex CLI, IDE extension, and Codex cloud keep the Codex name. See [Wikipedia](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)) and [Developers Digest](https://www.developersdigest.tech/blog/chatgpt-work-codex-desktop-app).)*

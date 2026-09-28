@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Competitive |
 
 *(Daytona began as an open-source development environment manager and repositioned around sandboxed AI code execution in early 2025, per [Morph](https://www.morphllm.com/comparisons/daytona-alternative) and [Northflank](https://northflank.com/blog/top-daytona-io-alternatives-for-running-ai-code-in-secure-sandboxed-environments). The company name is unchanged.)*

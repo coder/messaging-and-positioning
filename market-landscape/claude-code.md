@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
 *(Anthropic's hosted cloud sessions for Claude Code were previously called "Claude Code on the web" and are now called cloud sessions, per [Anthropic's announcement](https://claude.com/blog/claude-code-on-the-web).)*

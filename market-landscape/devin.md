@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Competitive |
 
 *Devin is built by Cognition (formerly Cognition Labs). Devin Desktop is the editor formerly called Windsurf ([Continuum](https://continuumcode.ai/guides/devin-pricing/), [Wikipedia](https://en.wikipedia.org/wiki/Cognition_AI)).*

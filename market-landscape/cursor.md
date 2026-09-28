@@ -3,6 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
+| Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
 *Cursor is made by Anysphere, Inc. As of August 2026, Anysphere is reported to be a wholly owned subsidiary of SpaceX, being integrated into the SpaceXAI team ([Techzine](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company))). The product name is unchanged.*
