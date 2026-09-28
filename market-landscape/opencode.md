@@ -68,8 +68,7 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 - **OpenCode Zen.** Pay-as-you-go per-token pricing. Credit card fees of 4.4% + $0.30 per transaction are passed through at cost ([Zen docs](https://opencode.ai/docs/zen/)).
 - **OpenCode Go.** $10/month, with Go Plus at $40/month for higher limits ([OpenCode Go](https://opencode.ai/go)).
 - **OpenCode Enterprise.** Per-seat pricing through sales. OpenCode does not charge for tokens when the organization uses its own LLM gateway ([OpenCode Enterprise](https://opencode.ai/docs/enterprise/)).
-- **Coder.** A free Community edition and a Premium edition priced through sales ([G2](https://www.g2.com/products/coder/pricing), secondary). See `coder.com/pricing` for current tiers and [Packaging](../company/packaging.md) for the narrative. Community deployments do not include AI Gateway or Agent Firewall ([Coder docs](https://coder.com/docs/ai-coder/ai-governance)).
-- **Coder AI Governance packaging is inconsistent across doc versions.** The v2.35.3 docs describe AI Governance as a separately purchased per-user add-on for Premium ([Coder docs v2.35.3](https://coder.com/docs/ai-coder/ai-governance)). The v2.37 docs describe it as included with a Premium license ([Coder docs v2.37](https://coder.com/docs/ai-coder/ai-gateway/cost-controls)). Confirm against `coder.com/pricing` before publishing.
+- **Coder.** A free Community edition and a Premium edition priced through sales ([G2](https://www.g2.com/products/coder/pricing), secondary). See `coder.com/pricing` for current tiers and [Packaging](../company/packaging.md) for the narrative. Community deployments do not include AI Gateway or Agent Firewall; AI Governance is included with a Premium license rather than sold as a separate add-on ([AI Governance message house](../products/coder-ai-governance/message-house.md), [Packaging](../company/packaging.md)).
 
 ## Sources
 
@@ -86,8 +85,8 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 - **[Fastino OpenCode guide](https://fastino.ai/blog/the-complete-guide-to-opencode-open-source-ai-coding-agents).** MIT license. Secondary. Accessed 2026-09-28.
 - **[Coder docs, AI Gateway OpenCode client](https://coder.com/docs/ai-coder/ai-gateway/clients/opencode).** OpenCode configuration for AI Gateway. Primary. Accessed 2026-09-28.
 - **[Coder docs, AI Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients).** Supported clients. Primary. Accessed 2026-09-28.
-- **[Coder docs, AI Governance](https://coder.com/docs/ai-coder/ai-governance).** AI Gateway audit, Community limits, add-on packaging (v2.35.3). Primary. Accessed 2026-09-28.
-- **[Coder docs, AI Gateway cost controls](https://coder.com/docs/ai-coder/ai-gateway/cost-controls).** Budgets and Premium packaging (v2.37). Primary. Accessed 2026-09-28.
+- **[Coder docs, AI Governance](https://coder.com/docs/ai-coder/ai-governance).** AI Gateway audit, Community limits. Primary. Accessed 2026-09-28.
+- **[Coder docs, AI Gateway cost controls](https://coder.com/docs/ai-coder/ai-gateway/cost-controls).** Budgets and Premium packaging. Primary. Accessed 2026-09-28.
 - **[Coder docs, Agent Boundaries](https://coder.com/docs/ai-coder/agent-boundaries) and [Agent Firewall](https://coder.com/docs/ai-coder/agent-firewall).** Process-level network enforcement and rename. Primary. Accessed 2026-09-28.
 - **[Coder docs, Run AI Coding Agents](https://coder.com/docs/ai-coder).** Coder Agents architecture. Primary. Accessed 2026-09-28.
 - **[Coder docs, Template Optimization](https://coder.com/docs/ai-coder/agents/platform-controls/template-optimization).** Network-level versus command-level boundaries. Primary. Accessed 2026-09-28.
@@ -95,3 +94,4 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 - **[coder/coder README](https://github.com/coder/coder).** Platform summary, OpenCode support, no API keys in workspaces. Primary. Accessed 2026-09-28.
 - **[Coder Registry modules](https://registry.coder.com/modules) and [OpenCode module source](https://github.com/coder/registry/blob/main/registry/coder-labs/modules/opencode/main.tf).** OpenCode module. Primary. Accessed 2026-09-28.
 - **[G2, Coder pricing](https://www.g2.com/products/coder/pricing).** Community and Premium tiers. Secondary. Accessed 2026-09-28.
+- **[Coder AI Governance message house](../products/coder-ai-governance/message-house.md) and [Packaging](../company/packaging.md).** AI Governance included with Premium, not sold separately. Primary (this repository). Accessed 2026-09-28.
