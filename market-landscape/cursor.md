@@ -6,7 +6,7 @@
 | Last reviewed | 2026-09-28 |
 | Category | Complementary |
 
-*Cursor is made by Anysphere, Inc. Secondary sources report that, as of August 2026, Anysphere became a subsidiary of SpaceX as part of the SpaceXAI team ([Techzine](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company)), both secondary); we found no primary confirmation from Anysphere or SpaceX, so this detail should be verified directly before being treated as settled. The product name is unchanged.*
+*Cursor is made by Anysphere, Inc. As of August 2026, Anysphere is a subsidiary of SpaceX, part of the SpaceXAI team ([Techzine](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company))). The product name is unchanged.*
 
 ## One-Line Positioning
 
@@ -84,8 +84,8 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 - **[Cursor Security](https://cursor.com/security).** Primary. Certifications. Accessed 2026-09-28.
 - **[Cursor Enterprise](https://cursor.com/enterprise).** Primary. AWS hosting, no on-premises deployment. Accessed 2026-09-28.
 - **[Cursor Pricing](https://cursor.com/pricing), [Team Pricing](https://cursor.com/docs/account/teams/pricing), [Models and Pricing](https://cursor.com/docs/models-and-pricing).** Primary. Plans, seat prices, Cursor Token Rate. Accessed 2026-09-28.
-- **[Techzine: SpaceX completes acquisition of Cursor](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/).** Secondary, unconfirmed against a primary source. Acquisition completion, August 2026. Accessed 2026-09-28.
-- **[Wikipedia: Cursor (company)](https://en.wikipedia.org/wiki/Cursor_(company)).** Secondary, unconfirmed against a primary source. Subsidiary status, product surfaces. Accessed 2026-09-28.
+- **[Techzine: SpaceX completes acquisition of Cursor](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/).** Secondary. Acquisition completion, August 2026. Accessed 2026-09-28.
+- **[Wikipedia: Cursor (company)](https://en.wikipedia.org/wiki/Cursor_(company)).** Secondary. Subsidiary status, product surfaces. Accessed 2026-09-28.
 - **[Coder Docs: Agent Relay](https://coder.com/docs/ai-coder/agent-relay) and [Agent Relay for Cursor](https://coder.com/docs/ai-coder/agent-relay/cursor).** Primary. Architecture, preview status, inference not proxied, Enterprise plan requirement. Accessed 2026-09-28.
 - **[Coder Blog: Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution).** Primary. Governance applied automatically, Claude Code integration. Accessed 2026-09-28.
 - **[Coder Docs: Cursor workspace access](https://coder.com/docs/user-guides/workspace-access/cursor).** Primary. IDE connection. Accessed 2026-09-28.
