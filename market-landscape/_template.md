@@ -5,6 +5,7 @@
 | Field | Value |
 |---|---|
 | Date generated | YYYY-MM-DD |
+| Last reviewed | YYYY-MM-DD |
 | Category | Competitive or Complementary |
 
 *(If the company's product has been renamed or rebranded, note its prior name here.)*
