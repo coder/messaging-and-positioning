@@ -16,11 +16,12 @@ Use this skill for tasks such as:
 - Checking whether proposed content is consistent with established Coder positioning.
 - Understanding a specific audience's priorities, problems, or concerns when writing for them.
 - Writing or evaluating use-case content that spans one or more Coder products.
+- Drafting or reviewing battlecards and positioning against other vendors or product categories.
 
 ## How to use it
 
 1. Read `AI_CONTEXT.md` at the root of this repository first. It explains the repository structure and how to select relevant context.
-2. Follow its guidance to identify and read only the smallest set of relevant files under `company/`, `products/`, `audiences/`, and `use-cases/` needed for the task.
+2. Follow its guidance to identify and read only the smallest set of relevant files under `company/`, `products/`, `audiences/`, `use-cases/`, and `market-landscape/` needed for the task.
 3. Treat the repository as authoritative for current public messaging and positioning. Do not invent product facts, claims, or competitive positioning that the repository does not support.
 
 Do not duplicate or restate the repository's content here. This skill is a pointer, not a copy; the repository itself is the source of truth and may change independently of this skill file.
