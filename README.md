@@ -4,7 +4,7 @@ This repository is Coder’s canonical source of truth for company and product m
 
 It exists to give everyone at Coder, including the AI agents and tools we use, a shared foundation for how we describe Coder, our products, the problems we solve, and why they matter.
 
-> **Everything in this repository is public information.** Do not commit confidential, proprietary, customer-sensitive, or otherwise non-public information. Messaging that relies on non-public context should be maintained elsewhere.
+> **This repository is intended to become public.** Write content here as if it could be published as-is. Do not commit confidential, proprietary, or customer-sensitive information. Sales qualification criteria, internal enablement scripts ("what should I tell a customer who asks..."), and forward-looking roadmap or partnership detail should be maintained elsewhere; if it relies on non-public context, it doesn't belong in this repository.
 
 ## What's here
 

@@ -49,12 +49,12 @@ Organizations transitioning out of a rapid-growth or digital-disruption phase an
 - Uncentralized, basic developer tooling with no active push to standardize it
 - A growth- or market-share-focused business cycle with little pressure yet to consolidate spend
 
-## Disqualifying signals
+## Signals Coder treats as a poor fit
 
-Two additional signals lead Coder to walk away from an opportunity even when an organization otherwise fits the profile above.
+Two additional patterns tend to signal a poor fit even when an organization otherwise matches the profile above.
 
-- **Unwillingness to acknowledge risk already taken.** An organization that has already deployed AI in a way that introduces real risk, for example rolling out AI coding tools broadly on unmanaged laptops, but is unwilling to acknowledge that decision and take a step back to reduce the risk. These organizations often return once they feel the consequences directly, and Coder is better served waiting for that shift than pushing an unreceptive prospect.
-- **No connected executive initiative or budget.** A need that isn't attached to a strategic initiative at the executive level usually doesn't have real budget behind it. If the champions Coder is working with can't provide access to validate that budget exists at that level, the opportunity is unlikely to close and isn't worth continued pursuit.
+- **Unwillingness to address risk already taken.** Organizations that have already deployed AI in a way that introduces real risk, for example broad AI coding tool rollout on unmanaged laptops, but aren't ready to acknowledge that risk or take steps to reduce it, are not yet ready for a governance conversation. That readiness often changes once the risk materializes.
+- **No connected executive initiative.** AI infrastructure investment tends to succeed when it's tied to a strategic initiative with executive sponsorship, rather than pursued as a bottom-up, unbudgeted request.
 
 ## Related
 

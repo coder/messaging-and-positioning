@@ -192,19 +192,21 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 - **MCP server support** - available in both Community and Premium, enabling model context protocol integrations within workspaces.
 - **Extensible to AI Governance** - process-level network controls and LLM gateway with prompt logging and model access control are included in Coder Premium and layer directly onto existing workspace infrastructure. No new platform required.
 
-## Known Limitations
+## Scope and Tradeoffs
 
-- **Full AI governance for external IDE agents is in development** - When developers use Cursor or Windsurf connected to a Coder workspace via SSH, LLM calls still go directly from the IDE client to the model provider, bypassing Coder's AI Governance today. The infrastructure security story, source code stays in your VPC, is strong and real. Full AI governance for external IDE agents (logging, attribution, guardrails) is in active development. For complete AI governance today, the path is Coder Agents for native agent execution.
-- **Workspace provisioning time varies by template complexity.** Prebuilt workspace pools mitigate this for common configurations, but complex templates with lengthy startup procedures will still have provisioning latency.
-- **Coder Workspaces is a self-hosted alternative to lightweight sandbox products, not a like-for-like comparison.** Products such as Daytona and E2B optimize for sub-2-second ephemeral runtimes for simple agent experimentation. Coder Workspaces trades some of that raw startup speed for a full-featured, self-hosted environment platform with the governance, persistence, and enterprise depth those sandbox products don't provide, a tradeoff most enterprises are willing to make in exchange for control over their infrastructure.
+- **AI governance for externally-connected IDE agents**: When developers connect Cursor or Windsurf to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
+- **Provisioning time scales with template complexity.** Prebuilt workspace pools give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
+- **Coder Workspaces optimizes for depth, not raw cold-start speed.** Lightweight sandbox products like Daytona and E2B are built for sub-2-second ephemeral runtimes for simple agent experimentation. Coder Workspaces is a full-featured, self-hosted environment platform with governance, persistence, and enterprise depth those products don't provide, a tradeoff most enterprises make in exchange for control over their infrastructure.
 
 ## Competitive Position
 
 Coder Workspaces sits at the intersection of two converging shifts: the collapse of legacy CDE platforms and the rise of AI-driven development. Five major competitors, AWS Cloud9, AWS CodeCatalyst, JetBrains Space, JetBrains CodeCanvas, and Microsoft Dev Box, have been deprecated, discontinued, or closed to new customers in the past 18 months. The remaining SaaS-first competitors (GitHub Codespaces, Ona/Gitpod) are either locked to a single cloud or actively pivoting away from their CDE roots. That leaves enterprises without a committed, enterprise-grade platform, and Coder is the natural destination.
 
-Coder Workspaces is the only CDE that is self-hosted on any infrastructure (any cloud, on-prem, or air-gapped), IDE-agnostic, and purpose-built to serve as the foundation for both human developer workflows and AI agent execution. Where competitors offer hosted convenience with significant constraints, vendor lock-in, limited deployment options, no AI governance path, Coder offers infrastructure ownership, flexibility, and a clear runway into the AI agent development era.
+Coder Workspaces is among the few CDEs that are self-hosted on any infrastructure (any cloud, on-prem, or air-gapped), IDE-agnostic, and purpose-built to serve as the foundation for both human developer workflows and AI agent execution. Where competitors offer hosted convenience with significant constraints, vendor lock-in, limited deployment options, no AI governance path, Coder offers infrastructure ownership, flexibility, and a clear runway into the AI agent development era.
 
-In regulated industries, Coder is the only platform that can meet data residency, air-gap, and compliance requirements while also supporting modern AI tooling. For multi-cloud enterprises, it is the only CDE that works consistently across AWS, Azure, GCP, and on-prem without compromise, and for organizations already deploying AI coding tools, Coder is the only CDE that is also the foundation for a complete AI governance and agent execution stack.
+In regulated industries, Coder is one of the only platforms that can meet data residency, air-gap, and compliance requirements while also supporting modern AI tooling. For multi-cloud enterprises, it is one of the few CDEs that works consistently across AWS, Azure, GCP, and on-prem without compromise, and for organizations already deploying AI coding tools, Coder is well positioned as the foundation for a complete AI governance and agent execution stack.
+
+See [`market-landscape/`](../../market-landscape/) for sourced, dated comparisons against specific competitors.
 
 ## Target Market / ICP
 
