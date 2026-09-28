@@ -45,7 +45,7 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 - **Coder Workspaces.** Self-hosted development environments for developers and their agents, provisioned from Terraform templates on infrastructure the customer controls ([Coder AI docs](https://coder.com/docs/ai-coder), [Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
 - **Coder Agents.** A standalone agent written in Go that runs inside the Coder control plane. It is not a wrapper around Claude Code or Codex ([Coder Agents docs](https://coder.com/docs/ai-coder/agents)). Developers use it through the web UI or REST API ([Coder AI docs](https://coder.com/docs/ai-coder)).
 - **AI Governance.** AI Gateway and Agent Firewall are part of AI Governance, which is included with a Premium license ([Coder AI Gateway Codex docs](https://coder.com/docs/ai-coder/ai-gateway/clients/codex)). AI Gateway supports Codex CLI as a client ([Coder AI Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients)).
-- **Agent Relay.** Connects cloud-hosted agent sessions to self-hosted Coder workspaces. Cursor Cloud Agents is the first supported provider, and Codex is not currently supported ([Coder AI docs](https://coder.com/docs/ai-coder)).
+- **Agent Relay.** Connects cloud-hosted agent sessions to self-hosted Coder workspaces. As of 2026-09-28, documented supported providers are Cursor (first supported, since September 2, 2026) and Claude Code (added September 15, 2026, early access with select design partners); Codex is not currently supported ([Coder AI docs](https://coder.com/docs/ai-coder), [Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
 
 ## Where Codex Is Strong or Coder Has a Gap
 
@@ -60,9 +60,9 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 
 - **No self-hosted Codex cloud (as of 2026-09-28).** Codex cloud runs on hosted environments ([OpenAI admin rollout guide](https://developers.openai.com/codex/enterprise/admin-setup)). The self-hosted options OpenAI documents for Codex are local clients and SSH-connected remote hosts ([OpenAI Remote connections docs](https://developers.openai.com/codex/remote-connections)). The separate Agents API, in public beta since September 10, 2026, can run tool execution in a customer-run sandbox, but the Codex harness and sessions stay on OpenAI infrastructure ([OpenAI API changelog](https://developers.openai.com/api/docs/changelog), [OpenAI self-hosted sandboxes docs](https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted)).
 - **Agents API data controls (as of 2026-09-28).** The Agents API supports data residency only in the United States and does not support Zero Data Retention, and a self-hosted sandbox does not change either ([OpenAI Agents API docs](https://developers.openai.com/api/docs/guides/agents-api/overview)).
-- **Setup-phase network access (as of 2026-09-28).** Setup scripts in Codex cloud run with internet access ([OpenAI cloud environments docs](https://developers.openai.com/codex/cloud/environments)). One secondary source reports no documented way to restrict that access ([WorkOS](https://workos.com/blog/agent-sandbox-egress-defaults), secondary).
+- **Setup-phase network access (as of 2026-09-28).** Setup scripts in Codex cloud run with internet access ([OpenAI cloud environments docs](https://developers.openai.com/codex/cloud/environments)). A third-party analysis states it found no documented way to restrict that access ([WorkOS](https://workos.com/blog/agent-sandbox-egress-defaults), secondary); we did not find a primary OpenAI source confirming or ruling out a setup-phase restriction option, so this should be reverified against OpenAI's own docs before being treated as settled.
 - **Shared caches (as of 2026-09-28).** For Business and Enterprise, cached environments are shared by everyone with access to the environment ([OpenAI cloud environments docs](https://developers.openai.com/codex/cloud/environments)).
-- **Local usage and compliance export (as of 2026-09-28).** A secondary source reports that the Compliance API does not cover local Codex usage ([PromptArmor](https://www.promptarmor.com/resources/configuring-codex-securely-across-every-platform-and-use-case), secondary).
+- **Local usage and compliance export (as of 2026-09-28).** A secondary source, a security vendor's blog rather than OpenAI's own documentation, reports that the Compliance API does not cover local Codex usage ([PromptArmor](https://www.promptarmor.com/resources/configuring-codex-securely-across-every-platform-and-use-case), secondary); confirm against OpenAI's compliance documentation before relying on this.
 - **Managed configuration scope (as of 2026-09-28).** Managed configuration covers local runtime behavior. It doesn't grant workspace access or replace workspace RBAC ([OpenAI managed configuration docs](https://developers.openai.com/codex/enterprise/managed-configuration)).
 - **Custom model protocol (as of 2026-09-28).** Custom providers must support the Responses API. Providers that only offer Chat Completions need a translation proxy ([Codex Knowledge Base](https://codex.danielvaughan.com/2026/04/23/codex-cli-custom-model-providers-configuration-guide/), secondary).
 
@@ -73,7 +73,7 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 - **Is Codex locked to OpenAI models?** Codex cloud documents no option for non-OpenAI models. The Codex CLI can use local or custom providers ([OpenAI advanced configuration docs](https://developers.openai.com/codex/config-advanced)).
 - **Can Codex cloud run on our infrastructure?** OpenAI does not document a self-hosted Codex cloud. Remote SSH lets the desktop app work on a remote host, and files, commands, credentials, network access, and compute stay on that machine ([OpenAI Developers on X](https://x.com/OpenAIDevs/status/2044828473060139208)). Model inference still goes through OpenAI unless a custom provider is configured.
 - **How is Coder Agents different from Codex?** Coder Agents runs its agent loop, chat history, and tool execution entirely in the customer's Coder deployment and works with any configured LLM provider ([Coder Agents docs](https://coder.com/docs/ai-coder/agents)).
-- **Does Coder Agent Relay work with Codex?** Not today. Cursor Cloud Agents is the first supported provider ([Coder AI docs](https://coder.com/docs/ai-coder)).
+- **Does Coder Agent Relay work with Codex?** Not today. As of 2026-09-28, Agent Relay's documented supported providers are Cursor and Claude Code ([Coder AI docs](https://coder.com/docs/ai-coder), [Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
 
 ## When Codex Alone Is Enough
 
@@ -119,13 +119,14 @@ All accessed 2026-09-28.
 - **[Coder Agents solution page](https://coder.com/solutions/agents).** Primary. Model switching as configuration.
 - **[Coder Registry announcement](https://coder.com/blog/introducing-the-coder-registry).** Primary. Terraform templates.
 - **[Coder pricing](https://coder.com/pricing).** Primary. Editions and Coder Agents concurrency cap.
+- **[Coder Agent Relay Claude Code announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development).** Primary. Agent Relay supported providers and dates.
 - **[Wikipedia, OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)).** Secondary. App merger date, licenses.
 - **[Developers Digest](https://www.developersdigest.tech/blog/chatgpt-work-codex-desktop-app).** Secondary. Desktop app merger details.
 - **[Agent37](https://www.agent37.com/blog/codex-cloud).** Secondary. Quotes OpenAI's Codex cloud glossary definition.
 - **[Codex Knowledge Base](https://codex.danielvaughan.com/2026/04/23/codex-cli-custom-model-providers-configuration-guide/).** Secondary. Responses API requirement for custom providers.
 - **[freeCodeCamp Codex Handbook](https://www.freecodecamp.org/news/the-codex-handbook-a-practical-guide-to-openai-s-coding-platform/).** Secondary. Codex model lineup.
-- **[WorkOS](https://workos.com/blog/agent-sandbox-egress-defaults).** Secondary. Setup-phase egress.
-- **[PromptArmor](https://www.promptarmor.com/resources/configuring-codex-securely-across-every-platform-and-use-case).** Secondary. Compliance API coverage of local usage.
+- **[WorkOS](https://workos.com/blog/agent-sandbox-egress-defaults).** Secondary. Setup-phase egress, unverified against a primary OpenAI source.
+- **[PromptArmor](https://www.promptarmor.com/resources/configuring-codex-securely-across-every-platform-and-use-case).** Secondary. Compliance API coverage of local usage, unverified against a primary OpenAI source.
 - **[Verdent](https://www.verdent.ai/guides/codex-pricing-2026).** Secondary. Token-based credit billing.
 - **[G2](https://www.g2.com/products/coder/pricing).** Secondary. Reviewer view of Coder operational overhead.
 - **[InfraGap](https://infragap.com/tools/coder/).** Secondary. Coder Premium price not published.
