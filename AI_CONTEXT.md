@@ -16,7 +16,7 @@ In general:
 - **Products** provides product-specific messaging, positioning, value propositions, terminology, and FAQs.
 - **Audiences** provides context about the people Coder communicates with, including their priorities, problems, needs, and concerns. This includes role-based pages (e.g. developer, CISO) and an `audiences/personas/` subdirectory describing motivational buyer personas that cut across roles. See `audiences/personas/overview.md` for how the two differ.
 - **Use cases** describes the problems Coder helps customers solve and the outcomes they want to achieve, including use cases that may span multiple products.
-- **Market landscape** provides comparisons between Coder and the vendors and product categories that come up alongside it, explaining how each relates to Coder and how to position Coder alongside it. Comparisons build on `company/why-coder.md` and link to the competitive sections of product message houses and FAQs, so consult those as well.
+- **Market landscape** provides comparisons between Coder and the vendors and product categories that come up alongside it, whether competitive or complementary, explaining how each relates to Coder and how to position Coder alongside it. Comparisons build on `company/why-coder.md` and link to the market landscape sections of product message houses and FAQs, so consult those as well.
 
 Not every task requires context from every directory. Select the smallest set of relevant sources that provides enough context to answer accurately.
 
