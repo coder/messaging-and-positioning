@@ -162,15 +162,15 @@ Coder AI Governance provides centralized control and visibility over how AI agen
 
 **Identity, Access, and Audit Controls:** Role-based access control, audit logging, and user attribution that track prompts, tool calls, and agent actions for governance and incident response.
 
-## Known Limitations
+## Governance Scope
 
-- **Micro-segmentation**: Fine-grained runtime policies such as per-directory or per-file access restrictions for agents are not available today. Governance is primarily enforced through workspace isolation, infrastructure boundaries, and network controls (domain, method, and path) rather than filesystem-level policy enforcement.
-- **Native SIEM integrations**: Monitoring and metrics are available through observability tools such as Prometheus and Grafana, and telemetry can be exported through OpenTelemetry or structured logs. However, native, purpose-built integrations with enterprise SIEM platforms are still evolving.
-- **MCP governance is consolidating**: AI Gateway's original, in-gateway MCP tool injection is deprecated in favor of Coder Agents' organization-scoped MCP server management, which is the current, actively developed governance path for MCP tools.
-- **Agent Firewall does not cover Coder Agents tool calls**: Coder Agents executes shell tool calls inside the workspace through the workspace daemon, and those processes are not wrapped by Agent Firewall today. Network restrictions for Coder Agents workspaces come from template-defined network policy, which platform teams configure themselves. AI Gateway's model-level governance is unaffected and applies to Coder Agents automatically.
-- **Agent Firewall's sandboxing is still maturing**: its network enforcement backends (nsjail and landjail) are effective at domain/method/path-level control today, but full process (PID) isolation and complete non-TCP/UDP control are still being built out, and should not be positioned as complete today.
-- **Maturity of AI governance**: We have recently introduced AI Governance capabilities (GA'ed in Feb 2026). These features focus on managing and auditing AI agents within development environments. They should not be positioned as a complete solution for preventing every class of AI-related vulnerability.
-- **Disparate needs by industry**: Security requirements vary across industries. Highly regulated sectors such as federal and financial services require stricter controls than others. Because these needs are fragmented, no single governance solution fits every environment, and Coder may need to be combined with additional security controls.
+- **Network policy granularity**: Governance is enforced through workspace isolation, infrastructure boundaries, and domain/method/path-level network controls. Per-directory or per-file runtime policy is not part of the current model.
+- **SIEM integration path**: Prometheus, Grafana, OpenTelemetry, and structured log export are the supported observability path today. Purpose-built, native integrations with specific enterprise SIEM platforms are on the roadmap.
+- **MCP governance model**: Coder Agents' organization-scoped MCP server management is the current, actively developed governance path for MCP tools; AI Gateway's original in-gateway MCP tool injection has been superseded by it.
+- **Coverage by agent type**: Agent Firewall's process-level network enforcement applies to third-party agents, such as Claude Code and Codex, running inside a workspace. Coder Agents' shell tool calls run through the workspace daemon and are governed by template-defined network policy instead. AI Gateway's model-level governance applies to both paths automatically.
+- **Agent Firewall enforcement depth**: Agent Firewall's nsjail and landjail backends enforce domain, method, and path-level network policy today. Process-level (PID) isolation and full non-TCP/UDP control are active areas of investment.
+- **Positioning AI Governance**: AI Governance (GA'ed February 2026) manages and audits AI agents within development environments. It is one layer of a broader security posture, not a standalone solution for every class of AI-related risk.
+- **Industry-specific requirements**: Security requirements vary by industry, and highly regulated sectors such as federal and financial services often require controls beyond any single vendor's default configuration. Coder is frequently deployed alongside complementary security tooling for this reason.
 
 ## Competitive Position
 
