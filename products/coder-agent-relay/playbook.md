@@ -2,7 +2,7 @@
 
 > A shared reference for understanding where Coder Agent Relay fits, how it works, and how to support organizations evaluating or adopting it.
 
-This playbook builds on the [Agent Relay message house](./message-house.md), the [Agent Relay for Cursor FAQ](./cursor-faq.md), and the [Agent Relay for Claude FAQ](./claude-code-faq.md). When they conflict, the message house governs positioning and the FAQs govern provider-specific technical detail. Items marked `TBD` are open questions for Product Marketing. For preview access, see [Contacts](#contacts).
+This playbook builds on the [Agent Relay message house](./message-house.md), the [Agent Relay for Cursor FAQ](./cursor-faq.md), and the [Agent Relay for Claude FAQ](./claude-code-faq.md). When they conflict, the message house governs positioning and the FAQs govern provider-specific technical detail. For preview access, see [Contacts](#contacts).
 
 ---
 
