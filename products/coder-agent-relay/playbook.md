@@ -108,7 +108,7 @@ Execution runs inside infrastructure the organization already governs, with the 
 
 **Relevant value**
 
-Agent Relay extends infrastructure existing Coder customers already operate, organizations, templates, RBAC, and audit logging, to cloud-hosted agents. Coder provisions one ephemeral workspace per session and scales to zero when idle. Startup time depends on template complexity; templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
+Agent Relay extends the organizations, templates, RBAC, and audit logging that existing Coder customers already operate to cloud-hosted agents. Coder provisions one ephemeral workspace per session and scales to zero when idle. Startup time depends on template complexity; templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
 
 **Useful framing**
 
@@ -168,11 +168,11 @@ Developers want the best cloud agents. Platform and security teams need control 
 
 ### The approach
 
-Split the agent stack at the execution boundary. The provider keeps the developer experience, orchestration, and inference. Coder provides the execution environment: an ephemeral, governed workspace per session, provisioned from a platform-managed template. Agent Relay connects the two and manages the workspace lifecycle.
+Split the agent stack at the execution boundary. The provider keeps the developer experience, orchestration, and inference. Coder provides the execution environment, giving each session its own ephemeral, governed workspace built from a platform-managed template. Agent Relay connects the two and manages the workspace lifecycle.
 
 ### The value
 
-Agent Relay is the means, not the end. The value customers are buying is the Coder infrastructure underneath: self-hosting, neutrality, standardization, connectivity, and governance that already work for human developers and now extend to cloud agents.
+Agent Relay is the means, not the end. The value customers are buying is the Coder infrastructure underneath. Self-hosting, neutrality, standardization, connectivity, and governance already work for human developers, and Agent Relay extends them to cloud agents.
 
 ### Key capabilities
 
@@ -228,7 +228,7 @@ The Coder control plane, Agent Relay, and workspaces run on customer-controlled 
 
 ### Data and trust boundaries
 
-Repositories, build caches, credentials, internal services, and development tooling stay in the customer's Coder deployment. Some content must cross the boundary: the worker or runner sends conversation content, including tool results that can contain code, to the provider for inference. Cursor documents that file contents, terminal output, diffs, screenshots, local MCP results, and routing metadata are sent to Cursor. Evaluate specific data flows against each provider's architecture and security documentation rather than assuming all data stays inside. Coder doesn't proxy or observe model inference, and Coder AI Gateway isn't in the inference path.
+Repositories, build caches, credentials, internal services, and development tooling stay in the customer's Coder deployment. Some content must cross the boundary. The worker or runner sends conversation content, including tool results that can contain code, to the provider for inference. Cursor documents that file contents, terminal output, diffs, screenshots, local MCP results, and routing metadata are sent to Cursor. Evaluate specific data flows against each provider's architecture and security documentation rather than assuming all data stays inside. Coder doesn't proxy or observe model inference, and Coder AI Gateway isn't in the inference path.
 
 ---
 
@@ -304,7 +304,7 @@ Orchestration and inference stay with the provider, and some content crosses the
 
 ### Organizational considerations
 
-- Who approves AI tools: platform, security, compliance, or a central AI group?
+- Who approves AI tools, such as platform, security, compliance, or a central AI group?
 - Is there a mandate to reduce shadow AI or provide an approved path?
 - Which regulatory frameworks (for example DORA or FCA/PRA operational resilience) are in scope?
 
@@ -727,8 +727,8 @@ Agent Relay is a capability within existing Coder tiers rather than a separate S
 ### Prerequisites
 
 - A licensed Coder Premium deployment
-- For Cursor: a Cursor Enterprise plan
-- For Claude Code: an Anthropic Team or Enterprise plan (Anthropic self-hosted environments are in public beta on these plans)
+- A Cursor Enterprise plan, for Cursor
+- An Anthropic Team or Enterprise plan, for Claude Code (Anthropic self-hosted environments are in public beta on these plans)
 
 ### Pricing metric
 
@@ -812,13 +812,16 @@ Additional technical, product, security, or commercial expertise may be useful w
 
 ### Evaluation
 
-- Preview access and pilot scoping: see [Contacts](#contacts)
+- For preview access and pilot scoping, see [Contacts](#contacts)
 
 ### Market context
 
 - [Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution)
 - [Coder Brings Claude Code to Agent Relay](https://coder.com/blog/agent-relay-claude-code-agentic-development)
-- Market landscape: [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Daytona](../../market-landscape/daytona.md), [E2B](../../market-landscape/e2b.md)
+- [Coder and Cursor](../../market-landscape/cursor.md)
+- [Coder and Claude Code](../../market-landscape/claude-code.md)
+- [Coder and Daytona](../../market-landscape/daytona.md)
+- [Coder and E2B](../../market-landscape/e2b.md)
 
 ---
 
