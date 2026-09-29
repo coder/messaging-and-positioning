@@ -1,6 +1,6 @@
 # [Product Name]
 
-> Template for product playbooks. Copy this file to `products/<product>/playbook.md`, replace the bracketed guidance in each section with real content, and delete this note. This repository is public, so everything in a playbook is public the moment it merges: only include evidence labeled **Public**, and keep customer-confidential or internal-only material (including internal contact details) in an internal source. Where a section can't be filled accurately yet, mark it `TBD` with the open question rather than inventing a claim.
+> Template for product playbooks. Copy this file to `products/<product>/playbook.md`, replace the bracketed guidance in each section with real content, and delete this note. This repository is public, so everything in a playbook is public the moment it merges. Include only information that is safe to share publicly. Refer to customers by anonymized type (for example, "a large financial institution") unless they have publicly agreed to be named. Where a section can't be filled accurately yet, mark it `TBD` with the open question rather than inventing a claim.
 
 > A shared reference for understanding where [Product Name] fits, how it works, and how to support organizations evaluating or adopting it.
 
@@ -68,7 +68,7 @@
 
 ## 3. Audiences and Stakeholders
 
-For each audience, explain what matters to them and how the product relates to their goals.
+For each audience role (see `audiences/`), explain what matters to them and how the product relates to their goals.
 
 ### [Audience / Persona]
 
@@ -465,9 +465,11 @@ Topics to address:
 
 ### Customer evidence
 
-- [Customer example]
-- [Quote]
-- [Deployment example]
+Use anonymized customer types (for example, "a large financial institution") unless the customer has publicly agreed to be named.
+
+- [Anonymized customer example]
+- [Publicly approved quote]
+- [Anonymized deployment example]
 
 ### Product evidence
 
@@ -481,13 +483,9 @@ Topics to address:
 - [Research]
 - [Regulatory or ecosystem development]
 
-### Evidence classification
+### Sourcing
 
-Label supporting evidence where appropriate:
-
-- **Public**
-- **Customer confidential**
-- **Internal only**
+Every item in this section must be publicly shareable. Link to a public source where one exists.
 
 ---
 
@@ -561,7 +559,9 @@ Additional technical, product, security, or commercial expertise may be useful w
 - [Condition]
 - [Condition]
 
-### Internal contacts
+### Contacts
+
+List only people or teams who have agreed to be named publicly as contacts for this product.
 
 | Topic | Contact / Team |
 |---|---|
@@ -594,51 +594,9 @@ Additional technical, product, security, or commercial expertise may be useful w
 - [Research]
 - [Customer story]
 
-### Internal resources
-
-- [Internal documentation]
-- [Training]
-- [Reference material]
-
 ---
 
-## 20. What We're Learning
-
-This section should evolve as the product reaches more organizations.
-
-### Recurring questions
-
-- [Question]
-- [Question]
-
-### Common requirements
-
-- [Requirement]
-- [Requirement]
-
-### Patterns in successful evaluations
-
-- [Pattern]
-- [Pattern]
-
-### Product gaps or requests
-
-- [Request]
-- [Request]
-
-### Messaging that resonates
-
-- [Message]
-- [Message]
-
-### Areas that create confusion
-
-- [Area]
-- [Area]
-
----
-
-## 21. Quick Reference
+## 20. Quick Reference
 
 ### The product
 

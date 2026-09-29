@@ -2,7 +2,7 @@
 
 > A shared reference for understanding where Coder Agent Relay fits, how it works, and how to support organizations evaluating or adopting it.
 
-This playbook builds on the [Agent Relay message house](./message-house.md), the [Agent Relay for Cursor FAQ](./cursor-faq.md), and the [Agent Relay for Claude FAQ](./claude-code-faq.md). When they conflict, the message house governs positioning and the FAQs govern provider-specific technical detail. Items marked `TBD` are open questions for Product Marketing.
+This playbook builds on the [Agent Relay message house](./message-house.md), the [Agent Relay for Cursor FAQ](./cursor-faq.md), and the [Agent Relay for Claude FAQ](./claude-code-faq.md). When they conflict, the message house governs positioning and the FAQs govern provider-specific technical detail. Items marked `TBD` are open questions for Product Marketing. For preview access, see [Contacts](#contacts).
 
 ---
 
@@ -66,23 +66,25 @@ Agent Relay connects cloud-hosted AI agents, like Cursor Cloud Agents and Claude
 
 ## 3. Audiences and Stakeholders
 
-See [Buyer Personas](../../audiences/personas/overview.md) for the canonical persona definitions and the [message house](./message-house.md#buyer-personas) for their full application to Agent Relay.
+See the role pages under [`audiences/`](../../audiences/) for full context on each role. For the cross-role buyer motivations behind these roles, see [Buyer Personas](../../audiences/personas/overview.md) and the [message house](./message-house.md#buyer-personas).
 
-### Protectionist (security and compliance leaders)
+### CISO and security leaders
 
 **Primary goals**
 
 - Control where agent execution happens and what it can reach
 - Keep agent activity auditable and inside existing controls
+- Enable AI adoption without unnecessary risk
 
 **Common concerns**
 
 - Developers adopting cloud agents security hasn't approved
 - Unmanaged, unauditable agent activity across the organization
+- What data flows to the agent provider for inference
 
 **Relevant value**
 
-Execution runs inside infrastructure the organization already governs, with the same identity, network, and audit controls. Each run is tied to the agent session and user it served. This lets the organization say yes to agent adoption instead of blocking it or accepting the risk of unmanaged usage.
+Execution runs inside infrastructure the organization already governs, with the same identity, network, and audit controls, including Agent Firewall. Each run is tied to the agent session and user it served. This lets the organization say yes to agent adoption instead of blocking it or accepting the risk of unmanaged usage.
 
 **Useful framing**
 
@@ -90,21 +92,23 @@ Execution runs inside infrastructure the organization already governs, with the 
 
 ---
 
-### Opportunist (platform and engineering leaders)
+### Platform engineers
 
 **Primary goals**
 
-- Give developers the AI tools they're asking for, quickly
+- Provide self-service, standardized environments for developers and agents
+- Reduce operational toil through templates and automation
 - Avoid standing up a new platform or a new security review
 
 **Common concerns**
 
 - A few manually wired self-hosted machines won't hold up as agent usage scales
-- Operational burden of provisioning, isolating, and cleaning up agent environments
+- Owning worker images, isolation, scaling, and cleanup for agent environments
+- Session startup time
 
 **Relevant value**
 
-Agent Relay extends infrastructure existing Coder customers already operate, organizations, templates, RBAC, and audit logging, to cloud-hosted agents. It's built for bursts of hundreds or thousands of concurrent sessions and scales to zero when idle.
+Agent Relay extends infrastructure existing Coder customers already operate, organizations, templates, RBAC, and audit logging, to cloud-hosted agents. Coder provisions one ephemeral workspace per session and scales to zero when idle. Startup time depends on template complexity; templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
 
 **Useful framing**
 
@@ -112,25 +116,47 @@ Agent Relay extends infrastructure existing Coder customers already operate, org
 
 ---
 
-### Caring Provider (developer experience advocates)
+### Developers
 
 **Primary goals**
 
-- Give developers the Cursor or Claude Code experience they're asking for
-- Stop trading off developer experience against infrastructure approval
+- Use the Cursor or Claude Code experience they already prefer
+- Give agents access to the code, tools, and services real work requires
 
 **Common concerns**
 
-- Security or platform concerns blocking the tools developers want
-- Changes that make the agent experience worse
+- Security or platform concerns blocking the tools they want
+- Changes that make the agent experience slower or worse
 
 **Relevant value**
 
-Developers keep using Cursor or Claude Code exactly as they would otherwise. The difference is invisible to them, since execution happens inside a Coder workspace behind the scenes.
+Developers keep using Cursor or Claude Code exactly as they would otherwise. The difference is invisible to them, since execution happens inside a Coder workspace behind the scenes, with access to the internal resources the template provides.
 
 **Useful framing**
 
-> Developers keep their agent. The platform team keeps control.
+> Keep your agent. It just runs where your code already lives.
+
+---
+
+### CTO and CIO
+
+**Primary goals**
+
+- Accelerate software delivery and engineering productivity with AI
+- Adopt new technology without compromising security, reliability, or cost control
+
+**Common concerns**
+
+- Shadow AI and fragmented, unmanaged tooling
+- Locking the organization into a single agent vendor
+
+**Relevant value**
+
+Agent Relay gives the organization a sanctioned path to the cloud agents developers want, on one governed platform that also runs Coder Agents and other agents side by side. Engineering gets the tools; security and platform teams keep control.
+
+**Useful framing**
+
+> Adopt the best cloud agents without giving up control of where they run.
 
 ---
 
@@ -152,7 +178,7 @@ Agent Relay is the means, not the end. The value customers are buying is the Cod
 
 - Provider pools mapped to a Coder organization and Terraform-based workspace template
 - One ephemeral workspace per agent session, created on demand and deleted when the session ends
-- Scales to zero when idle and scales up as concurrent sessions grow
+- Designed for high concurrency (hundreds or thousands of sessions), scaling to zero when idle
 - Existing Coder governance (RBAC, Agent Firewall, secrets management, audit) applies to agent workspaces
 - Audit records that correlate each run to the agent session and user
 - Out of the agent's communication path once the session and workspace are connected
@@ -161,7 +187,7 @@ Agent Relay is the means, not the end. The value customers are buying is the Cod
 
 - Sanctioned cloud agent adoption instead of shadow AI
 - No new platform or separate security model for existing Coder customers
-- Agent scale driven by infrastructure rather than manual provisioning
+- Agent scale driven by platform automation rather than manual provisioning
 - One governed platform for Cursor, Claude Code, Coder Agents, and other agents
 
 ---
@@ -331,7 +357,7 @@ The organization uses the provider's self-hosted option (Cursor self-hosted mach
 
 **How Coder Agent Relay differs**
 
-The execution environment is provisioned, isolated, governed, and torn down as part of a platform, using templates, RBAC, Agent Firewall, and audit the platform team already manages.
+The execution environment is provisioned, isolated, governed, and torn down as part of a platform, using templates, RBAC, Agent Firewall, and audit the platform team already manages. Agent Relay is designed for high-concurrency bursts. That scale hasn't been publicly benchmarked yet, and in practice it may also depend on the provider's orchestration capacity.
 
 ---
 
@@ -498,11 +524,43 @@ Timing and access.
 
 **Response**
 
-Agent Relay is in early access and closed preview with select customers. Access is through the Coder account team.
+Agent Relay is in early access, in closed preview with design partners. Space is limited; interested customers should connect with Nicky Pike and Atif (see [Contacts](#contacts)).
 
 **Useful follow-up**
 
 > Which provider and plan are you on, and what timeline are you working toward?
+
+---
+
+### "How long does a session take to start?"
+
+**Context**
+
+Developers are used to provider-hosted agents starting quickly, and platform teams worry ephemeral workspaces add delay.
+
+**Response**
+
+It depends on the complexity of the workspace template. Templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
+
+**Useful follow-up**
+
+> What does your current workspace template install at startup, and which parts do agents actually need?
+
+---
+
+### "How many concurrent sessions can it handle?"
+
+**Context**
+
+Platform teams planning broad rollout want to know the ceiling.
+
+**Response**
+
+Agent Relay is designed to support bursts of hundreds or thousands of concurrent sessions, and Coder can support that scale. It hasn't been publicly benchmarked at that level yet, and in practice concurrency may also depend on the provider's orchestration capacity.
+
+**Useful follow-up**
+
+> What concurrency do you expect at launch, and how quickly do you expect it to grow?
 
 ---
 
@@ -568,7 +626,7 @@ Recommended characteristics:
 
 Topics to address:
 
-- Capacity for concurrent sessions and startup latency expectations
+- Capacity for concurrent sessions, and startup time targets (simplify templates or use prebuilt workspaces)
 - Template ownership and update process
 - Rollout to additional teams and providers
 
@@ -580,9 +638,9 @@ Topics to address:
 
 - A realistic use case where agents need private repositories or internal services
 - Named stakeholders from platform, security, and the developer group
-- A licensed Coder deployment and a supported provider plan
+- A licensed Coder Premium deployment and a supported provider plan
 - Agreed success criteria
-- A timeline (`TBD`: recommended pilot length)
+- An agreed timeline
 
 ### Suggested success criteria
 
@@ -622,13 +680,14 @@ The developer's experience doesn't change, but the agent's work runs in a govern
 ### Areas to avoid over-emphasizing
 
 - Data sovereignty claims beyond execution
-- Startup latency, which is an active area of investment
+- Complex template startup times; if the demo template is heavy, simplify it or use prebuilt workspaces first
+- Unbenchmarked concurrency numbers
 
 ### Audience-specific variations
 
 **Technical audience**
 
-Template configuration, pool mapping, lifecycle, and scale-to-zero.
+Template configuration, pool mapping, lifecycle, scale-to-zero, and prebuilt workspaces for faster starts.
 
 **Security audience**
 
@@ -644,22 +703,18 @@ Approved path versus shadow AI, and no new platform for existing Coder customers
 
 ### Customer evidence
 
-- `TBD`: public customer examples, quotes, or deployment stories
+- None published yet. When added, refer to customers by anonymized type (for example, "a large financial institution") unless they have publicly agreed to be named.
 
 ### Product evidence
 
-- **Public.** Agent Relay supports Cursor (first supported provider) and Claude Code, and is in early access and closed preview ([Agent Relay docs](https://coder.com/docs/ai-coder/agent-relay)).
-- `TBD`: public usage, scale, or startup-time data
+- Agent Relay supports Cursor (first supported provider) and Claude Code, and is in early access ([Agent Relay docs](https://coder.com/docs/ai-coder/agent-relay)).
+- None published yet for usage, scale, or startup time.
 
 ### Market evidence
 
-- **Public.** Cursor lists Coder as a self-hosted machines integration partner ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/integrations)).
-- **Public.** Coder and Anthropic announced Claude Code support in Agent Relay on September 15, 2026 ([Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
-- **Public.** Cursor states self-hosting is usually driven by compliance or security policy ([Cursor docs](https://cursor.com/docs/cloud-agent/choose-runtime)).
-
-### Evidence classification
-
-This repository is public, so only **Public** evidence belongs here. Keep customer-confidential and internal-only evidence in an internal source.
+- Cursor lists Coder as a self-hosted machines integration partner ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/integrations)).
+- Coder and Anthropic announced Claude Code support in Agent Relay on September 15, 2026 ([Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
+- Cursor states self-hosting is usually driven by compliance or security policy ([Cursor docs](https://cursor.com/docs/cloud-agent/choose-runtime)).
 
 ---
 
@@ -667,21 +722,21 @@ This repository is public, so only **Public** evidence belongs here. Keep custom
 
 ### Packaging
 
-Agent Relay is a capability within existing Coder tiers rather than a separate SKU. As of this writing, it's included within Premium and doesn't introduce its own billing. This is an area of active exploration; confirm current thinking with Product Marketing before stating anything more specific. See [Packaging](../../company/packaging.md).
+Agent Relay is a capability within existing Coder tiers rather than a separate SKU, and it requires Coder Premium. As of this writing, it doesn't introduce its own billing. See [Packaging](../../company/packaging.md).
 
 ### Prerequisites
 
-- A licensed Coder deployment
+- A licensed Coder Premium deployment
 - For Cursor: a Cursor Enterprise plan
 - For Claude Code: an Anthropic Team or Enterprise plan (Anthropic self-hosted environments are in public beta on these plans)
 
 ### Pricing metric
 
-No public pricing. `TBD`: whether a metric will apply after preview.
+No separate pricing metric. Agent Relay is included with Coder Premium.
 
 ### Evaluation / trial model
 
-Access is through the Coder account team during preview. `TBD`: standard pilot structure and duration.
+Agent Relay is in early access, in closed preview with design partners, and space is limited. Interested customers should connect with Nicky Pike and Atif (see [Contacts](#contacts)).
 
 ### Example deployment profiles
 
@@ -695,7 +750,7 @@ Access is through the Coder account team during preview. `TBD`: standard pilot s
 
 - Organization: Enterprise standardizing on Cursor or Claude Code, blocked by execution requirements
 - Usage pattern: Adopts Coder to provide governed execution for cloud agent sessions
-- Relevant package: `TBD`: licensed Coder tier recommended for a net-new customer
+- Relevant package: Coder Premium plus the provider's enterprise plan
 
 ---
 
@@ -718,7 +773,6 @@ Access is through the Coder account team during preview. `TBD`: standard pilot s
 
 - Security review of the provider's data flows
 - Provider plan, pool, or environment setup
-- `TBD`: co-selling motions and joint account engagement
 
 ### Shared positioning
 
@@ -736,9 +790,13 @@ Additional technical, product, security, or commercial expertise may be useful w
 - The customer asks about an unsupported provider or roadmap timing
 - Pricing, packaging, or regulatory positioning (for example DORA) comes up
 
-### Internal contacts
+### Contacts
 
-Internal contact details don't belong in this public repository. Route questions through the Coder account team and Product Marketing. `TBD`: link to the internal directory for Product, Technical architecture, Security, Partnerships, and Commercial owners.
+| Topic | Contact / Team |
+|---|---|
+| Preview access | Nicky Pike and Atif |
+| Messaging and positioning | Matt Vollmer, Product Marketing |
+| Everything else | Your [Coder account team](https://coder.com/contact) or [sales@coder.com](mailto:sales@coder.com) |
 
 ---
 
@@ -754,61 +812,17 @@ Internal contact details don't belong in this public repository. Route questions
 
 ### Evaluation
 
-- `TBD`: demo recording
-- `TBD`: technical setup guide and sample templates
-- `TBD`: pilot guide
+- Preview access and pilot scoping: see [Contacts](#contacts)
 
 ### Market context
 
 - [Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution)
 - [Coder Brings Claude Code to Agent Relay](https://coder.com/blog/agent-relay-claude-code-agentic-development)
 - Market landscape: [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Daytona](../../market-landscape/daytona.md), [E2B](../../market-landscape/e2b.md)
-- `TBD`: public customer story
-
-### Internal resources
-
-Maintained outside this public repository. `TBD`: pointer to internal enablement.
 
 ---
 
-## 20. What We're Learning
-
-This section should evolve as the product reaches more organizations.
-
-### Recurring questions
-
-- Whether the provider becomes fully self-hosted
-- Exactly what data leaves the network
-- Why Coder instead of the provider's own self-hosted workers
-
-### Common requirements
-
-- Execution on customer-controlled infrastructure
-- Agent access to private repositories and internal systems
-
-### Patterns in successful evaluations
-
-- `TBD`
-
-### Product gaps or requests
-
-- Inference and orchestration inside the perimeter
-- Support for additional providers
-- Lower session startup latency
-
-### Messaging that resonates
-
-- `TBD`
-
-### Areas that create confusion
-
-- Self-hosted execution versus a self-hosted agent
-- Whether Coder AI Gateway covers inference for these sessions
-- The difference between Agent Relay and Coder Agents
-
----
-
-## 21. Quick Reference
+## 20. Quick Reference
 
 ### The product
 
@@ -836,15 +850,15 @@ This section should evolve as the product reaches more organizations.
 
 ### Next step
 
-> Talk to the Coder account team to request preview access and scope a pilot.
+> Connect with Nicky Pike and Atif to request a spot in the closed preview and scope a pilot.
 
 ---
 
 ## Document Maintenance
 
-**Owner:** `TBD`  
+**Owner:** Matt Vollmer, Product Marketing  
 **Last updated:** 2026-09-29  
-**Product status:** Early access (closed preview with select customers)  
+**Product status:** Early access (closed preview with design partners)  
 **Version:** 0.1
 
 ### Update this guide when
