@@ -86,7 +86,6 @@ See the message house's [Scope and Tradeoffs](./message-house.md#scope-and-trade
 - Replace the IDE. Coder is the environment IDEs connect to.
 - Serve as a lightweight sandbox optimized for sub-second, disposable agent runtimes.
 - Govern LLM calls made by an IDE running on a developer's own machine, such as Cursor connected over SSH. Code still stays in the workspace.
-- Support the Dev Containers integration in Windows or macOS workspaces.
 - Spread the control plane across regions. High availability runs in one region, and workspace proxies serve other regions.
 
 ### Recommended terminology
