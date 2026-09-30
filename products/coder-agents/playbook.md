@@ -165,25 +165,7 @@ See the message house's [Market Landscape](./message-house.md#market-landscape) 
 
 ## 8. Common Questions
 
-For architecture, security, pricing mechanics, and competitive questions, see the [Coder Agents FAQ](./faq.md). The questions below aren't covered there.
-
-### "What counts as Agent Time?"
-
-Agent Time is how Coder measures Agent Hours usage. It is the cumulative duration of model invocations that produce Coder Agents chat messages, including sub-agents and context compaction. It excludes time spent waiting for user input, failed model calls, and work handed off to external agents. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
-
-> Useful follow-up: "What mix of interactive chats and background automation do you expect?"
-
-### "What happens when a deployment runs out of Agent Hours?"
-
-Administrators get an in-app warning as the deployment approaches its allotment, so they can buy more before the concurrency fallback takes effect.
-
-> Useful follow-up: "Who should receive usage warnings, and how do you want to track spend by team?"
-
-### "Can we extend the agent with our own tools and instructions?"
-
-Yes. Organization admins can register external MCP servers, and workspace templates can provide skills and MCP tools. See [Extending Agents](https://coder.com/docs/ai-coder/agents/extending-agents) and [MCP Servers](https://coder.com/docs/ai-coder/agents/platform-controls/mcp-servers).
-
-> Useful follow-up: "Which internal systems would agents need to reach to be useful?"
+For common questions about architecture, security, pricing, licensing, and competitors, see the [Coder Agents FAQ](./faq.md).
 
 ---
 
