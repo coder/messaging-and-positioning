@@ -36,7 +36,7 @@ See the message house for the full [status quo and 3 Whys](./message-house.md#th
 
 ### Architecture summary
 
-The Coder control plane (`coderd`) serves the dashboard and API, stores state in PostgreSQL, and runs provisioners that apply Terraform templates to create workspaces. A workspace agent runs inside each workspace and provides SSH, port forwarding, and startup scripts. Developers connect over end-to-end encrypted connections built on WireGuard, directly when possible and through the control plane's relay otherwise. See [Architecture](https://coder.com/docs/install/plan/architecture) and [Networking](https://coder.com/docs/admin/networking).
+The Coder control plane (`coderd`) serves the dashboard and API, stores state in PostgreSQL, and runs provisioners that apply Terraform templates to create workspaces. A workspace daemon runs inside each workspace and provides SSH, port forwarding, and startup scripts. Developers connect over end-to-end encrypted connections built on WireGuard, directly when possible and through the control plane's relay otherwise. See [Architecture](https://coder.com/docs/install/plan/architecture) and [Networking](https://coder.com/docs/admin/networking).
 
 ### Components and responsibilities
 
@@ -46,7 +46,7 @@ The Coder control plane (`coderd`) serves the dashboard and API, stores state in
 | PostgreSQL | Stores deployment state. An external PostgreSQL 13+ database is recommended for production |
 | Provisioners | Apply Terraform templates to create, update, and delete workspace infrastructure. External provisioners (Premium) run builds outside the control plane |
 | Templates | Terraform code that defines each type of workspace, versioned and updated centrally. The [Coder Registry](https://registry.coder.com) provides reusable templates and modules |
-| Workspace agent | Runs inside each workspace and provides SSH, port forwarding, IDE connections, and startup scripts on any OS, architecture, or cloud |
+| Workspace daemon | Runs inside each workspace and provides SSH, port forwarding, IDE connections, and startup scripts on any OS, architecture, or cloud |
 | Workspace proxies (Premium) | Relay workspace traffic for teams in other regions to reduce latency |
 | Identity provider | Signs users in through OIDC or GitHub, with SCIM provisioning and group sync on Premium |
 
