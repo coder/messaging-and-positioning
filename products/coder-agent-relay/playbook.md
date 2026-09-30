@@ -17,6 +17,7 @@ For positioning, messaging, and value propositions, see the [Agent Relay message
 | **Core value** | Developers keep their agent, and platform and security teams keep control of execution. |
 | **Important limitation** | Orchestration and inference stay in the provider's cloud, so it isn't a fit for fully self-hosted or air-gapped requirements. |
 | **Status** | Early access (closed preview with design partners). |
+| **Journey stage** | Multiply, building on Coder Workspaces and AI Governance. See the [customer journey](../../company/customer-journey.md). |
 | **Next step** | Connect with Nicky Pike and Atif to request a spot in the closed preview and scope a pilot. |
 
 ---
@@ -92,6 +93,10 @@ See the message house's [Known Limitations](./message-house.md#known-limitations
 ## 5. Fit
 
 See the message house's [Target Market / ICP](./message-house.md#target-market--icp) for the full ideal customer profile.
+
+### Use cases
+
+Agent Relay's primary use cases are cloud agent adoption without losing execution control, extending existing Coder infrastructure to cloud agents, and providing an approved path before shadow AI takes hold. See the message house's [Use Cases](./message-house.md#use-cases) and [Deploy AI Coding Agents](../../use-cases/deploy-ai-coding-agents.md).
 
 ### Good-fit signals
 

@@ -4,7 +4,7 @@
 
 > A shared reference for understanding where [Product Name] fits, how it works, and how to support organizations evaluating or adopting it.
 
-For positioning, messaging, and value propositions, see the [[Product Name] message house](./message-house.md). For detailed product questions, see [link each FAQ].
+For positioning, messaging, and value propositions, see the [[Product Name] message house](./message-house.md). For detailed product questions, see [link the product FAQ, if one exists, or delete this sentence].
 
 ---
 
@@ -19,6 +19,7 @@ For positioning, messaging, and value propositions, see the [[Product Name] mess
 | **Core value** | [Short value statement.] |
 | **Important limitation** | [Most important boundary or qualification.] |
 | **Status** | [Preview / Early access / Beta / GA.] |
+| **Journey stage** | [Migrate, Modernize, or Multiply, linking to the [customer journey](../../company/customer-journey.md).] |
 | **Next step** | [Recommended next action for someone evaluating the product.] |
 
 ---
@@ -44,6 +45,8 @@ For positioning, messaging, and value propositions, see the [[Product Name] mess
 
 ### Typical workflow
 
+If the product has more than one primary user, such as developers and template admins, include one short workflow for each.
+
 1. **[Step].** [Description.]
 2. **[Step].** [Description.]
 3. **[Step].** [Description.]
@@ -59,6 +62,8 @@ For positioning, messaging, and value propositions, see the [[Product Name] mess
 ---
 
 ## 4. Boundaries and Terminology
+
+Link to wherever the product's limits are already documented, such as a message house "Known Limitations" or "Scope and Tradeoffs" section, or an FAQ's "what it is and isn't" section.
 
 ### What the product does not do
 
@@ -76,6 +81,10 @@ For positioning, messaging, and value propositions, see the [[Product Name] mess
 ## 5. Fit
 
 Link to the message house's target market section for the full ideal customer profile.
+
+### Use cases
+
+[One line listing the product's primary use cases, linking to the matching pages in [`use-cases/`](../../use-cases/) and the message house's use case section rather than restating them.]
 
 ### Good-fit signals
 
@@ -116,7 +125,7 @@ Two or three lines per alternative, linking to the relevant `market-landscape/` 
 
 ## 8. Common Questions
 
-Only include questions the product FAQs don't already answer. Link to the FAQs for everything else.
+Only include questions the product FAQ doesn't already answer, and link to the FAQ for everything else. If the product has no FAQ, this section is the main place for common questions.
 
 ### "[Common question]"
 
@@ -160,14 +169,15 @@ Tailor emphasis to the audiences in section 6. Avoid over-emphasizing [area].
 
 ### Packaging and prerequisites
 
-- [Tier or package required]
+- [Tier or package required, and which capabilities need which tier]
+- [What changes between tiers, such as limits, caps, or usage-based pricing]
 - [Other prerequisites]
 
 Link to [Packaging](../../company/packaging.md) rather than restating it.
 
 ### Evaluation access
 
-[How organizations get access to an evaluation, trial, or preview.]
+[How organizations get access, such as a self-serve trial or free tier, a sales-led pilot, or a limited preview.]
 
 ### Partners
 
@@ -186,7 +196,8 @@ List only people or teams who have agreed to be named publicly as contacts for t
 ## 11. Resources
 
 - [Product documentation]
-- [Message house and FAQs]
+- [Message house and FAQ, if one exists]
+- [Related use case pages]
 - [Announcements and blog posts]
 - [Related market landscape pages]
 - [Public evidence, such as anonymized customer examples, research, or ecosystem developments]
