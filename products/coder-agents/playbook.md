@@ -98,7 +98,6 @@ See the FAQ's [What Coder Agents Is and Is Not](./faq.md#3-what-coder-agents-is-
 | "The agent loop runs in the Coder control plane" | "The agent runs in the workspace" | Workspaces are only the execution environment. |
 | "Air-gap capable with a self-hosted model" | "Air-gapped" with no qualification | Inference stays in the perimeter only when the model is self-hosted. |
 | "Model-agnostic" | "Includes models" | Customers bring their own LLM provider. |
-| "Successor to Coder Tasks" | "A UI refresh of Tasks" | The architecture changed, not just the interface. |
 
 ---
 
