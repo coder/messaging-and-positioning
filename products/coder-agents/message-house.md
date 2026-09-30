@@ -1,6 +1,6 @@
 # Coder Agents Message House
 
-Coder Agents is part of the Multiply stage of the [customer journey](../../company/customer-journey.md), building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
+Coder Agents is mostly part of the Multiply stage of the [customer journey](../../company/customer-journey.md), with a partial role in Modernize, building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
 
 ## Status Quo
 
@@ -106,7 +106,7 @@ For platform teams, Coder Agents provides a consistent way to deploy and govern 
 
 **Pain Points:** Incident response is manual, slow, and expensive after hours. Engineers context-switch from feature work to triage. Existing CI/CD pipelines can detect failures but can't reason about fixes. Cloud-hosted agents can't be triggered programmatically from internal CI or operate inside network-restricted environments.
 
-**Coder's Solution:** A CI webhook triggers Coder Agents via the Coder Agents API. An agent provisions a workspace, analyzes the failure, correlates it with recent commits, identifies the root cause, and opens a pull request with a fix. Review agents evaluate the change in parallel, and once approved, the agent updates the PR and merges it, all running self-hosted within your infrastructure.
+**Coder's Solution:** A CI webhook triggers Coder Agents via the Coder Agents API. An agent provisions a workspace, analyzes the failure, correlates it with recent commits, identifies the root cause, and opens a pull request with a fix. Review agents evaluate the change in parallel, and once approved, the agent updates the PR and merges it, all running self-hosted within your infrastructure. Headless use is already the dominant pattern, with roughly 70% of Coder Agents usage so far triggered through the API.
 
 ### Use Case 5: AI Adoption Observability for Platform Teams
 
@@ -186,6 +186,8 @@ Anthropic, OpenAI, Google, Azure OpenAI, AWS Bedrock, OpenRouter, Vercel AI Gate
 - **Organizations that have not yet adopted Coder** - A much larger market with the same profile: regulated, governance-sensitive, and requiring self-hosted infrastructure, but not yet using Coder for human developer workspaces. For these organizations, Coder Agents often becomes the reason they first evaluate Coder. The need that brings them to the table is straightforward: give developers native AI coding agents without sending source code to a third party. Coder's workspace infrastructure is what makes that possible, even though it may not be the initial motivation for evaluating the platform.
 
 The logic that drives a traditional Coder Workspace-first purchase is the same logic that drives a Coder Agents purchase. If an organization needs centralization and governance over development environments for human developers, they need centralization and governance over development environments for AI agents, for the same reasons. The infrastructure and architecture are the same. The end user changes from a human to an agent. Everything else, identity, network policies, audit requirements, compliance posture, stays the same.
+
+The same need extends beyond professional developers. Organizations that want a governed, standardized way to distribute agents to engineering-adjacent knowledge workers or citizen developers are also a strong fit.
 
 ## Buyer Personas
 

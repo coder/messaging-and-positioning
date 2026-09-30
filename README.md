@@ -9,7 +9,7 @@ It exists to give everyone at Coder, including the AI agents and tools we use, a
 ## What's here
 
 - **Company** — Company-level messaging, positioning, narrative, and value propositions, including the customer journey narrative that connects the product line, a TLDR of the AI Operating Layer whitepaper, the ideal customer profile, the packaging narrative, and the fuller "why Coder" narrative behind the message house's pillars
-- **Products** — Product-specific messaging and positioning
+- **Products** — Product-specific messaging and positioning, including FAQs and playbooks for supporting evaluations (new playbooks start from `products/_playbook-template.md`)
 - **Audiences** — Priorities, problems, and messaging for key audiences, including role-based pages and a `personas/` subdirectory describing cross-role buyer motivations
 - **Use cases** — Customer problems and outcomes that may span products
 - **Market landscape** — Comparisons between Coder and the vendors and product categories that come up alongside it

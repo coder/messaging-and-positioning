@@ -58,7 +58,13 @@ The Claude Code agent executes inside a Coder workspace running on customer-cont
 Customers create a named environment in Claude admin settings, then configure Agent Relay with that environment's credentials and map it to a Coder organization and workspace template. Developers select the environment for a Claude Code cloud session. Agent Relay polls Anthropic for a spawn hint, receives a short-lived single-use work order for the session, resolves the session owner, and creates the corresponding Coder workspace. The Anthropic self-hosted runner starts in that workspace and serves the session.
 
 **Does Coder need to keep Anthropic self-hosted runners running all the time?**
-No. The initial Agent Relay architecture is designed to scale to zero. Anthropic environments remain available even when no Coder workspaces are running. When a new request arrives, Agent Relay claims it and triggers creation of an ephemeral workspace for that session, which is deleted after the runner finishes. Pre-built warm capacity is being considered as a future optimization to reduce startup latency.
+No. The initial Agent Relay architecture is designed to scale to zero. Anthropic environments remain available even when no Coder workspaces are running. When a new request arrives, Agent Relay claims it and triggers creation of an ephemeral workspace for that session, which is deleted after the runner finishes.
+
+**How long does a Claude Code session take to start?**
+It depends on the complexity of the workspace template. Templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
+
+**How many concurrent sessions can Agent Relay handle?**
+Agent Relay is designed to support bursts of hundreds or thousands of concurrent sessions, and Coder can support that scale. It hasn't been publicly benchmarked at that level yet, and in practice concurrency may also depend on the provider's orchestration capacity.
 
 **Does each Claude Code agent get its own Coder workspace?**
 Yes. Agent Relay creates an ephemeral Coder workspace for each Claude Code agent session. The workspace serves that session until the Anthropic self-hosted runner exits, after which Agent Relay triggers its deletion through the Coder control plane.
@@ -100,7 +106,10 @@ The Claude Code integration is the right fit when a customer wants the Claude Co
 No. Claude Code's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Claude Code agents execute by allowing those workloads to run inside self-hosted Coder workspaces on customer-controlled infrastructure.
 
 **Is this available today?**
-The Claude Code integration uses Coder Agent Relay to connect Claude Code cloud agent sessions with self-hosted Coder workspaces. Agent Relay is currently in Preview with select regulated enterprise customers.
+The Claude Code integration uses Coder Agent Relay to connect Claude Code cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in early access, in closed preview with design partners.
+
+**How can a customer get access?**
+Space in the preview is limited. Interested customers should connect with their CSM, who aligns with Product Management and the Field CTO. Agent Relay requires Coder Premium and an Anthropic Team or Enterprise plan.
 
 **Is Agent Relay specific to Claude Code?**
 No. Agent Relay is Coder infrastructure for connecting supported cloud-hosted AI agents with self-hosted execution environments on Coder. Agent Relay's underlying architecture can support other cloud-hosted agent providers as they enable self-hosted execution environments.
@@ -121,7 +130,7 @@ Claude Code with Agent Relay is a strong fit when an organization wants the Clau
 Yes. Coder is designed to provide a common infrastructure layer for developers and AI agents rather than require organizations to standardize on a single agent harness. Customers can support multiple agent experiences while using Coder to standardize the development environments and infrastructure where those agents execute.
 
 **Will Coder work with cloud agent providers beyond Anthropic?**
-Yes. Coder is designed to remain agent-agnostic, and Agent Relay provides an architecture for connecting cloud-hosted agents to self-hosted Coder environments. Support for additional providers will depend on their ability to support self-hosted execution and specific product integrations.
+Yes. Coder is designed to remain agent-agnostic, and Agent Relay provides an architecture for connecting cloud-hosted agents to self-hosted Coder environments. Support for additional providers will depend on their ability to support self-hosted execution and specific product integrations. Cursor and Claude Code are supported today, and other providers, such as Codex cloud and Devin Outposts, are not.
 
 ## Frequently Misunderstood Concepts
 
