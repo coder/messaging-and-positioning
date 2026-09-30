@@ -24,7 +24,7 @@ For positioning, messaging, and value propositions, see the [Coder Agents messag
 
 ## 2. Overview
 
-Coder Agents is built into Coder, in the same binary as the rest of the platform. Developers describe the work they want done through chat or the API. The agent selects a template, provisions a workspace when it needs one, writes and tests code, and produces branches, commits, and pull requests. It is the successor to Coder Tasks.
+Coder Agents is built into Coder, in the same binary as the rest of the platform. Developers describe the work they want done through chat or the API. The agent selects a template, provisions a workspace when it needs one, writes and tests code, and produces branches, commits, and pull requests.
 
 The agent loop runs in the Coder control plane rather than inside the workspace. LLM credentials stay in the control plane, workspaces need no agent software, and the agent acts with the same permissions as the user who prompted it. Coder Agents works with any configured LLM provider, including self-hosted models, so inference can stay inside the perimeter too.
 
@@ -133,7 +133,6 @@ Coder Agents' primary use cases are data residency and sovereign AI, avoiding lo
 - **Network.** Can agent workspaces be restricted to the control plane and git provider?
 - **Automation.** Which workflows, such as CI failures or code review, should trigger agents without a developer?
 - **Scale and spend.** How many concurrent agents are expected, how many Agent Hours will background automation need, and who owns AI spend and reporting?
-- **Tasks.** Is the organization using Coder Tasks or the Tasks API today?
 
 ---
 
@@ -165,7 +164,7 @@ See the message house's [Market Landscape](./message-house.md#market-landscape) 
 
 ## 8. Common Questions
 
-For architecture, security, Tasks migration, pricing mechanics, and competitive questions, see the [Coder Agents FAQ](./faq.md). The questions below aren't covered there.
+For architecture, security, pricing mechanics, and competitive questions, see the [Coder Agents FAQ](./faq.md). The questions below aren't covered there.
 
 ### "What counts as Agent Time?"
 
@@ -184,12 +183,6 @@ Administrators get an in-app warning as the deployment approaches its allotment,
 Yes. Organization admins can register external MCP servers, and workspace templates can provide skills and MCP tools. See [Extending Agents](https://coder.com/docs/ai-coder/agents/extending-agents) and [MCP Servers](https://coder.com/docs/ai-coder/agents/platform-controls/mcp-servers).
 
 > Useful follow-up: "Which internal systems would agents need to reach to be useful?"
-
-### "We built automation on the Tasks API. What changes?"
-
-Coder Tasks and the Tasks API have been removed. Integrations move to the Chats API, which has a different architecture. See [Migrate from the Tasks API to the Chats API](https://coder.com/docs/ai-coder/agents/tasks-to-chats-migration).
-
-> Useful follow-up: "Which workflows call the Tasks API today, and which Coder version are you running?"
 
 ---
 
