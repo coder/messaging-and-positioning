@@ -44,7 +44,7 @@ Organizations transitioning out of a rapid-growth or digital-disruption phase an
 - Headcount below 1,000, or fewer than 50 in-house developers and ML staff
 - A single cloud vendor with only basic VM proficiency
 - Heavy reliance on SaaS or an external agency or managed service provider for core technology
-- Limited developer innovation on Linux, with Windows prevalent
+- Limited developer innovation on Linux, with Windows prevalent. Coder supports Windows workspaces, but fit is strongest where most development happens on Linux
 - Compliance treated as a marketing requirement rather than an operational one
 - Uncentralized, basic developer tooling with no active push to standardize it
 - A growth- or market-share-focused business cycle with little pressure yet to consolidate spend
