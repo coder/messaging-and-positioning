@@ -199,11 +199,12 @@ For common questions about architecture, security, pricing, licensing, and compe
 
 ### Demo flow
 
-1. Show the admin view, with multiple model providers configured and an organization-wide system prompt.
-2. Ask a question that needs no workspace, and show the instant response.
-3. Assign a coding task, and show the agent selecting a template, provisioning a workspace, and spawning sub-agents.
-4. Show the resulting pull request, then open the workspace in an IDE, such as VS Code or Cursor, to review the agent's work.
-5. Show the same session in AI Gateway, with prompts, tool calls, and token usage attributed to the user.
+1. Briefly show the Workspaces page to reinforce that Coder moves development off laptops and into governed cloud development environments, with workspaces running on the customer's cloud compute and developers using the tools they prefer, such as VS Code, JetBrains, or Cursor.
+2. Show the admin view, with multiple model providers configured and an organization-wide system prompt.
+3. Ask a question that needs no workspace, and show the instant response.
+4. Assign a coding task, and show the agent selecting a template, provisioning a workspace, and spawning sub-agents.
+5. Show the resulting pull request, then open the workspace in an IDE, such as VS Code or Cursor, to review the agent's work.
+6. Show the same session in AI Gateway, with prompts, tool calls, and token usage attributed to the user.
 
 Tailor emphasis to the audiences in [section 6](#6-audiences), and use a template that provisions quickly.
 
