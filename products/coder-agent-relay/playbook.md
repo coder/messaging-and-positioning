@@ -157,7 +157,7 @@ For architecture, data, positioning, and roadmap questions, see the [Cursor FAQ]
 
 Agent Relay is in early access, in closed preview with design partners. Space is limited, so interested customers should connect with their CSM, who then aligns with Product Management and the Field CTO (see [Contacts](#contacts)). It requires Coder Premium and a supported provider plan.
 
-> Useful follow-up: "Which provider and plan are you on, and what timeline are you working toward?"
+> Useful follow-up: "Which provider are you using, and what version of Coder are you running?"
 
 ### "How long does a session take to start?"
 
