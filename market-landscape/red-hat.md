@@ -1,3 +1,6 @@
 # Coder and Red Hat
 
-PLACEHOLDER
+| Field | Value |
+|---|---|
+
+OpenShift AI's test (MaaS).
