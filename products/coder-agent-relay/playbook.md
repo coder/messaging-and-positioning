@@ -255,13 +255,3 @@ Cursor and Anthropic deliver the agent experience developers want, and Coder gov
 - Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Daytona](../../market-landscape/daytona.md), and [E2B](../../market-landscape/e2b.md)
 
 No public customer evidence is available yet. When added, refer to customers by anonymized type unless they have publicly agreed to be named.
-
----
-
-## Document Maintenance
-
-**Owner:** Matt Vollmer, Product Marketing  
-**Last updated:** 2026-09-29  
-**Version:** 0.2
-
-Update this playbook when the product's architecture, packaging, supported integrations, boundaries, or public evidence change, or when new questions recur.
