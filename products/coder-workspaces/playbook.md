@@ -18,7 +18,7 @@ For positioning, messaging, and value propositions, see the [Coder Workspaces me
 | **Important limitation** | The customer operates Coder. It isn't a hosted service or a lightweight sandbox for sub-second agent runtimes. |
 | **Status** | Generally available. |
 | **Journey stage** | Migrate, and the foundation Modernize and Multiply build on. See the [customer journey](../../company/customer-journey.md). |
-| **Next step** | Install the free Community edition with the [quickstart](https://coder.com/docs/get-started), or request a free, unlimited 30-day Premium trial at [coder.com/trial](https://coder.com/trial). |
+| **Next step** | Install the free Community edition with the [quickstart](https://coder.com/docs/get-started), or request a free, unlimited 30-day trial at [coder.com/trial](https://coder.com/trial). |
 
 ---
 
@@ -188,7 +188,7 @@ For common questions about developer experience, infrastructure, security, cost,
 - A deployment on the infrastructure the organization would use in production, following [Prepare your deployment](https://coder.com/docs/install/prepare), with DNS, TLS, PostgreSQL, and an identity provider
 - One or two templates for real repositories and workloads, including any that strain laptops
 - A pilot group of developers across the IDEs the organization uses
-- A free, unlimited 30-day Premium trial if the evaluation covers Premium features
+- A free, unlimited 30-day trial license
 - Named stakeholders from platform, security, and the developer group, with agreed success criteria and timeline
 
 ### Success criteria
@@ -226,7 +226,7 @@ See [Packaging](../../company/packaging.md) and [coder.com/pricing](https://code
 
 ### Evaluation access
 
-Self-serve. The Community edition installs in under 10 minutes with the [quickstart](https://coder.com/docs/get-started). A free, unlimited 30-day Premium trial is available at [coder.com/trial](https://coder.com/trial).
+Self-serve. The Community edition installs in under 10 minutes with the [quickstart](https://coder.com/docs/get-started). A free, unlimited 30-day trial is available at [coder.com/trial](https://coder.com/trial).
 
 ### Partners
 
