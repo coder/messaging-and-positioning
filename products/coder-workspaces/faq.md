@@ -48,4 +48,4 @@ Autostart and autostop schedules stop idle workspaces. Premium adds quotas, dorm
 Community is free and open source. Premium adds enterprise controls such as audit logs, groups and custom roles, multiple organizations, SCIM and IdP sync, template permissions, quotas, prebuilt workspaces, workspace proxies, high availability, external provisioners, and AI Governance. See [Packaging](../../company/packaging.md) and [coder.com/pricing](https://coder.com/pricing).
 
 **How can an organization evaluate Coder?**
-The free Community edition installs in under 10 minutes with the [quickstart](https://coder.com/docs/get-started). Premium trials are available at [coder.com/trial](https://coder.com/trial).
+The free Community edition installs in under 10 minutes with the [quickstart](https://coder.com/docs/get-started). A free, unlimited 30-day Premium trial is available at [coder.com/trial](https://coder.com/trial).
