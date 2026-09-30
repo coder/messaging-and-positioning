@@ -1,6 +1,6 @@
 # Coder Agents Message House
 
-Coder Agents is part of the Multiply stage of the [customer journey](../../company/customer-journey.md), building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
+Coder Agents is mostly part of the Multiply stage of the [customer journey](../../company/customer-journey.md), with a partial role in Modernize, building on the Migrate and Modernize foundation established by Coder Workspaces and AI Governance.
 
 ## Status Quo
 

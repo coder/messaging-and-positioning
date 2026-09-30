@@ -17,7 +17,7 @@ For positioning, messaging, and value propositions, see the [Coder Agents messag
 | **Core value** | Developers get a modern agent experience, and platform and security teams keep orchestration, execution, and model choice on infrastructure they control. |
 | **Important limitation** | Coder Agents uses its own agent. It doesn't run third-party harnesses like Claude Code or Codex, and Agent Firewall doesn't wrap its tool calls today. |
 | **Status** | Generally available since September 1, 2026. |
-| **Journey stage** | Multiply, building on Coder Workspaces and AI Governance. See the [customer journey](../../company/customer-journey.md). |
+| **Journey stage** | Mostly Multiply, with a partial role in Modernize. See the [customer journey](../../company/customer-journey.md). |
 | **Next step** | Enable Coder Agents in an existing or proof-of-concept Coder deployment by following [Getting Started](https://coder.com/docs/ai-coder/agents/getting-started). |
 
 ---
@@ -75,7 +75,7 @@ Everything runs in the customer's Coder deployment, in a cloud VPC, on-premises,
 
 ### Data and trust boundaries
 
-The agent loop, chat history, and tool execution stay inside the customer's Coder deployment. Prompts and code context go to whichever LLM provider the platform team configures. With a self-hosted model, inference stays inside the perimeter too. Workspaces don't need access to LLM providers, so they can be restricted to the control plane and the git provider. Deployments that use Agent Time report hourly totals, with no user or chat data, to a Coder-managed billing service. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
+The agent loop, chat history, and tool execution stay inside the customer's Coder deployment. Prompts and code context go to whichever LLM provider the platform team configures. With a self-hosted model, inference stays inside the perimeter too. Workspaces don't need access to LLM providers, so they can be restricted to the control plane and the git provider. AI Premium deployments report hourly Agent Hours usage, with no user or chat data, to a Coder-managed billing service. Air-gapped customers can send a manually exported usage bundle instead, or establish another usage-based agreement with their Coder sales team. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
 
 ---
 
@@ -134,7 +134,7 @@ Coder Agents' primary use cases are data residency and sovereign AI, avoiding lo
 - **Coder today.** Is the organization already running Coder, and are its templates clearly named and described?
 - **Network.** Can agent workspaces be restricted to the control plane and git provider?
 - **Automation.** Which workflows, such as CI failures or code review, should trigger agents without a developer?
-- **Scale and spend.** How many concurrent agents are expected, and who owns AI spend and reporting?
+- **Scale and spend.** How many concurrent agents are expected, how many Agent Hours will background automation need, and who owns AI spend and reporting?
 - **Tasks.** Is the organization using Coder Tasks or the Tasks API today?
 
 ---
@@ -171,11 +171,11 @@ For architecture, security, Tasks migration, pricing mechanics, and competitive 
 
 ### "What counts as Agent Time?"
 
-Agent Time is the cumulative duration of model invocations that produce Coder Agents chat messages, including sub-agents and context compaction. It excludes time spent waiting for user input, failed model calls, and work handed off to external agents. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
+Agent Time is how Coder measures Agent Hours usage. It is the cumulative duration of model invocations that produce Coder Agents chat messages, including sub-agents and context compaction. It excludes time spent waiting for user input, failed model calls, and work handed off to external agents. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
 
 > Useful follow-up: "What mix of interactive chats and background automation do you expect?"
 
-### "What happens when a deployment runs out of Agent Time?"
+### "What happens when a deployment runs out of Agent Hours?"
 
 Administrators get an in-app warning as the deployment approaches its allotment, so they can buy more before the concurrency fallback takes effect.
 
@@ -240,16 +240,17 @@ Tailor emphasis to the audiences in [section 6](#6-audiences). Avoid implying Ag
 ### Packaging and prerequisites
 
 - Coder Agents is part of the Coder install, not a separate product or deployment
-- Community supports up to five concurrently active agents at no cost, with more agents queued
-- Removing the concurrency cap uses shared, usage-based Agent Time
-- Deployments that use Agent Time need outbound HTTPS to Coder's usage reporting service
+- Every tier can run Coder Agents, including agents triggered through the API
+- Community and Premium support up to five concurrently active agents, with more agents queued
+- AI Premium removes the concurrency cap and includes a deployment-wide allotment of Agent Hours that customers size and buy based on expected usage
+- AI Premium deployments report usage to Coder over outbound HTTPS, or, if air-gapped, through a manually exported usage bundle or another usage-based agreement
 - An API key for at least one supported LLM provider, or a self-hosted model endpoint
 
 See [Packaging](../../company/packaging.md) and [coder.com/pricing](https://coder.com/pricing) for current tiers and prices.
 
 ### Evaluation access
 
-Self-serve. Coder Agents is available in every Coder deployment, including Community and proof-of-concept deployments, without a separate install.
+Self-serve. Coder Agents is available in every Coder deployment, including Community and proof-of-concept deployments, without a separate install. For evaluations that need more than five concurrent agents, work with the Coder account team on AI Premium and Agent Hours sizing.
 
 ### Partners
 
@@ -273,4 +274,4 @@ Coder Agents drives compute and inference consumption for cloud and model provid
 - [Coder Agents GA announcement](https://coder.com/blog/coder-agents-ga)
 - Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Codex](../../market-landscape/codex.md), [Devin](../../market-landscape/devin.md), and [GitHub Codespaces](../../market-landscape/github-codespaces.md)
 
-No public customer evidence is available yet. When added, refer to customers by anonymized type unless they have publicly agreed to be named.
+Roughly 70% of Coder Agents usage so far has been triggered through the API, which indicates customers are using it for headless background orchestration. No public customer examples are available yet. When added, refer to customers by anonymized type unless they have publicly agreed to be named.

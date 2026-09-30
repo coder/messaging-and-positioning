@@ -71,7 +71,7 @@ This flexibility is important as the AI landscape evolves quickly. Developers in
 ## 4. Tasks Deprecation and Migration
 
 **How is this different from Tasks?**
-Coder Agents is the successor to Coder Tasks and will ultimately replace it. It represents a fundamentally different philosophy, architecture, and user experience for working with AI inside Coder.
+Coder Agents is the successor to Coder Tasks and has replaced it. Coder Tasks was deprecated in Coder v2.34 and has since been removed, including the Tasks API. Coder Agents represents a fundamentally different philosophy, architecture, and user experience for working with AI inside Coder.
 
 Unlike Tasks, Coder Agents is not a wrapper around third-party agents such as Claude Code or Codex. It uses Coder's own lightweight agent, giving us full control over the runtime and user experience.
 
@@ -82,11 +82,11 @@ This architecture allows Coder Agents to respond immediately without provisionin
 Like Tasks, Coder Agents still exposes an API so developers can trigger background work through automation and integrations such as CI systems, GitHub workflows, or other tooling.
 
 **What about customers who are using Tasks?**
-Coder Agents is the next generation of Tasks and will ultimately replace it. Tasks helped validate the demand for delegating development work to AI agents inside Coder, but its architecture and CLI-wrapper UX were an early implementation.
+Coder Agents is the next generation of Tasks and has replaced it. Tasks helped validate the demand for delegating development work to AI agents inside Coder, but its architecture and CLI-wrapper UX were an early implementation.
 
-Coder Agents introduces a fundamentally different architecture and a modern, conversational experience built directly into the platform. Over time, this will become the primary way developers interact with agents in Coder.
+Coder Agents introduces a fundamentally different architecture and a modern, conversational experience built directly into the platform. It is now the primary way developers interact with agents in Coder.
 
-For customers currently using Tasks, we will provide a clear migration path. The goal is to move forward without disrupting existing workflows while transitioning to a more capable and intuitive system.
+Coder Tasks and the Tasks API (`/api/v2/tasks`) have been removed. Customers with integrations built on the Tasks API should move them to the Chats API (`/api/v2/chats`) using the [Tasks to Chats migration guide](https://coder.com/docs/ai-coder/agents/tasks-to-chats-migration).
 
 **Will I need to relearn everything I just learned about Tasks?**
 No, absolutely not. The fundamental principles you've learned about Tasks and the value they deliver to customers still apply to Coder Agents.
@@ -100,7 +100,7 @@ So while the mechanics behind the scenes are evolving, the core story remains th
 ## 5. Architecture, Control Plane, and Workspaces
 
 **What does it mean to run the agent loop in the coderd control plane?**
-Today, with Coder Tasks, the agent loop (LLM and tool calls) always happens in Coder workspaces. This means, for the agent to respond to a simple "hello," it must start a Coder workspace. This is slow, expensive, and unnecessary.
+With Coder Tasks, the agent loop (LLM and tool calls) always happened in Coder workspaces. This meant that, for the agent to respond to a simple "hello," it had to start a Coder workspace. This was slow, expensive, and unnecessary.
 
 With the new Coder Agents architecture, the agent loop runs in the coderd control plane. This means that it can make requests to LLM providers and reason without a Coder workspace. This is faster, cheaper, and the expected developer experience. The Coder Agent will still provision a Coder workspace as needed for read/write/edit/exec commands.
 
@@ -135,7 +135,7 @@ Platform teams can also centrally control important aspects of the agent's behav
 For automation, Coder Agents exposes an API that allows background tasks to be triggered from external systems such as CI pipelines, GitHub workflows, Slack, or other integrations. This allows many existing automation patterns to be replicated or adapted using the Coder Agents API.
 
 **If the internal object is "chat," do we expose "chat" or "task" semantics externally?**
-Yes, /chats/ is an experimental API route and is planned to be promoted to /v2/ when Coder Agents becomes generally available on September 1, 2026.
+Chats. The Coder Agents API is the Chats API, available at `/api/v2/chats`.
 
 ## 6. Security, Governance, and Admin Controls
 
@@ -200,7 +200,7 @@ At the same time, Coder Agents is the golden path for running agents on self-hos
 In other words, customers can still use other agents with Coder, but Coder Agents provides the ideal out-of-the-box experience for running agentic workloads on Coder infrastructure.
 
 **How does this align with the Migrate, Modernize, Multiply customer journey framework?**
-Coder Agents primarily aligns with the Modernize and Multiply stages.
+Coder Agents mostly aligns with the Multiply stage, with a partial role in Modernize.
 
 In the Modernize phase, platform teams begin introducing AI tools and agents into developer workflows. Instead of deploying third-party agents inside Coder workspaces, teams can use Coder Agents to provide a simpler, more consistent agent experience across the organization.
 
@@ -219,11 +219,11 @@ Because Coder Agents runs in the control plane rather than inside workspaces, it
 ## 9. Pricing, Packaging, Licensing, and Unit Economics
 
 **What is the pricing model for Coder Agents?**
-The Coder Agents pricing and usage model takes effect at general availability on September 1, 2026. Community licenses support up to five concurrently active agents at no cost. Premium deployments can purchase Agent Hours with their Premium license, which removes the concurrency limit.
+The Coder Agents pricing and usage model takes effect at general availability on September 1, 2026. Community and Premium licenses support up to five concurrently active agents at no additional cost. AI Premium removes the concurrency limit and includes a deployment-wide allotment of Agent Hours that customers size and buy based on expected usage. API-triggered agents are available in every tier.
 
-Beginning September 1, 2026, Community licenses support up to five concurrently active agents. There is no limit on how long those agents can run or how many tasks they complete over time; additional agents queue whenever more than five are active. This enables individuals and small teams to experiment with Coder Agents at no cost.
+Beginning September 1, 2026, Community and Premium licenses support up to five concurrently active agents. There is no limit on how long those agents can run or how many tasks they complete over time; additional agents queue whenever more than five are active. This enables individuals and small teams to experiment with Coder Agents at no cost.
 
-Premium deployments can purchase Agent Hours with their Premium license. Agent Hours are shared across the deployment, allowing any number of agents to run concurrently while consuming from a shared pool of purchased working hours. This usage-based model is designed for enterprise workloads, where large development teams, background automation, and API-triggered tasks can create highly variable bursts of agent activity without being constrained by a concurrency limit.
+AI Premium includes a deployment-wide allotment of Agent Hours, sized and purchased based on expected usage. Agent Hours are shared across the deployment, allowing any number of agents to run concurrently while consuming from a shared pool of purchased working hours. This usage-based model is designed for enterprise workloads, where large development teams, background automation, and API-triggered tasks can create highly variable bursts of agent activity without being constrained by a concurrency limit.
 
 **Where can I find current pricing details?**
 [coder.com/pricing](https://coder.com/pricing) is the source of truth for current numbers. This document covers the mechanics of the model; if it and the pricing page ever diverge, treat the pricing page as authoritative and flag the discrepancy to Product Marketing.
@@ -231,23 +231,26 @@ Premium deployments can purchase Agent Hours with their Premium license. Agent H
 **How will Coder Agents be packaged?**
 Coder Agents is an additional solution that will be part of the existing Coder install. Coder Agents is not a separate product or deployment.
 
-**How will Community and Premium licensing work?**
+**How will Community, Premium, and AI Premium licensing work?**
 Coder Agents is shipped as part of the same open-core repository as the rest of the Coder product, but that doesn't mean all functionality is free.
 
-Beginning September 1, 2026, Community licenses will support up to five concurrently active agents. There will be no limit on how long those agents can run or how many tasks they complete over time; additional agents will queue whenever more than five are active. This will enable individuals and small teams to experiment with Coder Agents at no cost.
+Beginning September 1, 2026, Community and Premium licenses support up to five concurrently active agents. There is no limit on how long those agents can run or how many tasks they complete over time; additional agents queue whenever more than five are active. This enables individuals and small teams to experiment with Coder Agents at no cost.
 
-Premium deployments will be able to purchase Agent Hours with their Premium license. Agent Hours will be shared across the deployment, allowing any number of agents to run concurrently while consuming from a shared pool of purchased working hours. This usage-based model is designed for enterprise workloads with large development teams, background automation, and API-triggered tasks that can create highly variable bursts of agent activity.
+AI Premium includes a deployment-wide allotment of Agent Hours, sized and purchased based on expected usage. Agent Hours are shared across the deployment, allowing any number of agents to run concurrently while consuming from a shared pool of purchased working hours. This usage-based model is designed for enterprise workloads with large development teams, background automation, and API-triggered tasks that can create highly variable bursts of agent activity.
+
+**How do air-gapped deployments report Agent Hours usage?**
+Connected deployments report hourly Agent Time totals to Coder automatically, with no user or chat data. Air-gapped customers can send a manually exported usage bundle instead, or establish another usage-based agreement with their Coder sales team.
 
 ## 10. Third-Party Agents and Agent Ecosystem
 
 **Will Coder Agents support third-party agent harnesses like Claude Code?**
 This is an active area of focus.
 
-Customer expectations exist on a spectrum. Some think they need a specific harness for a handful of capabilities like MCP or custom skills, in many of those cases, Coder Agents can already address the need or is actively building toward it. Others have deeply integrated with a specific agent ecosystem at scale, and the switching cost is significant.
+Customer expectations exist on a spectrum. Some think they need a specific harness for capabilities like MCP or custom skills. In many of those cases, Coder Agents already addresses the need. Organization admins can register external [MCP servers](https://coder.com/docs/ai-coder/agents/platform-controls/mcp-servers), and workspace templates can provide [skills and MCP tools](https://coder.com/docs/ai-coder/agents/extending-agents). Others have deeply integrated with a specific agent ecosystem at scale, and the switching cost is significant.
 
 The architectural challenge is real: Coder Agents runs in the control plane, while third-party harnesses run inside the workspace. Bridging those two models in a way that delivers a coherent developer experience, not just background API execution, is a hard problem. We are not going to rush a half-functional integration that creates more problems than it solves.
 
-Our approach is to close the gaps that drive customers toward third-party harnesses in the first place (MCP support, extensible tooling, richer UX patterns) while exploring what responsible third-party harness support could look like.
+Our approach is to keep closing the gaps that drive customers toward third-party harnesses in the first place, such as extensible tooling and richer UX patterns, while exploring what responsible third-party harness support could look like.
 
 In the meantime, customers can still run third-party agents like Claude Code inside Coder Workspaces with AI Governance controls. That remains a supported path, even as Coder Agents is our recommended direction for new deployments.
 
