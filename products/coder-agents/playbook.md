@@ -199,7 +199,7 @@ For common questions about architecture, security, pricing, licensing, and compe
 
 ### Demo flow
 
-1. Briefly show the Workspaces page to reinforce that Coder moves development off laptops and into governed cloud development environments, with workspaces running on the customer's cloud compute and developers using the tools they prefer, such as VS Code, JetBrains, or Cursor.
+1. Briefly show the Workspaces page to reinforce that Coder moves development off laptops and into governed cloud development environments, with workspaces running on the customer's infrastructure and developers using the tools they prefer, such as VS Code, JetBrains, or Cursor.
 2. Show the admin view, with multiple model providers configured and an organization-wide system prompt.
 3. Ask a question that needs no workspace, and show the instant response.
 4. Assign a coding task, and show the agent selecting a template, provisioning a workspace, and spawning sub-agents.
