@@ -187,6 +187,8 @@ Anthropic, OpenAI, Google, Azure OpenAI, AWS Bedrock, OpenRouter, Vercel AI Gate
 
 The logic that drives a traditional Coder Workspace-first purchase is the same logic that drives a Coder Agents purchase. If an organization needs centralization and governance over development environments for human developers, they need centralization and governance over development environments for AI agents, for the same reasons. The infrastructure and architecture are the same. The end user changes from a human to an agent. Everything else, identity, network policies, audit requirements, compliance posture, stays the same.
 
+The same need extends beyond professional developers. Organizations that want a governed, standardized way to distribute agents to engineering-adjacent knowledge workers or citizen developers are also a strong fit.
+
 ## Buyer Personas
 
 See [Buyer Personas](../../audiences/personas/overview.md) for the canonical definition of each persona. The application to Coder Agents is below.
