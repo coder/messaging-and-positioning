@@ -2,7 +2,7 @@
 
 > A shared reference for understanding where Coder Workspaces fits, how it works, and how to support organizations evaluating or adopting it.
 
-For positioning, messaging, and value propositions, see the [Coder Workspaces message house](./message-house.md). Coder Workspaces doesn't have an FAQ yet, so common questions are covered in [section 8](#8-common-questions).
+For positioning, messaging, and value propositions, see the [Coder Workspaces message house](./message-house.md). For detailed product questions, see the [Coder Workspaces FAQ](./faq.md).
 
 ---
 
@@ -168,47 +168,7 @@ See the message house's [Competitive Position](./message-house.md#competitive-po
 
 ## 8. Common Questions
 
-### "Do developers have to change IDEs?"
-
-No. Developers can use VS Code desktop or in the browser, JetBrains IDEs, Cursor, Devin Desktop (formerly Windsurf), Zed, or any SSH-capable editor, plus a web terminal and port forwarding. See [Access workspaces](https://coder.com/docs/user-guides/workspace-access).
-
-> Useful follow-up: "Which IDEs does each team use today?"
-
-### "What can a workspace run on?"
-
-Anything Terraform can provision, including VMs, Kubernetes pods, and Docker containers on Linux, Windows, or macOS, and on x86-64 or ARM. Existing dev container configurations can be reused on Linux workspaces. See [Templates](https://coder.com/docs/admin/templates) and [Dev Containers](https://coder.com/docs/admin/integrations/devcontainers).
-
-> Useful follow-up: "Which workloads are hardest to run on laptops today?"
-
-### "Can Coder run fully air-gapped?"
-
-Yes. All Coder features are supported in air-gapped and offline deployments, using a Terraform provider mirror and offline license checks. Telemetry and update checks can be disabled. See [Air-gapped deployments](https://coder.com/docs/install/prepare/airgap).
-
-> Useful follow-up: "Which environments are disconnected, and how do you mirror container images and packages today?"
-
-### "How fast do workspaces start?"
-
-It depends on the template. Simple templates start quickly, and prebuilt workspaces (Premium) keep a pool of ready workspaces for each preset so developers can claim one without waiting for a full build. See [Prebuilt workspaces](https://coder.com/docs/admin/templates/extending-templates/prebuilt-workspaces).
-
-> Useful follow-up: "What does your environment install at startup today?"
-
-### "How many users can Coder support?"
-
-Coder publishes validated reference architectures for 1,000, 2,000, 3,000, and 10,000 users on Kubernetes. The 10,000-user architecture is sized for 6,000 concurrently running workspaces. These are sizing guidelines, not guarantees. See [Scale Coder](https://coder.com/docs/install/plan/sizing).
-
-> Useful follow-up: "How many developers would use Coder in the first year, and how many are active at once?"
-
-### "How do we control compute cost?"
-
-Autostart and autostop schedules stop idle workspaces. Premium adds quotas, dormancy, automatic cleanup, and required autostop, and template usage insights show where compute goes. See [Workspace scheduling](https://coder.com/docs/admin/templates/managing-templates/schedule) and [Quotas](https://coder.com/docs/admin/users/quotas).
-
-> Useful follow-up: "How is development compute attributed to teams today?"
-
-### "What does Premium add over Community?"
-
-Community is free and open source. Premium adds enterprise controls such as audit logs, groups and custom roles, multiple organizations, SCIM and IdP sync, template permissions, quotas, prebuilt workspaces, workspace proxies, high availability, external provisioners, and AI Governance. See [Packaging](../../company/packaging.md) and [coder.com/pricing](https://coder.com/pricing).
-
-> Useful follow-up: "Which of these controls does your security team require?"
+For common questions about developer experience, infrastructure, security, cost, and packaging, see the [Coder Workspaces FAQ](./faq.md).
 
 ---
 
@@ -286,7 +246,7 @@ Every workspace runs on the customer's cloud or data center, so Coder drives con
 
 - [Coder docs](https://coder.com/docs), including [Architecture](https://coder.com/docs/install/plan/architecture), [Install](https://coder.com/docs/install/server), [Templates](https://coder.com/docs/admin/templates), [Access workspaces](https://coder.com/docs/user-guides/workspace-access), [Scale Coder](https://coder.com/docs/install/plan/sizing), and [Air-gapped deployments](https://coder.com/docs/install/prepare/airgap)
 - [Coder Registry](https://registry.coder.com) for templates and modules
-- [Coder Workspaces message house](./message-house.md), including its [Proof Points](./message-house.md#proof-points)
+- [Coder Workspaces message house](./message-house.md), including its [Proof Points](./message-house.md#proof-points), and [FAQ](./faq.md)
 - Use cases for [Developer Experience](../../use-cases/developer-experience.md), [Secure Development Environments](../../use-cases/secure-development-environments.md), [Compute Resource Optimization](../../use-cases/compute-resource-optimization.md), and [ML Operations](../../use-cases/ml-operations.md)
 - Market landscape pages for [GitHub Codespaces](../../market-landscape/github-codespaces.md), [Ona](../../market-landscape/ona.md), [Daytona](../../market-landscape/daytona.md), and [E2B](../../market-landscape/e2b.md)
 - [Coder on GitHub](https://github.com/coder/coder)

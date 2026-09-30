@@ -100,7 +100,7 @@ Together, these address the two things that make AI development transformation h
 
 **Pain Points:** Most development problems, slow onboarding, broken builds, "it works on my machine," trace back to the same root cause: environments that aren't defined, enforced, or reproducible.
 
-**Coder's Solution:** Workspaces are Terraform-provisioned from templates, so every developer starts from an identical, policy-enforced baseline. Platform teams define and update environments centrally; developers claim ready-to-use workspaces instantly from prebuilt pools. Cloud-based compute eliminates local hardware bottlenecks. Large monorepos, GPU jobs, intensive builds, and model training run on cloud CPUs and GPUs rather than developer laptops. Ephemeral workspaces let developers discard and spin up fresh environments instead of debugging broken ones.
+**Coder's Solution:** Workspaces are Terraform-provisioned from templates, so every developer starts from an identical, policy-enforced baseline. Platform teams define and update environments centrally; developers claim ready-to-use workspaces instantly from prebuilt pools (Premium). Cloud-based compute eliminates local hardware bottlenecks. Large monorepos, GPU jobs, intensive builds, and model training run on cloud CPUs and GPUs rather than developer laptops. Ephemeral workspaces let developers discard and spin up fresh environments instead of debugging broken ones.
 
 ### Use Case 2: Secure Source Code
 
@@ -108,7 +108,7 @@ Together, these address the two things that make AI development transformation h
 
 **Pain Points:** Storing source code on developer laptops creates persistent exfiltration risk and makes data sovereignty difficult to enforce. Platform teams have no reliable audit trail, and managing security patches across hundreds of distributed machines is slow and inconsistent. Every unpatched laptop is an exposure window.
 
-**Coder's Solution:** Coder Workspaces runs self-hosted in the enterprise's VPC, on-prem data center, or fully air-gapped enclave. Source code never leaves the perimeter; developers connect via SSH from any device, but code stays in the workspace. SSO/OIDC integration, RBAC, and audit logging give platform teams full visibility into workspace access and activity. Security patches push to all workspaces centrally in minutes, without relying on developer intervention. Coder supports any cloud, on-premises, and fully air-gapped deployments, and integrates with existing SIEM and SOC tooling rather than requiring new compliance infrastructure.
+**Coder's Solution:** Coder Workspaces runs self-hosted in the enterprise's VPC, on-prem data center, or fully air-gapped enclave. Source code never leaves the perimeter; developers connect via SSH from any device, but code stays in the workspace. SSO/OIDC integration, RBAC, and audit logging give platform teams full visibility into workspace access and activity. Security patches push to all workspaces centrally in minutes, without relying on developer intervention. Coder supports any cloud, on-premises, and fully air-gapped deployments, and its audit logs can be exported to existing log management and SIEM tools, such as Splunk, rather than requiring new compliance infrastructure.
 
 ### Use Case 3: Enabling an AI Agents Strategy
 
@@ -151,8 +151,8 @@ Together, these address the two things that make AI development transformation h
 How organizational standards for environments get encoded and enforced consistently, across every developer and every agent.
 
 - **Terraform-based workspace provisioning** - every environment is defined as code, version-controlled, and updatable centrally. Platform teams push updates to all workspaces from one place; developers never wait for a patch to propagate.
-- **Prebuilt workspace pools** - developers claim ready-to-use environments instantly, with no configuration lag. Onboarding takes seconds, not days.
-- **IDE and tool agnosticism** - VS Code, Cursor, JetBrains, Windsurf, Jupyter, and any SSH-capable editor connect to workspaces without changing developer workflow. Official plugins for VS Code and JetBrains; browser-based access via code-server.
+- **Prebuilt workspace pools (Premium)** - developers claim ready-to-use environments instantly, with no configuration lag. Onboarding takes seconds, not days.
+- **IDE and tool agnosticism** - VS Code, Cursor, JetBrains, Devin Desktop (formerly Windsurf), Jupyter, and any SSH-capable editor connect to workspaces without changing developer workflow. Official plugins for VS Code and JetBrains; browser-based access via code-server.
 - **Any Git provider** - connect to GitHub, GitLab, Bitbucket, or Azure DevOps for consistent source access across teams.
 - **Coder Agent Relay** - connects cloud-hosted AI agent sessions, such as Cursor and Claude Code, to self-hosted Coder workspaces, so agent orchestration and inference can stay with the provider while execution happens on infrastructure you control.
 - **Support for real enterprise workloads** - VMs, containers, Kubernetes, GPU workloads, and Windows environments. Large monorepos, complex builds, and long-running sessions. Not a lightweight sandbox.
@@ -178,7 +178,7 @@ How every builder, human or agent, is held accountable to organizational standar
 - **SCIM provisioning and deprovisioning (Premium)** - automate user lifecycle management via your existing identity provider.
 - **OIDC group and role sync (Premium)** - group membership and roles stay in sync with your IdP automatically.
 - **Multi-organization access control (Premium)** - manage distinct teams, business units, or tenants within a single Coder deployment.
-- **Audit logging (Premium)** - full logs of all user and workspace actions. Integrates with existing SIEM and SOC tooling.
+- **Audit logging (Premium)** - full logs of all user and workspace actions, exportable to existing log management and SIEM tools such as Splunk.
 - **Connection logging (Premium)** - a complete record of workspace app connections, browser port forwarding, SSH/IDE sessions, and tunnel authorization decisions, for deeper compliance and security visibility.
 - **Browser-only IDE enforcement (Premium)** - restrict workspace access to browser-based IDEs when security policy requires it.
 - **Source code stays in your perimeter** - workspaces run self-hosted in your VPC, on-prem data center, or air-gapped enclave. Developers connect via SSH; code never leaves the infrastructure you control.
@@ -194,8 +194,8 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 
 ## Scope and Tradeoffs
 
-- **AI governance for externally-connected IDE agents**: When developers connect Cursor or Windsurf to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
-- **Provisioning time scales with template complexity.** Prebuilt workspace pools give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
+- **AI governance for externally-connected IDE agents**: When developers connect Cursor or Devin Desktop (formerly Windsurf) to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
+- **Provisioning time scales with template complexity.** Prebuilt workspace pools (Premium) give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
 - **Coder Workspaces optimizes for depth, not raw cold-start speed.** Lightweight sandbox products like Daytona and E2B are built for sub-2-second ephemeral runtimes for simple agent experimentation. Coder Workspaces is a full-featured, self-hosted environment platform with governance, persistence, and enterprise depth those products don't provide, a tradeoff most enterprises make in exchange for control over their infrastructure.
 
 ## Competitive Position
@@ -258,7 +258,7 @@ With Coder, onboarding is instant, environments are consistent, and teams stay p
 
 ### Government
 
-Coder Workspaces runs fully self-hosted with no SaaS component, no external telemetry, and no call-home requirements. Deployable in air-gapped environments at any classification level. All development and AI agent execution runs on compute your agency owns and operates. Meets the bar for ATO conversations today, self-hosted, auditable, identity-attributed, and cloud-agnostic. The path to governed AI agent development execution for classified environments runs through Coder Workspaces.
+Coder Workspaces runs fully self-hosted with no SaaS component. Telemetry and update checks can be disabled, so there are no call-home requirements. Deployable in air-gapped environments at any classification level. All development and AI agent execution runs on compute your agency owns and operates. Meets the bar for ATO conversations today, self-hosted, auditable, identity-attributed, and cloud-agnostic. The path to governed AI agent development execution for classified environments runs through Coder Workspaces.
 
 ### FinServ
 
