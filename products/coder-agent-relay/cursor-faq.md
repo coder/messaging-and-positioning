@@ -58,7 +58,13 @@ The Cursor agent executes inside a Coder workspace running on customer-controlle
 Customers configure Cursor worker pools in Agent Relay and map each pool to a Coder organization and workspace template. Developers select the appropriate pool in Cursor, and Agent Relay monitors that pool for pending requests. When it claims a request, it creates a unique worker ID and triggers the corresponding Coder workspace, allowing Cursor to route the session to the worker running inside it.
 
 **Does Coder need to keep Cursor workers running all the time?**
-No. The initial Agent Relay architecture is designed to scale to zero. Cursor pools remain available even when no Coder workspaces are running. When a new request arrives, Agent Relay claims it and triggers creation of an ephemeral workspace for that session, which is deleted after the worker finishes. Startup latency is an active area of investment as the architecture matures.
+No. The initial Agent Relay architecture is designed to scale to zero. Cursor pools remain available even when no Coder workspaces are running. When a new request arrives, Agent Relay claims it and triggers creation of an ephemeral workspace for that session, which is deleted after the worker finishes.
+
+**How long does a Cursor session take to start?**
+It depends on the complexity of the workspace template. Templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
+
+**How many concurrent sessions can Agent Relay handle?**
+Agent Relay is designed to support bursts of hundreds or thousands of concurrent sessions, and Coder can support that scale. It hasn't been publicly benchmarked at that level yet, and in practice concurrency may also depend on the provider's orchestration capacity.
 
 **Does each Cursor agent get its own Coder workspace?**
 Yes. Agent Relay creates an ephemeral Coder workspace for each Cursor agent session. The workspace serves that session until the Cursor worker exits, after which Agent Relay triggers its deletion through the Coder control plane.
@@ -100,7 +106,10 @@ The Cursor integration is the right fit when a customer wants the Cursor cloud a
 No. Cursor's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Cursor agents execute by allowing those workloads to run inside self-hosted Coder workspaces on customer-controlled infrastructure.
 
 **Is this available today?**
-The Cursor integration uses Coder Agent Relay to connect Cursor cloud agent sessions with self-hosted Coder workspaces. Agent Relay is currently in Preview with select regulated enterprise customers.
+The Cursor integration uses Coder Agent Relay to connect Cursor cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in early access, in closed preview with design partners.
+
+**How can a customer get access?**
+Space in the preview is limited. Interested customers should connect with their CSM, who aligns with Product Management and the Field CTO. Agent Relay requires Coder Premium and a Cursor Enterprise plan.
 
 **Is Agent Relay specific to Cursor?**
 No. Agent Relay is Coder infrastructure for connecting supported cloud-hosted AI agents with self-hosted execution environments on Coder. Cursor is Coder's first integration partner for Agent Relay, and the underlying architecture is provider-agnostic by design.
@@ -121,7 +130,7 @@ Cursor with Agent Relay is a strong fit when an organization wants the Cursor cl
 Yes. Coder is designed to provide a common infrastructure layer for developers and AI agents rather than require organizations to standardize on a single agent harness. Customers can support multiple agent experiences while using Coder to standardize the development environments and infrastructure where those agents execute.
 
 **Will Coder work with cloud agent providers beyond Cursor?**
-Agent Relay's architecture is provider-agnostic by design and not built exclusively for Cursor. We aren't able to comment on specific unannounced partnerships or roadmap timing.
+Agent Relay's architecture is provider-agnostic by design and not built exclusively for Cursor. Cursor and Claude Code are supported today, and other providers, such as Codex cloud and Devin Outposts, are not. We aren't able to comment on specific unannounced partnerships or roadmap timing.
 
 ## Frequently Misunderstood Concepts
 

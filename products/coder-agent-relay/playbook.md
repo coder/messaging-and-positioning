@@ -151,31 +151,7 @@ See the message house's [Competitive Position](./message-house.md#competitive-po
 
 ## 8. Common Questions
 
-For architecture, data, positioning, and roadmap questions, see the [Cursor FAQ](./cursor-faq.md) and [Claude FAQ](./claude-code-faq.md). The questions below aren't covered there.
-
-### "How do we get access?"
-
-Agent Relay is in early access, in closed preview with design partners. Space is limited, so interested customers should connect with their CSM, who then aligns with Product Management and the Field CTO (see [Contacts](#contacts)). It requires Coder Premium and a supported provider plan.
-
-> Useful follow-up: "Which provider are you using, and what version of Coder are you running?"
-
-### "How long does a session take to start?"
-
-It depends on the complexity of the workspace template. Templates can be simplified to start in seconds, and prebuilt workspaces can warm environments for faster starts.
-
-> Useful follow-up: "What does your current template install at startup, and which parts do agents actually need?"
-
-### "How many concurrent sessions can it handle?"
-
-Agent Relay is designed to support bursts of hundreds or thousands of concurrent sessions, and Coder can support that scale. It hasn't been publicly benchmarked at that level yet, and in practice concurrency may also depend on the provider's orchestration capacity.
-
-> Useful follow-up: "What concurrency do you expect at launch, and how quickly do you expect it to grow?"
-
-### "Do you support Codex, Devin, or other providers?"
-
-Not today. Cursor and Claude Code are supported. The architecture is designed to support additional providers as they enable self-hosted execution, but we don't comment on unannounced partnerships or timing.
-
-> Useful follow-up: "Would Coder Agents, or running that agent's CLI inside a workspace, meet the need in the meantime?"
+For common questions about architecture, data, positioning, access, and roadmap, see the [Agent Relay for Cursor FAQ](./cursor-faq.md) and the [Agent Relay for Claude FAQ](./claude-code-faq.md).
 
 ---
 

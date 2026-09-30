@@ -241,6 +241,12 @@ AI Premium includes a deployment-wide allotment of Agent Hours, sized and purcha
 **How do air-gapped deployments report Agent Hours usage?**
 Connected deployments report hourly Agent Time totals to Coder automatically, with no user or chat data. Air-gapped customers can send a manually exported usage bundle instead, or establish another usage-based agreement with their Coder sales team.
 
+**How is Agent Hours usage measured?**
+Coder measures Agent Time, the cumulative duration of model invocations that produce Coder Agents chat messages, including sub-agents and context compaction. It excludes time spent waiting for user input, failed model calls, and work handed off to external agents. See [Licensing and Usage](https://coder.com/docs/ai-coder/agents/licensing-usage).
+
+**What happens when a deployment runs out of Agent Hours?**
+Administrators get an in-app warning as the deployment approaches its allotment, so they can buy more before the concurrency fallback takes effect.
+
 ## 10. Third-Party Agents and Agent Ecosystem
 
 **Will Coder Agents support third-party agent harnesses like Claude Code?**

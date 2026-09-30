@@ -125,7 +125,7 @@ Two or three lines per alternative, linking to the relevant `market-landscape/` 
 
 ## 8. Common Questions
 
-Only include questions the product FAQ doesn't already answer, and link to the FAQ for everything else. If the product has no FAQ, this section is the main place for common questions.
+Point to the product FAQ rather than listing questions here. If a common question isn't answered there, add it to the FAQ. If the product has no FAQ, list common questions here using the format below.
 
 ### "[Common question]"
 
