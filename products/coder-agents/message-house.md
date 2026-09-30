@@ -150,7 +150,7 @@ For platform teams, Coder Agents provides a consistent way to deploy and govern 
 ### Security
 
 - **Zero API keys in workspaces** - LLM provider credentials exist only in the control plane. Nothing for a developer, compromised dependency, or rogue process to exfiltrate.
-- **Full workspace network isolation** - workspaces need outbound access only to the control plane and your git provider. Everything else can be blocked. Agent workspaces need no outbound access to LLM providers.
+- **Workspace network isolation** - agent workspaces need no outbound access to LLM providers, so a template can restrict them to the control plane and your git provider and block everything else. Templates must set this explicitly; it is not a default.
 - **User identity on every action** - every agent action (PRs, commits, commands) is tied to the user who submitted the prompt. No shared bot account or anonymous identity.
 - **No agent software in workspaces** - no Claude Code, Codex, or agent harness installed. Eliminates supply chain risk and per-workspace agent maintenance. A workspace created by the agent looks identical to one a developer created manually.
 

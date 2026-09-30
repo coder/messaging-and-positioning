@@ -27,7 +27,7 @@ Workspaces run on the organization's own cloud, on-prem, or air-gapped infrastru
 
 ### Network Isolation
 
-Workspaces run in isolated networks with template-defined allow lists, so access is scoped by design rather than left open by default. Agent Firewall extends that same default-deny network policy to AI coding agents running inside a workspace, and every allow and deny decision is logged centrally for review.
+Workspaces run in isolated networks with template-defined allow lists, so access is scoped by design rather than left open by default. Agent Firewall extends that same default-deny network policy to the agent processes it wraps inside a workspace, and every allow and deny decision is logged centrally for review.
 
 ### Identity and Audit
 
@@ -36,7 +36,7 @@ SSO and SCIM integration with the organization's existing identity provider appl
 ## Products Involved
 
 - **Coder Workspaces** — the self-hosted execution environment that keeps source code, credentials, and tooling inside the organization's perimeter.
-- **AI Governance (Agent Firewall)** — extends default-deny network policy and audit logging to AI agent activity running inside a workspace, on top of the workspace-level controls above.
+- **AI Governance (Agent Firewall)** — extends default-deny network policy and audit logging to the agent processes it wraps inside a workspace, on top of the workspace-level controls above.
 
 ## Proof Points
 

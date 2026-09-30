@@ -45,7 +45,7 @@ The provider orchestrates and performs inference, Coder provides the self-hosted
 | Provider (Cursor or Anthropic) | Developer client, cloud session orchestration, agent loop, model inference, worker or runner software, and billing for the agent |
 | Agent Relay | Watches provider pools, claims eligible sessions, resolves the session owner, triggers workspace creation, and reaps completed workspaces |
 | Coder control plane | Provisions and deletes workspaces from Terraform templates, and enforces RBAC and audit |
-| Coder workspace | Execution environment with the code, tools, dependencies, network access, and credentials the customer provides, governed by Agent Firewall |
+| Coder workspace | Execution environment with the code, tools, dependencies, network access, and credentials the customer provides, governed by the template's network policy |
 | Customer | Infrastructure and compute, workspace templates, network and security policy, and the provider pool or environment configuration |
 
 ### Typical workflow
@@ -163,7 +163,7 @@ For common questions about architecture, data, positioning, access, and roadmap,
 |---|---|---|
 | Initial exploration | Understand the architecture split and data boundary, and confirm the provider and plan are supported | Platform and security leads |
 | Technical evaluation | Adapt a template to install the provider's worker or runner, and validate routing, provisioning, and teardown | Platform engineers, developers |
-| Security and architecture review | Data flows to the provider, Agent Firewall and network policy, identity mapping, RBAC, and per-session audit | Security, compliance |
+| Security and architecture review | Data flows to the provider, workspace network policy, identity mapping, RBAC, and per-session audit | Security, compliance |
 | Production planning | Concurrency, startup time targets, template ownership, and rollout to more teams | Platform engineering, engineering leadership |
 
 ### Pilot setup
@@ -178,7 +178,7 @@ For common questions about architecture, data, positioning, access, and roadmap,
 
 - Developers complete real tasks in their normal Cursor or Claude Code workflow
 - Each session gets its own workspace, and workspaces are deleted when sessions end
-- Agent Firewall and RBAC policies apply to agent workspaces as expected
+- Workspace network policy and RBAC apply to agent workspaces as expected
 - Audit records tie each run to the session and user
 - Security signs off on the documented data flows
 
