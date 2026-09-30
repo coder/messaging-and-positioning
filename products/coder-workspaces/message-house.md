@@ -152,7 +152,7 @@ How organizational standards for environments get encoded and enforced consisten
 
 - **Terraform-based workspace provisioning** - every environment is defined as code, version-controlled, and updatable centrally. Platform teams push updates to all workspaces from one place; developers never wait for a patch to propagate.
 - **Prebuilt workspace pools (Premium)** - developers claim ready-to-use environments instantly, with no configuration lag. Onboarding takes seconds, not days.
-- **IDE and tool agnosticism** - VS Code, Cursor, JetBrains, Devin Desktop (formerly Windsurf), Jupyter, and any SSH-capable editor connect to workspaces without changing developer workflow. Official plugins for VS Code and JetBrains; browser-based access via code-server.
+- **IDE and tool agnosticism** - VS Code, Cursor, JetBrains, Jupyter, and any SSH-capable editor connect to workspaces without changing developer workflow. Official plugins for VS Code and JetBrains; browser-based access via code-server.
 - **Any Git provider** - connect to GitHub, GitLab, Bitbucket, or Azure DevOps for consistent source access across teams.
 - **Coder Agent Relay** - connects cloud-hosted AI agent sessions, such as Cursor and Claude Code, to self-hosted Coder workspaces, so agent orchestration and inference can stay with the provider while execution happens on infrastructure you control.
 - **Support for real enterprise workloads** - VMs, containers, Kubernetes, GPU workloads, and Windows environments. Large monorepos, complex builds, and long-running sessions. Not a lightweight sandbox.
@@ -194,7 +194,7 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 
 ## Scope and Tradeoffs
 
-- **AI governance for externally-connected IDE agents**: When developers connect Cursor or Devin Desktop (formerly Windsurf) to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
+- **AI governance for externally-connected IDE agents**: When developers connect an IDE such as Cursor to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
 - **Provisioning time scales with template complexity.** Prebuilt workspace pools (Premium) give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
 - **Coder Workspaces optimizes for depth, not raw cold-start speed.** Lightweight sandbox products like Daytona and E2B are built for sub-2-second ephemeral runtimes for simple agent experimentation. Coder Workspaces is a full-featured, self-hosted environment platform with governance, persistence, and enterprise depth those products don't provide, a tradeoff most enterprises make in exchange for control over their infrastructure.
 

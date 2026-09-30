@@ -3,7 +3,7 @@
 ## Developer Experience
 
 **Do developers have to change IDEs?**
-No. Developers can use VS Code desktop or in the browser, JetBrains IDEs, Cursor, Devin Desktop (formerly Windsurf), Zed, or any SSH-capable editor, plus a web terminal and port forwarding. See [Access workspaces](https://coder.com/docs/user-guides/workspace-access).
+No. Developers can use VS Code desktop or in the browser, JetBrains IDEs, Cursor, Zed, or any SSH-capable editor, plus a web terminal and port forwarding. See [Access workspaces](https://coder.com/docs/user-guides/workspace-access).
 
 **How fast do workspaces start?**
 It depends on the template. Simple templates start quickly, and prebuilt workspaces (Premium) keep a pool of ready workspaces for each preset so developers can claim one without waiting for a full build. See [Prebuilt workspaces](https://coder.com/docs/admin/templates/extending-templates/prebuilt-workspaces).
