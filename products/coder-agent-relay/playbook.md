@@ -210,7 +210,7 @@ Not today. Cursor and Claude Code are supported. The architecture is designed to
 
 1. Start a session in Cursor or Claude Code, selecting the Coder-mapped pool or environment.
 2. Show the ephemeral workspace appear in Coder for that user, built from the mapped template.
-3. Show the agent using internal resources, and Agent Firewall blocking a disallowed destination.
+3. Show the developer opening the workspace in an IDE, such as VS Code or Cursor, to review the agent's work.
 4. End the session and show the workspace deleted and the audit record tied to the session and user.
 
 Tailor emphasis to the audiences in [section 6](#6-audiences). Avoid over-emphasizing data sovereignty beyond execution or unbenchmarked concurrency, and use a simple template or prebuilt workspaces so startup stays fast.
