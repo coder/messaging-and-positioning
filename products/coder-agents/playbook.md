@@ -117,6 +117,7 @@ Coder Agents' primary use cases are data residency and sovereign AI, avoiding lo
 - Shadow AI tools are appearing with API keys spread across laptops and workspaces
 - Teams want background agents triggered from CI, GitHub, or other internal systems
 - Leadership wants usage, cost, and outcome data for AI coding spend
+- The organization needs a governed, standardized way to distribute agents to engineering-adjacent knowledge workers or citizen developers
 
 ### Poor fit or another approach
 
