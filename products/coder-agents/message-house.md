@@ -106,7 +106,7 @@ For platform teams, Coder Agents provides a consistent way to deploy and govern 
 
 **Pain Points:** Incident response is manual, slow, and expensive after hours. Engineers context-switch from feature work to triage. Existing CI/CD pipelines can detect failures but can't reason about fixes. Cloud-hosted agents can't be triggered programmatically from internal CI or operate inside network-restricted environments.
 
-**Coder's Solution:** A CI webhook triggers Coder Agents via the Coder Agents API. An agent provisions a workspace, analyzes the failure, correlates it with recent commits, identifies the root cause, and opens a pull request with a fix. Review agents evaluate the change in parallel, and once approved, the agent updates the PR and merges it, all running self-hosted within your infrastructure.
+**Coder's Solution:** A CI webhook triggers Coder Agents via the Coder Agents API. An agent provisions a workspace, analyzes the failure, correlates it with recent commits, identifies the root cause, and opens a pull request with a fix. Review agents evaluate the change in parallel, and once approved, the agent updates the PR and merges it, all running self-hosted within your infrastructure. Headless use is already the dominant pattern, with roughly 70% of Coder Agents usage so far triggered through the API.
 
 ### Use Case 5: AI Adoption Observability for Platform Teams
 
