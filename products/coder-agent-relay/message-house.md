@@ -100,7 +100,7 @@ Workspaces are ephemeral: one per agent session, created when the session starts
 
 ### Governance
 
-Workspace-level controls, network policy, secrets management, and RBAC, apply to the execution environment the same way they would for any other Coder workspace. Agent Firewall applies only to the processes a template explicitly wraps with it.
+Workspace-level controls, network policy, secrets management, and RBAC, apply to the execution environment the same way they would for any other Coder workspace. Agent Firewall applies only to processes launched under it, typically configured in the template.
 
 ## Known Limitations
 
