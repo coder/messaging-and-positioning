@@ -18,7 +18,7 @@ For positioning, messaging, and value propositions, see the [Agent Relay message
 | **Important limitation** | Orchestration and inference stay in the provider's cloud, so it isn't a fit for fully self-hosted or air-gapped requirements. |
 | **Status** | Early access (closed preview with design partners). |
 | **Journey stage** | Multiply, building on Coder Workspaces and AI Governance. See the [customer journey](../../company/customer-journey.md). |
-| **Next step** | Connect with Nicky Pike and Atif to request a spot in the closed preview and scope a pilot. |
+| **Next step** | Customers connect with their customer success manager (CSM), who aligns with Product Management and the Field CTO on a spot in the closed preview and a pilot scope. |
 
 ---
 
@@ -155,7 +155,7 @@ For architecture, data, positioning, and roadmap questions, see the [Cursor FAQ]
 
 ### "How do we get access?"
 
-Agent Relay is in early access, in closed preview with design partners. Space is limited, so interested customers should connect with Nicky Pike and Atif (see [Contacts](#contacts)). It requires Coder Premium and a supported provider plan.
+Agent Relay is in early access, in closed preview with design partners. Space is limited, so interested customers should connect with their CSM, who then aligns with Product Management and the Field CTO (see [Contacts](#contacts)). It requires Coder Premium and a supported provider plan.
 
 > Useful follow-up: "Which provider and plan are you on, and what timeline are you working toward?"
 
@@ -229,7 +229,7 @@ See [Packaging](../../company/packaging.md) for how Agent Relay fits Coder's tie
 
 ### Evaluation access
 
-Agent Relay is in early access, in closed preview with design partners, and space is limited.
+Agent Relay is in early access, in closed preview with design partners, and space is limited. Interested customers connect with their CSM, who aligns with Product Management and the Field CTO.
 
 ### Partners
 
@@ -239,7 +239,7 @@ Cursor and Anthropic deliver the agent experience developers want, and Coder gov
 
 | Topic | Contact / Team |
 |---|---|
-| Preview access | Nicky Pike and Atif |
+| Preview access | The customer's CSM, who aligns with Product Management and the Field CTO |
 | Messaging and positioning | Matt Vollmer, Product Marketing |
 | Everything else | Your [Coder account team](https://coder.com/contact) or [sales@coder.com](mailto:sales@coder.com) |
 
