@@ -151,7 +151,7 @@ Agent Firewall was originally designed to observe and control how third-party ag
 
 Coder Agents introduces a different architecture. The agent loop, model credentials, and prompt handling run in the control plane rather than inside the workspace. This removes the need to place provider API keys or agent software in the workspace, which eliminates a meaningful class of risk.
 
-Command execution is the exception. When Coder Agents runs a shell tool call, that command executes inside the workspace, so the workspace's network access applies to it. Agent Firewall works by wrapping a specific process, and it does not wrap Coder Agents tool calls today. The enforcement point for that traffic is workspace-level network policy defined in the template, which platform teams configure themselves.
+When Coder Agents runs a shell tool call, that command executes inside the workspace, so the workspace's network access applies to it. Platform teams control that traffic through workspace-level network policy defined in the template.
 
 Coder Agents' integration with AI Gateway focuses on observability and auditability. Agent sessions, prompts, and tool calls can be captured through AI Gateway and viewed in Coder's AI Session dashboard, or queried via a Prometheus endpoint and added to customers' Grafana dashboards.
 
@@ -160,7 +160,7 @@ Coder Agents also integrates with AI Gateway's cost controls, giving platform te
 **What does this mean for customers currently using AI Governance?**
 AI Governance is still relevant, but its role depends on how customers choose to run agents. If they continue using third-party agents like Claude Code or Codex inside Coder workspaces, then AI Governance, including AI Gateway and Agent Firewall, remains the right solution for control and oversight.
 
-If they adopt Coder Agents, the enforcement points change rather than disappear. AI Gateway continues to provide visibility, attribution, and cost governance over LLM usage. Agent Firewall does not apply to Coder Agents tool calls, so network restrictions for those workspaces come from template-defined network policy instead. Platform teams should configure that policy deliberately rather than assume the control-plane architecture removes the need for it.
+If they adopt Coder Agents, AI Gateway continues to provide visibility, attribution, and cost governance over LLM usage, and network restrictions for agent workspaces come from template-defined network policy. Platform teams should configure that policy deliberately rather than assume the control-plane architecture removes the need for it.
 
 **Are AI Bridge and Agent Boundaries being deprecated, and on what timeline?**
 No, these features are not being deprecated. This FAQ covers how they will remain useful features for customers running third-party agents in Coder workspaces and for customers who choose to use Coder Agents. Engineering resources will continue to be allocated to advancing AI Gateway's maturity.

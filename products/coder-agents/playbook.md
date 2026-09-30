@@ -15,7 +15,7 @@ For positioning, messaging, and value propositions, see the [Coder Agents messag
 | **Common signal** | "We want something like Cursor Agents, but it has to run on our infrastructure with the models we approve." |
 | **Key question** | "Does the agent's orchestration need to run inside your perimeter, or only its execution?" |
 | **Core value** | Developers get a modern agent experience, and platform and security teams keep orchestration, execution, and model choice on infrastructure they control. |
-| **Important limitation** | Coder Agents uses its own agent. It doesn't run third-party harnesses like Claude Code or Codex, and Agent Firewall doesn't wrap its tool calls today. |
+| **Important limitation** | Coder Agents uses its own agent. It doesn't run third-party harnesses like Claude Code or Codex. |
 | **Status** | Generally available since September 1, 2026. |
 | **Journey stage** | Mostly Multiply, with a partial role in Modernize. See the [customer journey](../../company/customer-journey.md). |
 | **Next step** | Enable Coder Agents in an existing or proof-of-concept Coder deployment by following [Getting Started](https://coder.com/docs/ai-coder/agents/getting-started). |
@@ -87,7 +87,6 @@ See the FAQ's [What Coder Agents Is and Is Not](./faq.md#3-what-coder-agents-is-
 
 - Wrap or run third-party agent harnesses such as Claude Code or Codex. Those run inside workspaces with AI Governance instead.
 - Replace the IDE. Developers still use VS Code, Cursor, JetBrains, or other editors to review and refine work.
-- Get covered by Agent Firewall. Network restrictions for agent tool calls come from template-defined network policy.
 - Restrict network access by default. If a template allows full internet access, agent workspaces have it too.
 - Provide its own models. Intelligence comes from the configured LLM provider.
 
@@ -231,7 +230,7 @@ Coder Tasks and the Tasks API have been removed. Integrations move to the Chats 
 4. Show the resulting pull request, then open the workspace in an IDE, such as VS Code or Cursor, to review the agent's work.
 5. Show the same session in AI Gateway, with prompts, tool calls, and token usage attributed to the user.
 
-Tailor emphasis to the audiences in [section 6](#6-audiences). Avoid implying Agent Firewall covers agent tool calls, and use a template that provisions quickly.
+Tailor emphasis to the audiences in [section 6](#6-audiences), and use a template that provisions quickly.
 
 ---
 

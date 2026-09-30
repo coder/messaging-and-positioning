@@ -46,7 +46,7 @@ Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted mod
 
 ## Known Limitations
 
-Governance depth currently varies by how an agent runs. Third-party agents running inside a Coder workspace can be wrapped by Agent Firewall for domain, method, and path-level network policy, and routed through AI Gateway for model-level governance. Coder Agents routes its model traffic through AI Gateway automatically, but its shell tool calls are not wrapped by Agent Firewall, so network restrictions for those workspaces come from template-defined network policy instead. Cloud-hosted agents connected through Agent Relay keep their orchestration and inference in the provider's cloud, so AI Gateway's model-level auditing doesn't extend to that portion of the activity. See the AI Governance and Agent Relay message houses for the current specifics.
+Governance depth currently varies by how an agent runs. Third-party agents running inside a Coder workspace can be wrapped by Agent Firewall for domain, method, and path-level network policy, and routed through AI Gateway for model-level governance. Coder Agents routes its model traffic through AI Gateway automatically, and network restrictions for its workspaces come from template-defined network policy. Cloud-hosted agents connected through Agent Relay keep their orchestration and inference in the provider's cloud, so AI Gateway's model-level auditing doesn't extend to that portion of the activity. See the AI Governance and Agent Relay message houses for the current specifics.
 
 ## Related Use Cases
 
