@@ -64,7 +64,7 @@ Beginning with general availability on September 1, 2026, the standard Support t
   It still relies on model providers like Anthropic and OpenAI. Intelligence is external, orchestration and UX are ours.
 
 **What agents are we using? Claude Code, Codex, or something else?**
-None of the above. Coder Agents uses its own lightweight agent, purpose-built for this experience. It is open source, configurable, and model-agnostic. Customers can use their preferred LLM provider without worrying about lock-in.
+None of the above. Coder Agents uses its own lightweight agent, purpose-built for this experience. It is open source under the AGPL-3.0 license as part of the [`coder/coder`](https://github.com/coder/coder) repository, configurable, and model-agnostic. Customers can use their preferred LLM provider without worrying about lock-in.
 
 This flexibility is important as the AI landscape evolves quickly. Developers increasingly want the freedom to switch between the latest frontier models regardless of who provides them, and Coder Agents makes that possible.
 
@@ -232,7 +232,7 @@ AI Premium includes a deployment-wide allotment of Agent Hours, sized and purcha
 Coder Agents is an additional solution that will be part of the existing Coder install. Coder Agents is not a separate product or deployment.
 
 **How will Community, Premium, and AI Premium licensing work?**
-Coder Agents is shipped as part of the same open-core repository as the rest of the Coder product, but that doesn't mean all functionality is free.
+Coder Agents is shipped as part of the same open-core repository as the rest of the Coder product, but that doesn't mean all functionality is free. The agent itself, including its agent loop, tools, prompts, and LLM provider integrations, is licensed under [AGPL-3.0](https://github.com/coder/coder/blob/main/LICENSE), like the rest of Coder's open-source core. Enterprise functionality, such as the AI Premium entitlement that removes the concurrency limit, lives in the repository's `enterprise` directory under Coder's [enterprise license](https://github.com/coder/coder/blob/main/LICENSE.enterprise).
 
 Beginning September 1, 2026, Community and Premium licenses support up to five concurrently active agents. There is no limit on how long those agents can run or how many tasks they complete over time; additional agents queue whenever more than five are active. This enables individuals and small teams to experiment with Coder Agents at no cost.
 
