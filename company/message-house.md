@@ -32,7 +32,7 @@ Run development environments and agent execution on self-hosted infrastructure, 
 
 ### Choice
 
-Retain your choice of clouds, models, coding agents, and development tools. Give teams the flexibility to adopt new capabilities while reducing lock-in risk and preserving the enterprise's investment in its development infrastructure.
+Batteries included, but swappable. Retain your choice of clouds, compute, models, coding agents, development tools, and Git providers. Give teams the flexibility to adopt new capabilities while reducing lock-in risk and preserving the enterprise's investment in its development infrastructure.
 
 ### Consistency
 
