@@ -1,0 +1,113 @@
+# Coder and Virtual Desktop Infrastructure (VDI)
+
+| Field | Value |
+|---|---|
+| Date generated | 2026-10-12 |
+| Last reviewed | 2026-10-12 |
+| Category | Competitive |
+
+*This page covers virtual desktop infrastructure (VDI) and desktop as a service (DaaS) as a category rather than a single vendor. Examples include Citrix DaaS and Citrix Virtual Apps and Desktops, Omnissa Horizon (formerly VMware Horizon), Azure Virtual Desktop, and Amazon WorkSpaces. VDI competes with Coder only where it hosts developers. For other employees and desktop applications, the two solve different problems.*
+
+## One-Line Positioning
+
+VDI streams a general-purpose desktop to any employee for any application, while Coder provisions development environments defined as code that developers reach from their own IDE and AI agents run in, keeping source code off laptops without streaming the editor.
+
+## Strategic Themes and Patterns
+
+- **Relationship.** Competitive for developers, and unrelated for most other employees. VDI products deliver [apps and desktops from on-premises or cloud-hosted VMs](https://docs.citrix.com/en-us/citrix-daas/overview.html) to any user, and Coder [provisions development workspaces with Terraform](https://coder.com/docs/templates/tour) on infrastructure the customer controls. Organizations often pair laptops with VDI for developers, and that mix is one form of the [environment sprawl Coder addresses](../company/ideal-customer-profile.md).
+- **Choice, Control, Consistency.** Both approaches keep source code on central infrastructure rather than endpoints, so Control is comparable at the data boundary. The tradeoffs are in Choice and Consistency. A VDI user works inside a desktop built from a [golden image](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/IntroductiontoVirtualDesktops) with whatever tools it includes. Coder developers keep the [IDE they already use](../products/coder-workspaces/faq.md), and platform teams define environments as code ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
+- **Lock-in risk.** Standardizing developer environments on desktop images ties each toolchain change to the image update cycle. In Amazon WorkSpaces, for example, changing installed software means [updating a custom bundle and rebuilding](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html) the WorkSpaces that use it. Coder templates are Terraform, applied [each time a workspace is created, started, or stopped](https://coder.com/docs/templates/tour).
+- **Build versus buy.** For developers, the realistic alternative to Coder is usually keeping them on existing VDI with per-team desktop images, or building an internal platform on VMs and Kubernetes. See [Why Coder](../company/why-coder.md).
+- **Where VDI is sufficient on its own.** Organizations whose staff mainly use desktop applications, and whose developers do light work without containers, heavy builds, or AI agents (inferred).
+
+## Coder's Strengths Here
+
+- **The editor runs locally.** Developers connect from VS Code desktop or browser, JetBrains IDEs, Cursor, Zed, or any SSH-capable editor ([Coder Workspaces FAQ](../products/coder-workspaces/faq.md)), while code and compute stay in the workspace. Even with VS Code in the browser, [typing is rendered locally](https://coder.com/blog/coder-better-vdi-alternative-for-developers) and then synchronized to the server.
+- **Environments as code.** Workspaces are [Terraform-provisioned from templates](../products/coder-workspaces/message-house.md), so platform teams update environments centrally and a toolchain change is a template change rather than a new desktop image.
+- **Containers in the workspace.** Templates can provision VMs, Kubernetes pods, or Docker containers on Linux, Windows, or macOS, on x86-64 or ARM ([Coder Workspaces FAQ](../products/coder-workspaces/faq.md)). Coder documents [several ways to run Docker inside container-based workspaces](https://coder.com/docs/admin/templates/extending-templates/docker-in-workspaces), including Sysbox and rootless Podman.
+- **Compute sized to the work.** Large monorepos, intensive builds, and GPU jobs run on cloud CPUs and GPUs, and autostop policies and quotas (Premium) keep idle compute from running ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
+- **One platform for developers and AI agents.** Coder Agents and third-party agents such as Claude Code and Codex run in the same governed workspaces under AI Governance controls ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
+- **Browser-only access when policy requires it.** Coder Premium can [restrict workspace access to browser-based IDEs](../products/coder-workspaces/message-house.md). Coder and Island describe pairing Coder with an enterprise browser [to secure the last mile](https://coder.com/blog/the-modern-alternative-to-vdi-for-developers) between developers and their workspaces.
+- **A desktop when a tool needs one.** Workspaces can serve a graphical desktop over [RDP, Amazon DCV, or VNC](https://coder.com/docs/user-guides/workspace-access/remote-desktops).
+- **Air-gapped.** [All Coder features are supported in air-gapped and offline deployments](https://coder.com/docs/install/airgap).
+
+## VDI Overview
+
+- **What it is.** Citrix DaaS, formerly the [Citrix Virtual Apps and Desktops service](https://docs.citrix.com/en-us/citrix-daas.html), provides [app and desktop virtualization](https://docs.citrix.com/en-us/citrix-daas/overview.html). Omnissa Horizon 8 [delivers Windows desktops and applications and Linux desktops](https://techzone.omnissa.com/resource/what-horizon-8). Azure Virtual Desktop delivers [Windows 11, Windows 10, and Windows Server desktops](https://azure.microsoft.com/en-us/products/virtual-desktop). Amazon WorkSpaces is a [fully managed desktop service](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) for Windows and Linux.
+- **Architecture.** Desktops are VMs created from a master or golden image and grouped into catalogs or pools ([Citrix](https://docs.citrix.com/en-us/citrix-daas/overview.html), [Omnissa](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/IntroductiontoVirtualDesktops)). Users connect over a remote display protocol such as Horizon's [Blast Extreme](https://techzone.omnissa.com/resource/what-horizon-8). Desktops are either persistent, where users keep their changes, or non-persistent, where [changes are lost on restart](https://docs.citrix.com/en-us/citrix-daas/delivery-methods.html) ([Microsoft](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-virtual-desktop)).
+- **Target customer.** Any employee who needs desktop applications. AWS positions persistent WorkSpaces Personal for [knowledge workers, developers, and engineers](https://aws.amazon.com/workspaces-family/workspaces/faqs/), and non-persistent WorkSpaces Pools for task workers, contact centers, and training labs. Microsoft describes Azure Virtual Desktop as [designed for organizations with expertise in VDI](https://azure.microsoft.com/en-us/products/virtual-desktop).
+- **Deployment model.** Ranges from customer-operated to cloud-managed. Horizon 8 runs [on-premises or on Azure, AWS, Nutanix AHV, or Google Cloud](https://techzone.omnissa.com/resource/what-horizon-8). With Citrix DaaS, the customer [manages the machines that host desktops](https://docs.citrix.com/en-us/citrix-daas/manage-deployment.html). Azure [manages the broker, gateway, load balancing, and diagnostics](https://azure.microsoft.com/en-us/products/virtual-desktop) for Azure Virtual Desktop, and AWS runs WorkSpaces as a [fully managed service](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html).
+- **Vendor changes.** Omnissa became a standalone company when KKR [completed its acquisition of VMware's End-User Computing business](https://www.omnissa.com/insights/blog/announcing-omnissa-a-new-standalone-software-company/) on July 1, 2024.
+
+## Coder Overview for This Comparison
+
+- **Development workspaces.** The Coder server runs a Terraform apply [each time a workspace is created, started, or stopped](https://coder.com/docs/templates/tour), on any infrastructure Terraform can manage.
+- **Access methods.** Developers reach workspaces from desktop or browser IDEs, SSH, a web terminal, port forwarding, or a remote desktop ([Coder Docs](https://coder.com/docs/user-guides/workspace-access)).
+- **Remote desktops.** Coder supports [RDP, Amazon DCV, and VNC](https://coder.com/docs/user-guides/workspace-access/remote-desktops) for graphical workspaces, and a registry module connects a [local RDP client to Windows workspaces](https://registry.coder.com/modules/coder/local-windows-rdp).
+- **Governance.** SSO through OpenID Connect, role-based access control, and, in Premium, audit logging exportable to SIEM tools ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
+
+## Where VDI Is Strong or Coder Has a Gap
+
+- **Any application for any employee.** VDI delivers full Windows desktops and applications to the whole workforce ([Omnissa](https://techzone.omnissa.com/resource/what-horizon-8), [Microsoft](https://azure.microsoft.com/en-us/products/virtual-desktop)). Coder is built for development work and isn't a general desktop delivery platform for office or line-of-business applications.
+- **Display-level data controls.** Horizon offers [watermarks, screen-capture blocking, USB redirection, and printing controls](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/FeaturesofLinuxDesktopsinHorizon8) for Linux desktops. We found no equivalent display-level controls in Coder's documentation. Coder's controls sit at the identity, network, and IDE access layers ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
+- **Managed service options.** Azure Virtual Desktop and Amazon WorkSpaces are operated by the cloud provider ([Microsoft](https://azure.microsoft.com/en-us/products/virtual-desktop), [AWS](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html)). Coder is [self-hosted](../company/why-coder.md), so the customer runs the control plane and the compute.
+- **Existing investment.** Organizations with VDI already licensed, staffed, and integrated with endpoint and identity tooling may see Coder as a second platform to operate (inferred).
+- **Agents for desktop applications.** Amazon WorkSpaces for agents, [generally available since June 2026](https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-workspaces-ai/), lets AI agents operate desktop applications such as ERP systems through managed WorkSpaces and MCP. Coder workspaces are built for coding agents, not automation of desktop business applications.
+
+## Known Limitations in VDI's Approach
+
+- **Interactive latency (as of 2026-10-12).** Microsoft's guidance for Azure Virtual Desktop is that latency up to 150 ms shouldn't affect work that doesn't involve rendering or video, 150 to 200 ms should be fine for text processing, and above 200 ms might affect the experience. It recommends [hosting desktops in the region closest to users](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/troubleshoot-connection-quality).
+- **Docker Desktop needs nested virtualization (as of 2026-10-12).** Docker Desktop in a virtual desktop requires [nested virtualization or Docker Offload](https://docs.docker.com/desktop/setup/vm-vdi/), is supported only on VMware ESXi, Azure VMs, or Nutanix, requires a Docker Business subscription, and isn't supported on non-persistent desktops. Citrix Hypervisor and XenServer don't support nested virtualization, per the same page. Amazon WorkSpaces supports nested virtualization on [some bundles](https://aws.amazon.com/workspaces-family/workspaces/faqs/) but [not on Windows Server 2016](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html).
+- **Environment changes go through images (as of 2026-10-12).** Pooled desktops are created from a [golden image](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/IntroductiontoVirtualDesktops), non-persistent desktops [lose user changes on restart](https://docs.citrix.com/en-us/citrix-daas/delivery-methods.html), and updating software in WorkSpaces means [updating a custom bundle and rebuilding](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html). Developer toolchain changes therefore tend to wait on the image cycle (inferred).
+- **Non-persistent WorkSpaces Pools are Windows only (as of 2026-10-12).** WorkSpaces Pools support [Windows Server 2019 and 2022](https://aws.amazon.com/workspaces-family/workspaces/faqs/), so Linux developers on WorkSpaces need persistent WorkSpaces Personal.
+
+## Common Questions
+
+- **Is Coder just another form of VDI?** No. VDI streams a full desktop operating system. Coder provisions development environments defined as code with [Terraform](https://coder.com/docs/templates/tour), and developers connect from their own IDE over SSH or in the browser ([Coder Docs](https://coder.com/docs/user-guides/workspace-access)), so the editor runs locally. Coder can still serve a desktop over [RDP, Amazon DCV, or VNC](https://coder.com/docs/user-guides/workspace-access/remote-desktops) when a tool needs one.
+- **Does Coder keep code off laptops the way VDI does?** Yes. Coder runs in the customer's VPC, data center, or air-gapped enclave, and developers connect over SSH while code stays in the workspace ([Coder Workspaces message house](../products/coder-workspaces/message-house.md)). Where policy also requires blocking desktop IDEs, Premium can [restrict access to browser-based IDEs](../products/coder-workspaces/message-house.md).
+- **Can developers run Docker in Coder?** Yes. Coder documents options such as [Sysbox, Envbox, rootless Podman, and a privileged sidecar](https://coder.com/docs/admin/templates/extending-templates/docker-in-workspaces) for container-based workspaces, and VM-based workspaces can run Docker like any other VM (inferred).
+- **Do we have to replace VDI to adopt Coder?** No. Coder covers development environments, and VDI can keep serving desktop applications for the rest of the workforce. Because Coder is reached through an IDE or a browser, developers can also connect from an existing virtual desktop during a transition (inferred).
+- **Does Coder support Windows development?** Yes. Templates can provision Windows workspaces ([Coder Workspaces FAQ](../products/coder-workspaces/faq.md)), and developers can open them over [RDP](https://coder.com/docs/user-guides/workspace-access/remote-desktops).
+- **Which is cheaper?** It depends on the workforce and existing licensing. Both models pay for VMs or containers. See Pricing and Packaging below.
+
+## When VDI Alone Is Enough
+
+- **Mostly non-developer workforces.** Task workers, contact centers, and training labs, which AWS lists as the audience for [non-persistent WorkSpaces Pools](https://aws.amazon.com/workspaces-family/workspaces/faqs/), along with staff who mainly use desktop business applications.
+- **Light development.** Occasional scripting or small edits without containers, heavy builds, or AI agents (inferred).
+- **Display-level controls as a hard requirement.** Policies that require [watermarking or screen-capture blocking](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/FeaturesofLinuxDesktopsinHorizon8) for everyone who views code.
+
+## Pricing and Packaging
+
+- **Azure Virtual Desktop.** Customers with an eligible Microsoft 365 or Windows license [can access Azure Virtual Desktop at no additional cost](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/) and pay for the Azure infrastructure that runs it.
+- **Amazon WorkSpaces.** Billed [monthly or hourly](https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/), with WorkSpaces Personal starting at $25 per month. WorkSpaces for agents is [priced by active session time](https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-workspaces-ai/).
+- **Citrix and Omnissa.** List prices weren't found in the public documentation reviewed for this page.
+- **Coder.** Coder Community Edition is free and open source. Coder Premium pricing is not public and is available by quote. See [coder.com/pricing](https://coder.com/pricing) and [Packaging](../company/packaging.md). Compute is billed separately by the customer's own cloud or infrastructure provider.
+
+## Sources
+
+- **[Citrix DaaS overview (Citrix Docs)](https://docs.citrix.com/en-us/citrix-daas/overview.html).** App and desktop virtualization, catalogs built from images. Primary. Accessed 2026-10-12.
+- **[Citrix DaaS (Citrix Docs)](https://docs.citrix.com/en-us/citrix-daas.html).** Former product name. Primary. Accessed 2026-10-12.
+- **[Delivery methods (Citrix Docs)](https://docs.citrix.com/en-us/citrix-daas/delivery-methods.html).** Persistent and non-persistent desktops. Primary. Accessed 2026-10-12.
+- **[Manage a deployment (Citrix Docs)](https://docs.citrix.com/en-us/citrix-daas/manage-deployment.html).** Customer-managed machines. Primary. Accessed 2026-10-12.
+- **[What is Horizon 8 (Omnissa Tech Zone)](https://techzone.omnissa.com/resource/what-horizon-8).** Desktops and apps delivered, deployment locations, Blast Extreme. Primary. Accessed 2026-10-12.
+- **[Introduction to Virtual Desktops (Omnissa Docs)](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/IntroductiontoVirtualDesktops).** Golden image desktop pools. Primary. Accessed 2026-10-12.
+- **[Features of Linux Desktops in Horizon 8 (Omnissa Docs)](https://docs.omnissa.com/Desktops-and-Applications-in-Horizon-V2406/FeaturesofLinuxDesktopsinHorizon8).** Watermark, screen-capture blocking, USB redirection, printing. Primary. Accessed 2026-10-12.
+- **[Announcing Omnissa (Omnissa Blog)](https://www.omnissa.com/insights/blog/announcing-omnissa-a-new-standalone-software-company/).** Standalone company after KKR acquisition. Primary. Accessed 2026-10-12.
+- **[Azure Virtual Desktop (Microsoft)](https://azure.microsoft.com/en-us/products/virtual-desktop).** Supported desktops, managed components, target customer. Primary. Accessed 2026-10-12.
+- **[Deploy Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-virtual-desktop).** Pooled and personal host pools. Primary. Accessed 2026-10-12.
+- **[Troubleshoot connection quality (Microsoft Learn)](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/troubleshoot-connection-quality).** Latency guidance. Primary. Accessed 2026-10-12.
+- **[Azure Virtual Desktop pricing (Microsoft)](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/).** License eligibility and infrastructure costs. Primary. Accessed 2026-10-12.
+- **[What is Amazon WorkSpaces (AWS Docs)](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html).** Fully managed service, supported operating systems. Primary. Accessed 2026-10-12.
+- **[Amazon WorkSpaces FAQs (AWS)](https://aws.amazon.com/workspaces-family/workspaces/faqs/).** Personal and Pools audiences, Pools operating systems, nested virtualization support. Primary. Accessed 2026-10-12.
+- **[WorkSpaces bundles (AWS Docs)](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html).** Custom bundle updates, nested virtualization limits. Primary. Accessed 2026-10-12.
+- **[Amazon WorkSpaces pricing (AWS)](https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/).** Monthly and hourly billing, starting price. Primary. Accessed 2026-10-12.
+- **[Amazon WorkSpaces for agents is generally available (AWS, 2026-06-30)](https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-workspaces-ai/).** Desktop application agents, MCP, session-time pricing. Primary. Accessed 2026-10-12.
+- **[Run Docker Desktop in a VM or VDI environment (Docker Docs)](https://docs.docker.com/desktop/setup/vm-vdi/).** Nested virtualization, supported hypervisors, subscription and persistence requirements. Primary. Accessed 2026-10-12.
+- **[Templates guided tour (Coder Docs)](https://coder.com/docs/templates/tour).** Terraform-based provisioning. Primary. Accessed 2026-10-12.
+- **[Access workspaces (Coder Docs)](https://coder.com/docs/user-guides/workspace-access) and [Remote desktops (Coder Docs)](https://coder.com/docs/user-guides/workspace-access/remote-desktops).** IDE, SSH, and desktop access. Primary. Accessed 2026-10-12.
+- **[Local Windows RDP module (Coder Registry)](https://registry.coder.com/modules/coder/local-windows-rdp).** RDP to Windows workspaces. Primary. Accessed 2026-10-12.
+- **[Docker in Workspaces (Coder Docs)](https://coder.com/docs/admin/templates/extending-templates/docker-in-workspaces).** Options for running Docker in workspaces. Primary. Accessed 2026-10-12.
+- **[Air-gapped Deployments (Coder Docs)](https://coder.com/docs/install/airgap).** Air-gapped support. Primary. Accessed 2026-10-12.
+- **[Coder, a better VDI alternative for developers (Coder Blog)](https://coder.com/blog/coder-better-vdi-alternative-for-developers) and [The modern alternative to VDI for developers (Coder Blog)](https://coder.com/blog/the-modern-alternative-to-vdi-for-developers).** Local rendering in browser-based VS Code, Coder and Island approach. Used for claims about Coder only. Primary (Coder). Accessed 2026-10-12.
+- **[Coder pricing](https://coder.com/pricing).** Editions. Primary. Accessed 2026-10-12.
+- **[Coder Workspaces message house](../products/coder-workspaces/message-house.md), [Coder Workspaces FAQ](../products/coder-workspaces/faq.md), [Why Coder](../company/why-coder.md), [Ideal Customer Profile](../company/ideal-customer-profile.md).** Coder capabilities, supported IDEs and workload types, governance, positioning. Primary (Coder). Accessed 2026-10-12.

@@ -5,6 +5,9 @@
 **Do developers have to change IDEs?**
 No. Developers can use VS Code desktop or in the browser, JetBrains IDEs, Cursor, Zed, or any SSH-capable editor, plus a web terminal and port forwarding. See [Access workspaces](https://coder.com/docs/user-guides/workspace-access).
 
+**Is Coder just another form of VDI?**
+No. VDI streams a full desktop operating system. Coder provisions development environments defined as code with Terraform, and developers connect from their own IDE over SSH or in the browser, so the editor runs locally. Coder can still serve a desktop over RDP, Amazon DCV, or VNC when a tool needs one. See [Remote desktops](https://coder.com/docs/user-guides/workspace-access/remote-desktops) and [Coder and VDI](../../market-landscape/vdi.md).
+
 **How fast do workspaces start?**
 It depends on the template. Simple templates start quickly, and prebuilt workspaces (Premium) keep a pool of ready workspaces for each preset so developers can claim one without waiting for a full build. See [Prebuilt workspaces](https://coder.com/docs/admin/templates/extending-templates/prebuilt-workspaces).
 
