@@ -222,7 +222,7 @@ When evaluating a platform like Coder, developers often ask:
 - What happens if my workspace stops or needs to be rebuilt?
 - How does debugging work when development happens remotely?
 - Can I share my environment with teammates to reproduce issues?
-- Is this a true development environment or simply another form of VDI?
+- Is this a true development environment or simply another form of VDI? See [Coder and VDI](../market-landscape/vdi.md).
 
 ## Content They Trust
 

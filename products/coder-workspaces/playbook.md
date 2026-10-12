@@ -116,6 +116,7 @@ Coder Workspaces' primary use cases are consistent development environments, sec
 - Large or complex workloads, such as monorepos, GPU work, or Windows environments, that strain laptops
 - Security is restricting AI coding tools on unmanaged laptops, or AI tools are spreading without governance
 - A hosted cloud development environment has been discontinued, or can't meet self-hosting or network requirements
+- Developers work in virtual desktops and report latency, or can't run container tools such as Docker there
 - Interest in Coder Agents or AI Governance, which run on Coder Workspaces
 
 ### Poor fit or another approach
@@ -157,6 +158,7 @@ See the message house's [Buyer Personas](./message-house.md#buyer-personas) for 
 See the message house's [Competitive Position](./message-house.md#competitive-position) for the full narrative.
 
 - **Local laptops.** The status quo. Coder moves code, credentials, and compute off unmanaged endpoints. See [Secure Development Environments](../../use-cases/secure-development-environments.md).
+- **Virtual desktop infrastructure (VDI).** Citrix, Omnissa Horizon, Azure Virtual Desktop, and Amazon WorkSpaces stream full, general-purpose desktops. Coder gives developers an environment defined as code that they reach from their own IDE. See [Coder and VDI](../../market-landscape/vdi.md).
 - **Building in-house.** Teams can assemble VMs, Kubernetes, and dev containers themselves, but take on the platform work Coder provides. See [Why Coder](../../company/why-coder.md).
 - **GitHub Codespaces.** GitHub-hosted, Linux-only, and tied to GitHub. See [Coder and GitHub Codespaces](../../market-landscape/github-codespaces.md).
 - **Ona (formerly Gitpod).** A vendor-operated platform now part of OpenAI, with runners in AWS or GCP. See [Coder and Ona](../../market-landscape/ona.md).
@@ -247,5 +249,5 @@ Every workspace runs on the customer's cloud or data center, so Coder drives con
 - [Coder Registry](https://registry.coder.com) for templates and modules
 - [Coder Workspaces message house](./message-house.md), including its [Proof Points](./message-house.md#proof-points), and [FAQ](./faq.md)
 - Use cases for [Developer Experience](../../use-cases/developer-experience.md), [Secure Development Environments](../../use-cases/secure-development-environments.md), [Compute Resource Optimization](../../use-cases/compute-resource-optimization.md), and [ML Operations](../../use-cases/ml-operations.md)
-- Market landscape pages for [GitHub Codespaces](../../market-landscape/github-codespaces.md), [Ona](../../market-landscape/ona.md), [Daytona](../../market-landscape/daytona.md), and [E2B](../../market-landscape/e2b.md)
+- Market landscape pages for [GitHub Codespaces](../../market-landscape/github-codespaces.md), [Ona](../../market-landscape/ona.md), [Daytona](../../market-landscape/daytona.md), [E2B](../../market-landscape/e2b.md), and [VDI](../../market-landscape/vdi.md)
 - [Coder on GitHub](https://github.com/coder/coder)
