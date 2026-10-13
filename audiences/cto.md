@@ -14,7 +14,7 @@ The Chief Technology Officer is responsible for the organization's engineering s
 - Head of Software Engineering
 - Head of Technology
 
-Organizations structure engineering leadership differently. These titles share enough focus on engineering strategy, software delivery, platform engineering, and technical direction to be considered related, although their authority and scope may vary. The CIO and CISO are not treated as related titles in this persona. They are distinct executive roles with overlapping interests but different primary responsibilities.
+Organizations structure engineering leadership differently. These titles share enough focus on engineering strategy, software delivery, platform engineering, and technical direction to be considered related, although their authority and scope may vary. The CIO and CISO are not treated as related titles in this persona. They are distinct executive roles with overlapping interests but different primary responsibilities. Engineering managers and directors who lead specific delivery teams are covered on the [Engineering Manager](./engineering-manager.md) page.
 
 ## Primary Goals
 

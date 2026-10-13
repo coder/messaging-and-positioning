@@ -8,6 +8,7 @@ Coder gets developers contributing in hours, not weeks, by replacing manual loca
 
 - **Individual developers** who are blocked or frustrated by slow onboarding or a poor local development experience. Onboarding isn't a one-time cost: it's paid again every time a developer switches projects.
 - **Platform, IT, DevOps, and SecOps teams** who absorb the time-consuming work of provisioning, approving, and troubleshooting local environments.
+- **Developer experience leads** accountable for measuring and reducing developer friction across the organization. See [Developer Experience Lead](../audiences/developer-experience-lead.md).
 - **Engineering leadership** concerned with the business-level impact: inefficient use of developer time directly affects velocity and the ability to scale headcount to meet output demands, and a poor developer experience hurts retention and the ability to attract talent.
 
 ## The Problem

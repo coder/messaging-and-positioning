@@ -30,6 +30,7 @@ Lead with technical credibility and practitioner-to-practitioner conversation, n
 Caring Providers most often appear in these roles.
 
 - [Platform Engineer](../platform-engineer.md)
+- [Developer Experience Lead](../developer-experience-lead.md)
 - [Developer](../developer.md)
 
 The same title doesn't guarantee the same persona. A platform engineer can act as a Caring Provider in one organization, while a technical leader with a different title takes on that motivation elsewhere.

@@ -11,13 +11,26 @@ Platform Engineers design, build, and operate the internal platforms that develo
 - Staff Platform Engineer
 - Principal Platform Engineer
 - Developer Platform Engineer
-- Developer Experience Engineer (DevEx)
 - Internal Developer Platform (IDP) Engineer
 - Cloud Platform Engineer
 - Infrastructure Engineer
 - Site Reliability Engineer (SRE)
 
-Organizations structure platform engineering differently. Depending on the company, these responsibilities may sit within Platform Engineering, Developer Experience, Infrastructure Engineering, Cloud Engineering, or Site Reliability Engineering. While titles vary, the role is responsible for building and operating the internal platforms developers rely on every day.
+Organizations structure platform engineering differently. Depending on the company, these responsibilities may sit within Platform Engineering, Developer Experience, Infrastructure Engineering, Cloud Engineering, or Site Reliability Engineering. While titles vary, the role is responsible for building and operating the internal platforms developers rely on every day. Engineers who build and operate developer infrastructure inside a Developer Experience group are covered by this page. The leaders who measure and drive the developer experience across the organization are covered on the [Developer Experience Lead](./developer-experience-lead.md) page.
+
+## Platform Engineer vs. Developer Experience Lead
+
+Platform Engineers and [Developer Experience (DevEx) Leads](./developer-experience-lead.md) work toward the same outcome, productive developers, but own different parts of it. The Platform Engineer builds and operates the internal platform developers use. The DevEx Lead decides which developer problems matter most, measures whether they're getting better, and drives adoption and enablement across the organization.
+
+| | Platform Engineer | Developer Experience Lead |
+| --- | --- | --- |
+| **Owns** | The internal developer platform and the infrastructure behind it | The developer experience as an outcome, across tools, processes, and practices |
+| **Primary work** | Building and operating environments, templates, automation, and integrations | Measuring friction, prioritizing improvements, running onboarding and enablement programs, driving adoption, communicating change |
+| **Measures success by** | Platform reliability, provisioning speed, operational toil, infrastructure efficiency | Developer satisfaction, onboarding time, time lost to friction, adoption of recommended tools and practices |
+| **Core question** | "How do we build and run the capabilities developers need, reliably and at scale?" | "What is slowing developers down, and is it getting better?" |
+| **Role in an evaluation** | Validates technical fit, integration, and operability | Validates developer adoption and experience, builds the productivity business case |
+
+In smaller organizations, one person or team may hold both responsibilities. When messaging to a Platform Engineer, lead with architecture, integration, operability, and scale rather than developer-satisfaction outcomes alone.
 
 ## Primary Goals
 
@@ -184,7 +197,7 @@ Modern developer platforms span cloud providers, Kubernetes, identity systems, A
 
 ## Collaboration
 
-Platform Engineers build platforms that serve other engineers. A small platform team is often responsible for the daily experience of hundreds or even thousands of developers, making them one of the highest-leverage teams in an engineering organization. To deliver that experience, they collaborate closely with software developers to understand pain points and improve workflows, partner with infrastructure and cloud teams to manage the underlying platform, work with security and IT teams to implement governance and identity controls, and align with engineering leadership on platform priorities and technology adoption. Success depends on balancing the needs of many stakeholders while delivering secure, reliable, and self-service platforms that scale across the organization.
+Platform Engineers build platforms that serve other engineers. A small platform team is often responsible for the daily experience of hundreds or even thousands of developers, making them one of the highest-leverage teams in an engineering organization. To deliver that experience, they collaborate closely with software developers to understand pain points and improve workflows, work with [Developer Experience Leads](./developer-experience-lead.md) on which friction to prioritize and how to measure improvement, partner with infrastructure and cloud teams to manage the underlying platform, work with security and IT teams to implement governance and identity controls, and align with engineering leadership on platform priorities and technology adoption. Success depends on balancing the needs of many stakeholders while delivering secure, reliable, and self-service platforms that scale across the organization.
 
 ## What They Need from End Users
 
@@ -211,7 +224,7 @@ Coder gives Platform Engineers a single platform for delivering secure, standard
 
 ## Buying Influence
 
-Platform Engineers play a critical role in the technical evaluation, implementation, and long-term success of developer infrastructure platforms. As organizations move from identifying a need to evaluating solutions, Platform Engineers are responsible for validating technical fit, integrating the platform with existing infrastructure, and ensuring it can be operated securely and reliably at scale. They work closely with Developer Experience teams, engineering leadership, and developers throughout the evaluation process.
+Platform Engineers play a critical role in the technical evaluation, implementation, and long-term success of developer infrastructure platforms. As organizations move from identifying a need to evaluating solutions, Platform Engineers are responsible for validating technical fit, integrating the platform with existing infrastructure, and ensuring it can be operated securely and reliably at scale. They work closely with [Developer Experience Leads](./developer-experience-lead.md), who validate developer adoption and build the productivity business case, as well as engineering leadership and developers throughout the evaluation process.
 
 While Platform Engineers assess operational and technical requirements, they also look for evidence that a solution delivers a better developer experience and will be broadly adopted. Their recommendation carries significant weight because they are ultimately responsible for operating the platform long after it's deployed.
 
