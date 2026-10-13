@@ -30,6 +30,7 @@ Lead with a quantifiable value story covering productivity gained, time saved, o
 Opportunists can appear in a range of roles, including these.
 
 - [CTO](../cto.md)
+- [Engineering Manager](../engineering-manager.md)
 - Technical or engineering leaders evaluating cost and efficiency of AI-assisted development
 
 The same title doesn't guarantee the same persona. A leader who is an Opportunist at one organization may act as a [Protectionist](./protectionist.md) at another, with someone else in the organization taking on the opposite motivation.

@@ -12,6 +12,10 @@ Strong-fit organizations are mid-size to large enterprises, typically 2,000 or m
 
 A consistent history of investing in best-in-class technology and a pattern of strategic adoption based on open standards, rather than defaulting to whatever a single vendor bundles, is a positive signal.
 
+## Geographic coverage
+
+Coder serves organizations across North America; Europe, the Middle East, and Africa (EMEA); and Asia-Pacific (APAC). Because Coder is self-hosted, organizations deploy it in the cloud regions, data centers, or air-gapped environments they choose, which helps them meet data residency and sovereignty requirements wherever they operate.
+
 ## Technical signals
 
 - Multi-cloud or hybrid-cloud adoption, with genuine operational proficiency across more than one cloud rather than a single vendor relationship
