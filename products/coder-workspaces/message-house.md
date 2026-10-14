@@ -188,7 +188,7 @@ How every builder, human or agent, is held accountable to organizational standar
 The foundation for AI agent execution, built on the three standards above. AI Governance is included in Coder Premium, and the workspace infrastructure it depends on is already in place. Coder's platform is the substrate that AI governance and agent execution run on. Because the control plane already defines how environments are provisioned, who can access them, and how activity is logged, extending it to governed agent workflows requires no new platform.
 
 - **Efficient** - Coder Agents provision workspaces only when tool execution is required for large tasks like file edits, shell commands, and builds.
-- **Agnostic** - Third-party agents (Claude Code, Codex, Cursor Agents, etc.) can run inside Coder Workspaces, governed by AI Governance controls, network firewalls, prompt logging, model access control.
+- **Agnostic** - Third-party agents (Claude Code, Codex, etc.) can run inside Coder Workspaces, governed by AI Governance controls, network firewalls, prompt logging, model access control. Cursor Cloud Agents execute in Coder Workspaces through Agent Relay, where workspace network policy, RBAC, and audit logging apply.
 - **MCP server support** - available in both Community and Premium, enabling model context protocol integrations within workspaces.
 - **Extensible to AI Governance** - process-level network controls and LLM gateway with prompt logging and model access control are included in Coder Premium and layer directly onto existing workspace infrastructure. No new platform required.
 

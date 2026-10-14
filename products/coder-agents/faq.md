@@ -295,7 +295,7 @@ That said, our primary focus remains on delivering a best-in-class experience fo
 ## 12. Competitive Landscape: Cursor
 
 **How does Coder Agents compare to Cursor?**
-TL;DR: Coder Agents is most comparable to Cursor Agents, but the two products work in very different ways. Cursor Agents typically runs on Cursor's hosted infrastructure, while Coder Agents runs entirely on a customer's self-hosted Coder deployment. This allows enterprises to run agentic workloads on their own infrastructure with stronger security and control.
+TL;DR: Coder Agents is most comparable to Cursor Agents, but the two products work in very different ways. Cursor Agents always runs orchestration and inference on Cursor's hosted infrastructure, while Coder Agents runs entirely on a customer's self-hosted Coder deployment. This allows enterprises to run agentic workloads on their own infrastructure with stronger security and control.
 
 Cursor also offers a hybrid model, where agent orchestration and model inference run in Cursor's cloud while execution connects out to a self-hosted environment such as a Coder workspace through Coder Agent Relay. That's a real option for organizations willing to keep orchestration and inference off-premises, but it stops short of the fully self-hosted, air-gapped operation Coder Agents provides, where orchestration, inference, and execution all run on infrastructure the customer controls. For organizations that require everything to stay fully self-hosted and air-gapped, Cursor's hybrid model isn't viable and Coder Agents is the fit.
 

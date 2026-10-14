@@ -12,7 +12,7 @@ Coder is the self-hosted, cloud-agnostic infrastructure layer that governs how A
 Cursor orchestrates and performs inference, Coder provides the self-hosted execution environment, and Agent Relay connects the two.
 
 **Why is Cursor partnering with Coder?**
-Cursor has built one of the industry's most compelling AI coding experiences, but many enterprises need greater control over where AI agents execute and what resources they can access. Together, Cursor and Coder give organizations a way to use Cursor's cloud agent experience while running agent workloads inside self-hosted Coder environments on infrastructure they own and govern.
+Cursor has built one of the industry's most compelling AI coding experiences, but many enterprises need greater control over where AI agents execute and what resources they can access. Together, Cursor and Coder give organizations a way to use Cursor's cloud agent experience while agents execute inside self-hosted Coder environments on infrastructure they own and govern.
 
 **What customer problem does this solve?**
 Cloud-hosted coding agents need access to source code, dependencies, internal services, development tooling, and other enterprise resources to do useful work. Many organizations cannot provide that access inside vendor-managed execution environments. Coder gives Cursor agents self-hosted development environments inside the customer's infrastructure while preserving the Cursor cloud agent experience developers already use.
@@ -103,7 +103,7 @@ The Cursor integration is the right fit when a customer wants the Cursor cloud a
 ## Product & Roadmap
 
 **Does this replace Cursor Cloud?**
-No. Cursor's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Cursor agents execute by allowing those workloads to run inside self-hosted Coder workspaces on customer-controlled infrastructure.
+No. Cursor's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Cursor agents execute by moving that execution into self-hosted Coder workspaces on customer-controlled infrastructure.
 
 **Is this available today?**
 The Cursor integration uses Coder Agent Relay to connect Cursor cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in early access, in closed preview with design partners.

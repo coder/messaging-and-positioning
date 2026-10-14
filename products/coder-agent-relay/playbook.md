@@ -133,7 +133,7 @@ See the message house's [Buyer Personas](./message-house.md#buyer-personas) for 
 |---|---|---|
 | [CISO and security leaders](../../audiences/ciso.md) | Controlling where agents execute, what they reach, and what data flows to the provider | "An approved path to the agents developers want, on infrastructure you already govern." |
 | [Platform engineers](../../audiences/platform-engineer.md) | Extending existing templates and RBAC to agents without owning worker fleets, plus startup time | "Extend the Coder platform you already run to cloud agents, without a new platform." |
-| [Developers](../../audiences/developer.md) | Keeping the Cursor or Claude Code experience while agents reach internal resources | "Keep your agent. It just runs where your code already lives." |
+| [Developers](../../audiences/developer.md) | Keeping the Cursor or Claude Code experience while agents reach internal resources | "Keep your agent. It just executes where your code already lives." |
 | [CTO](../../audiences/cto.md) and [CIO](../../audiences/cio.md) | Sanctioned AI adoption without shadow AI or single-vendor lock-in | "Adopt the best cloud agents without giving up control of where they run." |
 
 ---
