@@ -16,7 +16,7 @@ For positioning, messaging, and value propositions, see the [AI Governance messa
 | **Key question** | "If an agent did something it shouldn't, could you reconstruct who prompted it, what it ran, and what it reached?" |
 | **Core value** | Developers keep the agents and models they prefer. Platform and security teams get one place to approve models, attribute every request to a user, cap spend, and limit what agents can reach. |
 | **Important limitation** | AI Gateway governs only the clients routed through it, and some popular tools, including Cursor, aren't supported clients today. It records, attributes, and limits AI usage, but doesn't inspect or block prompt content. |
-| **Status** | Generally available since Coder v2.30 (February 2026). |
+| **Status** | Generally available since Coder v2.30 (February 2026). The pilot and demo in this playbook need v2.38 or later. |
 | **Journey stage** | Modernize. See the [customer journey](../../company/customer-journey.md). |
 | **Next step** | Start a self-serve [Premium trial](https://coder.com/trial), [set up AI Gateway](https://coder.com/docs/ai-coder/ai-gateway/setup), and route one agent, such as Claude Code, through it. |
 
@@ -42,10 +42,9 @@ AI clients point their model base URL at Coder and authenticate with a Coder ses
 
 | Component | Responsibility |
 |---|---|
-| AI Gateway | Authenticates users, holds provider keys, records prompts, reasoning, tool calls, and token usage, and enforces per-user and per-group budgets |
+| AI Gateway | Authenticates users, holds provider keys, records prompts, reasoning, tool calls, and token usage, and enforces per-user spend budgets, set by group or individually |
 | AI Gateway Proxy | Brings clients that can't override their base URL, such as GitHub Copilot, under AI Gateway |
 | Agent Firewall | Restricts agent processes in a workspace to allowlisted domains, methods, and paths, and logs each allow or deny decision to the control plane |
-| Coder Agents MCP management | Defines approved MCP servers and tools, with group and user access controls |
 | Coder Workspaces | The self-hosted environment where developers and agents run, with network policy defined in the template |
 | Platform team | Configures providers, budgets, retention, templates, allowlists, and workspace network policy |
 
@@ -65,8 +64,8 @@ AI clients point their model base URL at Coder and authenticate with a Coder ses
 
 **Security team**
 
-1. **Investigate.** Open a session to see the prompt, the model's reasoning, each tool call, and the related Agent Firewall decisions, attributed to a user.
-2. **Report.** Use spend reports and metrics for audit and chargeback.
+1. **Investigate.** Open a session to see the prompt, the model's reasoning, and each tool call, attributed to a user. When the template links Agent Firewall to AI Gateway, the session also shows the agent's allowed and blocked network requests.
+2. **Report.** Use spend reports and metrics for audit and cost allocation.
 
 ### Deployment model
 
@@ -136,7 +135,7 @@ AI Governance's primary use cases are secure execution for AI agents, audit and 
 - **Existing gateway.** Do you already run an AI gateway or proxy, and what does it cover?
 - **Audit.** What would you need to reconstruct an agent incident, and how long must records be kept?
 - **Monitoring.** Where should AI usage data go: Prometheus, OpenTelemetry, a log pipeline, or a SIEM?
-- **Spend.** Who owns AI spend, and do you need limits by team or user?
+- **Spend.** Who owns AI spend, and do different teams need different limits per developer?
 - **Network.** What can workspaces and agents reach today, and who decides?
 - **Privacy.** Will prompt logging need review by a works council or privacy team?
 
@@ -164,7 +163,7 @@ See the message house's [Competitive Position](./message-house.md#competitive-po
 - **Agent sandboxes.** Isolation alone doesn't provide model access control, attribution, or organization-wide policy. See [Coder and NVIDIA OpenShell](../../market-landscape/nvidia-openshell.md).
 - **Admin controls built into AI tools.** Each covers its own tool. AI Gateway gives one audit trail and one set of budgets across supported tools.
 - **Building in-house.** Teams would need a gateway, identity integration, environment isolation, and network policy. See [Why Coder](../../company/why-coder.md).
-- **Coder Agents and Agent Relay.** Coder Agents routes all model traffic through AI Gateway automatically. Agent Relay runs Cursor and Claude Code cloud agents in governed workspaces. See the [Coder Agents playbook](../coder-agents/playbook.md) and [Agent Relay playbook](../coder-agent-relay/playbook.md).
+- **Coder Agents and Agent Relay.** Coder Agents is a separate product and doesn't require AI Governance. When both are in use, Coder Agents' model traffic appears in AI Gateway sessions and counts toward AI Gateway budgets. Agent Relay runs Cursor and Claude Code cloud agents in governed workspaces. See the [Coder Agents playbook](../coder-agents/playbook.md) and [Agent Relay playbook](../coder-agent-relay/playbook.md).
 
 ---
 
@@ -178,7 +177,7 @@ A gateway governs the model call: approved models, logs, and spend for traffic r
 
 ### "Logging isn't enough. Can we block risky prompts or actions?"
 
-AI Governance enforces limits in several places today: approved providers, with BYOK optionally disabled; per-user and per-group budgets enforced before requests reach the provider; approved MCP servers and tools for Coder Agents; Agent Firewall allowlists; and workspace network policy. It doesn't inspect or block prompt content. A policy engine is under active investigation. Customers who want to help shape it should raise it with their customer success team, who will work with the product manager on next steps.
+AI Governance enforces limits in several places today: approved providers, with BYOK optionally disabled; per-user budgets, set by group or individually, enforced before requests reach the provider; Agent Firewall allowlists; and workspace network policy. It doesn't inspect or block prompt content. A policy engine is under active investigation. Customers who want to help shape it should raise it with their customer success team, who will work with the product manager on next steps.
 
 > Useful follow-up: "Which specific actions or content would you need to block?"
 
@@ -208,7 +207,7 @@ AI Gateway stores the last user prompt, tool call requests, token usage, and mod
 
 ### "Our corporate proxy already controls egress. Why add Agent Firewall?"
 
-A corporate proxy sees traffic, but not which Coder user, workspace, or agent session produced it. Agent Firewall applies per-agent allowlists inside the workspace and correlates each decision with the AI Gateway session. The two work together.
+A corporate proxy sees traffic, but not which Coder user, workspace, or agent session produced it. Agent Firewall applies per-agent allowlists inside the workspace and logs every decision with the workspace and its owner. When the template links it to AI Gateway, those decisions also appear in the agent's AI Gateway session. The two work together.
 
 > Useful follow-up: "Do you need different rules for agents than for developers?"
 
@@ -239,15 +238,15 @@ No. AI Governance is included in Premium. Community deployments can't use it. Se
 | Initial exploration | Map current AI tools, key management, and gaps in audit and spend visibility | Platform and security leads |
 | Technical evaluation | Enable AI Gateway, route supported tools through it, and set budgets | Platform engineers, developers |
 | Security and architecture review | Stored data and retention, Agent Firewall allowlists, workspace network policy, and monitoring integration | Security, compliance, privacy |
-| Production planning | Provider strategy, BYOK policy, budgets by group, template rollout, and coexistence with any existing gateway | Platform engineering, engineering leadership |
+| Production planning | Provider strategy, BYOK policy, budgets by group, template rollout, coexistence with any existing gateway, and pricing for any self-hosted or gateway-routed models | Platform engineering, engineering leadership |
 
 ### Pilot setup
 
-- A Coder deployment on v2.30 or later, with a Premium or trial license
+- A Coder deployment on v2.38 or later, with a Premium or trial license
 - AI Gateway enabled with at least one provider key
 - Workspace templates that inject the AI Gateway base URL and session token
 - A pilot group using a supported tool, such as Claude Code or Codex
-- Agent Firewall on at least one agent template, with an allowlist tightened for the pilot
+- Agent Firewall on at least one agent template, with an allowlist tightened for the pilot and linked to AI Gateway sessions. Linking isn't on by default, so include it when building the pilot template.
 - Group budgets for the pilot group
 - Named stakeholders from platform, security, and the developer group, with agreed success criteria and timeline
 
@@ -264,12 +263,14 @@ No. AI Governance is included in Premium. Community deployments can't use it. Se
 
 1. Open **AI settings > Providers** to show that admins connect providers such as OpenAI, Anthropic, and Amazon Bedrock in one place, with keys held centrally.
 2. Click through to **AI settings > Models** to show the range of models the organization can offer.
-3. Show a template that injects the AI Gateway base URL and session token, so the developer never handles a provider key.
+3. Show a template that injects the AI Gateway base URL and session token and runs Claude Code under Agent Firewall, so the developer never handles a provider key.
 4. Start a workspace from that template and run a Claude Code task.
 5. Open the session in AI Gateway, with the prompt, reasoning, tool calls, and token usage attributed to the user.
-6. Have the agent try to reach a domain that isn't on the allowlist, and show the denied request alongside the session.
+6. Have the agent try to reach a domain that isn't on the allowlist, and show the blocked request in the same session.
 7. Show group budgets and the spend report.
 8. Show metrics in Prometheus or Grafana.
+
+Do a dry run first. If the session shows network requests as **Disabled**, either the agent isn't running under Agent Firewall or Agent Firewall isn't linked to AI Gateway.
 
 Tailor emphasis to the audiences in [section 6](#6-audiences).
 
@@ -281,8 +282,7 @@ Tailor emphasis to the audiences in [section 6](#6-audiences).
 
 - AI Governance, including AI Gateway, AI Gateway Proxy, and Agent Firewall, is included in Premium
 - Community deployments can't use AI Governance
-- Coder Agents routes all model traffic through AI Gateway automatically
-- Coder v2.30 or later. Agent Firewall audit logs require Agent Firewall v0.5.2 or later
+- Coder v2.38 or later
 - Credentials for at least one supported provider, or a self-hosted OpenAI-compatible endpoint
 - AI Gateway Proxy requires a CA certificate that clients trust
 
