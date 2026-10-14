@@ -170,7 +170,7 @@ Agent Relay lets healthcare and insurance organizations give developers access t
 
 ### Cursor
 
-Cursor delivers the cloud agent experience and orchestration developers already want; Coder governs where that agent executes. Neither side has to change what it does well. Customers get the best-of-breed agent experience they're asking for, running on infrastructure their platform and security teams can actually approve. Cursor's integration with Coder is designed to unlock enterprise accounts that an execution-in-the-cloud-only model couldn't reach on its own, particularly in financial services and other regulated industries.
+Cursor delivers the cloud agent experience and orchestration developers already want; Coder governs where that agent executes. Neither side has to change what it does well. Customers get the best-of-breed agent experience they're asking for, executing on infrastructure their platform and security teams can actually approve. Cursor's integration with Coder is designed to unlock enterprise accounts that an execution-in-the-cloud-only model couldn't reach on its own, particularly in financial services and other regulated industries.
 
 ### Anthropic (Claude Code)
 

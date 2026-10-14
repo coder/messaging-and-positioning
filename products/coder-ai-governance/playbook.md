@@ -123,7 +123,7 @@ AI Governance's primary use cases are secure execution for AI agents, audit and 
 
 ### Poor fit or another approach
 
-- **The main AI tool can't be routed through AI Gateway.** If most usage is in Cursor, for example, model-level governance won't cover it. Cursor cloud agents can still run in governed workspaces through [Agent Relay](../coder-agent-relay/playbook.md).
+- **The main AI tool can't be routed through AI Gateway.** If most usage is in Cursor, for example, model-level governance won't cover it. Cursor cloud agents can still execute in governed workspaces through [Agent Relay](../coder-agent-relay/playbook.md).
 - **The immediate need is prompt content inspection or DLP.** Pair Coder with a DLP tool for now. A policy engine is under active investigation.
 - **The need is one model endpoint for many non-development applications.** A general-purpose gateway may be enough. See [Coder and LiteLLM](../../market-landscape/litellm.md).
 - **The organization isn't using AI coding tools yet.** Start with Coder Workspaces and the Migrate stage.
@@ -163,7 +163,7 @@ See the message house's [Competitive Position](./message-house.md#competitive-po
 - **Agent sandboxes.** Isolation alone doesn't provide model access control, attribution, or organization-wide policy. See [Coder and NVIDIA OpenShell](../../market-landscape/nvidia-openshell.md).
 - **Admin controls built into AI tools.** Each covers its own tool. AI Gateway gives one audit trail and one set of budgets across supported tools.
 - **Building in-house.** Teams would need a gateway, identity integration, environment isolation, and network policy. See [Why Coder](../../company/why-coder.md).
-- **Coder Agents and Agent Relay.** Coder Agents is a separate product and doesn't require AI Governance. When both are in use, Coder Agents' model traffic appears in AI Gateway sessions and counts toward AI Gateway budgets. Agent Relay runs Cursor and Claude Code cloud agents in governed workspaces. See the [Coder Agents playbook](../coder-agents/playbook.md) and [Agent Relay playbook](../coder-agent-relay/playbook.md).
+- **Coder Agents and Agent Relay.** Coder Agents is a separate product and doesn't require AI Governance. When both are in use, Coder Agents' model traffic appears in AI Gateway sessions and counts toward AI Gateway budgets. With Agent Relay, Cursor and Claude Code cloud agents execute in governed workspaces. See the [Coder Agents playbook](../coder-agents/playbook.md) and [Agent Relay playbook](../coder-agent-relay/playbook.md).
 
 ---
 
@@ -189,7 +189,7 @@ Yes, for supported clients. Tools on laptops or desktops can use AI Gateway with
 
 ### "Does it work with Cursor and GitHub Copilot?"
 
-GitHub Copilot works through AI Gateway Proxy. Cursor isn't a supported AI Gateway client today. Its custom-endpoint mode sends request formats AI Gateway doesn't accept (an open Cursor bug), routes traffic through Cursor's servers, and doesn't cover Tab completion. Cursor cloud agents can run in governed Coder workspaces through Agent Relay, where workspace controls apply. See the [compatibility table](https://coder.com/docs/ai-coder/ai-gateway/clients#compatibility).
+GitHub Copilot works through AI Gateway Proxy. Cursor isn't a supported AI Gateway client today. Its custom-endpoint mode sends request formats AI Gateway doesn't accept (an open Cursor bug), routes traffic through Cursor's servers, and doesn't cover Tab completion. Cursor cloud agents can execute in governed Coder workspaces through Agent Relay, where workspace controls apply. See the [compatibility table](https://coder.com/docs/ai-coder/ai-gateway/clients#compatibility).
 
 > Useful follow-up: "Which tools account for most of your AI usage?"
 
