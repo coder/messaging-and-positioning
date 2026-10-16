@@ -12,6 +12,7 @@ It exists to give everyone at Coder, including the AI agents and tools we use, a
 - **Products** — Product-specific messaging and positioning, including FAQs and playbooks for supporting evaluations (new playbooks start from `products/_playbook-template.md`)
 - **Audiences** — Priorities, problems, and messaging for key audiences, including role-based pages and a `personas/` subdirectory describing cross-role buyer motivations
 - **Use cases** — Customer problems and outcomes that may span products
+- **Industries** — How Coder fits specific industries, the types of organizations within each, and why they need Coder
 - **Market landscape** — Comparisons between Coder and the vendors and product categories that come up alongside it
 
 ## How to use it

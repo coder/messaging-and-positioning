@@ -4,7 +4,7 @@ This expands on `company/message-house.md`'s "Who We're For" section with the fu
 
 ## Industry
 
-Coder's strongest fit is with Global 2000 organizations, concentrated in finance, banking, government (federal and state), software and services, technology, automotive, insurance, telecommunications, agriculture, manufacturing, marketing, research and development, retail, e-commerce, aerospace, healthcare, and consulting. The common thread across these industries is that software and data processing are central to how the organization generates revenue, not a supporting function.
+Coder's strongest fit is with Global 2000 organizations, concentrated in finance, banking, government (federal and state), software and services, technology, automotive, insurance, telecommunications, agriculture, manufacturing, marketing, research and development, retail, e-commerce, aerospace, healthcare, and consulting. The common thread across these industries is that software and data processing are central to how the organization generates revenue, not a supporting function. See `industries/` for deeper pages on individual industries, such as [Financial Services](../industries/financial-services.md).
 
 ## Company profile
 
