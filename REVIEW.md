@@ -12,10 +12,10 @@ Skip it when you're only answering a question about Coder's positioning and not 
 
 The content misleads someone about Coder. Check for these, in order:
 
-1. **Unsupported facts.** Every capability, integration, metric, version, availability statement, and customer claim must be supported by this repository or by Coder's own public sources: [coder.com](https://coder.com), including product documentation at [coder.com/docs](https://coder.com/docs) and published customer stories. Don't fill gaps from general knowledge or third-party sites.
+1. **Unsupported facts.** Every capability, integration, metric, version, availability statement, and customer claim must be supported by this repository or by Coder's own public sources: [coder.com](https://coder.com), including product documentation at [coder.com/docs](https://coder.com/docs) and published customer stories. Don't fill gaps about Coder from general knowledge or third-party sites. Claims about other vendors follow item 4.
 2. **Pricing and packaging.** Tier names, what each tier includes, and prices come from [coder.com/pricing](https://coder.com/pricing), with [Packaging](./company/packaging.md) for the narrative. Don't state prices from memory.
 3. **Roadmap promises.** Don't describe unreleased features as available, and don't commit to dates or future capabilities.
-4. **Competitor claims.** Claims about other vendors must match their page in `market-landscape/`. If a vendor has no page, don't make specific claims about it. No disparaging language.
+4. **Competitor claims.** Claims about other vendors must match their page in `market-landscape/`. If the vendor has no page, or its page doesn't cover what the content needs, you may research it using credible sources, such as the vendor's own website, documentation, pricing, and announcements, or reputable press and analysts. Don't contradict the repository's positioning, and use no disparaging language.
 5. **Names and terminology.** Use current product and feature names as written in `products/` and `company/`, for example AI Gateway (not AI Bridge) and Agent Firewall (not Agent Boundaries). Mention a former name only to help a reader who knows the old one.
 6. **Positioning drift.** The content must not contradict the [message house](./company/message-house.md) or the relevant product message house, for example by calling an included capability an add-on or describing a product's scope differently.
 7. **Non-public information.** No customer names, logos, quotes, or results unless they're already public, and no internal metrics or plans.
@@ -36,6 +36,7 @@ Then tell the person what you did, in your reply to them and never in the conten
 - List each change briefly, for example "AI Bridge → AI Gateway" or "Removed '60% faster onboarding': no source in the messaging repository."
 - Call out anything you removed or couldn't verify, so they can add a source or leave it out.
 - Link the source for any claim you kept or added based on coder.com or the docs rather than this repository, so they can confirm it.
+- Call out any outside research about other vendors, with links, so they know it didn't come from this repository.
 - End with one line: `Checked against Coder messaging: <N> fixed, <N> removed.` If nothing needed changing, write `Checked against Coder messaging: no issues found.` A missing line means the check didn't run.
 
 ## Improving this check
