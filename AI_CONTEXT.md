@@ -4,6 +4,8 @@ This repository is Coder's canonical source of truth for public messaging and po
 
 Use the content in this repository when answering questions about Coder or creating, reviewing, or refining Coder-related messaging.
 
+Whenever you create or edit content about Coder using this repository, check it against [`REVIEW.md`](./REVIEW.md) before returning it. See [Review before returning content](#review-before-returning-content).
+
 ## How to use this repository
 
 Before answering, identify the subject of the request and inspect the repository for relevant context.
@@ -74,6 +76,10 @@ Use this repository as a strategic foundation, not a library of sentences that m
 Adapt messaging to the audience, format, and task while preserving the underlying positioning, terminology, product truths, and messaging guardrails.
 
 When reviewing existing content, identify material conflicts with the guidance in this repository and explain the discrepancy.
+
+## Review before returning content
+
+Before returning any content about Coder that you created or edited using this repository, check it against [`REVIEW.md`](./REVIEW.md), fix what you find, and tell the person what you changed in your reply. Never leave review notes, markers, or check results in the content itself. This step is required. Don't wait for the person to ask for it, and don't skip it because the request seems small. Most people using this repository through an AI tool don't know the check exists.
 
 ## Responding to people
 

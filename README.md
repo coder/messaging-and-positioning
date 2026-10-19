@@ -19,6 +19,8 @@ It exists to give everyone at Coder, including the AI agents and tools we use, a
 
 Use this repository as the starting point when creating or reviewing Coder messaging. The content here establishes the strategic foundation, not necessarily copy that should be reproduced verbatim.
 
+Content created or edited with this repository should be checked against [`REVIEW.md`](./REVIEW.md), which lists what makes Coder content inaccurate. AI agents that use this repository run that check automatically.
+
 When guidance here conflicts with older decks, documents, Slack conversations, prompts, or other materials, treat this repository as the current source of truth or raise the discrepancy with Product Marketing.
 
 For AI agents and applications, see [`AI_CONTEXT.md`](./AI_CONTEXT.md) for instructions on navigating and applying this context.
