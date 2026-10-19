@@ -1,6 +1,6 @@
 ---
 name: coder-messaging
-description: "Coder's canonical messaging and positioning repository. Use when drafting, reviewing, or answering questions about Coder company narrative, product messaging, FAQs, message houses, audience context, use cases, market landscape, or competitive/positioning language for Coder products."
+description: "Coder's canonical messaging and positioning repository. Use whenever you write, edit, or review anything that describes Coder or its products (social posts, emails, blog posts, web copy, decks, one-pagers, sales enablement, RFP answers), or answer questions about Coder company narrative, product messaging, FAQs, message houses, audience context, use cases, market landscape, or competitive/positioning language."
 ---
 
 # Coder Messaging
@@ -23,5 +23,6 @@ Use this skill for tasks such as:
 1. Read `AI_CONTEXT.md` at the root of this repository first. It explains the repository structure and how to select relevant context.
 2. Follow its guidance to identify and read only the smallest set of relevant files under `company/`, `products/`, `audiences/`, `use-cases/`, and `market-landscape/` needed for the task.
 3. Treat the repository as authoritative for current public messaging and positioning. Do not invent product facts, claims, or competitive positioning that the repository does not support.
+4. Before returning any content you created or edited, check it against `REVIEW.md` at the root of this repository and follow its instructions, including the one-line result. Do this even if the person didn't ask for a review.
 
 Do not duplicate or restate the repository's content here. This skill is a pointer, not a copy; the repository itself is the source of truth and may change independently of this skill file.
