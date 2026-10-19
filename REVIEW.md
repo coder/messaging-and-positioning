@@ -25,15 +25,17 @@ Don't flag tone, style, length, or word choice unless it changes the meaning. Ke
 
 ## What to do with findings
 
+The content you deliver contains only the finished piece. Never put markers like `[needs source]`, review notes, comments, or check results in it, whether you're replying in chat or writing directly into a document, file, or other tool.
+
 - Fix what you can using this repository or product documentation.
-- If you can't verify a claim, remove it or mark it `[needs source]` in the content, and tell the person why.
-- If the repository doesn't answer something the content needs, say so plainly instead of inventing a position.
+- If you can't verify a claim, take it out of the content or replace it with a version this repository supports.
+- If the repository doesn't answer something the content needs, leave it out rather than inventing a position.
 
-After the content, and separate from it so it isn't pasted into the final piece, add one line:
+Then tell the person what you did, in your reply to them and never in the content itself:
 
-`Checked against Coder messaging: <N> fixed, <N> flagged.`
-
-If nothing needed changing, write `Checked against Coder messaging: no issues found.` A missing line means the check didn't run.
+- List each change briefly, for example "AI Bridge → AI Gateway" or "Removed '60% faster onboarding': no source in the messaging repository."
+- Call out anything you removed or couldn't verify, so they can add a source or leave it out.
+- End with one line: `Checked against Coder messaging: <N> fixed, <N> removed.` If nothing needed changing, write `Checked against Coder messaging: no issues found.` A missing line means the check didn't run.
 
 ## Improving this check
 

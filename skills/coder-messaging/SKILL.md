@@ -23,6 +23,6 @@ Use this skill for tasks such as:
 1. Read `AI_CONTEXT.md` at the root of this repository first. It explains the repository structure and how to select relevant context.
 2. Follow its guidance to identify and read only the smallest set of relevant files under `company/`, `products/`, `audiences/`, `use-cases/`, and `market-landscape/` needed for the task.
 3. Treat the repository as authoritative for current public messaging and positioning. Do not invent product facts, claims, or competitive positioning that the repository does not support.
-4. Before returning any content you created or edited, check it against `REVIEW.md` at the root of this repository and follow its instructions, including the one-line result. Do this even if the person didn't ask for a review.
+4. Before returning any content you created or edited, check it against `REVIEW.md` at the root of this repository and follow its instructions. Tell the person what you changed in your reply, and never leave review notes or markers in the content itself. Do this even if the person didn't ask for a review.
 
 Do not duplicate or restate the repository's content here. This skill is a pointer, not a copy; the repository itself is the source of truth and may change independently of this skill file.
