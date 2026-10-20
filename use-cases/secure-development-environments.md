@@ -41,7 +41,8 @@ SSO and SCIM integration with the organization's existing identity provider appl
 ## Proof Points
 
 - "One or two clicks and developers can start working. Sharing reports, exposing ports. It's all built-in. And because it's hosted remotely, we don't need expensive laptops or worry about local Docker vulnerabilities." — Sumeet Roy, DevOps Engineer at payabl
-- A U.S. Defense Intelligence Organization runs Coder across 2,500+ developers with centralized identity, access controls, and audit logs supporting its compliance requirements, and established the military's first multi-tenant Coder deployment with centralized ATO compliance.
+- A U.S. defense intelligence organization runs Coder self-hosted on AWS GovCloud inside a fully air-gapped network. Onboarding dropped from multiple days to 3-5 minutes, developer adoption grew 500% over a multi-year deployment, and leadership gained full audit trails for compliance verification ([Defense Intelligence success story](https://coder.com/success-stories/defense-intelligence-organizations)).
+- A separate U.S. Defense Intelligence platform runs the U.S. military's first true multi-tenant Coder deployment, giving 2,500+ developers pre-approved environments that inherit a centralized, platform-level ATO instead of each mission team certifying its own ([U.S. Defense Intelligence Organization success story](https://coder.com/success-stories/u-s-defense-intelligence-organization)). Coder's [defense sovereignty blog](https://coder.com/blog/ai-agent-security-sovereignty-defense) describes these as two separate organizations, so keep their metrics separate.
 - Skydio reduced cloud computing costs by 90% after moving development onto Coder-managed infrastructure ([Skydio success story](https://coder.com/success-stories/skydio)), a case study Coder also features on its Secure Development Environments page.
 
 ## Known Limitations
