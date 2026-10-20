@@ -41,7 +41,7 @@ Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted mod
 
 ## Proof Points
 
-- A U.S. Defense Intelligence Organization runs Coder across 2,500+ developers and is cited by Coder as an example of enabling "seamless AI adoption" alongside centralized compliance ([U.S. Defense Intelligence Organization success story](https://coder.com/success-stories/u-s-defense-intelligence-organization)).
+- A U.S. Defense Intelligence platform gives 2,500+ developers pre-approved, ATO-compliant environments through the U.S. military's first true multi-tenant Coder deployment ([U.S. Defense Intelligence Organization success story](https://coder.com/success-stories/u-s-defense-intelligence-organization)). Coder's [defense sovereignty blog](https://coder.com/blog/ai-agent-security-sovereignty-defense) presents that centralized-approval model as the foundation for governing AI agents in the same kind of environment. The success story itself doesn't describe AI agent usage.
 - Industry context: as of Coder's Coder Agents beta announcement, 61% of engineering teams were already running AI coding agents, most still without the infrastructure to scale them safely ([Coder blog: Self-Hosted, AI Model Agnostic Coder Agents](https://coder.com/blog/self-hosted-ai-model-agnostic-coder-agents)). This is an industry-adoption stat Coder has published, not a customer-specific result.
 
 ## Known Limitations
