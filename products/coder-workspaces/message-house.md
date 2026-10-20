@@ -276,7 +276,7 @@ Every Coder Workspace is an EC2 instance, EKS pod, or ECS task running in the cu
 
 ### Azure / GCP
 
-Same dynamic. Azure customers run workspaces on Azure VMs or AKS. GCP customers run on GCE or GKE. Coder is cloud-agnostic, so wherever the customer runs, Coder drives consumption on that cloud. Azure OpenAI and Vertex AI are supported as model providers. For organizations running multi-cloud or shifting cloud strategy over time, Coder moves with them: the same platform, the same governance, the same developer experience regardless of which cloud is underneath.
+Same dynamic. Azure customers run workspaces on Azure VMs or AKS. GCP customers run on GCE or GKE. Coder is cloud-agnostic, so wherever the customer runs, Coder drives consumption on that cloud. Coder supports Azure OpenAI and Google Gemini as model providers, and Claude Code running in a workspace can use Google Vertex AI through the Coder Registry module. For organizations running multi-cloud or shifting cloud strategy over time, Coder moves with them: the same platform, the same governance, the same developer experience regardless of which cloud is underneath.
 
 ### IDE and AI Tool Vendors (Cursor, JetBrains, VS Code, etc.)
 
