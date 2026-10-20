@@ -246,4 +246,4 @@ Coder Agents also makes these models accessible in environments they otherwise c
 
 ### Cloud Providers (Azure, GCP)
 
-Same dynamic as AWS. Azure customers run Coder Agents workspaces on Azure VMs or AKS, and access models via Azure OpenAI. GCP customers run workspaces on GCE or GKE and access models via Vertex AI. Coder is cloud-agnostic; wherever the customer runs, Coder Agents drives consumption on that cloud.
+Same dynamic as AWS. Azure customers run Coder Agents workspaces on Azure VMs or AKS, and access models via Azure OpenAI. GCP customers run workspaces on GCE or GKE and access Gemini models via Google's Gemini API. Coder is cloud-agnostic; wherever the customer runs, Coder Agents drives consumption on that cloud.
