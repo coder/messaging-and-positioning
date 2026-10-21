@@ -160,7 +160,7 @@ Many DoD and Intelligence Community programs already run OpenShift in disconnect
 | OpenShift Container Platform, installed disconnected with oc-mirror v2 | Coder Workspaces scheduled onto the cluster, with Terraform templates scoped to OpenShift namespaces |
 | RHEL UBI base images, and STIG profiles for scanning clusters and nodes with the Compliance Operator | SSO, role-based access control, and audit logging for workspaces and templates |
 | Advanced Cluster Security for container runtime security and vulnerability scanning | Agent Firewall for agent processes inside a workspace |
-| OpenShift AI and Red Hat AI Inference Server, serving models through vLLM | AI Gateway routing developer and agent traffic to those in-enclave endpoints, and Coder Agents |
+| OpenShift AI and Red Hat AI Inference, serving models through vLLM | AI Gateway routing developer and agent traffic to those in-enclave endpoints, and Coder Agents |
 
 See [Coder and Red Hat](../market-landscape/red-hat.md) for sources, and for where OpenShift Dev Spaces overlaps with Coder Workspaces.
 
