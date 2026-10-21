@@ -54,7 +54,7 @@ To reduce risk, many institutions harden laptops with endpoint scanners, enterpr
 
 ### AI adoption is happening under scrutiny
 
-Engineers want AI coding assistants and agents, and leadership wants the productivity gains. Risk and compliance teams need to know which models touch code, what data leaves the perimeter, and what an agent actually did. [AI Governance](../products/coder-ai-governance/message-house.md) answers those questions: AI Gateway centralizes model access, credentials, budgets, and auditing, and Agent Firewall enforces default-deny network policy on agent processes inside a workspace. That lets institutions move from blocking AI to adopting it with a record regulators can review.
+Engineers want AI coding assistants and agents, and leadership wants the productivity gains. Risk and compliance teams need to know which models touch code, what data leaves the perimeter, and what an agent actually did. [AI Governance](../products/coder-ai-governance/message-house.md) answers those questions: AI Gateway centralizes model access, credentials, budgets, and auditing, and Agent Firewall enforces default-deny HTTP and HTTPS egress rules on agent processes inside a workspace. That lets institutions move from blocking AI to adopting it with a record regulators can review.
 
 ### Modernization runs alongside daily delivery
 
@@ -129,7 +129,7 @@ Quants, researchers, actuaries, and analysts write code every day, often in note
 ## Products Involved
 
 - **Coder Workspaces**: self-hosted, standardized environments that keep code and data inside the institution's perimeter and replace laptop-based development or VDI.
-- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access, auditing, budgets, and agent network policy, so institutions can adopt AI with evidence for risk and compliance teams.
+- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access, auditing, budgets, and HTTP and HTTPS egress allowlisting for agent processes, so institutions can adopt AI with evidence for risk and compliance teams.
 - **Coder Agents**: governed coding agents that run on the institution's own infrastructure, with model traffic routed through AI Gateway.
 
 ## Proof Points

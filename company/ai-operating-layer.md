@@ -48,7 +48,7 @@ Coder's product line maps directly onto the five requirements, though the specif
 
 - **Coder Workspaces** provides the governed environment itself, the isolated, self-hosted infrastructure where development and agent execution happen, and is the foundation the other requirements build on. See [Coder Workspaces](../products/coder-workspaces/message-house.md).
 - **AI Gateway** (part of AI Governance) governs the models and controls the spend, centralizing model access, credentials, and budgets. See [AI Governance](../products/coder-ai-governance/message-house.md).
-- **Agent Firewall** (part of AI Governance) scopes the access and helps contain the data through network policy enforcement by domain, method, and path. Its current capabilities and known limitations are described in the AI Governance message house rather than here.
+- **Agent Firewall** (part of AI Governance) scopes the access and helps contain the data through HTTP and HTTPS egress allowlisting by domain, method, and path. Its current capabilities and known limitations are described in the AI Governance message house rather than here.
 - **AI Gateway's auditing and session timeline** address the audit-everything requirement, giving a durable record of prompts, tool usage, and user attribution.
 
 Do not present Coder's coverage of these five requirements as complete in every dimension. Check the AI Governance message house's Known Limitations section before making a specific completeness claim.

@@ -98,7 +98,7 @@ See the message house's [Governance Scope](./message-house.md#governance-scope) 
 | "AI Governance, included in Premium" | "The AI Governance add-on" | It's part of Premium, not a separate purchase. |
 | "AI Gateway" and "Agent Firewall" | "AI Bridge" and "Agent Boundaries" | Those are the former names. |
 | "Records prompts, tool calls, and token usage" | "Records everything the agent does" | Model output and tool results aren't stored. |
-| "Limits what agents launched through Agent Firewall can reach" | "Controls all egress" | Coverage depends on which processes are wrapped and on the allowlist. |
+| "Limits what agents launched through Agent Firewall can reach" | "Controls all egress" | Coverage depends on which processes are wrapped and on the allowlist, and applies to HTTP and HTTPS traffic only. |
 | "Supported AI clients" | "Any AI tool" | Some clients can't be routed through AI Gateway. |
 
 ---

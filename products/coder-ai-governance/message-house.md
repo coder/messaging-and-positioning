@@ -29,7 +29,7 @@ The need for AI governance is especially urgent now as enterprises move rapidly 
 
 ### Why Coder?
 
-Coder provides the governed AI infrastructure layer that enables organizations to move from experimentation to auditable AI development. AI Governance, included in Coder Premium and made up of AI Gateway and Agent Firewall, centralizes model access, credential management, and network policy enforcement for AI activity running inside Coder Workspaces. Coverage differs by component: AI Gateway's model-level governance applies to Coder Agents and to supported third-party clients such as Claude Code and Codex, while Agent Firewall's network policy applies to the agent processes it wraps inside a workspace. Coder reduces blast radius, delivers full observability into AI activity, and gives organizations the foundation to scale AI adoption while maintaining visibility, control, and compliance.
+Coder provides the governed AI infrastructure layer that enables organizations to move from experimentation to auditable AI development. AI Governance, included in Coder Premium and made up of AI Gateway and Agent Firewall, centralizes model access, credential management, and HTTP and HTTPS egress allowlisting for AI activity running inside Coder Workspaces. Coverage differs by component: AI Gateway's model-level governance applies to Coder Agents and to supported third-party clients such as Claude Code and Codex, while Agent Firewall's egress allowlisting applies to the HTTP and HTTPS traffic of the agent processes it wraps inside a workspace. Coder reduces blast radius, delivers full observability into AI activity, and gives organizations the foundation to scale AI adoption while maintaining visibility, control, and compliance.
 
 ## What's Included
 
@@ -83,7 +83,7 @@ What differentiates Coder is its infrastructure-first approach. Rather than focu
 
 **Challenges:** Agents running on developer laptops inherit access to SSH keys, credentials, and local files. Agents can install packages, execute commands, and access networks without restrictions. A compromised or misbehaving agent can affect multiple systems.
 
-**Coder's Solution:** Coder Workspaces already isolates agents from developer laptops by running them in ephemeral, self-hosted environments with RBAC. AI Governance adds the enforcement layer on top: Agent Firewall applies default-deny network policy, domain, HTTP method, and path rules, to agent processes running inside the workspace, limiting blast radius and enforcing least-privilege execution.
+**Coder's Solution:** Coder Workspaces already isolates agents from developer laptops by running them in ephemeral, self-hosted environments with RBAC. AI Governance adds the enforcement layer on top: Agent Firewall applies default-deny HTTP and HTTPS egress rules by domain, method, and path to agent processes running inside the workspace, limiting blast radius and enforcing least-privilege execution.
 
 ### Use Case 2: AI Activity Visibility, Audit, and Forensics
 
@@ -159,17 +159,17 @@ Coder AI Governance provides centralized control and visibility over how AI agen
 
 ### Agent Execution Layer
 
-**Agent Firewall:** A process-level, default-deny network firewall for agent processes running inside a workspace. It enforces domain, HTTP method, and URL path rules, and every policy decision is logged to the control plane and correlated with the corresponding AI Gateway session for a unified view of prompt and network activity.
+**Agent Firewall:** A process-level, default-deny egress firewall for the HTTP and HTTPS traffic of agent processes running inside a workspace. It enforces domain, HTTP method, and URL path rules, and every policy decision is logged to the control plane and correlated with the corresponding AI Gateway session for a unified view of prompt and network activity.
 
 **Identity, Access, and Audit Controls:** Role-based access control, audit logging, and user attribution that track prompts, tool calls, and agent actions for governance and incident response.
 
 ## Governance Scope
 
-- **Network policy granularity**: Governance is enforced through workspace isolation, infrastructure boundaries, and domain/method/path-level network controls. Per-directory or per-file runtime policy is not part of the current model.
+- **Network policy granularity**: Governance is enforced through workspace isolation, infrastructure boundaries, and domain/method/path-level HTTP and HTTPS egress controls. Per-directory or per-file runtime policy is not part of the current model.
 - **SIEM integration path**: Prometheus, Grafana, OpenTelemetry, and structured log export are the supported observability path today. Purpose-built, native integrations with specific enterprise SIEM platforms are on the roadmap.
 - **MCP governance model**: Coder Agents' organization-scoped MCP server management is the current, actively developed governance path for MCP tools; AI Gateway's original in-gateway MCP tool injection has been superseded by it.
 - **Agent Firewall enforcement depth**: Agent Firewall enforces domain, method, and path-level policy on HTTP and HTTPS. Rules cannot express ports, CIDRs, or protocols. Under the default nsjail backend, all TCP from the wrapped process is routed through the policy proxy, so non-HTTP TCP is blocked rather than policy-controlled; DNS gets a placeholder answer by default, and other UDP is dropped. The landjail backend, for environments without network namespace capabilities, is weaker: it can be bypassed by connecting to an external host on the proxy's port, it doesn't control UDP, and it doesn't isolate the agent from other processes. Recommend nsjail wherever it can run. Process-level isolation and broader non-TCP control are active areas of investment.
-- **Agent Firewall coverage**: Agent Firewall rules are default-deny, so anything not on the allowlist is blocked. It applies only to agent processes launched through it, using the agent-firewall module or CLI; an agent started outside the wrapper isn't firewalled. The module's starter allowlist is broad (major Git hosts, container registries, cloud platforms, and model providers) and should be tightened per customer. Coder Agents don't use Agent Firewall: their network boundary is the workspace itself, so restrict workspace egress in the template.
+- **Agent Firewall coverage**: Agent Firewall rules are default-deny, so anything not on the allowlist is blocked. It applies only to agent processes launched through it, using the agent-firewall module or CLI; an agent started outside the wrapper isn't firewalled. It handles HTTP and HTTPS traffic only: rules match domain, method, and path, with no port or protocol rules, so other TCP protocols such as database connections aren't supported as allowed traffic ([rules engine](https://coder.com/docs/ai-coder/agent-firewall/rules-engine), [Agent Firewall architecture](https://github.com/coder/boundary/blob/main/docs/architecture.md)). The module's starter allowlist is broad (major Git hosts, container registries, cloud platforms, and model providers) and should be tightened per customer. Coder Agents don't use Agent Firewall: their network boundary is the workspace itself, so restrict workspace egress in the template.
 - **Positioning AI Governance**: AI Governance (GA'ed February 2026) manages and audits AI agents within development environments. It is one layer of a broader security posture, not a standalone solution for every class of AI-related risk.
 - **Industry-specific requirements**: Security requirements vary by industry, and highly regulated sectors such as federal and financial services often require controls beyond any single vendor's default configuration. Coder is frequently deployed alongside complementary security tooling for this reason.
 
@@ -235,7 +235,7 @@ Coder lets Caring Providers, whether a platform team supporting a developer popu
 
 ### Government
 
-Coder enables government agencies to run AI agents inside secure, controlled infrastructure rather than unmanaged developer environments. Coder Workspaces already isolates agents in ephemeral, self-hosted environments; AI Governance adds the strict network restrictions and audit logging required for oversight. AI Gateway centralizes model access and records prompts, tool usage, and user attribution for oversight and incident response, while Agent Firewall enforces the network policy boundaries. This architecture reduces data exposure, prevents unauthorized model access, and enforces policy boundaries. Agencies can adopt AI for software development while maintaining data sovereignty, operational control, and compliance with government security requirements.
+Coder enables government agencies to run AI agents inside secure, controlled infrastructure rather than unmanaged developer environments. Coder Workspaces already isolates agents in ephemeral, self-hosted environments; AI Governance adds HTTP and HTTPS egress restrictions for wrapped agent processes and the audit logging required for oversight. AI Gateway centralizes model access and records prompts, tool usage, and user attribution for oversight and incident response, while Agent Firewall enforces HTTP and HTTPS egress allowlists for the agent processes it wraps. This architecture reduces data exposure, prevents unauthorized model access, and enforces policy boundaries. Agencies can adopt AI for software development while maintaining data sovereignty, operational control, and compliance with government security requirements.
 
 ### FinServ
 
