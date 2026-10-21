@@ -126,6 +126,50 @@ Data scientists, analysts, researchers, and mission engineers write code too, of
 
 **How Coder helps:** Because Coder is self-hosted and open source, organizations deploy it on infrastructure they choose, including air-gapped networks, and can inspect what they run, which simplifies accreditation in the US and European regions. AI Gateway and Coder Agents keep model access and agent execution inside the same boundary.
 
+## Deploying in Disconnected and Classified Networks
+
+Defense and Intelligence Community programs usually run Coder on networks with no outbound connectivity. This section covers the deployment detail those conversations need.
+
+### Air-gap operational profile
+
+All Coder features are supported in air-gapped and disconnected deployments ([Coder docs: air-gapped deployments](https://coder.com/docs/install/prepare/airgap)). A standard disconnected deployment uses:
+
+- **Offline license validation.** License keys are validated locally with cryptographic signatures, with no outbound connection to Coder.
+- **Usage reporting off.** Licenses can be issued with usage reporting disabled.
+- **Telemetry and update checks disabled.** Both are server configuration settings.
+- **Mirrored dependencies.** Server and workspace images come from an internal registry, Terraform providers from a filesystem or network mirror, and Coder registry modules from JFrog Artifactory or a private Git repository ([Coder docs: modules in offline installations](https://coder.com/docs/admin/templates/extending-templates/modules)).
+- **No public STUN.** STUN is disabled, so workspace connections relay through Coder's built-in DERP server or a custom one.
+- **Internal PostgreSQL.** Coder connects to a PostgreSQL database the program already runs and controls.
+- **Internally hosted documentation.** The Coder docs bundle is hosted on an internal server, and the Coder UI links to it.
+
+### Running coding agents inside the enclave
+
+Two options work with no outbound connectivity, as long as models are also served inside the boundary:
+
+- **Bring your own agent.** Claude Code, Codex, or other third-party agents run inside Coder workspaces. AI Gateway routes their model traffic to in-enclave endpoints and attributes every prompt, token count, and tool call to a named user. Best when teams have already standardized on an agent and need governance and audit around it.
+- **Coder Agents.** Coder's own agent runs in the control plane against any OpenAI-compatible endpoint, so the agent loop and its execution are both self-hosted. Best when no third-party agent can be accredited, or when the agent needs to sit under the same authorization as the platform.
+
+Agent Relay connects cloud-hosted agents to self-hosted workspaces, so it fits connected networks, not disconnected or classified ones.
+
+### On Red Hat OpenShift
+
+Many DoD and Intelligence Community programs already run OpenShift in disconnected enclaves, and Coder runs on it as a standard workload. Red Hat provides the platform and model serving. Coder provides governed developer and agent environments on top.
+
+| Red Hat provides | Coder provides |
+| :---- | :---- |
+| OpenShift Container Platform, installed disconnected with oc-mirror v2 | Coder Workspaces scheduled onto the cluster, with Terraform templates scoped to OpenShift namespaces |
+| RHEL UBI base images, and STIG profiles for scanning clusters and nodes with the Compliance Operator | SSO, role-based access control, and audit logging for workspaces and templates |
+| Advanced Cluster Security for container runtime security and vulnerability scanning | Agent Firewall for agent processes inside a workspace |
+| OpenShift AI and Red Hat AI Inference Server, serving models through vLLM | AI Gateway routing developer and agent traffic to those in-enclave endpoints, and Coder Agents |
+
+See [Coder and Red Hat](../market-landscape/red-hat.md) for sources, and for where OpenShift Dev Spaces overlaps with Coder Workspaces.
+
+### What a first deployment looks like
+
+1. **Start with one team.** Mirror the images into the internal registry, deploy the control plane on a cluster the program already runs, and define one workspace template for one program.
+2. **Prove the baseline once.** Validate that template against the program's security controls. The approved template becomes the pattern every later team inherits.
+3. **Expand without repeating.** Add programs as separate organizations or namespaces on the same control plane, isolated from each other.
+
 ## Products Involved
 
 - **Coder Workspaces**: self-hosted, standardized environments that run inside the organization's authorization boundary, including air-gapped and classified networks, and keep code off endpoints.
@@ -145,7 +189,7 @@ All published by Coder. Coder's public sector customers keep their use of Coder 
 
 Coder runs inside an organization's authorization boundary and supports its accreditation, but it doesn't grant an ATO or make an organization compliant: authorization is granted by the operating organization to its own deployment. FedRAMP authorizes cloud service offerings, and Coder is self-hosted software, so it runs under the customer's ATO rather than holding its own authorization.
 
-Coder Workspaces runs fully disconnected. Two capabilities need outbound connectivity. Coder Agents reports Agent Time usage to Coder over HTTPS, and air-gapped deployments can send a manually exported usage bundle instead ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Agent Firewall applies only to agent processes launched through it and allowlists HTTP and HTTPS traffic by domain, method, and path; other TCP protocols, such as database connections, aren't supported as allowed traffic. Coder Agents doesn't use Agent Firewall: its network boundary is the workspace itself, so restrict its egress in the template. See the AI Governance message house's Governance Scope for current specifics.
+All Coder features run disconnected, and licenses can be issued with usage reporting disabled. Connected Coder Agents deployments report Agent Time totals to Coder automatically, and air-gapped deployments can instead use a license with usage reporting disabled, send a manually exported usage bundle, or set up another usage-based agreement with Coder sales ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay is the exception to running disconnected: it connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Agent Firewall applies only to agent processes launched through it and allowlists HTTP and HTTPS traffic by domain, method, and path; other TCP protocols, such as database connections, aren't supported as allowed traffic. Coder Agents doesn't use Agent Firewall: its network boundary is the workspace itself, so restrict its egress in the template. See the AI Governance message house's Governance Scope for current specifics.
 
 ## Messaging Guidance
 
@@ -155,7 +199,8 @@ Coder Workspaces runs fully disconnected. Two capabilities need outbound connect
   - Say Coder "supports the access control and audit practices" a CMMC assessment covers. Don't say CMMC compliant or certified.
   - Claim FIPS 140-3 only with the module name and an active CMVP certificate number. Don't say FIPS compliant or certified.
   - Don't say STIG compliant, STIG certified, or DISA approved.
-- Say Coder Workspaces runs fully air-gapped. Don't say every Coder capability runs disconnected; see Known Limitations.
+- Say Coder runs fully air-gapped, including Coder Agents and AI Gateway with models served inside the boundary. Don't position Agent Relay for disconnected or classified networks; see Known Limitations.
+- Some government programs don't use AI yet ("SI" in US federal content). For them, lead with Coder Workspaces on its own: it delivers value with no AI in the environment, and AI Gateway and Coder Agents can be added to the same platform later without re-architecting it.
 - In US federal-facing content, including the federal segment sections above, say "super intelligence (SI)" instead of "AI." Product names such as AI Gateway and AI Governance don't change. State, local, and international content keeps "AI."
 - Don't name public sector customers or state how many agencies use Coder. Use the anonymized descriptions from published stories.
 - Lead with secure development environments for developers and other builders, and present AI Governance as extending the same control to agents. Only claim AI governance controls that exist today.
