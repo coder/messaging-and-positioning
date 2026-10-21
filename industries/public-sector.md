@@ -130,7 +130,7 @@ Data scientists, analysts, researchers, and mission engineers write code too, of
 
 - **Coder Workspaces**: self-hosted, standardized environments that run inside the organization's authorization boundary, including air-gapped and classified networks, and keep code off endpoints.
 - **Coder Agents**: coding agents that run on the organization's own infrastructure with the models it approves, with model traffic routed through AI Gateway.
-- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access, auditing, and network policy for agents running in workspaces.
+- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access and auditing, plus HTTP and HTTPS egress allowlisting for agent processes running in workspaces.
 
 ## Proof Points
 
@@ -145,7 +145,7 @@ All published by Coder. Coder's public sector customers keep their use of Coder 
 
 Coder runs inside an organization's authorization boundary and supports its accreditation, but it doesn't grant an ATO or make an organization compliant: authorization is granted by the operating organization to its own deployment. FedRAMP authorizes cloud service offerings, and Coder is self-hosted software, so it runs under the customer's ATO rather than holding its own authorization.
 
-Coder Workspaces runs fully disconnected. Two capabilities need outbound connectivity. Coder Agents reports Agent Time usage to Coder over HTTPS, and air-gapped deployments can send a manually exported usage bundle instead ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Agent Firewall applies only to agent processes launched through it and enforces policy on HTTP and HTTPS; Coder Agents' network boundary is the workspace itself. See the AI Governance message house's Governance Scope for current specifics.
+Coder Workspaces runs fully disconnected. Two capabilities need outbound connectivity. Coder Agents reports Agent Time usage to Coder over HTTPS, and air-gapped deployments can send a manually exported usage bundle instead ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Agent Firewall applies only to agent processes launched through it and allowlists HTTP and HTTPS traffic by domain, method, and path; other TCP protocols, such as database connections, aren't supported as allowed traffic. Coder Agents doesn't use Agent Firewall: its network boundary is the workspace itself, so restrict its egress in the template. See the AI Governance message house's Governance Scope for current specifics.
 
 ## Messaging Guidance
 
@@ -159,6 +159,7 @@ Coder Workspaces runs fully disconnected. Two capabilities need outbound connect
 - In US federal-facing content, including the federal segment sections above, say "super intelligence (SI)" instead of "AI." Product names such as AI Gateway and AI Governance don't change. State, local, and international content keeps "AI."
 - Don't name public sector customers or state how many agencies use Coder. Use the anonymized descriptions from published stories.
 - Lead with secure development environments for developers and other builders, and present AI Governance as extending the same control to agents. Only claim AI governance controls that exist today.
+- Describe Agent Firewall as HTTP and HTTPS egress allowlisting for the agent processes it wraps. Don't say it controls all network egress or governs Coder Agents.
 - Use "public sector" as the umbrella term, and "government" where the audience or search expects it.
 - Recognize builders beyond software engineers: analysts, researchers, data scientists, and mission engineers.
 
