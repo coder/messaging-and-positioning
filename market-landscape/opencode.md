@@ -45,7 +45,7 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 - **Coder Workspaces.** Self-hosted development environments defined with Terraform ([coder/coder](https://github.com/coder/coder)). This is where OpenCode runs when paired with Coder.
 - **OpenCode registry module.** Adds OpenCode to a template in a few lines of Terraform ([Coder Registry](https://registry.coder.com/modules)). The module accepts an OpenCode `auth.json` for non-interactive authentication ([module source](https://github.com/coder/registry/blob/main/registry/coder-labs/modules/opencode/main.tf)).
 - **AI Gateway.** Coder's LLM gateway, with a documented OpenCode client configuration ([Coder docs](https://coder.com/docs/ai-coder/ai-gateway/clients/opencode)).
-- **Agent Firewall.** Process-level network policy and audit for agents in workspaces, previously named Agent Boundaries ([Coder docs](https://coder.com/docs/ai-coder/agent-firewall)).
+- **Agent Firewall.** Process-level HTTP and HTTPS egress allowlisting and audit for agents in workspaces, previously named Agent Boundaries ([Coder docs](https://coder.com/docs/ai-coder/agent-firewall)).
 - **Coder Agents.** A native agent whose loop runs in the control plane, so workspaces can be fully network isolated ([Coder docs](https://coder.com/docs/ai-coder)), with no API keys in workspaces ([coder/coder](https://github.com/coder/coder)). This is the Coder product that overlaps with OpenCode at the agent layer. See the [Coder Agents message house](../products/coder-agents/message-house.md).
 
 ## Known Limitations in OpenCode's Approach
