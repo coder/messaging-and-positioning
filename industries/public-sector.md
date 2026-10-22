@@ -159,7 +159,7 @@ Many DoD and Intelligence Community programs already run OpenShift in disconnect
 | :---- | :---- |
 | OpenShift Container Platform, installed disconnected with oc-mirror v2 | Coder Workspaces scheduled onto the cluster, with Terraform templates scoped to OpenShift namespaces |
 | RHEL UBI base images, and STIG profiles for scanning clusters and nodes with the Compliance Operator | SSO, role-based access control, and audit logging for workspaces and templates |
-| Advanced Cluster Security for container runtime security and vulnerability scanning | Agent Firewall for agent processes inside a workspace |
+| Advanced Cluster Security for container runtime security and vulnerability scanning | Templates that set what each workspace, and every agent in it, can reach, using the cluster's network policies |
 | OpenShift AI and Red Hat AI Inference, serving models through vLLM | AI Gateway routing developer and agent traffic to those in-enclave endpoints, and Coder Agents |
 
 See [Coder and Red Hat](../market-landscape/red-hat.md) for sources, and for where OpenShift Dev Spaces overlaps with Coder Workspaces.
@@ -172,9 +172,9 @@ See [Coder and Red Hat](../market-landscape/red-hat.md) for sources, and for whe
 
 ## Products Involved
 
-- **Coder Workspaces**: self-hosted, standardized environments that run inside the organization's authorization boundary, including air-gapped and classified networks, and keep code off endpoints.
+- **Coder Workspaces**: self-hosted, standardized environments that run inside the organization's authorization boundary, including air-gapped and classified networks, and keep code off endpoints. Templates set what each workspace, and every agent in it, can reach on the network.
 - **Coder Agents**: coding agents that run on the organization's own infrastructure with the models it approves, with model traffic routed through AI Gateway.
-- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access and auditing, plus HTTP and HTTPS egress allowlisting for agent processes running in workspaces.
+- **AI Governance (including AI Gateway)**: centralized model access and auditing.
 
 ## Proof Points
 
@@ -189,7 +189,7 @@ All published by Coder. Coder's public sector customers keep their use of Coder 
 
 Coder runs inside an organization's authorization boundary and supports its accreditation, but it doesn't grant an ATO or make an organization compliant: authorization is granted by the operating organization to its own deployment. FedRAMP authorizes cloud service offerings, and Coder is self-hosted software, so it runs under the customer's ATO rather than holding its own authorization.
 
-All Coder features run disconnected, and licenses can be issued with usage reporting disabled. Connected Coder Agents deployments report Agent Time totals to Coder automatically, and air-gapped deployments can instead use a license with usage reporting disabled, send a manually exported usage bundle, or set up another usage-based agreement with Coder sales ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay is the exception to running disconnected: it connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Agent Firewall applies only to agent processes launched through it and allowlists HTTP and HTTPS traffic by domain, method, and path; other TCP protocols, such as database connections, aren't supported as allowed traffic. Coder Agents doesn't use Agent Firewall: its network boundary is the workspace itself, so restrict its egress in the template. See the AI Governance message house's Governance Scope for current specifics.
+All Coder features run disconnected, and licenses can be issued with usage reporting disabled. Connected Coder Agents deployments report Agent Time totals to Coder automatically, and air-gapped deployments can instead use a license with usage reporting disabled, send a manually exported usage bundle, or set up another usage-based agreement with Coder sales ([Coder Agents FAQ](../products/coder-agents/faq.md)). Agent Relay is the exception to running disconnected: it connects workspaces to cloud-hosted agents, so it needs connectivity to the agent provider. Network controls for workspaces and agents come from the template and the network infrastructure it uses, such as Kubernetes network policies or security groups. If a template doesn't restrict outbound access, the workspace has full internet access. Rule granularity and logging of allowed and blocked connections come from that infrastructure, not from Coder.
 
 ## Messaging Guidance
 
@@ -204,7 +204,7 @@ All Coder features run disconnected, and licenses can be issued with usage repor
 - In US federal-facing content, including the federal segment sections above, say "super intelligence (SI)" instead of "AI." Product names such as AI Gateway and AI Governance don't change. State, local, and international content keeps "AI."
 - Don't name public sector customers or state how many agencies use Coder. Use the anonymized descriptions from published stories.
 - Lead with secure development environments for developers and other builders, and present AI Governance as extending the same control to agents. Only claim AI governance controls that exist today.
-- Describe Agent Firewall as HTTP and HTTPS egress allowlisting for the agent processes it wraps. Don't say it controls all network egress or governs Coder Agents.
+- Describe agent network controls as workspace network policy set in the template. It applies to every process in the workspace, including third-party agents and the work Coder Agents runs there. Don't say Coder filters or logs individual network requests.
 - Use "public sector" as the umbrella term, and "government" where the audience or search expects it.
 - Recognize builders beyond software engineers: analysts, researchers, data scientists, and mission engineers.
 

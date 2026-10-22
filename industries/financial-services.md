@@ -54,7 +54,7 @@ To reduce risk, many institutions harden laptops with endpoint scanners, enterpr
 
 ### AI adoption is happening under scrutiny
 
-Engineers want AI coding assistants and agents, and leadership wants the productivity gains. Risk and compliance teams need to know which models touch code, what data leaves the perimeter, and what an agent actually did. [AI Governance](../products/coder-ai-governance/message-house.md) answers those questions: AI Gateway centralizes model access, credentials, budgets, and auditing, and Agent Firewall enforces default-deny HTTP and HTTPS egress rules on agent processes inside a workspace. That lets institutions move from blocking AI to adopting it with a record regulators can review.
+Engineers want AI coding assistants and agents, and leadership wants the productivity gains. Risk and compliance teams need to know which models touch code, what data leaves the perimeter, and what an agent actually did. Coder answers those questions. AI Gateway, part of [AI Governance](../products/coder-ai-governance/message-house.md), centralizes model access, credentials, budgets, and auditing. Workspace templates set what each workspace, and every agent in it, can reach on the network, and can block direct model provider endpoints so AI Gateway is the only route to a model. That lets institutions move from blocking AI to adopting it with a record regulators can review.
 
 ### Modernization runs alongside daily delivery
 
@@ -100,7 +100,7 @@ Quants, researchers, actuaries, and analysts write code every day, often in note
 
 **What they need:** Fast iteration for researchers and engineers, protection for strategy code that can never leak, large amounts of CPU and GPU compute on demand, and a safe way to let AI agents speed up research.
 
-**How Coder helps:** Workspaces on the firm's own compute keep strategy code and market data inside the perimeter. Port sharing lets analysts share running models with traders directly, without fragile pipelines. AI Gateway and Agent Firewall let firms adopt coding agents while controlling which models are used and what agents can reach. Coder's open-source foundation also fits engineering cultures that prefer tools they can inspect and run themselves.
+**How Coder helps:** Workspaces on the firm's own compute keep strategy code and market data inside the perimeter. Port sharing lets analysts share running models with traders directly, without fragile pipelines. AI Gateway and template network policy let firms adopt coding agents while controlling which models are used and what agents can reach. Coder's open-source foundation also fits engineering cultures that prefer tools they can inspect and run themselves.
 
 ### Private equity and alternative asset managers
 
@@ -128,8 +128,8 @@ Quants, researchers, actuaries, and analysts write code every day, often in note
 
 ## Products Involved
 
-- **Coder Workspaces**: self-hosted, standardized environments that keep code and data inside the institution's perimeter and replace laptop-based development or VDI.
-- **AI Governance (AI Gateway and Agent Firewall)**: centralized model access, auditing, budgets, and HTTP and HTTPS egress allowlisting for agent processes, so institutions can adopt AI with evidence for risk and compliance teams.
+- **Coder Workspaces**: self-hosted, standardized environments that keep code and data inside the institution's perimeter and replace laptop-based development or VDI. Templates set what each workspace, and every agent in it, can reach on the network.
+- **AI Governance (including AI Gateway)**: centralized model access, auditing, and budgets, so institutions can adopt AI with evidence for risk and compliance teams.
 - **Coder Agents**: governed coding agents that run on the institution's own infrastructure, with model traffic routed through AI Gateway.
 
 ## Proof Points

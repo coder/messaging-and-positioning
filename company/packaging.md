@@ -5,7 +5,7 @@ This describes the shape and reasoning behind Coder's packaging, not a feature-b
 ## The three tiers
 
 - **Community** (free) is for hobbyists and small teams joining Coder's open-source community. It includes unlimited self-hosted workspaces, environments defined as code, and support for running AI coding agents inside ephemeral workspaces from day one, with a capped number of Coder Agents able to run concurrently.
-- **Premium** (per-user, annual) is for enterprises that need world-class security, scalability, and developer experience. It includes everything in Community, plus AI Governance (AI Gateway and Agent Firewall), high availability, workspace proxies, multi-organization access control, and SLA-backed support.
+- **Premium** (per-user, annual) is for enterprises that need world-class security, scalability, and developer experience. It includes everything in Community, plus AI Governance (including AI Gateway), high availability, workspace proxies, multi-organization access control, and SLA-backed support.
 - **AI Premium** (custom pricing) is for enterprises scaling AI-native transformation on their own infrastructure. It includes everything in Premium, plus removing the concurrency cap on Coder Agents with a deployment-wide allotment of Agent Hours that customers size and buy based on expected usage, and support for connecting the model providers the organization already uses.
 
 ## The packaging philosophy

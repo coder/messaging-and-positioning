@@ -146,8 +146,8 @@ Coder Agents operates using the same identity and permissions as the user who in
 
 In practice, the agent simply performs actions on behalf of the user. It provisions a workspace when needed and interacts with it using the same permissions the user already has. The agent does not receive elevated privileges or additional access beyond the user's existing authorization.
 
-**How do Coder's existing AI Governance features, AI Gateway and Agent Firewall, work with Coder Agents?**
-Agent Firewall was originally designed to observe and control how third-party agents (Claude Code, Codex) operate inside Coder Workspaces. In those scenarios, the agent runs directly inside the workspace environment, which means additional governance layers are needed to protect coinciding sensitive data, credentials, and network access.
+**How do Coder's existing AI Governance features, including AI Gateway, work with Coder Agents?**
+Third-party agents (Claude Code, Codex) run directly inside the workspace environment, alongside sensitive data, credentials, and network access. In those scenarios, AI Gateway governs model access, and the workspace's template-defined network policy controls what the agent can reach.
 
 Coder Agents introduces a different architecture. The agent loop, model credentials, and prompt handling run in the control plane rather than inside the workspace. This removes the need to place provider API keys or agent software in the workspace, which eliminates a meaningful class of risk.
 
@@ -158,12 +158,12 @@ Coder Agents' integration with AI Gateway focuses on observability and auditabil
 Coder Agents also integrates with AI Gateway's cost controls, giving platform teams a centralized place to control and observe LLM spend across their Coder deployment.
 
 **What does this mean for customers currently using AI Governance?**
-AI Governance is still relevant, but its role depends on how customers choose to run agents. If they continue using third-party agents like Claude Code or Codex inside Coder workspaces, then AI Governance, including AI Gateway and Agent Firewall, remains the right solution for control and oversight.
+AI Governance is still relevant, but its role depends on how customers choose to run agents. If they continue using third-party agents like Claude Code or Codex inside Coder workspaces, then AI Governance, including AI Gateway, remains the right solution for model-level control and oversight, and template-defined network policy controls what those agents can reach from the workspace.
 
-If they adopt Coder Agents, AI Gateway continues to provide visibility, attribution, and cost governance over LLM usage, and network restrictions for agent workspaces come from template-defined network policy. Platform teams should configure that policy deliberately rather than assume the control-plane architecture removes the need for it.
+If they adopt Coder Agents, AI Gateway continues to provide visibility, attribution, and cost governance over LLM usage, and the same template-defined network policy restricts agent workspaces. Platform teams should configure that policy deliberately rather than assume the control-plane architecture removes the need for it.
 
-**Are AI Bridge and Agent Boundaries being deprecated, and on what timeline?**
-No, these features are not being deprecated. This FAQ covers how they will remain useful features for customers running third-party agents in Coder workspaces and for customers who choose to use Coder Agents. Engineering resources will continue to be allocated to advancing AI Gateway's maturity.
+**Is AI Gateway being deprecated now that Coder Agents exists?**
+No, AI Gateway is not being deprecated. This FAQ covers how it remains useful for customers running third-party agents in Coder workspaces and for customers who choose to use Coder Agents. Engineering resources will continue to be allocated to advancing AI Gateway's maturity.
 
 **Can we enforce spending limits per user/team?**
 Yes, spending limits can be enforced at the user and group level through AI Gateway.
@@ -270,7 +270,7 @@ For platform teams, that's the bigger win: they can shape the experience behind 
 **Can customers still use third-party agents like Claude Code or Codex with Coder?**
 Yes. Customers can still run third-party agents like Claude Code or Codex with Coder, but they do so directly inside Coder Workspaces.
 
-That is a fundamentally different deployment model from Coder Agents. Coder Agents runs natively in the control plane and only interacts with workspaces when needed, whereas third-party agents operate from within the workspace itself. Because of that, running third-party agents typically requires an additional layer of AI Governance to control what the agent can access and how it behaves inside the workspace.
+That is a fundamentally different deployment model from Coder Agents. Coder Agents runs natively in the control plane and only interacts with workspaces when needed, whereas third-party agents operate from within the workspace itself. Because of that, running third-party agents typically calls for AI Governance to govern model access, and for template-defined network policy to control what the workspace, and so the agent, can reach.
 
 Coder Agents is separate. It is a native capability built into Coder, not a wrapper around external agents.
 

@@ -17,7 +17,7 @@ Source code, credentials, and development tools often live on developer laptops,
 
 ## Desired Outcome
 
-Source code, credentials, and tooling stay inside infrastructure the organization manages, never on an endpoint laptop. Every workspace and agent action is attributed to a named user, with audit events flowing into the organization's existing SIEM. Network policy is enforced by default rather than left to individual machine configuration, and that same policy extends to AI coding agents, not just human developers. New tooling and security patches roll out to the entire fleet of workspaces at once instead of requiring per-laptop approval and update cycles.
+Source code, credentials, and tooling stay inside infrastructure the organization manages, never on an endpoint laptop. Every workspace and agent action is attributed to a named user, with audit events flowing into the organization's existing SIEM. Network policy is defined centrally in templates rather than left to individual machine configuration, and that same policy extends to AI coding agents, not just human developers. New tooling and security patches roll out to the entire fleet of workspaces at once instead of requiring per-laptop approval and update cycles.
 
 ## How Coder Solves It
 
@@ -27,7 +27,7 @@ Workspaces run on the organization's own cloud, on-prem, or air-gapped infrastru
 
 ### Network Isolation
 
-Workspaces run in isolated networks with template-defined allow lists, so access is scoped by design rather than left open by default. Agent Firewall adds default-deny HTTP and HTTPS egress allowlisting to the agent processes it wraps inside a workspace, and every allow and deny decision is logged centrally for review.
+Platform teams decide in each Terraform template what workspaces can reach on the network, using the controls their infrastructure already provides, such as Kubernetes network policies, cloud security groups and VPC rules, and existing egress proxies. The workspace is the network boundary, so that policy applies to every process inside it, including AI coding agents, and dedicated agent templates can apply stricter egress than developer templates.
 
 ### Identity and Audit
 
@@ -35,8 +35,7 @@ SSO and SCIM integration with the organization's existing identity provider appl
 
 ## Products Involved
 
-- **Coder Workspaces** — the self-hosted execution environment that keeps source code, credentials, and tooling inside the organization's perimeter.
-- **AI Governance (Agent Firewall)** — adds default-deny HTTP and HTTPS egress allowlisting and audit logging to the agent processes it wraps inside a workspace, on top of the workspace-level controls above.
+- **Coder Workspaces** — the self-hosted execution environment that keeps source code, credentials, and tooling inside the organization's perimeter, with network access defined in each template.
 
 ## Proof Points
 
@@ -47,7 +46,7 @@ SSO and SCIM integration with the organization's existing identity provider appl
 
 ## Known Limitations
 
-Coder's controls govern the workspace, network, and identity layer; they don't replace an organization's broader endpoint security or compliance program, and SOC 2 Type II certification covers Coder itself, not a customer's own compliance posture. For the current gaps specific to governing AI agent activity, such as filesystem-level (rather than network-level) policy enforcement, see the AI Governance message house's Known Limitations.
+Coder's controls govern the workspace, network, and identity layer; they don't replace an organization's broader endpoint security or compliance program, and SOC 2 Type II certification covers Coder itself, not a customer's own compliance posture. Network controls come from the template and the organization's network infrastructure: if a template doesn't restrict outbound access, its workspaces have full internet access, and the granularity and logging of allowed or blocked connections depend on that infrastructure, not on Coder.
 
 ## Related Use Cases
 
