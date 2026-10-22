@@ -34,9 +34,9 @@ Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted mod
 
 ## Products Involved
 
-- **Coder Workspaces** — the environment agents execute inside, whether that's a third-party agent running in a workspace or a Coder Agents session.
+- **Coder Workspaces** — the environment agents execute inside, whether that's a third-party agent running in a workspace or a Coder Agents session. Template-defined network policy controls what every agent in the workspace can reach.
 - **Coder Agents** — the native, control-plane agent experience, model-agnostic and requiring no separate deployment.
-- **AI Governance (AI Gateway, Agent Firewall)** — centralizes model access, authentication, and auditing, and applies HTTP and HTTPS egress allowlisting by domain, method, and path to agent processes running inside a workspace.
+- **AI Governance (including AI Gateway)** — centralizes model access, authentication, and auditing.
 - **Coder Agent Relay** — for organizations that want to keep using a cloud-hosted agent's experience (Cursor, Claude Code) while execution happens inside a self-hosted Coder workspace.
 
 ## Proof Points
@@ -46,7 +46,7 @@ Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted mod
 
 ## Known Limitations
 
-Governance depth currently varies by how an agent runs. Third-party agents running inside a Coder workspace can be wrapped by Agent Firewall for HTTP and HTTPS egress allowlisting by domain, method, and path, and routed through AI Gateway for model-level governance. Coder Agents routes its model traffic through AI Gateway automatically, and network restrictions for its workspaces come from template-defined network policy. Cloud-hosted agents connected through Agent Relay keep their orchestration and inference in the provider's cloud, so AI Gateway's model-level auditing doesn't extend to that portion of the activity. See the AI Governance and Agent Relay message houses for the current specifics.
+Governance depth currently varies by how an agent runs. Third-party agents running inside a Coder workspace are subject to the workspace's template-defined network policy and can be routed through AI Gateway for model-level governance. Coder Agents routes its model traffic through AI Gateway automatically, and its workspaces can be restricted to the control plane and git provider. Network policy is only as strict as the template makes it: if a template doesn't restrict outbound access, its workspaces have full internet access. Cloud-hosted agents connected through Agent Relay keep their orchestration and inference in the provider's cloud, so AI Gateway's model-level auditing doesn't extend to that portion of the activity. See the AI Governance and Agent Relay message houses for the current specifics.
 
 ## Related Use Cases
 

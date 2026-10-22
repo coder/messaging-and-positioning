@@ -46,7 +46,7 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 
 - **Coder Workspaces.** [Self-hosted, Terraform-provisioned development environments](../products/coder-workspaces/message-house.md) for developers and agents, IDE-agnostic, running on any cloud or on-prem.
 - **Coder Agents.** A [self-hosted coding agent whose loop runs in the Coder control plane](https://coder.com/docs/ai-coder/agents), with admin-controlled providers, models, and system prompts that are [enforced server-side](https://coder.com/docs/ai-coder/agents/platform-controls).
-- **AI Governance.** Included with Premium, adding [AI Gateway for authentication, prompt and tool audit trails, and policy enforcement, plus Agent Firewall](https://coder.com/docs/ai-coder).
+- **AI Governance.** Included with Premium, adding [AI Gateway for authentication, prompt and tool audit trails, and policy enforcement](https://coder.com/docs/ai-coder).
 - **Third-party agents.** Agents like [Claude Code, Codex, and OpenCode can run isolated in Coder workspaces](https://github.com/coder/coder).
 
 ## Where Ona Is Strong or Coder Has a Gap
