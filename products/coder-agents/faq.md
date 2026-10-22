@@ -162,9 +162,6 @@ AI Governance is still relevant, but its role depends on how customers choose to
 
 If they adopt Coder Agents, AI Gateway continues to provide visibility, attribution, and cost governance over LLM usage, and the same template-defined network policy restricts agent workspaces. Platform teams should configure that policy deliberately rather than assume the control-plane architecture removes the need for it.
 
-**Is AI Gateway being deprecated now that Coder Agents exists?**
-No, AI Gateway is not being deprecated. This FAQ covers how it remains useful for customers running third-party agents in Coder workspaces and for customers who choose to use Coder Agents. Engineering resources will continue to be allocated to advancing AI Gateway's maturity.
-
 **Can we enforce spending limits per user/team?**
 Yes, spending limits can be enforced at the user and group level through AI Gateway.
 
