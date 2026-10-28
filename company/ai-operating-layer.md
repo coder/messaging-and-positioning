@@ -8,6 +8,8 @@ Every mature enterprise stack has an application layer, a data layer, and a comp
 
 The AI Operating Layer is the infrastructure layer AI needs, where AI runs inside the organization, on infrastructure it controls, under its own policies, visible to its own teams. It isn't a product category or a point solution. It's the deliberate layer that makes AI workloads sustainable at scale, regardless of which models are used, which tools developers choose, or where the infrastructure lives.
 
+Coder isn't the AI Operating Layer. The AI Operating Layer is how enterprises should build their architecture, and Coder provides the secure infrastructure that enables it. Don't describe Coder as "the AI operating layer" in any content. Use the descriptor in the [message house](./message-house.md), secure infrastructure for AI-powered development.
+
 ## Three failure modes of ungoverned AI
 
 Ungoverned AI adoption tends to fail in the same three ways, and none of them look like an attack while they're happening.

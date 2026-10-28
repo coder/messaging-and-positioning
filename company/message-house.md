@@ -2,15 +2,15 @@
 
 ## Short Description
 
-Coder is the AI operating layer for enterprises: a self-hosted, cloud- and model-agnostic platform that moves development from laptops to centrally managed infrastructure, giving developers and coding agents a governed place to work with their choice of tools and models.
+Coder is secure infrastructure for AI-powered development: a self-hosted, cloud- and model-agnostic platform that moves development from laptops to centrally managed environments, giving developers and coding agents a governed place to work with their choice of tools and models.
 
 ## Long Description
 
-Coder is the AI operating layer for enterprises. Its self-hosted, cloud-agnostic platform moves development environments and source code off developer laptops and onto centrally managed infrastructure in your cloud or on-premises. Developers and coding agents get the tools, compute, and project context they need, while platform teams manage access, enforce policies, and govern how work runs. Organizations retain their choice of models, agents, and development tools as they expand AI adoption across their developer teams. The same foundation gives builders beyond engineering a governed way to use agents to create software and automate tasks.
+Coder is secure infrastructure for AI-powered development. Its self-hosted, cloud-agnostic platform moves development environments and source code off developer laptops and into your cloud or on-premises data centers, where they're centrally managed. Developers and coding agents get the tools, compute, and project context they need, while platform teams manage access, enforce policies, and govern how work runs. Organizations retain their choice of models, agents, and development tools as they expand AI adoption across their developer teams. The same foundation gives builders beyond engineering a governed way to use agents to create software and automate tasks.
 
 ## About Coder — PR Boilerplate
 
-Coder is the AI operating layer for the enterprise: a self-hosted, cloud-agnostic platform that gives organizations control over where development happens, which models and agents teams use, and how work is governed. Global 2000 enterprises and government agencies use Coder to move development environments and source code off laptops and onto centrally managed infrastructure that platform teams can secure, audit, and scale. With more than 125,000 GitHub stars, Coder gives developers, autonomous agents, and builders beyond engineering a governed foundation to create software and automate work. Learn more at [coder.com](https://coder.com).
+Coder is secure infrastructure for AI-powered development: a self-hosted, cloud-agnostic platform that gives organizations control over where development happens, which models and agents teams use, and how work is governed. Global 2000 enterprises and government agencies use Coder to move development environments and source code off laptops and into their own cloud or data centers, where platform teams can secure, audit, and scale them. With more than 125,000 GitHub stars, Coder gives developers, autonomous agents, and builders beyond engineering a governed foundation to create software and automate work. Learn more at [coder.com](https://coder.com).
 
 ## Who We're For
 
@@ -20,7 +20,7 @@ Platform engineering teams use Coder to provide governed development infrastruct
 
 ## Why It Matters
 
-Enterprise teams need control over where developers and agents work, the code and context they work with, and the systems they can access. Developers need reliable environments and the freedom to use tools that help them build. We believe neither side should have to compromise. Developer freedom and enterprise control should reinforce each other. The AI operating layer makes that combination a force multiplier, helping enterprises move quickly, manage risk, and expand what their teams can accomplish.
+Enterprise teams need control over where developers and agents work, the code and context they work with, and the systems they can access. Developers need reliable environments and the freedom to use tools that help them build. We believe neither side should have to compromise. Developer freedom and enterprise control should reinforce each other. An [AI operating layer](./ai-operating-layer.md), the architecture Coder enables, makes that combination a force multiplier, helping enterprises move quickly, manage risk, and expand what their teams can accomplish.
 
 ## Why Coder
 
