@@ -196,7 +196,7 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 
 - **AI governance for externally-connected IDE agents**: When developers connect an IDE such as Cursor to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
 - **Provisioning time scales with template complexity.** Prebuilt workspace pools (Premium) give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
-- **Coder Workspaces optimizes for depth, not raw cold-start speed.** Lightweight sandbox products like Daytona and E2B are built for sub-2-second ephemeral runtimes for simple agent experimentation. Coder Workspaces is a full-featured, self-hosted environment platform with governance, persistence, and enterprise depth those products don't provide, a tradeoff most enterprises make in exchange for control over their infrastructure.
+- **Coder Workspaces optimizes for depth, not raw cold-start speed.** Sandbox products like Daytona and E2B are built for fast, API-driven sandboxes that agents and AI products create at high volume. Coder Workspaces is a full-featured, self-hosted environment platform for developers and agents, built on Terraform-defined templates, with agent governance those products leave to the customer, a tradeoff most enterprises make in exchange for control over their infrastructure.
 
 ## Competitive Position
 
