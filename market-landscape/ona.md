@@ -82,7 +82,7 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 
 ## Pricing and Packaging
 
-- **Ona.** Ona's Core tier runs on Ona Cloud, which [shuts down on October 31, 2026](https://ona.com/stories/ona-core-shutdown). Ona says it refunds October payments and unused purchased credits. As of 2026-10-29, ona.com/pricing redirects to [Ona's sales contact page](https://ona.com/contact/sales). Enterprise runners deploy in [the customer's AWS or GCP account](https://ona.com/docs/ona/runners/overview), are [available by contacting sales](https://ona.com/docs/ona/runners/gcp/overview), and Enterprise usage is [billed in credits](https://ona.com/docs/ona/billing/usage). Runners in the customer's account also [bill compute to the customer's cloud provider](https://infragap.com/tools/ona/) (secondary source).
+- **Ona.** Ona's Core tier runs on Ona Cloud, which [shuts down on October 31, 2026](https://ona.com/stories/ona-core-shutdown). Ona says it refunds October payments and unused purchased credits. As of 2026-10-29, ona.com/pricing redirects to [Ona's sales contact page](https://ona.com/contact/sales). Enterprise runners deploy in [the customer's AWS or GCP account](https://ona.com/docs/ona/runners/overview), are [available by contacting sales](https://ona.com/docs/ona/runners/gcp/overview), and Enterprise usage is [billed in credits](https://ona.com/docs/ona/billing/usage). Runners in the customer's account also put infrastructure costs on the customer's cloud bill, and Ona's cost guides list the [AWS](https://ona.com/docs/ona/runners/aws/aws-runner-costs) and [GCP](https://ona.com/docs/ona/runners/gcp/gcp-runner-costs) resources each runner deploys.
 - **Coder.** Coder Community is free and open source, Premium is quote-based, and [AI Premium removes the 5 concurrent Coder Agents limit](https://coder.com/pricing) that applies to Community and Premium. See [coder.com/pricing](https://coder.com/pricing) for current tiers and [Packaging](../company/packaging.md) for the narrative.
 
 ## Sources
@@ -104,7 +104,7 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 - **[Ona Cost & Budgets](https://ona.com/docs/ona/billing/usage).** OCU billing for Core and credit billing for Enterprise. Primary. Accessed 2026-10-29.
 - **[Ona homepage](https://ona.com/).** Current positioning. Primary. Accessed 2026-09-28.
 - **[Self-hosted, not self-managed](https://www.gitpod.io/blog/self-hosted-not-self-managed).** Discontinuation of self-managed Gitpod in 2022. Primary. Accessed 2026-09-28.
-- **[InfraGap Ona review](https://infragap.com/tools/ona/).** Runner billing to customer cloud. Secondary. Accessed 2026-09-28.
+- **[AWS runner costs](https://ona.com/docs/ona/runners/aws/aws-runner-costs) and [GCP runner costs](https://ona.com/docs/ona/runners/gcp/gcp-runner-costs).** Runner resources billed to the customer's cloud account. Primary. Accessed 2026-10-29.
 - **[G2 Coder reviews](https://www.g2.com/products/coder/pricing).** Reviewer feedback on operational overhead. Secondary. Accessed 2026-09-28.
 - **[Coder Agents docs](https://coder.com/docs/ai-coder/agents), [Architecture](https://coder.com/docs/ai-coder/agents/architecture), [Platform Controls](https://coder.com/docs/ai-coder/agents/platform-controls), [AI Coder overview](https://coder.com/docs/ai-coder).** Coder Agents architecture, providers, governance. Primary. Accessed 2026-09-28.
 - **[Coder air-gapped deployments](https://coder.com/docs/install/airgap).** Air-gap support. Primary. Accessed 2026-09-28.
