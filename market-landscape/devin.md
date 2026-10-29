@@ -6,7 +6,7 @@
 | Last reviewed | 2026-10-29 |
 | Category | Competitive |
 
-*Devin is built by Cognition (formerly Cognition Labs). Devin Desktop is the editor formerly called Windsurf ([Continuum](https://continuumcode.ai/guides/devin-pricing/), [Wikipedia](https://en.wikipedia.org/wiki/Cognition_AI)).*
+*Devin is built by Cognition. Devin Desktop is the next generation of the editor formerly called Windsurf ([Cognition blog](https://cognition.com/blog/introducing-devin-desktop)).*
 
 ## One-Line Positioning
 
@@ -36,7 +36,7 @@ Devin is an autonomous coding agent whose reasoning layer always runs in Cogniti
 - **Target customer.** Enterprises and public sector. Cognition lists financial services, technology, healthcare, and defense ([AWS Marketplace listing](https://aws.amazon.com/marketplace/pp/prodview-yt3ntkdpdjdgm)).
 - **Deployment model: Enterprise Cloud.** Brain and Devbox both run in Cognition's multi-tenant cloud, with an isolated machine per session. Recommended when SCM and artifact stores are public or support IP allowlisting ([Devin enterprise deployment docs](https://docs.devin.ai/enterprise/deployment/overview)).
 - **Deployment model: Customer Dedicated Deployment (Devin's VPC option).** Cognition hosts Devin in an auto-scaling, customer-isolated environment within a single-tenant VPC. The customer's VPC connects over AWS PrivateLink or an IPSec tunnel, and Cognition manages the infrastructure on the customer's behalf ([Devin enterprise deployment docs](https://docs.devin.ai/enterprise/deployment/overview)). Cognition's docs describe an isolated container in Cognition's tenant for each session, and customer-managed AWS KMS keys require the separate Enterprise Assured deployment, which adds them to Customer Dedicated Deployment ([Devin enterprise deployment docs](https://docs.devin.ai/enterprise/deployment/overview), [Devin customer managed keys docs](https://docs.devin.ai/enterprise/security-access/security/customer-managed-keys)). This page follows Cognition's docs language throughout; see Known Limitations below for a note on where Cognition's marketing language reads differently.
-- **Deployment model: Outposts (alpha).** Devin sessions run on customer-operated machines such as VMs, Kubernetes clusters, or a Mac mini. Inference and planning continue in Devin's cloud ([Devin Outposts docs](https://docs.devin.ai/cloud/outposts/overview)). It launched in alpha on July 21, 2026 ([daily.dev](https://daily.dev/posts/devin-outposts-lets-you-run-devin-sessions-on-your-own-machines-fmxetakxg)).
+- **Deployment model: Outposts.** Devin sessions run on customer-operated machines such as VMs, Kubernetes clusters, or a Mac mini. Inference and planning continue in Devin's cloud ([Devin Outposts docs](https://docs.devin.ai/cloud/outposts/overview)). Cognition introduced it on July 21, 2026 ([Cognition blog](https://devin.ai/blog/introducing-devin-outposts)).
 - **Deployment model: Federal.** The federal deployment runs on AWS GovCloud ([Devin federal docs](https://docs.devin.ai/federal/introduction)). As of July 2026, the full platform including Devin Cloud is FedRAMP High In-Process, while Devin Desktop and CLI are FedRAMP High Authorized ([Cognition blog](https://cognition.com/blog/devin-fedramp-high-in-process)).
 
 ## Coder Overview for This Comparison
@@ -83,7 +83,7 @@ Devin is an autonomous coding agent whose reasoning layer always runs in Cogniti
 
 ## Pricing and Packaging
 
-- **Devin.** Free, Pro ($20 per month), Max ($200 per month), Teams ($80 per month plus $40 per full developer seat, up to 200 users), and Enterprise ("Let's talk"). Enterprise lists a dedicated deployment option and SAML/OIDC SSO ([Devin pricing](https://devin.ai/pricing)). Enterprise customers are billed in ACUs at the rate on their order form ([Fastio](https://fast.io/resources/devin-enterprise-guide/)).
+- **Devin.** Free, Pro ($20 per month), Max ($200 per month), Teams ($80 per month plus $40 per full developer seat, up to 200 users), and Enterprise ("Let's talk"). Enterprise lists a dedicated deployment option and SAML/OIDC SSO ([Devin pricing](https://devin.ai/pricing)). Enterprise customers are billed in ACUs at the rate on their order form ([Devin Enterprise billing docs](https://docs.devin.ai/admin/billing/enterprise)).
 - **Coder.** Community is free. Premium and AI Premium are sales-led. AI Premium removes the 5 concurrent Coder Agents cap on Community and Premium ([Coder pricing](https://coder.com/pricing)). Customers also run Coder on their own infrastructure, so compute and model costs are paid to their own providers ([AWS Marketplace, Coder Premium](https://aws.amazon.com/marketplace/pp/prodview-laypqph2nuvaq)). See [Packaging](../company/packaging.md).
 
 ## Sources
@@ -100,10 +100,9 @@ Devin is an autonomous coding agent whose reasoning layer always runs in Cogniti
 - **[FedRAMP Marketplace, Cognition Platform](https://www.fedramp.gov/marketplace/products/FR2627211780/).** Marketplace listing. Primary (government registry). Accessed 2026-09-28.
 - **[Devin pricing](https://devin.ai/pricing).** Plans and Enterprise features. Primary. Accessed 2026-09-28.
 - **[AWS Marketplace, Devin](https://aws.amazon.com/marketplace/pp/prodview-yt3ntkdpdjdgm).** Product surfaces, target industries. Primary (vendor listing). Accessed 2026-09-28.
-- **[Continuum, Devin pricing](https://continuumcode.ai/guides/devin-pricing/).** Windsurf rename. Secondary. Accessed 2026-09-28.
-- **[Fastio, Devin Enterprise guide](https://fast.io/resources/devin-enterprise-guide/).** Enterprise ACU billing. Secondary. Accessed 2026-09-28.
-- **[daily.dev, Devin Outposts](https://daily.dev/posts/devin-outposts-lets-you-run-devin-sessions-on-your-own-machines-fmxetakxg).** Alpha launch date. Secondary. Accessed 2026-09-28.
-- **[Wikipedia, Cognition AI](https://en.wikipedia.org/wiki/Cognition_AI).** Windsurf rebrand to Devin Desktop. Secondary. Accessed 2026-09-28.
+- **[Cognition blog, Introducing Devin Desktop](https://cognition.com/blog/introducing-devin-desktop).** Devin Desktop as the next generation of Windsurf. Primary. Accessed 2026-10-29.
+- **[Devin Enterprise billing docs](https://docs.devin.ai/admin/billing/enterprise).** Enterprise ACU billing. Primary. Accessed 2026-10-29.
+- **[Cognition blog, Introducing Devin Outposts](https://devin.ai/blog/introducing-devin-outposts).** Outposts launch date. Primary. Accessed 2026-10-29.
 - **[Coder Agents docs](https://coder.com/docs/ai-coder/agents) and [Coder Agents models docs](https://coder.com/docs/ai-coder/agents/models).** Self-hosted agent loop, providers, credentials. Primary. Accessed 2026-09-28.
 - **[Coder air-gapped docs](https://coder.com/docs/install/airgap).** Air-gapped feature support. Primary. Accessed 2026-09-28.
 - **[Coder 2.33 changelog](https://coder.com/changelog/coder-2-33) and [Coder Agents GA blog](https://coder.com/blog/coder-agents-ga).** Air-gapped agents, self-hosted models, Agent Relay. Primary. Accessed 2026-09-28.
