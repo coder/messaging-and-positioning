@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-30 |
-| Last reviewed | 2026-09-30 |
+| Last reviewed | 2026-10-29 |
 | Category | Complementary |
 
 *(This page covers Red Hat's OpenShift portfolio as it relates to Coder. The relationship is complementary at the platform level, with two product overlaps covered separately below. Red Hat OpenShift Dev Spaces, formerly [CodeReady Workspaces](https://docs.redhat.com/en/documentation/red_hat_openshift_dev_spaces/3.0/html-single/release_notes_and_known_issues/index), overlaps with Coder Workspaces. OpenShift AI's [Models-as-a-Service](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/3.5/html-single/govern_llm_access_with_models-as-a-service/index) (MaaS) overlaps with AI Gateway. Red Hat AI Inference Server is now named [Red Hat AI Inference](https://docs.redhat.com/en/documentation/red_hat_ai_inference/3.5/html-single/vllm_server_arguments/index).)*

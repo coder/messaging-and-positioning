@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-06 |
-| Last reviewed | 2026-10-06 |
+| Last reviewed | 2026-10-29 |
 | Category | Competitive |
 
 *(OpenShell is an open-source project from NVIDIA. The GitHub repository is [NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell). This comparison is competitive at the agent execution layer only, where OpenShell overlaps with Coder workspaces as the place coding agents run and with workspace network policy as the control on what they can reach. OpenShell does not provide a coding agent, a model gateway, or a development environment platform, so it does not compete with the broader Coder platform. NVIDIA positions OpenShell as the software layer of its [Open Agent Safety Platform](https://nvidianews.nvidia.com/news/open-agent-safety-platform), alongside NVIDIA Sentry, a separate reference design for BlueField-4 DPUs that OpenShell [does not require](https://www.nvidia.com/en-us/solutions/ai/agent-safety/). This page covers OpenShell only.)*
