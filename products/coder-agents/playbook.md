@@ -157,7 +157,7 @@ See the message house's [Market Landscape](./message-house.md#market-landscape) 
 - **Cursor Cloud Agents.** Orchestration and inference run in Cursor's cloud, with optional self-hosted execution. Coder Agents keeps all three in the customer's deployment. See [Coder and Cursor](../../market-landscape/cursor.md).
 - **Claude Code and Codex.** Single-provider agents that run in a terminal or the provider's cloud. They can still run inside Coder workspaces with AI Governance. See [Coder and Claude Code](../../market-landscape/claude-code.md) and [Coder and Codex](../../market-landscape/codex.md).
 - **Devin.** The reasoning layer runs in Cognition's cloud, including in the VPC option. See [Coder and Devin](../../market-landscape/devin.md).
-- **GitHub Copilot agents.** Governance, model routing, and execution run on GitHub and Microsoft infrastructure. See [Coder and GitHub Copilot](../../market-landscape/github-copilot.md), [Coder and GitHub Codespaces](../../market-landscape/github-codespaces.md), and the FAQ's [VS Code Agents and GitHub Copilot](./faq.md#16-competitive-landscape-vs-code-agents-and-github-copilot) section.
+- **GitHub Copilot agents.** Orchestration, governance, and model routing run on GitHub and Microsoft infrastructure, and execution runs in GitHub-managed sandboxes by default. See [Coder and GitHub Copilot](../../market-landscape/github-copilot.md), [Coder and GitHub Codespaces](../../market-landscape/github-codespaces.md), and the FAQ's [VS Code Agents and GitHub Copilot](./faq.md#16-competitive-landscape-vs-code-agents-and-github-copilot) section.
 - **Agentic IDEs.** Windsurf, Zed, Kiro, and similar editors complement Coder Agents as the place developers review and refine work.
 - **Coder Agent Relay.** For organizations that want a specific cloud agent's experience and accept cloud orchestration and inference. Customers can use both. See the [Agent Relay playbook](../coder-agent-relay/playbook.md).
 
@@ -247,6 +247,6 @@ Coder Agents drives compute and inference consumption for cloud and model provid
 - [Coder Agents message house](./message-house.md) and [FAQ](./faq.md)
 - [Deploy AI Coding Agents](../../use-cases/deploy-ai-coding-agents.md)
 - [Coder Agents GA announcement](https://coder.com/blog/coder-agents-ga)
-- Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Codex](../../market-landscape/codex.md), [Devin](../../market-landscape/devin.md), and [GitHub Codespaces](../../market-landscape/github-codespaces.md)
+- Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Codex](../../market-landscape/codex.md), [Devin](../../market-landscape/devin.md), [GitHub Copilot](../../market-landscape/github-copilot.md), and [GitHub Codespaces](../../market-landscape/github-codespaces.md)
 
 Roughly 70% of Coder Agents usage so far has been triggered through the API, which indicates customers are using it for headless background orchestration. No public customer examples are available yet. When added, refer to customers by anonymized type unless they have publicly agreed to be named.
