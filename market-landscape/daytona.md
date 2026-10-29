@@ -6,7 +6,7 @@
 | Last reviewed | 2026-10-29 |
 | Category | Competitive |
 
-*(Third-party sources describe Daytona as having begun as an open-source development environment manager before repositioning around sandboxed AI code execution in early 2025, per [Morph](https://www.morphllm.com/comparisons/daytona-alternative) and [Northflank](https://northflank.com/blog/top-daytona-io-alternatives-for-running-ai-code-in-secure-sandboxed-environments), both secondary and competitor-authored. The company name is unchanged.)*
+*(Daytona was founded in 2023 to automate development environments for enterprises and later rebuilt around sandboxes for AI agents, per its CEO ([Fortune](https://fortune.com/2026/10/20/daytona-startup-building-the-agentic-cloud-valued-at-1-billion-in-latest-funding-round/)). The company name is unchanged.)*
 
 ## One-Line Positioning
 
@@ -81,7 +81,7 @@ Daytona is a managed execution cloud for agents, built around an API for fast, p
 
 ## Pricing and Packaging
 
-- **Daytona.** Usage-based, billed per second, with $200 in free compute. vCPU is listed at $0.0504/h, and GPU and Windows rates are listed separately ([Daytona pricing](https://www.daytona.io/pricing)). A secondary source reports memory at $0.0162/GiB-h ([Tech Insider](https://tech-insider.org/e2b-vs-modal-vs-daytona-2026/)). Customer managed compute and single tenant pricing aren't public.
+- **Daytona.** Usage-based, billed per second, with $200 in free compute. vCPU is listed at $0.0504/h and memory at $0.0162/GiB-h, and GPU and Windows rates are listed separately ([Daytona pricing](https://www.daytona.io/pricing)). Customer managed compute and single tenant pricing aren't public.
 - **Coder.** Community is free and open source. Premium pricing isn't public. AI Governance (including AI Gateway) is included with Premium, not sold as a separate add-on ([AI Governance message house](../products/coder-ai-governance/message-house.md), [Packaging](../company/packaging.md)). AI Premium removes the concurrent-agent limit of 5 that applies on Community and Premium ([Coder pricing](https://coder.com/pricing)). Coder doesn't charge for compute. Customers pay their own cloud or on-prem costs.
 - **Structural difference.** Daytona charges for the compute it runs. Coder is licensed software running on compute the customer already buys, so a direct price comparison depends on workload and isn't meaningful at list price.
 
@@ -90,7 +90,7 @@ Daytona is a managed execution cloud for agents, built around an API for fast, p
 - **[Daytona documentation home](https://www.daytona.io/docs/en/).** Product definition, sandbox model, startup time, SDKs. Primary. Accessed 2026-09-28.
 - **[Daytona sandboxes docs](https://www.daytona.io/docs/en/sandboxes/).** Sandbox types (container, VM, Windows, GPU, macOS). Primary. Accessed 2026-09-28.
 - **[Daytona homepage](https://www.daytona.io/).** Customer managed compute and control plane statement, compliance claims, computer-use desktops. Primary. Accessed 2026-09-28.
-- **[Daytona pricing](https://www.daytona.io/pricing).** Usage-based rates, free credits, per-second billing. Primary. Accessed 2026-09-28.
+- **[Daytona pricing](https://www.daytona.io/pricing).** Usage-based rates, memory rate, free credits, per-second billing. Primary. Accessed 2026-10-29.
 - **[Daytona customer managed compute docs](https://www.daytona.io/docs/en/runners/).** Runner and custom region model. Primary. Accessed 2026-09-28.
 - **[Daytona single tenant deployment](https://www.daytona.io/dotfiles/single-tenant).** Managed isolated instance option. Primary. Accessed 2026-09-28.
 - **[Daytona January 2026 update](https://www.daytona.io/dotfiles/updates/what-s-new-at-daytona-january-2026).** Custom regions invite-only and experimental status at that time. Primary. Accessed 2026-09-28.
@@ -107,13 +107,10 @@ Daytona is a managed execution cloud for agents, built around an API for fast, p
 - **[Daytona Series A post](https://www.daytona.io/dotfiles/daytona-raises-24m-series-a-to-give-every-agent-a-computer).** Use cases and named customers. Primary. Accessed 2026-09-28.
 - **[Daytona Series B post](https://www.daytona.io/dotfiles/daytona-raises-60m-series-b-to-build-the-agent-cloud).** Agent Cloud positioning and stated scope, customer groups. Primary. Accessed 2026-10-20.
 - **[Ivan Burazin on X](https://x.com/ivanburazin/status/2112559682720055454).** Team size. Primary (Daytona CEO). Accessed 2026-10-20.
-- **[Fortune](https://fortune.com/2026/10/20/daytona-startup-building-the-agentic-cloud-valued-at-1-billion-in-latest-funding-round/).** Series B round and lead investor, CEO claim of 60 millisecond sandbox setup. Secondary (press interview). Accessed 2026-10-20.
+- **[Fortune](https://fortune.com/2026/10/20/daytona-startup-building-the-agentic-cloud-valued-at-1-billion-in-latest-funding-round/).** Series B round and lead investor, founding and pivot, CEO claim of 60 millisecond sandbox setup. Secondary (press interview). Accessed 2026-10-29.
 - **[Tech.eu](https://tech.eu/2026/10/20/daytona-hits-1b-valuation-with-60m-series-b-for-ai-agent-cloud).** Series B amount, valuation, and total funding, plus named infrastructure customers. Secondary (press coverage). Accessed 2026-10-20.
 - **[PR Newswire Series A release](https://www.prnewswire.com/news-releases/daytona-raises-24m-series-a-to-give-every-agent-a-computer-302680740.html).** Funding details, snapshot and fork capabilities. Primary. Accessed 2026-09-28.
 - **[Nightona](https://github.com/nightona-co/nightona).** Community fork of v0.190.0. Secondary. Accessed 2026-09-28.
-- **[Northflank](https://northflank.com/blog/top-daytona-io-alternatives-for-running-ai-code-in-secure-sandboxed-environments).** Pivot history. Secondary (competitor-authored). Accessed 2026-09-28.
-- **[Morph](https://www.morphllm.com/comparisons/daytona-alternative).** Pivot timeline. Secondary (competitor-authored). Accessed 2026-09-28.
-- **[Tech Insider](https://tech-insider.org/e2b-vs-modal-vs-daytona-2026/).** Memory rate. Secondary. Accessed 2026-09-28.
 - **[Coder air-gapped docs](https://coder.com/docs/install/airgap).** Air-gapped support. Primary. Accessed 2026-09-28.
 - **[Coder AI docs](https://coder.com/docs/ai-coder).** Coder Agents, Agent Relay, AI Gateway. Primary. Accessed 2026-09-28.
 - **[Agent Relay docs](https://coder.com/docs/ai-coder/agent-relay).** Early access and closed preview status, Cursor as first supported provider. Primary. Accessed 2026-09-28.
