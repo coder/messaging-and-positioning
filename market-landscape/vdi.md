@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-12 |
-| Last reviewed | 2026-10-12 |
+| Last reviewed | 2026-10-29 |
 | Category | Competitive |
 
 *This page covers virtual desktop infrastructure (VDI) and desktop as a service (DaaS) as a category rather than a single vendor. Examples include Citrix DaaS and Citrix Virtual Apps and Desktops, Omnissa Horizon (formerly VMware Horizon), Azure Virtual Desktop, and Amazon WorkSpaces. VDI competes with Coder only where it hosts developers. For other employees and desktop applications, the two solve different problems.*

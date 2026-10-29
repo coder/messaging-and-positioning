@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-12 |
-| Last reviewed | 2026-10-12 |
+| Last reviewed | 2026-10-29 |
 | Category | Complementary |
 
 *Kiro CLI is the successor to the Amazon Q Developer CLI ([Kiro docs](https://kiro.dev/docs/upgrade-guides/migrating-from-q/)), and AWS points Amazon Q Developer customers to Kiro ahead of Q Developer end of support on April 30, 2027 ([AWS](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/)).*
