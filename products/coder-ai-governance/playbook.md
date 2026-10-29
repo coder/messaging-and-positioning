@@ -157,7 +157,7 @@ See the message house's [Buyer Personas](./message-house.md#buyer-personas) for 
 
 See the message house's [Competitive Position](./message-house.md#competitive-position) for the full narrative.
 
-- **Standalone AI gateways, such as LiteLLM, Kong, Portkey, and Tetrate.** They govern model traffic routed through them. Coder governs model access and where agents run, and AI Gateway can route through an existing gateway. See [Coder and LiteLLM](../../market-landscape/litellm.md).
+- **Standalone AI gateways, such as LiteLLM, TrueFoundry, Kong, Portkey, and Tetrate.** They govern model traffic routed through them. Coder governs model access and where agents run, and AI Gateway can route through an existing gateway. See [Coder and LiteLLM](../../market-landscape/litellm.md) and [Coder and TrueFoundry](../../market-landscape/truefoundry.md).
 - **Corporate proxies and secure web gateways.** They see network traffic, but not the Coder user, workspace, or agent session behind it. They complement AI Governance.
 - **Agent sandboxes.** Isolation alone doesn't provide model access control, attribution, or organization-wide policy. See [Coder and NVIDIA OpenShell](../../market-landscape/nvidia-openshell.md).
 - **Admin controls built into AI tools.** Each covers its own tool. AI Gateway gives one audit trail and one set of budgets across supported tools.
@@ -313,4 +313,4 @@ AI Governance complements cloud and model providers such as AWS and Amazon Bedro
 - [Network boundaries for agent templates](https://coder.com/docs/ai-coder/agents/platform-controls/template-optimization#configure-network-boundaries)
 - [AI Governance message house](./message-house.md)
 - [Secure Development Environments](../../use-cases/secure-development-environments.md) and [Deploy AI Coding Agents](../../use-cases/deploy-ai-coding-agents.md)
-- Market landscape pages for [LiteLLM](../../market-landscape/litellm.md), [NVIDIA OpenShell](../../market-landscape/nvidia-openshell.md), [Cursor](../../market-landscape/cursor.md), and [Claude Code](../../market-landscape/claude-code.md)
+- Market landscape pages for [LiteLLM](../../market-landscape/litellm.md), [TrueFoundry](../../market-landscape/truefoundry.md), [NVIDIA OpenShell](../../market-landscape/nvidia-openshell.md), [Cursor](../../market-landscape/cursor.md), and [Claude Code](../../market-landscape/claude-code.md)
