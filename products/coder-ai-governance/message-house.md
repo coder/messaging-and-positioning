@@ -98,7 +98,7 @@ What differentiates Coder is its infrastructure-first approach. Rather than focu
 
 **Challenges:** Developers use multiple AI tools across IDEs, scripts, and agents with personal API keys. Security and platform teams lack visibility into model usage and data exposure. It's hard to determine effective vs. wasteful usage. There is a lack of predictability in token usage, model consumption, and cost attribution across users.
 
-**Coder's Solution:** AI Gateway enforces per-user and per-group budgets before requests are forwarded to a model provider, with configurable notification thresholds as spend approaches its limit. Platform teams get organization-wide spend reporting with CSV export by user, provider, and model, spend attribution down to the workspace, and Prometheus metrics for cost and enforcement, giving them the visibility to monitor, allocate, and optimize AI spend across users.
+**Coder's Solution:** AI Gateway enforces per-user and per-group budgets before requests are forwarded to a model provider, with configurable notification thresholds as spend approaches its limit. Platform teams get organization-wide spend reporting with CSV export by user, provider, and model, and Prometheus metrics for cost and enforcement, giving them the visibility to monitor, allocate, and optimize AI spend across users. When a request comes from a Coder Agents chat bound to a workspace, or from a client that authenticates with the session token Coder issues to its workspace, AI Gateway also records which workspace it came from. Spend reports don't break down by workspace.
 
 ### Use Case 4: Protecting Sensitive Code and Data
 
