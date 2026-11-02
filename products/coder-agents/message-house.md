@@ -144,7 +144,7 @@ For platform teams, Coder Agents provides a consistent way to deploy and govern 
 - **Context compaction** - as conversations grow, the agent automatically summarizes older context to stay within the model's context window. Earlier messages remain in the database for user review.
 - **Message queuing** - users can send follow-up messages while the agent is working. Messages are queued and delivered when the agent completes its current turn.
 - **Chat persistence** - all chat state is stored in the control plane database, not the workspace. History survives workspace stops, rebuilds, and deletions. Agents can resume work by targeting a new workspace.
-- **Projects** - users can group multiple related chats into a project. Memory shared within a project is available to other agents working in that same project, so context carries across chats instead of staying siloed in a single conversation.
+- **Projects** - users group related chats into a project. Every chat in a project gets the project's instructions, skills, and shared memory, so context carries across chats instead of staying siloed in a single conversation.
 - **Built-in tool set** - file read/write, atomic multi-file search-and-replace edits, shell execution (foreground and background), process management (list, output, signal), template browsing, and workspace creation.
 
 ### Security
@@ -157,13 +157,13 @@ For platform teams, Coder Agents provides a consistent way to deploy and govern 
 ### Platform Controls
 
 - **Centralized provider and model configuration** - admins configure LLM providers, API keys, base URLs (for enterprise proxies or self-hosted models), and per-model parameters (context limits, thinking budgets, reasoning effort) from the dashboard. Developers can select from enabled models; they cannot add providers or supply their own keys unless the admin allows it.
-- **Admin-controlled system prompt** - admins set an organization-wide system prompt (coding standards, commit formats, preferred libraries). Enforced server-side, developers do not see or interact with it.
+- **Admin-controlled instructions and skills** - admins set a deployment-wide system prompt (coding standards, commit formats, preferred libraries), and each organization can add its own instructions and publish shared skills, such as house conventions or deploy workflows, to every chat in that organization. Enforced server-side, with no per-developer setup.
 - **Template routing** - platform teams guide agent template selection by writing clear template descriptions. Developers don't need to understand template selection.
 - **Enforcement, not defaults** - all agent configuration is admin-level policy enforced server-side, not user preferences developers can override. When an admin removes a model or modifies the system prompt, the change applies to all sessions immediately.
 
 ### Model Provider Support
 
-Anthropic, OpenAI, Google, Azure OpenAI, AWS Bedrock, OpenRouter, Vercel AI Gateway, and any OpenAI-compatible endpoint, including enterprise LLM proxies, self-hosted model endpoints, and internal gateways via custom base URLs. Multiple providers can be configured simultaneously.
+Anthropic (including Claude Platform for AWS), OpenAI, Google, Azure OpenAI, AWS Bedrock, OpenRouter, Vercel AI Gateway, and any OpenAI-compatible endpoint, including enterprise LLM proxies, self-hosted model endpoints, and internal gateways via custom base URLs. Multiple providers can be configured simultaneously.
 
 ## Market Landscape
 
