@@ -46,7 +46,7 @@ Mission software is built on networks that can't reach the public internet: air-
 
 ### Accreditation sets the pace
 
-New software on a government network needs a security review and an ATO, and accreditation can take longer than the technical work. When every team builds its own development stack, every team repeats that process. Coder runs inside the organization's authorization boundary, under its ATO. A central platform team can accredit one Coder deployment and offer standardized, pre-approved environments to many teams, which inherit the platform's controls instead of certifying their own. For DoD environments, Coder publishes a hardened container image built on Red Hat UBI9 through Iron Bank, the DoD's hardened container registry ([Coder docs](https://coder.com/docs/install/server/rpm#hardened-base-images)). See [Coder and Red Hat](../market-landscape/red-hat.md) for the accreditation-reuse pattern.
+New software on a government network needs a security review and an ATO, and accreditation can take longer than the technical work. When every team builds its own development stack, every team repeats that process. Coder runs inside the organization's authorization boundary, under its ATO. A central platform team can accredit one Coder deployment and offer standardized, pre-approved environments to many teams, which inherit the platform's controls instead of certifying their own. For Department of War (DoW) environments, Coder publishes a hardened container image built on Red Hat UBI9 through Iron Bank, the DoW's hardened container registry ([Coder docs](https://coder.com/docs/install/server/rpm#hardened-base-images)). See [Coder and Red Hat](../market-landscape/red-hat.md) for the accreditation-reuse pattern.
 
 ### Government endpoints weren't built for development
 
@@ -153,7 +153,7 @@ Agent Relay connects cloud-hosted agents to self-hosted workspaces, so it fits c
 
 ### On Red Hat OpenShift
 
-Many DoD and Intelligence Community programs already run OpenShift in disconnected enclaves, and Coder runs on it as a standard workload. Red Hat provides the platform and model serving. Coder provides governed developer and agent environments on top.
+Many DoW and Intelligence Community programs already run OpenShift in disconnected enclaves, and Coder runs on it as a standard workload. Red Hat provides the platform and model serving. Coder provides governed developer and agent environments on top.
 
 | Red Hat provides | Coder provides |
 | :---- | :---- |
@@ -182,8 +182,8 @@ All published by Coder. Coder's public sector customers keep their use of Coder 
 
 - A **U.S. defense intelligence organization** runs Coder self-hosted on AWS GovCloud inside a fully air-gapped network. Onboarding dropped from multiple days to 3-5 minutes, developer adoption grew 500% over a multi-year deployment, and leadership gained full audit trails for compliance verification. ([Defense Intelligence success story](https://coder.com/success-stories/defense-intelligence-organizations))
 - A separate **U.S. Defense Intelligence platform** runs the U.S. military's first true multi-tenant Coder deployment, giving 2,500+ developers pre-approved environments that inherit a centralized, platform-level ATO instead of each mission team certifying its own. ([U.S. Defense Intelligence Organization success story](https://coder.com/success-stories/u-s-defense-intelligence-organization))
-- A **U.S. Department of Defense software development group** deployed Coder on AWS GovCloud (US) and regions supporting IL6 and above, moving source code off laptops and automating tool updates and security patches across environments at multiple classification levels. ([DoD software development group success story](https://coder.com/success-stories/us-department-of-defense-software-development-group))
-- A **U.S. Department of Defense command** uses Coder on AWS GovCloud to give hundreds of developers and data scientists ephemeral, GPU-enabled workspaces across classified and unclassified domains, with training data encrypted through AWS KMS and idle resources shut down automatically. ([DoD AI/ML group success story](https://coder.com/success-stories/us-dod-ai-ml-group))
+- A **U.S. Department of War software development group** deployed Coder on AWS GovCloud (US) and regions supporting IL6 and above, moving source code off laptops and automating tool updates and security patches across environments at multiple classification levels. ([DoW software development group success story](https://coder.com/success-stories/us-department-of-defense-software-development-group))
+- A **U.S. Department of War command** uses Coder on AWS GovCloud to give hundreds of developers and data scientists ephemeral, GPU-enabled workspaces across classified and unclassified domains, with training data encrypted through AWS KMS and idle resources shut down automatically. ([DoW AI/ML group success story](https://coder.com/success-stories/us-dod-ai-ml-group))
 
 ## Known Limitations
 
@@ -202,6 +202,7 @@ All Coder features run disconnected, and licenses can be issued with usage repor
 - Say Coder runs fully air-gapped, including Coder Agents and AI Gateway with models served inside the boundary. Don't position Agent Relay for disconnected or classified networks; see Known Limitations.
 - Some government programs don't use AI yet ("SI" in US federal content). For them, lead with Coder Workspaces on its own: it delivers value with no AI in the environment, and AI Gateway and Coder Agents can be added to the same platform later without re-architecting it.
 - In US federal-facing content, including the federal segment sections above, say "super intelligence (SI)" instead of "AI." Product names such as AI Gateway and AI Governance don't change. State, local, and international content keeps "AI."
+- Call the U.S. Department of Defense the "Department of War" (DoW), never "Department of Defense" or "DoD." Keep "DoD" only in formal designations buyers search for, such as DoD Impact Levels (IL2, IL4, IL5, IL6), and leave third-party URLs and source titles as published.
 - Don't name public sector customers or state how many agencies use Coder. Use the anonymized descriptions from published stories.
 - Lead with secure development environments for developers and other builders, and present AI Governance as extending the same control to agents. Only claim AI governance controls that exist today.
 - Describe agent network controls as workspace network policy set in the template. It applies to every process in the workspace, including third-party agents and the work Coder Agents runs there. Don't say Coder filters or logs individual network requests.
