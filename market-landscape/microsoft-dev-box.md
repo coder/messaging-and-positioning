@@ -1,4 +1,4 @@
-# Coder and Microsoft Dev Box
+# Coder, Microsoft Dev Box, and Windows 365
 
 | Field | Value |
 |---|---|
