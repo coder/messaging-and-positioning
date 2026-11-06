@@ -31,6 +31,9 @@ State the dated facts and link to Ona's own notice. Lead with the customer's req
 **What's the short version for a customer?**
 Ona Cloud shut down on October 31, 2026, and environments didn't move automatically. Coder is an open-source, self-hosted platform for development environments where developers work and AI agents run, on the customer's own cloud or data center, with the IDEs, agents, and models the team chooses. Teams can reuse their existing Dev Container configurations.
 
+**Is there a page we can send?**
+Yes. Coder's public [Ona alternative page](https://coder.com/solutions/workspaces/ona-alternative) compares Coder and Ona and answers common migration questions.
+
 ## Fit
 
 **Which Ona customers are a good fit for Coder?**
@@ -81,6 +84,7 @@ The free Community edition installs with the [quickstart](https://coder.com/docs
 ## Related
 
 - [Coder and Ona](../../market-landscape/ona.md) for the full comparison
+- [Coder's Ona alternative page](https://coder.com/solutions/workspaces/ona-alternative) for the public, customer-facing comparison
 - [Coder and Codex](../../market-landscape/codex.md) for Codex Cloud
 - [Coder Workspaces playbook](./playbook.md) and [FAQ](./faq.md)
 - [Coder Agents message house](../coder-agents/message-house.md)
