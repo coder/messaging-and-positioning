@@ -109,6 +109,6 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 - **[Coder air-gapped deployments](https://coder.com/docs/install/airgap).** Air-gap support. Primary. Accessed 2026-09-28.
 - **[Coder Dev Containers](https://coder.com/docs/@main/admin/integrations/devcontainers).** Dev Container specification support. Primary. Accessed 2026-10-29.
 - **[Coder pricing](https://coder.com/pricing) and [Coder Community blog](https://coder.com/blog/coder-community-open-source).** Tiers and agent limits. Primary. Accessed 2026-09-28.
-- **[Coder Ona alternative page](https://coder.com/solutions/workspaces/ona-alternative).** Coder's public comparison with Ona for teams moving off Ona Cloud or evaluating Ona Enterprise. Primary. Accessed 2026-11-06.
+- **[Coder Ona alternative page](https://coder.com/solutions/workspaces/ona-alternative).** Coder's public comparison with Ona for teams moving off Ona or evaluating Coder against Ona Enterprise. Primary. Accessed 2026-11-06.
 - **[coder/coder on GitHub](https://github.com/coder/coder).** Third-party agent support. Primary. Accessed 2026-09-28.
 - **[Coder Workspaces message house](../products/coder-workspaces/message-house.md), [Coder Agents message house](../products/coder-agents/message-house.md), [Why Coder](../company/why-coder.md).** Coder positioning. Primary (this repository). Accessed 2026-09-28.
