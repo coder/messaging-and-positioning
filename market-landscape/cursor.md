@@ -6,7 +6,7 @@
 | Last reviewed | 2026-11-06 |
 | Category | Complementary |
 
-*Cursor is made by Anysphere, Inc. As of August 2026, Anysphere is a subsidiary of SpaceX, part of the SpaceXAI team ([Techzine](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company))). The product name is unchanged.*
+*Cursor is made by Anysphere, Inc., which SpaceX acquired in August 2026 ([Cursor blog](https://cursor.com/blog/joining-spacex)). The product name is unchanged.*
 
 ## One-Line Positioning
 
@@ -33,7 +33,7 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 
 ## Cursor Overview
 
-- **What it is.** An AI coding agent and development environment for understanding codebases, building features, fixing bugs, and reviewing changes ([Cursor docs](https://docs.cursor.com/welcome)). Surfaces include the desktop app, web, mobile, CLI, and Cloud Agents ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted), [Wikipedia](https://en.wikipedia.org/wiki/Cursor_(company))).
+- **What it is.** An AI coding agent and development environment for understanding codebases, building features, fixing bugs, and reviewing changes ([Cursor docs](https://docs.cursor.com/welcome)). Surfaces include the desktop app, web, mobile, CLI, and Cloud Agents ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted), [Cursor CLI docs](https://cursor.com/docs/cli/overview)).
 - **Architecture.** Cursor sends prompts and code context to model providers such as OpenAI, Anthropic, and Google, and to its own inference providers for Cursor models like Composer ([Cursor docs](https://cursor.com/docs/enterprise/privacy-and-data-governance)). Cloud Agents run in Cursor-hosted isolated VMs by default. With Self-Hosted Machines, Cursor still runs the agent loop, inference, and planning, and a worker on customer hardware runs file edits, terminal commands, computer-use tools, and local MCP servers ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted)). Workers connect outbound over HTTPS with no inbound ports ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/pool)).
 - **Target customer.** Individual developers through large enterprises. Cursor recommends Enterprise for organizations that need pooled usage, invoicing, SCIM, or advanced security controls ([Cursor docs](https://cursor.com/docs/account/teams/pricing)).
 - **Deployment model.** SaaS on AWS infrastructure. Cursor doesn't offer on-premises deployment ([Cursor Enterprise](https://cursor.com/enterprise)). Self-Hosted Machines moves tool execution, not the agent loop, onto customer machines ([Cursor docs](https://cursor.com/docs/cloud-agent/self-hosted/pool)).
@@ -84,8 +84,8 @@ Cursor provides the AI coding experience, agent orchestration, and inference, an
 - **[Cursor Security](https://cursor.com/security).** Primary. Certifications. Accessed 2026-09-28.
 - **[Cursor Enterprise](https://cursor.com/enterprise).** Primary. AWS hosting, no on-premises deployment. Accessed 2026-09-28.
 - **[Cursor Pricing](https://cursor.com/pricing), [Team Pricing](https://cursor.com/docs/account/teams/pricing), [Models and Pricing](https://cursor.com/docs/models-and-pricing).** Primary. The X Subscription plans, current and legacy Teams seat prices, Cursor Token Rate. Accessed 2026-10-29.
-- **[Techzine: SpaceX completes acquisition of Cursor](https://www.techzine.eu/news/devops/143619/spacex-completes-acquisition-of-cursor/).** Secondary. Acquisition completion, August 2026. Accessed 2026-09-28.
-- **[Wikipedia: Cursor (company)](https://en.wikipedia.org/wiki/Cursor_(company)).** Secondary. Subsidiary status, product surfaces. Accessed 2026-09-28.
+- **[Cursor Blog: Cursor is now a part of SpaceX](https://cursor.com/blog/joining-spacex).** Primary. Acquisition by SpaceX, August 2026. Accessed 2026-11-06.
+- **[Cursor Docs: CLI](https://cursor.com/docs/cli/overview).** Primary. CLI surface. Accessed 2026-11-06.
 - **[Coder Docs: Agent Relay](https://coder.com/docs/@main/agent-relay) and [Agent Relay for Cursor](https://coder.com/docs/@main/agent-relay/cursor).** Primary. Architecture, beta status, Premium license, inference not proxied, Cursor Enterprise plan requirement. Accessed 2026-11-06.
 - **[Coder Blog: Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution).** Primary. Governance applied automatically, Claude Code integration. Accessed 2026-09-28.
 - **[Coder Docs: Cursor workspace access](https://coder.com/docs/user-guides/workspace-access/cursor).** Primary. IDE connection. Accessed 2026-09-28.
