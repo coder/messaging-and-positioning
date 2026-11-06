@@ -6,7 +6,7 @@
 | Last reviewed | 2026-11-06 |
 | Category | Competitive (Codex cloud) and Complementary (Codex CLI, IDE extension, Remote SSH) |
 
-*(On July 9, 2026, OpenAI merged the standalone Codex desktop app into the new ChatGPT desktop app, where Codex remains a dedicated coding mode. The Codex CLI, IDE extension, and Codex cloud keep the Codex name. See [Wikipedia](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)) and [Developers Digest](https://www.developersdigest.tech/blog/chatgpt-work-codex-desktop-app).)*
+*(On July 9, 2026, OpenAI merged the standalone Codex desktop app into the new ChatGPT desktop app, where Codex remains a dedicated coding mode ([OpenAI](https://learn.chatgpt.com/docs/whats-new)). The Codex CLI, IDE extension, and Codex cloud keep the Codex name.)*
 
 ## One-Line Positioning
 
@@ -34,7 +34,7 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 
 - **What it is.** OpenAI describes Codex as its coding agent for writing, reviewing, and debugging code, used from the IDE, the CLI, web and mobile, or CI/CD pipelines through the SDK ([OpenAI code generation guide](https://developers.openai.com/api/docs/guides/code-generation)).
 - **Architecture.** Local surfaces (ChatGPT desktop app, Codex CLI, IDE extension) run on the user's machine or on a connected SSH host ([OpenAI Remote connections docs](https://developers.openai.com/codex/remote-connections)). Codex cloud runs each task in its own VM from a published environment that Codex prepares and tests ([OpenAI cloud environments docs](https://learn.chatgpt.com/docs/environments/cloud-environments)). Tasks start from the web, desktop app, or mobile, while Code Review and the GitHub and Linear integrations still run on Codex Cloud (Legacy) ([OpenAI Help Center](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)).
-- **Open source components.** The Codex CLI is open source under Apache 2.0, and the desktop app is proprietary ([Wikipedia](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)), secondary). The app-server is open source in the openai/codex repository ([OpenAI App Server docs](https://developers.openai.com/codex/app-server)).
+- **Open source components.** The Codex CLI and the app-server are open source under Apache 2.0 in the openai/codex repository ([openai/codex](https://github.com/openai/codex), [OpenAI App Server docs](https://developers.openai.com/codex/app-server)).
 - **Model support.** Codex CLI can use local providers such as Ollama or LM Studio, plus custom model providers defined by base URL ([OpenAI advanced configuration docs](https://developers.openai.com/codex/config-advanced)). Custom providers must support the OpenAI Responses API ([OpenAI configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)).
 - **Enterprise controls.** Admins can set requirements that users cannot override, plus configuration defaults, for the ChatGPT desktop app, Codex CLI, and IDE extension ([OpenAI managed configuration docs](https://developers.openai.com/codex/enterprise/managed-configuration)). Cloud agents have internet access turned off by default, and admins can allow limited or unrestricted access per environment ([OpenAI internet access docs](https://developers.openai.com/codex/cloud/internet-access)).
 - **Target customer.** Codex ships with every ChatGPT plan, from Free and Go up to Plus, Pro, Business, and Enterprise ([Codex pricing](https://chatgpt.com/codex/pricing/)). That covers individual developers through enterprises already on ChatGPT.
@@ -49,16 +49,16 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 
 ## Where Codex Is Strong or Coder Has a Gap
 
-- **No infrastructure to run.** Codex cloud is hosted by OpenAI. Coder is self-hosted, so the customer runs both the control plane and the compute ([Coder install docs](https://coder.com/docs/install)). Some reviewers say this makes Coder a poor fit for small teams without dedicated DevOps ([G2 review](https://www.g2.com/products/coder/pricing), secondary).
+- **No infrastructure to run.** Codex cloud is hosted by OpenAI. Coder is self-hosted, so the customer runs both the control plane and the compute ([Coder install docs](https://coder.com/docs/install)).
 - **Breadth of surfaces.** Codex spans the desktop app, CLI, IDE extension, web, mobile, and task triggers from GitHub, GitLab, Linear, and Slack ([OpenAI Codex cloud docs](https://developers.openai.com/codex/cloud), [OpenAI Remote connections](https://openai.com/index/work-with-codex-from-anywhere/)).
-- **First-party access to OpenAI models.** Codex gets new OpenAI models as they launch, including Codex-tuned models ([freeCodeCamp Codex Handbook](https://www.freecodecamp.org/news/the-codex-handbook-a-practical-guide-to-openai-s-coding-platform/), secondary).
+- **First-party access to OpenAI models.** Codex offers OpenAI's latest models ([OpenAI Codex models](https://learn.chatgpt.com/docs/models)).
 - **Bundled with ChatGPT.** Organizations already paying for ChatGPT Business or Enterprise get Codex in their existing plan ([Codex pricing](https://chatgpt.com/codex/pricing/)).
 - **Hosted code review.** Codex offers optional hosted workflows such as code review ([OpenAI admin rollout guide](https://developers.openai.com/codex/enterprise/admin-setup)).
 - **Coder gaps.** Agent Relay does not support Codex cloud today ([Coder AI docs](https://coder.com/docs/ai-coder)). Community and Premium cap Coder Agents at 5 concurrent agents, and AI Premium removes the cap ([Coder pricing](https://coder.com/pricing)).
 
 ## Known Limitations in Codex's Approach
 
-- **No self-hosted Codex cloud (as of 2026-09-28).** Codex cloud runs on hosted environments ([OpenAI admin rollout guide](https://developers.openai.com/codex/enterprise/admin-setup)). The self-hosted options OpenAI documents for Codex are local clients and SSH-connected remote hosts ([OpenAI Remote connections docs](https://developers.openai.com/codex/remote-connections)). The separate Agents API, in public beta since September 10, 2026, can run tool execution in a customer-run sandbox, but the Codex harness and sessions stay on OpenAI infrastructure ([OpenAI API changelog](https://developers.openai.com/api/docs/changelog), [OpenAI self-hosted sandboxes docs](https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted)).
+- **No self-hosted Codex cloud (as of 2026-11-06).** Codex cloud runs on hosted environments ([OpenAI admin rollout guide](https://developers.openai.com/codex/enterprise/admin-setup)). The self-hosted options OpenAI documents for Codex are local clients and SSH-connected remote hosts ([OpenAI Remote connections docs](https://developers.openai.com/codex/remote-connections)). The separate Agents API can run tool execution in a customer-run sandbox, but the harness and inference stay on OpenAI infrastructure, or in Amazon Bedrock with Bedrock Managed Agents, in preview ([OpenAI self-hosted sandboxes docs](https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted), [OpenAI Bedrock Managed Agents docs](https://developers.openai.com/api/docs/guides/agents-api/bedrock-managed-agents)).
 - **Agents API data controls (as of 2026-09-28).** The Agents API supports data residency only in the United States and does not support Zero Data Retention, and a self-hosted sandbox does not change either ([OpenAI Agents API docs](https://developers.openai.com/api/docs/guides/agents-api/overview)).
 - **No GitLab or GitHub Enterprise Server in Codex cloud (as of 2026-10-29).** OpenAI lists GitLab, self-hosted GitHub Enterprise Server, and computer and browser use as not yet supported in cloud environments ([OpenAI cloud environments docs](https://learn.chatgpt.com/docs/environments/cloud-environments)).
 - **Local usage and compliance export (as of 2026-10-29).** OpenAI says local execution emits OpenTelemetry events collected separately from Compliance API records, and that neither gives a complete record of every local command, file operation, or approval ([OpenAI Compliance API docs](https://learn.chatgpt.com/docs/enterprise/compliance-api)).
@@ -100,7 +100,7 @@ Accessed 2026-09-28 unless noted.
 - **[OpenAI Remote connections docs](https://developers.openai.com/codex/remote-connections).** Primary. SSH host connections.
 - **[OpenAI App Server docs](https://developers.openai.com/codex/app-server).** Primary. Open source app-server.
 - **[OpenAI code generation guide](https://developers.openai.com/api/docs/guides/code-generation).** Primary. Codex product definition and surfaces.
-- **[OpenAI API changelog](https://developers.openai.com/api/docs/changelog).** Primary. Agents API public beta on September 10, 2026.
+- **[OpenAI Bedrock Managed Agents docs](https://developers.openai.com/api/docs/guides/agents-api/bedrock-managed-agents) and [Amazon Bedrock Managed Agents](https://aws.amazon.com/bedrock/managed-agents-openai/).** Primary. Agent harness and inference in Amazon Bedrock, preview status. Accessed 2026-11-06.
 - **[OpenAI Agents API docs](https://developers.openai.com/api/docs/guides/agents-api/overview) ([architecture](https://developers.openai.com/api/docs/guides/agents-api/architecture), [self-hosted sandboxes](https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted)).** Primary. Managed Codex harness, hosted and self-hosted sandboxes, US-only data residency, no ZDR.
 - **[Work with Codex from anywhere](https://openai.com/index/work-with-codex-from-anywhere/).** Primary. Remote SSH general availability.
 - **[OpenAI Developers on X](https://x.com/OpenAIDevs/status/2044828473060139208).** Primary. What stays on the remote machine with Remote Connection.
@@ -120,11 +120,10 @@ Accessed 2026-09-28 unless noted.
 - **[Coder pricing](https://coder.com/pricing).** Primary. Editions, Coder Agents concurrency cap, Premium price not published. Accessed 2026-10-29.
 - **[Coder Agent Relay Claude Code announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development).** Primary. Agent Relay supported providers and dates.
 - **[Coder Agent Relay docs](https://coder.com/docs/@main/agent-relay).** Primary. Beta status and supported providers. Accessed 2026-11-06.
-- **[Wikipedia, OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)).** Secondary. App merger date, licenses.
-- **[Developers Digest](https://www.developersdigest.tech/blog/chatgpt-work-codex-desktop-app).** Secondary. Desktop app merger details.
+- **[OpenAI What's new](https://learn.chatgpt.com/docs/whats-new).** Primary. July 9 desktop app merger. Accessed 2026-11-06.
+- **[openai/codex](https://github.com/openai/codex).** Primary. Apache 2.0 license for the CLI and app-server. Accessed 2026-11-06.
 - **[Using Codex Cloud](https://help.openai.com/en/articles/20001545-using-codex-cloud) and [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex).** Primary. OpenAI-managed computers, task surfaces, legacy integrations. Accessed 2026-10-29.
 - **[OpenAI configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).** Primary. Responses API as the only supported provider protocol. Accessed 2026-10-29.
-- **[freeCodeCamp Codex Handbook](https://www.freecodecamp.org/news/the-codex-handbook-a-practical-guide-to-openai-s-coding-platform/).** Secondary. Codex model lineup.
+- **[OpenAI Codex models](https://learn.chatgpt.com/docs/models).** Primary. Current Codex models. Accessed 2026-11-06.
 - **[OpenAI Compliance API docs](https://learn.chatgpt.com/docs/enterprise/compliance-api).** Primary. Compliance API and OpenTelemetry coverage of local execution. Accessed 2026-10-29.
 - **[OpenAI Codex pricing](https://learn.chatgpt.com/docs/pricing).** Primary. Credit rates per million tokens. Accessed 2026-10-29.
-- **[G2](https://www.g2.com/products/coder/pricing).** Secondary. Reviewer view of Coder operational overhead.
