@@ -2,25 +2,25 @@
 
 This FAQ helps Coder teams support organizations moving off Ona, formerly Gitpod. It covers who is affected, how to talk about the change, and how a move to Coder works. For the full product comparison, see [Coder and Ona](../../market-landscape/ona.md).
 
-Facts about Ona here are current as of 2026-10-29 and link to Ona's own announcements and docs. Recheck them before reusing this content.
+Facts about Ona here are current as of 2026-11-06 and link to Ona's own announcements and docs. Recheck them before reusing this content.
 
 ## What Changed
 
-**What did Ona announce?**
-On October 13, 2026, Ona announced that [Ona Cloud shuts down on October 31, 2026](https://ona.com/stories/ona-core-shutdown). New signups are closed, existing users can keep using Ona Cloud until that date, and Ona refunds October payments and unused purchased credits. The announcement follows Ona [becoming part of OpenAI on August 10, 2026](https://ona.com/stories/ona-joins-openai), where the team works with Codex.
+**What changed?**
+Ona [shut down Ona Cloud on October 31, 2026](https://ona.com/stories/ona-core-shutdown), after announcing the shutdown on October 13. New signups had already closed, and Ona said it would refund October payments and unused purchased credits. The shutdown followed Ona [becoming part of OpenAI on August 10, 2026](https://ona.com/stories/ona-joins-openai), where the team works with Codex.
 
-**Do Ona environments move anywhere automatically?**
-No. Ona says environments [do not move to Codex automatically](https://ona.com/stories/ona-core-shutdown). Users need to push their code and back up any other files before October 31. Ona points users to Codex Cloud as its suggested path.
+**Did Ona environments move anywhere automatically?**
+No. Ona said environments [would not move to Codex automatically](https://ona.com/stories/ona-core-shutdown). Users had to push their code and back up any other files before October 31. Ona pointed users to Codex Cloud as its suggested path.
 
 **Who is affected?**
-- **Ona Cloud users.** Ona Cloud is the managed infrastructure for [Ona's Core plans](https://ona.com/docs/ona/runners/ona-cloud). These users have a hard deadline of October 31, 2026.
-- **Ona Enterprise customers.** Enterprise runners deploy in [the customer's AWS or GCP account](https://ona.com/docs/ona/runners/overview). The shutdown notice covers Ona Cloud, and as of 2026-10-29 we found no published end date for Enterprise runners. Ona's docs now [recommend Codex Agent for new sessions and automations](https://ona.com/docs/ona/agents).
+- **Ona Cloud users.** Ona Cloud was the managed infrastructure for [Ona's Core plans](https://ona.com/docs/ona/runners/ona-cloud). It shut down on October 31, 2026, so these users need a new home for their environments.
+- **Ona Enterprise customers.** Enterprise runners deploy in [the customer's AWS or GCP account](https://ona.com/docs/ona/runners/overview). The shutdown notice covered Ona Cloud only, and as of 2026-11-06 we found no published end date for Enterprise runners. Ona's docs now [recommend Codex Agent for new sessions and automations](https://ona.com/docs/ona/agents).
 - **Former Gitpod customers.** Gitpod [rebranded as Ona in September 2025](https://ona.com/stories/gitpod-is-now-ona), so most former Gitpod customers fall into one of the two groups above.
 
 ## Talking About the Change
 
 **How should we bring up the shutdown?**
-State the dated facts and link to Ona's own notice. Lead with the customer's deadline and requirements, not with Ona. For Ona Cloud users, the conversation is about where to go before October 31. For Enterprise customers, it's about planning a move on their own timeline, not urgency.
+State the dated facts and link to Ona's own notice. Lead with the customer's requirements, not with Ona. For former Ona Cloud users, the conversation is about where their environments live now. For Enterprise customers, it's about planning a move on their own timeline, not urgency.
 
 **What should we avoid saying?**
 - Don't say or imply that Ona Enterprise is shutting down. Ona hasn't announced that.
@@ -29,7 +29,7 @@ State the dated facts and link to Ona's own notice. Lead with the customer's dea
 - Don't promise a migration timeline or an automatic import. Coder doesn't import Ona environments directly.
 
 **What's the short version for a customer?**
-Ona Cloud closes on October 31, 2026, and environments don't move automatically. Coder is an open-source, self-hosted platform for development environments where developers work and AI agents run, on the customer's own cloud or data center, with the IDEs, agents, and models the team chooses. Teams can reuse their existing Dev Container configurations.
+Ona Cloud shut down on October 31, 2026, and environments didn't move automatically. Coder is an open-source, self-hosted platform for development environments where developers work and AI agents run, on the customer's own cloud or data center, with the IDEs, agents, and models the team chooses. Teams can reuse their existing Dev Container configurations.
 
 ## Fit
 
