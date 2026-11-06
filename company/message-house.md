@@ -10,7 +10,7 @@ Coder is secure infrastructure for AI-powered development. Its self-hosted, clou
 
 ## About Coder — PR Boilerplate
 
-Coder is secure infrastructure for AI-powered development: a self-hosted, cloud-agnostic platform that gives organizations control over where development happens, which models and agents teams use, and how work is governed. Global 2000 enterprises and government agencies use Coder to move development environments and source code off laptops and into their own cloud or data centers, where platform teams can secure, audit, and scale them. With more than 125,000 GitHub stars, Coder gives developers, autonomous agents, and builders beyond engineering a governed foundation to create software and automate work. Learn more at [coder.com](https://coder.com).
+Coder is secure infrastructure for AI-powered development: a self-hosted, cloud-agnostic platform that gives organizations control over where development happens, which models and agents teams use, and how work is governed. Global 2000 enterprises and government agencies use Coder to move development environments and source code off laptops and into their own cloud or data centers, where platform teams can secure, audit, and scale them. With nearly 130,000 GitHub stars, Coder gives developers, autonomous agents, and builders beyond engineering a governed foundation to create software and automate work. Learn more at [coder.com](https://coder.com).
 
 ## Who We're For
 
