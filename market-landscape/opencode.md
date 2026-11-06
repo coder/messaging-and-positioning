@@ -6,7 +6,7 @@
 | Last reviewed | 2026-11-06 |
 | Category | Complementary |
 
-*OpenCode is built by Anomaly, the team behind SST, and was previously hosted at `github.com/sst/opencode` ([Developers Digest](https://www.developersdigest.tech/blog/opencode-developer-guide-2026)). It now lives at [github.com/anomalyco/opencode](https://github.com/anomalyco). A separate, earlier Go project at [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) shares the name. This page covers the Anomaly project.*
+*OpenCode is built by Anomaly, the team behind SST. Its repository moved from `github.com/sst/opencode`, which now redirects, to [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode). A separate, earlier Go project at [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) shares the name. This page covers the Anomaly project.*
 
 ## One-Line Positioning
 
@@ -65,7 +65,7 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 
 ## Pricing and Packaging
 
-- **OpenCode client.** Free and open source. Users pay only for model usage ([Developers Digest](https://www.developersdigest.tech/blog/opencode-developer-guide-2026), secondary).
+- **OpenCode client.** Free and open source. Users pay only for model usage from other providers ([opencode.ai](https://opencode.ai/)).
 - **OpenCode Zen.** Pay-as-you-go per-token pricing. Credit card fees of 4.4% + $0.30 per transaction are passed through at cost ([Zen docs](https://opencode.ai/docs/zen/)).
 - **OpenCode Go.** $10/month, with Go Plus at $40/month for higher limits ([OpenCode Go](https://opencode.ai/go)).
 - **OpenCode Enterprise.** Per-seat pricing through sales. OpenCode does not charge for tokens when the organization uses its own LLM gateway ([OpenCode Enterprise](https://opencode.ai/docs/enterprise/)).
@@ -74,16 +74,15 @@ OpenCode is an open-source, model-agnostic coding agent, and Coder provides the 
 ## Sources
 
 - **[OpenCode docs intro](https://opencode.ai/docs/).** Product definition and surfaces. Primary. Accessed 2026-09-28.
-- **[opencode.ai homepage](https://opencode.ai/).** Company-reported adoption figures. Primary. Accessed 2026-09-28.
+- **[opencode.ai homepage](https://opencode.ai/).** Company-reported adoption figures, free client and free models. Primary. Accessed 2026-11-06.
 - **[OpenCode Enterprise docs](https://opencode.ai/docs/enterprise/).** Central config, SSO, internal gateway, data handling, per-seat pricing. Primary. Accessed 2026-10-29.
 - **[OpenCode Zen docs](https://opencode.ai/docs/zen/) and [Zen page](https://opencode.ai/zen).** Zen model service, US and EU hosting, pricing model. Primary. Accessed 2026-10-29.
 - **[OpenCode Go](https://opencode.ai/go).** Go and Go Plus pricing. Primary. Accessed 2026-09-28.
 - **[OpenCode Console docs](https://opencode.ai/v2/docs/console/), [Providers](https://opencode.ai/v2/docs/console/providers/), [Harnesses](https://opencode.ai/v2/docs/console/harnesses/), and [Budgets](https://opencode.ai/v2/docs/console/budgets/).** Hosted team gateway, credential storage, member budgets, team-wide policies, harnesses for other agents. Primary. Accessed 2026-10-29.
 - **[OpenCode permissions](https://opencode.ai/docs/permissions/) and [tools](https://opencode.ai/docs/tools/).** Permission model and defaults. Primary. Accessed 2026-09-28.
 - **[OpenCode GitHub docs](https://opencode.ai/docs/github/).** GitHub Actions integration. Primary. Accessed 2026-10-29.
-- **[Anomaly GitHub org](https://github.com/anomalyco).** Current repository location. Primary. Accessed 2026-09-28.
+- **[Anomaly GitHub org](https://github.com/anomalyco).** Current repository location and redirect from `sst/opencode`. Primary. Accessed 2026-11-06.
 - **[Anomaly, OpenCode 2.0](https://anoma.ly/notes/opencode-2-0/).** Shared background service and 2.0 release date. Primary. Accessed 2026-10-29.
-- **[Developers Digest OpenCode guide](https://www.developersdigest.tech/blog/opencode-developer-guide-2026).** Prior `sst/opencode` location, pricing model. Secondary. Accessed 2026-09-28.
 - **[OpenCode providers](https://opencode.ai/docs/providers/) and [anomalyco/opencode](https://github.com/anomalyco/opencode).** Provider count and local models, MIT license. Primary. Accessed 2026-10-29.
 - **[Coder docs, AI Gateway OpenCode client](https://coder.com/docs/@main/ai-coder/ai-gateway/clients/opencode).** OpenCode configuration for AI Gateway, including Bedrock Mantle custom models. Primary. Accessed 2026-10-29.
 - **[Coder docs, AI Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients).** Supported clients. Primary. Accessed 2026-09-28.
