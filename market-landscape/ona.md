@@ -51,7 +51,7 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 
 ## Where Ona Is Strong or Coder Has a Gap
 
-- **No control plane for the customer to run.** Ona [hosts the management plane](https://ona.com/docs/ona/understanding/how-ona-works), so Enterprise customers operate only runners. Coder is always self-hosted and requires the customer to operate it, and some reviewers cite [operational overhead for small teams without dedicated DevOps](https://www.g2.com/products/coder/pricing) (secondary source).
+- **No control plane for the customer to run.** Ona [hosts the management plane](https://ona.com/docs/ona/understanding/how-ona-works), so Enterprise customers operate only runners. Coder is always self-hosted and requires the customer to operate it.
 - **Ephemeral VM per task.** Ona gives each task [a dedicated VM with its own compute, storage, and networking](https://ona.com/docs/ona/understanding/how-ona-works). Coder supports ephemeral workspaces, but isolation level depends on how each template is written.
 - **Event-driven automations.** Ona automations can be [triggered by PRs, schedules, or webhooks](https://ona.com/docs/ona/runners/aws/enterprise-runner/overview), with Slack and Linear entry points. Coder Agents can be triggered via API from CI, as described in the [Coder Agents message house](../products/coder-agents/message-house.md), but Ona ships more prebuilt triggers.
 - **Tight Codex integration.** For organizations standardized on OpenAI, Ona offers native Codex features such as [goal mode](https://ona.com/docs/ona/agents/codex).
@@ -105,7 +105,6 @@ Ona is a vendor-operated platform for running background agents, now part of Ope
 - **[Ona homepage](https://ona.com/).** Current positioning. Primary. Accessed 2026-09-28.
 - **[Self-hosted, not self-managed](https://www.gitpod.io/blog/self-hosted-not-self-managed).** Discontinuation of self-managed Gitpod in 2022. Primary. Accessed 2026-09-28.
 - **[AWS runner costs](https://ona.com/docs/ona/runners/aws/aws-runner-costs) and [GCP runner costs](https://ona.com/docs/ona/runners/gcp/gcp-runner-costs).** Runner resources billed to the customer's cloud account. Primary. Accessed 2026-10-29.
-- **[G2 Coder reviews](https://www.g2.com/products/coder/pricing).** Reviewer feedback on operational overhead. Secondary. Accessed 2026-09-28.
 - **[Coder Agents docs](https://coder.com/docs/ai-coder/agents), [Architecture](https://coder.com/docs/ai-coder/agents/architecture), [Platform Controls](https://coder.com/docs/ai-coder/agents/platform-controls), [AI Coder overview](https://coder.com/docs/ai-coder).** Coder Agents architecture, providers, governance. Primary. Accessed 2026-09-28.
 - **[Coder air-gapped deployments](https://coder.com/docs/install/airgap).** Air-gap support. Primary. Accessed 2026-09-28.
 - **[Coder Dev Containers](https://coder.com/docs/@main/admin/integrations/devcontainers).** Dev Container specification support. Primary. Accessed 2026-10-29.
