@@ -93,6 +93,7 @@ See the message house's [Scope and Tradeoffs](./message-house.md#scope-and-trade
 | Preferred | Avoid | Why |
 |---|---|---|
 | "Self-hosted development environments" | "Hosted CDE" or "SaaS" | The customer operates the platform on its own infrastructure. |
+| "Cloud development environments" (lowercase, as a description) | "CDE" or "Cloud Development Environment" as a name for Coder | "CDE" reads as a legacy category. Use the acronym only for legacy or competing products. |
 | "Workspaces defined as code with Terraform" | "Virtual desktops" or "VDI" | Workspaces are reproducible development environments, not remote desktops. |
 | "Telemetry and update checks can be disabled" | "No call-home" with no qualification | Telemetry is on by default until an administrator disables it. |
 | "OIDC single sign-on" | "SAML support" | The docs document OIDC and GitHub sign-in, not SAML. |

@@ -35,7 +35,7 @@ Three forces are converging:
 
 - AI agents are no longer an experiment, they are being deployed in production by early adopters, and the competitive gap is compounding every quarter.
 - Security and compliance teams are beginning to mandate governance over AI tooling, and the window for ungoverned adoption is closing.
-- The CDE market is contracting around providers who didn't build for AI. Former leaders have been deprecated, discontinued, or pivoted away from their core CDE offering, leaving enterprises without a committed platform. The consolidation window is now.
+- The legacy CDE market is contracting around providers who didn't build for AI. Former leaders have been deprecated, discontinued, or pivoted away from their core CDE offering, leaving enterprises without a committed platform. The consolidation window is now.
 
 ### Why Coder Workspaces?
 
@@ -202,9 +202,9 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 
 Coder Workspaces sits at the intersection of two converging shifts: the collapse of legacy CDE platforms and the rise of AI-driven development. Five major competitors, AWS Cloud9, AWS CodeCatalyst, JetBrains Space, JetBrains CodeCanvas, and Microsoft Dev Box, have been deprecated, discontinued, or closed to new customers in the past 18 months. The remaining SaaS-first competitors (GitHub Codespaces, Ona/Gitpod) are either locked to a single cloud or actively pivoting away from their CDE roots. That leaves enterprises without a committed, enterprise-grade platform, and Coder is the natural destination.
 
-Coder Workspaces is among the few CDEs that are self-hosted on any infrastructure (any cloud, on-prem, or air-gapped), IDE-agnostic, and purpose-built to serve as the foundation for both human developer workflows and AI agent execution. Where competitors offer hosted convenience with significant constraints, vendor lock-in, limited deployment options, no AI governance path, Coder offers infrastructure ownership, flexibility, and a clear runway into the AI agent development era.
+Coder Workspaces is among the few cloud development environment platforms that are self-hosted on any infrastructure (any cloud, on-prem, or air-gapped), IDE-agnostic, and purpose-built to serve as the foundation for both human developer workflows and AI agent execution. Where competitors offer hosted convenience with significant constraints, vendor lock-in, limited deployment options, no AI governance path, Coder offers infrastructure ownership, flexibility, and a clear runway into the AI agent development era.
 
-In regulated industries, Coder is one of the only platforms that can meet data residency, air-gap, and compliance requirements while also supporting modern AI tooling. For multi-cloud enterprises, it is one of the few CDEs that works consistently across AWS, Azure, GCP, and on-prem without compromise, and for organizations already deploying AI coding tools, Coder is well positioned as the foundation for a complete AI governance and agent execution stack.
+In regulated industries, Coder is one of the only platforms that can meet data residency, air-gap, and compliance requirements while also supporting modern AI tooling. For multi-cloud enterprises, it is one of the few platforms that works consistently across AWS, Azure, GCP, and on-prem without compromise, and for organizations already deploying AI coding tools, Coder is well positioned as the foundation for a complete AI governance and agent execution stack.
 
 See [`market-landscape/`](../../market-landscape/) for sourced, dated comparisons against specific competitors.
 

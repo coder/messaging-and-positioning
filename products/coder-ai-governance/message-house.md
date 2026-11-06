@@ -139,7 +139,7 @@ Coder enables AI governance through a set of infrastructure capabilities that co
 
 ### Infrastructure Layer
 
-**Coder Workspaces (Cloud Development Environments & Workspace Templates):** Self-hosted ephemeral workspaces defined through infrastructure-as-code templates that standardize development environments, dependencies, and security configurations for agents and developers.
+**Coder Workspaces (cloud development environments and workspace templates):** Self-hosted ephemeral workspaces defined through infrastructure-as-code templates that standardize development environments, dependencies, and security configurations for agents and developers.
 
 ### AI Governance Layer
 
@@ -189,7 +189,7 @@ Our competitors in AI governance for software development are not always direct 
 
 AI Governance is a Coder solution that provides control over how AI agents run, what they can access, and how they interact with models and external systems. It adds enforceable policies and auditability to existing development workflows.
 
-The primary ICP aligns with Coder's CDE audience: mid-size to large enterprises with 2,000+ employees and 200+ developers, especially those with ML or data teams.
+The primary ICP aligns with the Coder Workspaces audience: mid-size to large enterprises with 2,000+ employees and 200+ developers, especially those with ML or data teams.
 
 However, AI agent adoption is the strongest signal. Organizations actively experimenting with or deploying AI agents are the most likely early adopters, regardless of company size.
 
