@@ -106,10 +106,10 @@ The Cursor integration is the right fit when a customer wants the Cursor cloud a
 No. Cursor's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Cursor agents execute by moving that execution into self-hosted Coder workspaces on customer-controlled infrastructure.
 
 **Is this available today?**
-The Cursor integration uses Coder Agent Relay to connect Cursor cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in early access, in closed preview with design partners.
+The Cursor integration uses Coder Agent Relay to connect Cursor cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in beta and requires a Premium license.
 
 **How can a customer get access?**
-Space in the preview is limited. Interested customers should connect with their CSM, who aligns with Product Management and the Field CTO. Agent Relay requires Coder Premium and a Cursor Enterprise plan.
+Interested customers should connect with their CSM, who aligns with Product Management and the Field CTO. Agent Relay requires Coder Premium and a Cursor Enterprise plan.
 
 **Is Agent Relay specific to Cursor?**
 No. Agent Relay is Coder infrastructure for connecting supported cloud-hosted AI agents with self-hosted execution environments on Coder. Cursor is Coder's first integration partner for Agent Relay, and the underlying architecture is provider-agnostic by design.
