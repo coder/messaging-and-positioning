@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-29 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *Microsoft Dev Box [stopped accepting new sign-ups on November 1, 2025](https://azure.microsoft.com/en-us/products/dev-box), entered a closing-down period on September 14, 2026, and [retires on September 18, 2028](https://learn.microsoft.com/en-us/azure/dev-box/dev-box-retirement-guide). Microsoft names Windows 365 as the recommended path forward, so this page also covers the Windows 365 developer setup where it replaces Dev Box.*

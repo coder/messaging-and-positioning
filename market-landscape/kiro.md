@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-12 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Complementary |
 
 *Kiro CLI is the successor to the Amazon Q Developer CLI ([Kiro docs](https://kiro.dev/docs/upgrade-guides/migrating-from-q/)), and AWS points Amazon Q Developer customers to Kiro ahead of Q Developer end of support on April 30, 2027 ([AWS](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/)).*
@@ -64,7 +64,7 @@ Kiro is the AWS agentic development tool developers use to plan and write code, 
 
 ## Pricing and Packaging
 
-- **Kiro.** Public per-user tiers from Free to Power, priced in monthly credits, with Kiro Web sessions drawing from the same credits ([Kiro pricing](https://kiro.dev/pricing/)).
+- **Kiro.** Individuals pick credit tiers from Free to Power. Teams of two or more on profiles that use IAM Identity Center can pool credits at $20 per seat, with 500 monthly credits per seat. Profiles connected directly to an external identity provider can't use credit pooling ([Kiro pricing](https://kiro.dev/pricing/), [Kiro docs](https://kiro.dev/docs/enterprise/credit-pooling/)).
 - **Coder.** See [coder.com/pricing](https://coder.com/pricing) for current tiers and prices, and [Packaging](../company/packaging.md) for the reasoning behind them. Coder is also available through [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-laypqph2nuvaq).
 
 ## Sources
@@ -78,7 +78,7 @@ Kiro is the AWS agentic development tool developers use to plan and write code, 
 - **[Kiro docs: Steering](https://kiro.dev/docs/steering/), [Subagents](https://kiro.dev/docs/custom-agents/subagents/), [MCP](https://kiro.dev/docs/mcp/).** Primary. Agent capabilities. Accessed 2026-10-12.
 - **[Kiro docs: Governance](https://kiro.dev/docs/enterprise/governance/), [Identity provider](https://kiro.dev/docs/enterprise/identity-provider/), [Prompt logging](https://kiro.dev/docs/enterprise/monitor-and-track/prompt-logging/).** Primary. Enterprise controls. Accessed 2026-10-12.
 - **[Kiro docs: Migrating from Q](https://kiro.dev/docs/upgrade-guides/migrating-from-q/), [Migrating from VS Code](https://kiro.dev/docs/upgrade-guides/migrating-from-vscode/).** Primary. Q CLI succession and Open VSX extension support. Accessed 2026-10-12.
-- **[Kiro pricing](https://kiro.dev/pricing/).** Primary. Tiers and credits. Accessed 2026-10-12.
+- **[Kiro pricing](https://kiro.dev/pricing/), [Kiro docs: Credit pooling](https://kiro.dev/docs/enterprise/credit-pooling/).** Primary. Individual tiers, credit pooling for teams, two-seat minimum, IAM Identity Center requirement. Accessed 2026-11-06.
 - **[AWS: Amazon Q Developer end of support](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/).** Primary. Signup cutoff, end of support date, Kiro as successor. Accessed 2026-10-12.
 - **[AWS What's New: Kiro FedRAMP High and DoD IL-4/5 in GovCloud](https://aws.amazon.com/about-aws/whats-new/2026/06/kiro-fedramp-high-dod-il-4-5-govcloud-us/).** Primary. GovCloud authorization. Accessed 2026-10-12.
 - **[Coder Registry: Kiro module](https://registry.coder.com/modules/coder/kiro), [Kiro CLI module](https://registry.coder.com/modules/harleylrn/kiro-cli).** Primary. Kiro IDE connection, MCP configuration, CLI install. Accessed 2026-10-12.

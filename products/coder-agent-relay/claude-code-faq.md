@@ -106,10 +106,10 @@ The Claude Code integration is the right fit when a customer wants the Claude Co
 No. Claude Code's developer experience, agent orchestration, and inference remain cloud-hosted. The integration changes where Claude Code agents execute by allowing those workloads to run inside self-hosted Coder workspaces on customer-controlled infrastructure.
 
 **Is this available today?**
-The Claude Code integration uses Coder Agent Relay to connect Claude Code cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in early access, in closed preview with design partners.
+The Claude Code integration uses Coder Agent Relay to connect Claude Code cloud agent sessions with self-hosted Coder workspaces. Agent Relay is in beta and requires a Premium license.
 
 **How can a customer get access?**
-Space in the preview is limited. Interested customers should connect with their CSM, who aligns with Product Management and the Field CTO. Agent Relay requires Coder Premium and an Anthropic Team or Enterprise plan.
+Agent Relay is in open beta, so any Coder Premium customer with an Anthropic Team or Enterprise plan can set it up themselves by following the [Agent Relay docs](https://coder.com/docs/@main/agent-relay). Customers share feedback through their usual customer success channels, and customers without Premium can [request a Premium trial](https://coder.com/trial).
 
 **Is Agent Relay specific to Claude Code?**
 No. Agent Relay is Coder infrastructure for connecting supported cloud-hosted AI agents with self-hosted execution environments on Coder. Agent Relay's underlying architecture can support other cloud-hosted agent providers as they enable self-hosted execution environments.

@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-29 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Complementary (Copilot in the IDE and Copilot CLI) and Competitive (Copilot cloud agent) |
 
 *(GitHub renamed the Copilot coding agent to Copilot cloud agent by April 2026 ([GitHub Changelog](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/)). On October 28, 2026, it made a newer "Copilot in the cloud" experience available on paid plans, which its docs contrast with the older cloud agent plus Copilot Chat experience ([GitHub Docs](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)). This page uses "cloud agent" for both. GitHub replaced request-based billing with usage-based billing in GitHub AI Credits on June 1, 2026 ([GitHub Docs](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/what-changed-with-billing)).)*

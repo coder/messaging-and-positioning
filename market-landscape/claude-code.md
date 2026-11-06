@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Complementary |
 
 *(Anthropic's hosted cloud sessions for Claude Code were previously called "Claude Code on the web" and are now called cloud sessions, per [Anthropic's announcement](https://claude.com/blog/claude-code-on-the-web).)*
@@ -71,7 +71,7 @@ Claude Code is the coding agent developers use, and Coder is the self-hosted inf
 - **Can we keep inference inside our own cloud account?** For Claude Code running inside a workspace, yes, through Bedrock, Vertex AI, or Foundry, which the Coder module supports ([Coder Registry](https://registry.coder.com/modules/coder/claude-code), [Claude Code enterprise deployment docs](https://code.claude.com/docs/en/third-party-integrations)). For Claude Code cloud sessions through Agent Relay, inference stays with Anthropic and Coder AI Gateway is not in the path ([Agent Relay for Claude FAQ](../products/coder-agent-relay/claude-code-faq.md)).
 - **We need everything, including inference, inside the perimeter. What fits?** Agent Relay is not a fit for that requirement today ([Agent Relay message house](../products/coder-agent-relay/message-house.md)). Coder Agents runs its agent loop in the self-hosted Coder control plane ([Coder docs](https://coder.com/docs/ai-coder)), and Claude Code in a workspace can use a customer-controlled inference endpoint ([Coder Registry](https://registry.coder.com/modules/coder/claude-code)).
 - **Can developers use Claude Code and other agents at the same time?** Yes. Coder provides a common infrastructure layer rather than requiring one agent harness ([Agent Relay for Claude FAQ](../products/coder-agent-relay/claude-code-faq.md)).
-- **Is Agent Relay for Claude Code available now?** It is in early access with select design partners, with documentation at coder.com/anthropic ([GlobeNewswire](https://www.globenewswire.com/news-release/2026/09/15/3362210/0/en/coder-brings-claude-code-to-agent-relay-unlocking-agentic-development-for-the-world-s-most-regulated-enterprises.html)). Coder's FAQ describes Agent Relay as in early access, in closed preview with design partners ([Agent Relay for Claude FAQ](../products/coder-agent-relay/claude-code-faq.md)).
+- **Is Agent Relay for Claude Code available now?** Yes, in beta. It requires a Coder Premium license, Coder 2.39 or later, and an Anthropic Team or Enterprise plan ([Coder docs](https://coder.com/docs/@main/agent-relay)).
 - **Does Claude Code in Coder still need a Claude subscription?** With Agent Relay, Anthropic continues to handle billing ([Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)). Inside a workspace, Claude Code can authenticate through AI Gateway with a Coder token, a personal Anthropic key, or a cloud provider backend ([AI Gateway client docs](https://coder.com/docs/ai-coder/ai-gateway/clients/claude-code), [Coder Registry](https://registry.coder.com/modules/coder/claude-code)).
 
 ## Pricing and Packaging
@@ -108,7 +108,7 @@ Claude Code is the coding agent developers use, and Coder is the self-hosted inf
 - **[Coder licensing](https://coder.com/docs/admin/licensing).** Offline license validation. Primary (Coder). Accessed 2026-09-28.
 - **[Coder + Anthropic](https://coder.com/anthropic).** Agent Relay for Claude Code capabilities. Primary (Coder). Accessed 2026-09-28.
 - **[Coder Brings Claude Code to Agent Relay](https://coder.com/blog/agent-relay-claude-code-agentic-development).** Integration architecture, billing, and audit. Primary (Coder). Accessed 2026-09-28.
-- **[GlobeNewswire press release](https://www.globenewswire.com/news-release/2026/09/15/3362210/0/en/coder-brings-claude-code-to-agent-relay-unlocking-agentic-development-for-the-world-s-most-regulated-enterprises.html).** Early access status. Primary (Coder). Accessed 2026-09-28.
+- **[Coder docs, Agent Relay](https://coder.com/docs/@main/agent-relay).** Beta status, Premium license, version and provider plan requirements. Primary (Coder). Accessed 2026-11-06.
 - **[AWS Marketplace, Coder Premium](https://aws.amazon.com/marketplace/pp/prodview-laypqph2nuvaq).** Terraform-defined workspaces. Primary (Coder listing). Accessed 2026-09-28.
 - **[Agent Relay for Claude FAQ](../products/coder-agent-relay/claude-code-faq.md), [Agent Relay message house](../products/coder-agent-relay/message-house.md), [AI Governance message house](../products/coder-ai-governance/message-house.md), [Why Coder](../company/why-coder.md).** Coder positioning, division of responsibility, and known limitations. Primary (this repository). Accessed 2026-09-28.
 - **[DEVOPSdigest](https://www.devopsdigest.com/coder-agent-relay-supports-claude-code).** Agent Relay launch dates. Secondary. Accessed 2026-09-28.

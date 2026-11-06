@@ -106,7 +106,7 @@ Workspace-level controls, network policy, secrets management, and RBAC, apply to
 
 - **Not fully self-hosted or air-gapped today**: Orchestration and model inference remain in the agent provider's cloud. Agent Relay governs execution, not the entire stack. Organizations that require everything, including inference, inside their perimeter (common in government and defense) are not a fit for this architecture today.
 - **Addresses execution control, not a full regulatory review**: Frameworks like the EU's DORA or the UK's FCA/PRA operational resilience regime introduce third-party risk, concentration risk, and resilience requirements that go beyond where execution happens. Agent Relay solves the execution-control piece of that equation, not the entire compliance picture.
-- **Early access**: Agent Relay is in preview with select regulated enterprise customers, currently supporting Cursor and Claude Code as cloud agent providers.
+- **Beta**: Agent Relay is in beta and requires a Premium license, currently supporting Cursor and Claude Code as cloud agent providers.
 
 ## Competitive Position
 
