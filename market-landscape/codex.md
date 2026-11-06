@@ -45,7 +45,7 @@ Codex is OpenAI's coding agent, and it runs well inside a Coder workspace, but C
 - **Coder Workspaces.** Self-hosted development environments for developers and their agents, provisioned from Terraform templates on infrastructure the customer controls ([Coder AI docs](https://coder.com/docs/ai-coder), [Coder Workspaces message house](../products/coder-workspaces/message-house.md)).
 - **Coder Agents.** A standalone agent written in Go that runs inside the Coder control plane. It is not a wrapper around Claude Code or Codex ([Coder Agents docs](https://coder.com/docs/ai-coder/agents)). Developers use it through the web UI or REST API ([Coder AI docs](https://coder.com/docs/ai-coder)).
 - **AI Governance.** AI Gateway is part of AI Governance, which is included with a Premium license ([Coder AI Gateway Codex docs](https://coder.com/docs/ai-coder/ai-gateway/clients/codex)). AI Gateway supports Codex CLI as a client ([Coder AI Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients)).
-- **Agent Relay.** Connects cloud-hosted agent sessions to self-hosted Coder workspaces. As of 2026-09-28, documented supported providers are Cursor (first supported, since September 2, 2026) and Claude Code (added September 15, 2026, early access with select design partners); Codex is not currently supported ([Coder AI docs](https://coder.com/docs/ai-coder), [Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
+- **Agent Relay.** Connects cloud-hosted agent sessions to self-hosted Coder workspaces. As of 2026-11-06, it's in beta, and documented supported providers are Cursor (since September 2, 2026) and Claude Code (added September 15, 2026). Codex isn't supported ([Coder docs](https://coder.com/docs/@main/agent-relay), [Coder announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development)).
 
 ## Where Codex Is Strong or Coder Has a Gap
 
@@ -107,7 +107,7 @@ Accessed 2026-09-28 unless noted.
 - **[Codex pricing](https://chatgpt.com/codex/pricing/).** Primary. Plans that include Codex and Enterprise credit model.
 - **[Codex flexible pricing for teams](https://openai.com/index/codex-flexible-pricing-for-teams/).** Primary. Pay-as-you-go seat change on June 24, 2026.
 - **[Coder Agents docs](https://coder.com/docs/ai-coder/agents).** Primary. Self-hosted architecture and model support.
-- **[Coder AI docs](https://coder.com/docs/ai-coder).** Primary. Network isolation, Agent Relay provider support, Coder Agents background task use cases.
+- **[Coder AI docs](https://coder.com/docs/ai-coder).** Primary. Network isolation, Coder Agents background task use cases.
 - **[Coder AI Gateway Codex docs](https://coder.com/docs/ai-coder/ai-gateway/clients/codex).** Primary. Codex CLI routing and ChatGPT subscription flow.
 - **[Coder AI Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients).** Primary. Supported clients.
 - **[Coder AI Gateway providers](https://coder.com/docs/ai-coder/ai-gateway/providers).** Primary. ChatGPT provider with per-user OAuth.
@@ -119,6 +119,7 @@ Accessed 2026-09-28 unless noted.
 - **[Coder Registry announcement](https://coder.com/blog/introducing-the-coder-registry).** Primary. Terraform templates.
 - **[Coder pricing](https://coder.com/pricing).** Primary. Editions, Coder Agents concurrency cap, Premium price not published. Accessed 2026-10-29.
 - **[Coder Agent Relay Claude Code announcement](https://coder.com/blog/agent-relay-claude-code-agentic-development).** Primary. Agent Relay supported providers and dates.
+- **[Coder Agent Relay docs](https://coder.com/docs/@main/agent-relay).** Primary. Beta status and supported providers. Accessed 2026-11-06.
 - **[Wikipedia, OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)).** Secondary. App merger date, licenses.
 - **[Developers Digest](https://www.developersdigest.tech/blog/chatgpt-work-codex-desktop-app).** Secondary. Desktop app merger details.
 - **[Using Codex Cloud](https://help.openai.com/en/articles/20001545-using-codex-cloud) and [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex).** Primary. OpenAI-managed computers, task surfaces, legacy integrations. Accessed 2026-10-29.
