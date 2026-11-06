@@ -16,9 +16,9 @@ For positioning, messaging, and value propositions, see the [Agent Relay message
 | **Key question** | "Is your requirement about where the agent executes, or where the model runs?" |
 | **Core value** | Developers keep their agent, and platform and security teams keep control of execution. |
 | **Important limitation** | Orchestration and inference stay in the provider's cloud, so it isn't a fit for fully self-hosted or air-gapped requirements. |
-| **Status** | Beta. Requires a Premium license. |
+| **Status** | Open beta. Requires a Premium license, Coder 2.39 or later, Agent Relay v0.14.0 or later, and a supported provider plan. |
 | **Journey stage** | Multiply, building on Coder Workspaces and AI Governance. See the [customer journey](../../company/customer-journey.md). |
-| **Next step** | Customers connect with their customer success manager (CSM), who aligns with Product Management and the Field CTO on a pilot scope. |
+| **Next step** | Premium customers set up Agent Relay themselves with the [Agent Relay docs](https://coder.com/docs/@main/agent-relay) and share feedback through their customer success manager (CSM). Customers without Premium can [request a Premium trial](https://coder.com/trial). |
 
 ---
 
@@ -205,7 +205,7 @@ See [Packaging](../../company/packaging.md) for how Agent Relay fits Coder's tie
 
 ### Evaluation access
 
-Agent Relay is in beta and requires a Premium license. Interested customers connect with their CSM, who aligns with Product Management and the Field CTO.
+Agent Relay is in open beta, so any Coder Premium customer can set it up themselves by following the [Agent Relay docs](https://coder.com/docs/@main/agent-relay). Customers share feedback through their usual customer success channels. Customers without Premium can [request a Premium trial](https://coder.com/trial).
 
 ### Partners
 
@@ -215,7 +215,7 @@ Cursor and Anthropic deliver the agent experience developers want, and Coder gov
 
 | Topic | Contact / Team |
 |---|---|
-| Evaluation access | The customer's CSM, who aligns with Product Management and the Field CTO |
+| Setup questions and beta feedback | The customer's CSM, through their usual customer success channels |
 | Messaging and positioning | Matt Vollmer, Product Marketing |
 | Everything else | Your [Coder account team](https://coder.com/contact) or [sales@coder.com](mailto:sales@coder.com) |
 
