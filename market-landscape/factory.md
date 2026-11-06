@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-11-03 |
-| Last reviewed | 2026-11-03 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive, with a complementary CLI integration |
 
 *Factory's coding agent is called Droid. As of 2026-11-03, `factory.ai` and `docs.factory.ai` redirect to [factory.com](https://factory.com/) and [docs.factory.com](https://docs.factory.com/), while Factory still documents API and relay hosts under `*.factory.ai` ([deployment options](https://docs.factory.com/enterprise/network-and-deployment), [Remote Control](https://docs.factory.com/remote-control)).*

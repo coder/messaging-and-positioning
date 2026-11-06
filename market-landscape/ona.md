@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *Ona was previously named Gitpod. The company [rebranded as Ona on September 2, 2025](https://ona.com/stories/gitpod-is-now-ona), and Ona [became part of OpenAI when the acquisition closed on August 10, 2026](https://ona.com/stories/ona-joins-openai). Ona's docs still note that "Gitpod" may appear in the product [during the transition](https://ona.com/docs/ona/runners/overview). On October 13, 2026, Ona announced that [Ona Cloud, its managed infrastructure, shuts down on October 31, 2026](https://ona.com/stories/ona-core-shutdown).*

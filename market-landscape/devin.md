@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *Devin is built by Cognition. Devin Desktop is the next generation of the editor formerly called Windsurf ([Cognition blog](https://cognition.com/blog/introducing-devin-desktop)).*

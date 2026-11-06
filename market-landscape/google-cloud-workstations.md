@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-20 |
-| Last reviewed | 2026-10-20 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *Google Cloud Workstations is distinct from Google Workspace, Google's [productivity and collaboration suite](https://workspace.google.com/) (Gmail, Drive, Docs), which is not a development environment product. It is also distinct from Firebase Studio (formerly Project IDX). Project IDX was [built on Google Cloud Workstations](https://firebase.studio/blog/article/introducing-project-idx), and Google is [shutting Firebase Studio down on March 22, 2027](https://firebase.google.com/docs/studio/migrating-project).*

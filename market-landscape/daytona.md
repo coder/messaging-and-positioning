@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-09-28 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *(Daytona was founded in 2023 to automate development environments for enterprises and later rebuilt around sandboxes for AI agents, per its CEO ([Fortune](https://fortune.com/2026/10/20/daytona-startup-building-the-agentic-cloud-valued-at-1-billion-in-latest-funding-round/)). The company name is unchanged.)*

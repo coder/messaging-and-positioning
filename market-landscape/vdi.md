@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-12 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *This page covers virtual desktop infrastructure (VDI) and desktop as a service (DaaS) as a category rather than a single vendor. Examples include Citrix DaaS and Citrix Virtual Apps and Desktops, Omnissa Horizon (formerly VMware Horizon), Azure Virtual Desktop, Amazon WorkSpaces, and Windows 365. Windows 365 is also Microsoft's recommended path for developers leaving Microsoft Dev Box, which [Coder, Microsoft Dev Box, and Windows 365](microsoft-dev-box.md) covers in detail. VDI competes with Coder only where it hosts developers. For other employees and desktop applications, the two solve different problems.*

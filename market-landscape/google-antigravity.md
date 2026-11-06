@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-20 |
-| Last reviewed | 2026-10-20 |
+| Last reviewed | 2026-11-06 |
 | Category | Complementary |
 
 *Antigravity CLI replaced Gemini CLI for individual users, and Gemini CLI stopped serving individual, Google AI Pro, and Google AI Ultra accounts on June 18, 2026 ([Google Developers Blog](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/)). Google stopped selling new Gemini Code Assist Standard and Enterprise subscriptions on October 9, 2026 and points those customers to Antigravity in Gemini Enterprise ([Gemini Code Assist sunset](https://docs.cloud.google.com/gemini/docs/codeassist/sunset)).*

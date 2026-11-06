@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Date generated | 2026-10-29 |
-| Last reviewed | 2026-10-29 |
+| Last reviewed | 2026-11-06 |
 | Category | Competitive |
 
 *(TrueFoundry is the brand of Ensemble Labs, Inc. ([privacy policy](https://www.truefoundry.com/privacy-policy)). Its docs still introduce it as [a platform on Kubernetes for building and deploying models](https://www.truefoundry.com/docs/introduction), and it now leads with its [AI Gateway and MCP Gateway](https://www.truefoundry.com/). This comparison is competitive at the AI Gateway layer. TrueFoundry's model serving and fine-tuning have no Coder equivalent, and its ML workbench overlaps only partly with Coder Workspaces.)*
