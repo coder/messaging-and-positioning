@@ -16,9 +16,9 @@ For positioning, messaging, and value propositions, see the [Agent Relay message
 | **Key question** | "Is your requirement about where the agent executes, or where the model runs?" |
 | **Core value** | Developers keep their agent, and platform and security teams keep control of execution. |
 | **Important limitation** | Orchestration and inference stay in the provider's cloud, so it isn't a fit for fully self-hosted or air-gapped requirements. |
-| **Status** | Early access (closed preview with design partners). |
+| **Status** | Beta. Requires a Premium license. |
 | **Journey stage** | Multiply, building on Coder Workspaces and AI Governance. See the [customer journey](../../company/customer-journey.md). |
-| **Next step** | Customers connect with their customer success manager (CSM), who aligns with Product Management and the Field CTO on a spot in the closed preview and a pilot scope. |
+| **Next step** | Customers connect with their customer success manager (CSM), who aligns with Product Management and the Field CTO on a pilot scope. |
 
 ---
 
@@ -205,7 +205,7 @@ See [Packaging](../../company/packaging.md) for how Agent Relay fits Coder's tie
 
 ### Evaluation access
 
-Agent Relay is in early access, in closed preview with design partners, and space is limited. Interested customers connect with their CSM, who aligns with Product Management and the Field CTO.
+Agent Relay is in beta and requires a Premium license. Interested customers connect with their CSM, who aligns with Product Management and the Field CTO.
 
 ### Partners
 
@@ -215,7 +215,7 @@ Cursor and Anthropic deliver the agent experience developers want, and Coder gov
 
 | Topic | Contact / Team |
 |---|---|
-| Preview access | The customer's CSM, who aligns with Product Management and the Field CTO |
+| Evaluation access | The customer's CSM, who aligns with Product Management and the Field CTO |
 | Messaging and positioning | Matt Vollmer, Product Marketing |
 | Everything else | Your [Coder account team](https://coder.com/contact) or [sales@coder.com](mailto:sales@coder.com) |
 
