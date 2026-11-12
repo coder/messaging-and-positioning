@@ -45,7 +45,7 @@ What enterprises actually need is the infrastructure to run that agent self-host
 
 Coder Agents delivers this because it natively runs on the same Coder infrastructure already designed to provision, isolate, and manage development environments at scale:
 
-- **Self-hosted on your infrastructure** - run the agent loop and workspace execution in a cloud VPC, on-prem data center, or suitably configured air-gapped enclave. Prompts and relevant tool results go to the configured inference endpoint; self-hosting the agent does not alone keep all code inside the perimeter ([Coder architecture](https://coder.com/docs/ai-coder/agents/architecture)).
+- **Self-hosted on your infrastructure** - run the agent loop and workspace execution in a cloud VPC or on-prem data center, with air-gapped deployment options ([Coder architecture](https://coder.com/docs/ai-coder/agents/architecture)).
 - **LLM-agnostic** - connect any model: Anthropic Claude, OpenAI GPT, Google Gemini, or self-hosted open-weight models via Ollama, vLLM, or any OpenAI-compatible API. Switch models without changing tools.
 - **Terraform-provisioned workspaces** - every agent session runs in a reproducible, IaC workspace.
 - **Headless execution** - agents run autonomously in the background, report status to the dashboard, and integrate into CI/CD and review workflows.
