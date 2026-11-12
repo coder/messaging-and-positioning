@@ -112,6 +112,8 @@ Workspace-level controls, network policy, secrets management, and RBAC, apply to
 
 **Agent Relay vs. DIY self-hosted machines:** An enterprise can wire up a few self-hosted machines to a cloud agent's self-hosted execution option without Coder. The value of Agent Relay isn't that the machine is customer-owned; it's that the execution environment is provisioned, isolated, governed, and torn down as part of a platform. That distinction doesn't matter at small scale. It matters enormously when hundreds or thousands of agents need governed workspaces concurrently, which is a problem DIY infrastructure isn't built to solve.
 
+**Agent Relay vs. a provider's self-hosted agent platform:** Anthropic now offers self-hosted Claude Managed Agents in private beta, which moves Anthropic's agent server and sandboxes onto customer infrastructure ([Anthropic](https://claude.com/resources/articles/self-hosted-claude-managed-agents)). That is a toolkit for building custom Claude agents, not the Claude Code or Cursor experience developers already want, and the customer still builds and runs the sandbox layer. Agent Relay keeps the provider's own product and puts execution in governed Coder workspaces. Organizations that need the whole agent loop in-house, on any model, should use Coder Agents. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
+
 **Agent Relay vs. accepting shadow AI:** The alternative to an approved path isn't "no AI usage." Developers will use the agents they want regardless. Shadow AI isn't a cheaper alternative to Agent Relay; it just moves the cost into security risk, fragmented infrastructure, and loss of control.
 
 ## Target Market / ICP

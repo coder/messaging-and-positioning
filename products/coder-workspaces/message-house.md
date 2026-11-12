@@ -10,7 +10,7 @@ Software development today happens in fragments. Developers work from laptops, e
 
 AI tools have compounded this problem dramatically. Developers now run AI coding agents (Cursor, Claude Code, GitHub Copilot, and others) on local machines where those agents inherit ambient credentials, have full network access, and operate entirely outside any platform team's visibility. Many security teams have already moved to restrict or outright prohibit AI coding tools on unmanaged endpoints. What was once a developer environment problem has become a blocker on AI adoption itself.
 
-Beyond local machines, cloud-hosted agent platforms (Cursor Agents, Codex, Claude Managed Agents) introduce a second failure mode: source code routes through third-party infrastructure the organization does not own or control.
+Beyond local machines, cloud-hosted agent platforms (Cursor Agents, Codex cloud, Claude Code cloud sessions) introduce a second failure mode: source code routes through third-party infrastructure the organization does not own or control.
 
 Local development is ungoverned. Cloud-hosted agent platforms send your code to someone else's servers. Coder solves both.
 

@@ -32,6 +32,12 @@ AI Gateway centralizes LLM access for policy enforcement, auditability, and trou
 
 Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted models, including models running entirely inside their own network perimeter, and switch between them without changing platforms. Coder Agents runs the agent loop directly on the control plane, so there's nothing separate to deploy, and credentials and source code stay out of the agent's environment rather than being embedded inside it.
 
+### Choose How Each Agent Runs
+
+Coder supports three ways to run coding agents, and organizations can use all three at once. Coder Agents runs the agent loop in the self-hosted Coder control plane with any configured model, for organizations that need the whole agent inside their infrastructure. Third-party agents such as Claude Code and Codex run inside workspaces, under template network policy and, when routed through it, AI Gateway. Agent Relay connects Claude Code and Cursor cloud sessions to self-hosted workspaces, while the provider keeps orchestration and inference.
+
+Model providers also offer agent platforms of their own, such as Claude Managed Agents, which Anthropic now offers as a self-hosted service in private beta. Those platforms are built for teams creating agents on one provider's models, and the team operates the surrounding infrastructure itself. See [Coder and Claude Managed Agents](../market-landscape/claude-managed-agents.md).
+
 ## Products Involved
 
 - **Coder Workspaces** — the environment agents execute inside, whether that's a third-party agent running in a workspace or a Coder Agents session. Template-defined network policy controls what every agent in the workspace can reach.

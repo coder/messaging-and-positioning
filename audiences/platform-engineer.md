@@ -237,6 +237,7 @@ When evaluating a platform like Coder, Platform Engineers often ask:
 - How much operational overhead will this add for our platform team?
 - How customizable are workspace templates, provisioning workflows, and developer environments?
 - Can developers continue using their preferred IDEs, tools, and AI coding assistants?
+- Our AI vendor now offers a self-hosted agent platform. Why run agents on Coder instead?
 - How do we migrate developers to Coder with minimal disruption to their existing workflows?
 - What visibility do we have into workspace usage, platform health, resource utilization, and AI activity?
 - How does Coder support our security, compliance, and governance requirements?
