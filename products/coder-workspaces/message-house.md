@@ -12,7 +12,7 @@ AI tools have compounded this problem dramatically. Developers now run AI coding
 
 Beyond local machines, cloud-hosted agent platforms (Cursor Agents, Codex cloud, Claude Code cloud sessions) introduce a second failure mode: source code routes through third-party infrastructure the organization does not own or control.
 
-Local development is ungoverned. Cloud-hosted agent platforms send your code to someone else's servers. Coder solves both.
+Coder gives platform teams control over development environments and agent execution. Self-hosting those environments does not by itself keep all code or conversation data inside the network: model requests and tool results can still go to external providers, so inference endpoints, tools, and network policies must be evaluated separately ([Coder Agents architecture](https://coder.com/docs/ai-coder/agents/architecture), [Agent Relay boundaries](https://coder.com/docs/ai-coder/agent-relay)).
 
 This results in:
 
@@ -51,7 +51,7 @@ Coder Workspaces is the open-source platform that provisions secure, self-hosted
 
 Most enterprises have rigorous standards for production infrastructure. Almost none have equivalent standards for where code is actually written.
 
-Coder Workspaces closes that gap. It shifts development from ungoverned laptops to self-hosted infrastructure that platform teams define, provision, and control via Terraform. Every developer starts from a consistent, policy-enforced baseline. AI agents provision workspaces only when compute is required. Source code never leaves your infrastructure. Developers keep the tools they already use: VS Code, Cursor, JetBrains, and others.
+Coder Workspaces closes that gap. It shifts development from ungoverned laptops to self-hosted infrastructure that platform teams define, provision, and control via Terraform. Every developer starts from a consistent, policy-enforced baseline. AI agents provision workspaces only when compute is required. Source files are stored in managed workspaces; external tool and model requests can still transmit code, as described under [Scope and Tradeoffs](#scope-and-tradeoffs). Developers keep the tools they already use: VS Code, Cursor, JetBrains, and others.
 
 It encodes the four standards enterprises are missing: how environments are packaged and connected, how work is placed and resourced, how activity is governed and audited, and how all of it extends to AI agents as development evolves.
 
@@ -61,7 +61,7 @@ Local development is the last major holdout of ungoverned enterprise infrastruct
 
 The root cause is structural. Enterprises have rigorous standards for how applications are deployed, how data is stored, how networks are secured. Almost none have equivalent standards for where software is actually built. That gap didn't matter much when development meant a developer and a laptop. It matters enormously when AI agents are executing code autonomously at scale.
 
-Coder provides that missing standard. Its control plane provisions Coder Workspaces, the self-hosted environments where developers work and AI agents execute tasks, through Terraform, so every builder starts from a consistent, policy-enforced baseline. Source code never leaves your infrastructure. Developers keep the tools they already use: VS Code, Cursor, JetBrains, and others.
+Coder provides that missing standard. Its control plane provisions Coder Workspaces, the self-hosted environments where developers work and AI agents execute tasks, through Terraform, so every builder starts from a consistent, policy-enforced baseline. Source files are stored in managed workspaces; external tool and model requests can still transmit code, as described under [Scope and Tradeoffs](#scope-and-tradeoffs). Developers keep the tools they already use: VS Code, Cursor, JetBrains, and others.
 
 The control plane encodes these foundational standards:
 
@@ -108,7 +108,7 @@ Together, these address the two things that make AI development transformation h
 
 **Pain Points:** Storing source code on developer laptops creates persistent exfiltration risk and makes data sovereignty difficult to enforce. Platform teams have no reliable audit trail, and managing security patches across hundreds of distributed machines is slow and inconsistent. Every unpatched laptop is an exposure window.
 
-**Coder's Solution:** Coder Workspaces runs self-hosted in the enterprise's VPC, on-prem data center, or fully air-gapped enclave. Source code never leaves the perimeter; developers connect via SSH from any device, but code stays in the workspace. SSO/OIDC integration, RBAC, and audit logging give platform teams full visibility into workspace access and activity. Security patches push to all workspaces centrally in minutes, without relying on developer intervention. Coder supports any cloud, on-premises, and fully air-gapped deployments, and its audit logs can be exported to existing log management and SIEM tools, such as Splunk, rather than requiring new compliance infrastructure.
+**Coder's Solution:** Coder Workspaces runs self-hosted in the enterprise's VPC, on-prem data center, or fully air-gapped enclave. Developers work on remotely stored source files through SSH and supported IDEs; configured tools and model calls can transmit code outside the workspace, as described under [Scope and Tradeoffs](#scope-and-tradeoffs). SSO/OIDC integration, RBAC, and audit logging give platform teams full visibility into workspace access and activity. Security patches push to all workspaces centrally in minutes, without relying on developer intervention. Coder supports any cloud, on-premises, and fully air-gapped deployments, and its audit logs can be exported to existing log management and SIEM tools, such as Splunk, rather than requiring new compliance infrastructure.
 
 ### Use Case 3: Enabling an AI Agents Strategy
 
@@ -136,7 +136,7 @@ Together, these address the two things that make AI development transformation h
 
 ## Value Props / Differentiators
 
-- **Self-hosted on any infrastructure**: Run on AWS, Azure, GCP, on-prem, or air-gapped. Source code never leaves your perimeter. No vendor infrastructure dependency.
+- **Self-hosted infrastructure**: Run workspaces on AWS, Azure, GCP, on-prem, or in a suitably configured air-gapped deployment. The execution environment is customer-operated; inference and tool dependencies must be evaluated separately. See [Scope and Tradeoffs](#scope-and-tradeoffs).
 - **Open source with enterprise depth**: Coder Community Edition is free, open-source (AGPL v3.0), and fully functional. Premium adds enterprise RBAC, audit logging, multi-org tenancy, workspace proxies, SCIM/OIDC group sync, and high availability. No vendor lock-in.
 - **Terraform-provisioned environments**: Every workspace is defined as code. Consistent, reproducible, version-controlled, and updatable centrally. The same model that governs human workspaces governs agent workspaces.
 - **Works with what you have**: Developers keep their preferred IDE. Coder supports any model provider. No forced migrations, no lock-in on either side.
@@ -181,7 +181,7 @@ How every builder, human or agent, is held accountable to organizational standar
 - **Audit logging (Premium)** - full logs of all user and workspace actions, exportable to existing log management and SIEM tools such as Splunk.
 - **Connection logging (Premium)** - a complete record of workspace app connections, browser port forwarding, SSH/IDE sessions, and tunnel authorization decisions, for deeper compliance and security visibility.
 - **Browser-only IDE enforcement (Premium)** - restrict workspace access to browser-based IDEs when security policy requires it.
-- **Source code stays in your perimeter** - workspaces run self-hosted in your VPC, on-prem data center, or air-gapped enclave. Developers connect via SSH; code never leaves the infrastructure you control.
+- **Source code in customer-operated workspaces** - workspaces run in your VPC, on-prem data center, or suitably configured air-gapped enclave. Remote access does not itself prevent downloads, tool traffic, or model requests from transmitting code; enforce the required boundaries through access and network configuration ([Coder template guidance](https://coder.com/docs/ai-coder/agents/platform-controls/template-optimization#configure-network-boundaries)).
 
 ### Normalize Workflows
 
@@ -194,7 +194,7 @@ The foundation for AI agent execution, built on the three standards above. AI Go
 
 ## Scope and Tradeoffs
 
-- **AI governance for externally-connected IDE agents**: When developers connect an IDE such as Cursor to a Coder workspace over SSH, the IDE's LLM calls go directly from the client to the model provider. The infrastructure security guarantee, source code stays in your VPC, holds regardless. Full model-level governance (logging, attribution, guardrails) for that connection path is an active area of investment; Coder Agents is the path to complete AI governance today.
+- **AI governance for externally-connected IDE agents**: An IDE connected over SSH can send code context to its configured model provider. Self-hosting the workspace does not prevent that traffic. AI Gateway controls apply only to supported clients configured to route through it; Coder Agents routes its model requests through the gateway automatically, but inference still runs at the configured endpoint ([Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients), [Coder models](https://coder.com/docs/ai-coder/agents/models)).
 - **Provisioning time scales with template complexity.** Prebuilt workspace pools (Premium) give common configurations near-instant claim times; templates with complex startup procedures will provision more slowly.
 - **Coder Workspaces optimizes for depth, not raw cold-start speed.** Sandbox products like Daytona and E2B are built for fast, API-driven sandboxes that agents and AI products create at high volume. Coder Workspaces is a full-featured, self-hosted environment platform for developers and agents, built on Terraform-defined templates, with agent governance those products leave to the customer, a tradeoff most enterprises make in exchange for control over their infrastructure.
 
@@ -205,6 +205,8 @@ Coder Workspaces sits at the intersection of two converging shifts: the collapse
 Coder Workspaces is among the few cloud development environment platforms that are self-hosted on any infrastructure (any cloud, on-prem, or air-gapped), IDE-agnostic, and purpose-built to serve as the foundation for both human developer workflows and AI agent execution. Where competitors offer hosted convenience with significant constraints, vendor lock-in, limited deployment options, no AI governance path, Coder offers infrastructure ownership, flexibility, and a clear runway into the AI agent development era.
 
 In regulated industries, Coder is one of the only platforms that can meet data residency, air-gap, and compliance requirements while also supporting modern AI tooling. For multi-cloud enterprises, it is one of the few platforms that works consistently across AWS, Azure, GCP, and on-prem without compromise, and for organizations already deploying AI coding tools, Coder is well positioned as the foundation for a complete AI governance and agent execution stack.
+
+**Self-hosted agent platforms can coexist with Coder Workspaces.** Claude Managed Agents supplies Anthropic's configurable harness and sandbox deployment stack; customers still operate its compute, images, database, and network controls. That overlaps with Coder's environment-management role, but choosing Managed Agents for automation does not replace the separate need for developer workspaces. Coder provides template-defined environments and IDE access for human development and supported agent workflows. A native integration using Coder Workspaces as Managed Agents sandboxes is not documented, and Agent Relay's Anthropic integration is Claude Code, not Managed Agents. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
 
 See [`market-landscape/`](../../market-landscape/) for sourced, dated comparisons against specific competitors.
 
