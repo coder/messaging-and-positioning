@@ -26,7 +26,7 @@ For positioning, messaging, and value propositions, see the [Agent Relay message
 
 Coder Agent Relay is a broker that connects cloud-hosted AI agent sessions, from Cursor Cloud Agents and Claude Code, to ephemeral, self-hosted Coder workspaces on infrastructure the enterprise controls. The provider keeps the developer experience, orchestration, and model inference. The agent's execution, where it reads code, runs commands, and reaches internal systems, happens inside a governed Coder workspace.
 
-Many enterprises can accept SaaS orchestration but not agent execution outside infrastructure they control. Without an approved path, developers adopt cloud agents on their own. Cursor and Anthropic now support self-hosted execution, which makes a governed execution layer possible, and Agent Relay provides that layer using the Coder templates, RBAC, and audit the platform team already manages.
+Many enterprises can accept SaaS orchestration but not agent execution outside infrastructure they control. Without an approved path, developers adopt cloud agents on their own. Cursor and Claude Code now support self-hosted execution, which makes a governed execution layer possible, and Agent Relay provides that layer using the Coder templates, RBAC, and audit the platform team already manages.
 
 See the message house for the full [status quo and 3 Whys](./message-house.md#the-3-whys).
 
@@ -142,9 +142,10 @@ See the message house's [Buyer Personas](./message-house.md#buyer-personas) for 
 
 See the message house's [Competitive Position](./message-house.md#competitive-position) for the full narrative.
 
-- **DIY self-hosted workers.** Cursor Team Pools and Anthropic self-hosted environments leave the worker image, infrastructure, scaling, and cleanup to the customer. Agent Relay provides that as a governed platform. See [Coder and Cursor](../../market-landscape/cursor.md) and [Coder and Claude Code](../../market-landscape/claude-code.md).
+- **DIY self-hosted workers.** Cursor Team Pools and Claude Code self-hosted environments leave the worker image, infrastructure, scaling, and cleanup to the customer. Agent Relay provides that as a governed platform. See [Coder and Cursor](../../market-landscape/cursor.md) and [Coder and Claude Code](../../market-landscape/claude-code.md).
 - **Provider-hosted execution.** Cursor states its hosted agents are sufficient for over 80% of its customers ([Cursor docs](https://cursor.com/docs/cloud-agent/choose-runtime)). Agent Relay matters when execution must run on infrastructure the organization controls.
 - **Sandbox platforms.** Services like Daytona and E2B can run provider workers, but the control plane may stay with the vendor and the environments differ from the ones developers use. See [Coder and Daytona](../../market-landscape/daytona.md) and [Coder and E2B](../../market-landscape/e2b.md).
+- **Self-hosted Claude Managed Agents.** A separate Anthropic product in private beta, with a configurable harness, console, and sandbox stack that the customer operates. It is not Claude Code or an Agent Relay provider. Coder Agents is an alternative for a customer-hosted coding agent loop with supported model-provider choice. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
 - **Coder Agents.** Coder's native agent runs orchestration in the self-hosted Coder control plane and suits organizations that need inference inside the perimeter. Customers can use both. See the FAQ answer on [Agent Relay versus Coder Agents](./cursor-faq.md#product--roadmap) and the [Coder Agents message house](../coder-agents/message-house.md).
 
 ---
@@ -228,6 +229,6 @@ Cursor and Anthropic deliver the agent experience developers want, and Coder gov
 - [Introducing Agent Relay](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution) and [Coder Brings Claude Code to Agent Relay](https://coder.com/blog/agent-relay-claude-code-agentic-development), announced September 15, 2026
 - [Coder + Anthropic](https://coder.com/anthropic)
 - [Cursor's Self-Hosted Machines integrations](https://cursor.com/docs/cloud-agent/self-hosted/integrations), which list Coder as a partner
-- Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Daytona](../../market-landscape/daytona.md), and [E2B](../../market-landscape/e2b.md)
+- Market landscape pages for [Cursor](../../market-landscape/cursor.md), [Claude Code](../../market-landscape/claude-code.md), [Claude Managed Agents](../../market-landscape/claude-managed-agents.md), [Daytona](../../market-landscape/daytona.md), and [E2B](../../market-landscape/e2b.md)
 
 No public customer evidence is available yet. When added, refer to customers by anonymized type unless they have publicly agreed to be named.

@@ -100,6 +100,9 @@ The integration gives organizations control over the infrastructure where Claude
 **When is the Claude Code integration the right fit?**
 The Claude Code integration is the right fit when a customer wants the Claude Code cloud agent experience but requires agent execution to occur on infrastructure they own or control. It is particularly relevant when customers need agents to work inside existing enterprise networks, access internal development resources, or operate within infrastructure governed by their platform and security teams.
 
+**Anthropic now offers self-hosted Claude Managed Agents. Does that change when to use Agent Relay?**
+They serve different workflows. Self-hosted Claude Managed Agents, in private beta, supplies a configurable agent service, console, and sandbox deployment stack that the customer operates ([Anthropic overview](https://platform.claude.com/docs/en/managed-agents/self-hosted)). Agent Relay is for the Claude Code cloud experience with execution in Coder workspaces; it does not support Managed Agents. Coder Agents is another option for a customer-hosted agent loop with supported model-provider choice. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
+
 ## Product & Roadmap
 
 **Does this replace Claude Code?**
@@ -148,6 +151,9 @@ No. Coder provides complete development environments rather than standalone exec
 
 **Does Agent Relay sit between the agent and Claude Code for the entire session?**
 No. Agent Relay brokers the session and workspace association and manages the execution environment's lifecycle. Once connected, the Anthropic self-hosted runner inside the workspace communicates directly with the Claude Code cloud session.
+
+**Is Agent Relay for Claude the same as Claude Managed Agents?**
+No. Agent Relay connects Claude Code cloud sessions to Coder workspaces through Claude Code self-hosted environments ([Coder docs](https://coder.com/docs/@main/agent-relay/claude-code)). Claude Managed Agents is a separate Anthropic API platform for building agents, and it isn't an Agent Relay provider.
 
 **Is this only for regulated industries?**
 No. Regulated industries are an important use case because their infrastructure and data requirements are often the most stringent, but the architecture benefits any organization that wants to use cloud-hosted AI agents while retaining control over their execution environments.

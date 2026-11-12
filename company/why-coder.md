@@ -14,17 +14,17 @@ At its core, Coder moves development environments off individual laptops and ont
 
 Together, these are the fundamental Coder story, giving developers and agents the environments they need, while giving the enterprise control over where and how that work happens.
 
-## Why Coder doesn't have direct competition
+## Where Coder competes and complements
 
-Coder's competitive position doesn't look like the usual situation where a handful of vendors battle over the same feature set. A few things explain why.
+Coder's relationships with other vendors depend on the product and workload. A vendor can supply models or tools used with Coder while also competing for a particular agent or infrastructure decision.
 
 **Legacy CDEs are collapsing, not competing.** Several major cloud development environment products have been deprecated, discontinued, or closed to new customers in recent years, and the remaining SaaS-first options are either locked to a single cloud or pivoting away from their CDE roots. See the [Coder Workspaces message house](../products/coder-workspaces/message-house.md) for the specifics.
 
-**Point solutions solve an adjacent problem, not the same one.** AI gateways, agentic IDEs, sandboxing products, and cloud agent platforms each address a piece of the problem Coder solves, not the whole thing. See each product's own Market Landscape or Competitive Position section for the specifics of where those tools fit and where they stop.
+**Specialized products can overlap without replacing the whole platform.** AI gateways, agentic IDEs, sandboxing products, and agent platforms address parts of the development workflow. Some compete with individual Coder capabilities without replacing the broader need for self-hosted, standardized, connected, and governed development environments. See [Market Landscape](../market-landscape/) for product-specific comparisons.
 
 **Organizations already running a constrained SaaS CDE are often the best-informed prospects, not the hardest to win.** A team that has spent real time on a single-cloud, opinionated CDE has already felt firsthand what it costs to lose choice, control, and consistency. That experience tends to accelerate a conversation about Coder rather than slow it down.
 
-**The realistic alternative to buying Coder is building it yourself, not switching to a competing vendor.** Self-hosted, cloud-agnostic development infrastructure with this depth of governance is genuinely hard to build and maintain, and doing it well is only realistic for a small number of organizations with substantial in-house platform engineering capacity. Even for those organizations, it carries an ongoing maintenance burden most choose not to absorb indefinitely.
+**Building in-house is one alternative, not the only one.** Organizations can build and maintain development infrastructure themselves, assemble specialist products, or adopt a platform such as Coder. Compare the required capabilities and ongoing operating responsibilities rather than assuming that every narrower product is either a complete substitute or irrelevant.
 
 **What makes that hard to replicate is the same thing that makes Coder valuable, adaptability without a single fixed configuration.** Coder runs as adaptable, self-hosted infrastructure across radically different customer environments and constraints. Unlike a hosted SaaS product that runs one configuration for every customer, no two Coder deployments look alike, which is precisely what a self-hosted, cloud-agnostic product has to be able to do.
 

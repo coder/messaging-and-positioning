@@ -30,7 +30,13 @@ AI Gateway centralizes LLM access for policy enforcement, auditability, and trou
 
 ### Run Agents Without Lock-In
 
-Organizations can connect Anthropic, OpenAI, Gemini, Bedrock, or self-hosted models, including models running entirely inside their own network perimeter, and switch between them without changing platforms. Coder Agents runs the agent loop directly on the control plane, so there's nothing separate to deploy, and credentials and source code stay out of the agent's environment rather than being embedded inside it.
+Organizations can connect supported providers such as Anthropic, OpenAI, Google, and Bedrock, or compatible self-hosted models, and switch configured models without changing platforms. Coder Agents runs its agent loop on the Coder control plane and keeps LLM provider credentials out of workspaces ([Coder models](https://coder.com/docs/ai-coder/agents/models), [Coder architecture](https://coder.com/docs/ai-coder/agents/architecture)).
+
+### Choose How Each Agent Runs
+
+Coder supports three ways to run coding agents, and organizations can use all three. Coder Agents runs its loop in the self-hosted Coder control plane and shell/file tools in workspaces. Third-party agents such as Claude Code and Codex can run inside workspaces under template network policy, with AI Gateway controls for supported traffic routed through it. Agent Relay connects Claude Code and Cursor cloud sessions to self-hosted workspaces, while the provider retains its cloud orchestration and inference outside AI Gateway's audit path ([Coder architecture](https://coder.com/docs/ai-coder/agents/architecture), [Gateway clients](https://coder.com/docs/ai-coder/ai-gateway/clients), [Agent Relay](https://coder.com/docs/ai-coder/agent-relay)).
+
+Self-hosted Claude Managed Agents, in private beta, overlaps with Coder Agents for coding automation. Anthropic supplies a configurable Claude harness, console, and sandbox deployment tooling; the customer operates that stack. Coder's distinction is supported model-family choice and an integrated development-workspace platform, not the absence of environments in Managed Agents. A complementary integration using Coder Workspaces to run Managed Agents' custom workers is technically plausible, but a native integration is not publicly documented as of November 12, 2026. See [Coder and Claude Managed Agents](../market-landscape/claude-managed-agents.md).
 
 ## Products Involved
 
