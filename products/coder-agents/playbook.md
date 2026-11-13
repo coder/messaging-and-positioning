@@ -124,14 +124,12 @@ Coder Agents' primary use cases are data residency and sovereign AI, avoiding lo
 - **Developers are committed to a specific third-party harness.** Run Claude Code or Codex inside Coder workspaces with [AI Governance](../coder-ai-governance/message-house.md), or connect Cursor or Claude Code cloud agents through [Agent Relay](../coder-agent-relay/playbook.md).
 - **The need is in-editor assistance.** AI IDEs cover autocomplete and in-editor chat, and they complement Coder Agents rather than replace it.
 - **The organization is comfortable with SaaS agents and doesn't want to operate infrastructure.** A hosted agent may be simpler.
-- **Anthropic's configurable harness and Claude fit the workload.** Managed Agents may meet the need, including internal coding automation, without adopting Coder Agents. Compare its console and API workflows, environment needs, and operating responsibilities rather than treating coding and non-coding buyers as exclusive groups. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
 
 ### Discovery questions
 
 - **Current tools.** Which agents and AI tools are developers using today, and how are they governed?
 - **Boundary.** Must orchestration and inference stay in the perimeter, or only execution?
 - **Models.** Which LLM providers are approved, and is a self-hosted model required?
-- **Workflow and operations.** Does the team prefer Coder's integrated coding workflow or a configurable agent platform such as Claude Managed Agents? Which interfaces and integrations does it need, and who will operate either self-hosted option?
 - **Coder today.** Is the organization already running Coder, and are its templates clearly named and described?
 - **Network.** Can agent workspaces be restricted to the control plane and git provider?
 - **Automation.** Which workflows, such as CI failures or code review, should trigger agents without a developer?
@@ -158,7 +156,7 @@ See the message house's [Market Landscape](./message-house.md#market-landscape) 
 
 - **Cursor Cloud Agents.** Orchestration and inference run in Cursor's cloud, with optional self-hosted execution. Coder Agents runs its agent loop and workspace execution in the customer's deployment. See [Coder and Cursor](../../market-landscape/cursor.md).
 - **Claude Code and Codex.** Single-provider agents that run in a terminal or the provider's cloud. They can still run inside Coder workspaces with AI Governance. See [Coder and Claude Code](../../market-landscape/claude-code.md) and [Coder and Codex](../../market-landscape/codex.md).
-- **Claude Managed Agents.** Anthropic's configurable harness, console, and sandbox stack, self-hostable in private beta, overlap with Coder Agents for coding automation. Managed Agents documents Claude inference through multiple serving providers; Coder supports multiple model families and integrates agent work with developer workspaces. Both self-hosted options require operations, and existing Coder customers can reuse their platform. A complementary custom-worker integration using Coder Workspaces is technically plausible, but a native integration is not publicly documented as of November 12, 2026. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
+- **Claude Managed Agents.** Anthropic's agent platform, now self-hostable in private beta, overlaps with Coder Agents for unattended coding work. It supports Claude models only and runs agents in per-session sandboxes rather than the development workspaces developers also use. Coder Agents supports multiple model families, is generally available, and runs on the Coder platform the customer already operates. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
 - **Devin.** The reasoning layer runs in Cognition's cloud, including in the VPC option. See [Coder and Devin](../../market-landscape/devin.md).
 - **GitHub Copilot agents.** Orchestration, governance, and model routing run on GitHub and Microsoft infrastructure, and execution runs in GitHub-managed sandboxes by default. See [Coder and GitHub Copilot](../../market-landscape/github-copilot.md), [Coder and GitHub Codespaces](../../market-landscape/github-codespaces.md), and the FAQ's [VS Code Agents and GitHub Copilot](./faq.md#16-competitive-landscape-vs-code-agents-and-github-copilot) section.
 - **Agentic IDEs.** Windsurf, Zed, Kiro, and similar editors complement Coder Agents as the place developers review and refine work.
