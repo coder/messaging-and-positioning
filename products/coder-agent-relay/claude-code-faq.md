@@ -100,9 +100,6 @@ The integration gives organizations control over the infrastructure where Claude
 **When is the Claude Code integration the right fit?**
 The Claude Code integration is the right fit when a customer wants the Claude Code cloud agent experience but requires agent execution to occur on infrastructure they own or control. It is particularly relevant when customers need agents to work inside existing enterprise networks, access internal development resources, or operate within infrastructure governed by their platform and security teams.
 
-**Anthropic now offers self-hosted Claude Managed Agents. Does that change when to use Agent Relay?**
-They serve different workflows. Self-hosted Claude Managed Agents, in private beta, supplies a configurable agent service, console, and sandbox deployment stack that the customer operates ([Anthropic overview](https://platform.claude.com/docs/en/managed-agents/self-hosted)). Agent Relay is for the Claude Code cloud experience with execution in Coder workspaces; it does not support Managed Agents. Coder Agents is another option for a customer-hosted agent loop with supported model-provider choice. See [Coder and Claude Managed Agents](../../market-landscape/claude-managed-agents.md).
-
 ## Product & Roadmap
 
 **Does this replace Claude Code?**
